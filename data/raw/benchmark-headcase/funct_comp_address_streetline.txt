@@ -1,0 +1,6 @@
+//address
+1 microsoft way, redmond, wa, 98052		1 microsoft way
+5 super commerce place blvd Ste H, Richmond, VA, 23452		5 super commerce place blvd
+1001 sunset blvd, Room 301, Sacramento California		1001 sunset blvd
+1730 Minor Ave, Seattle, WA 98101		1730 minor ave
+100 main street, redmond, wa, 98052		100 main street

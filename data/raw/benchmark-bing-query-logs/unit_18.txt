@@ -1,0 +1,6 @@
+//convert dollars to euros  https://www.google.com/search?q=convert+fahrenheit+to+celsius&ie=utf-8&oe=utf-8#q=convert+dollars+to+euros
+7 dollar		6.23 euro
+20 dollar		17.79 euro
+300 dollar		266.89 euro
+211 dollar		187.71 euro
+222 dollar		197.50 euro

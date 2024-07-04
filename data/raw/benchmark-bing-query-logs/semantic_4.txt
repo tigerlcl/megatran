@@ -1,0 +1,6 @@
+//convert hex to ascii   http://www.rapidtables.com/convert/number/hex-to-ascii.htm
+34		4
+55		U
+74		t
+44		D
+22		"

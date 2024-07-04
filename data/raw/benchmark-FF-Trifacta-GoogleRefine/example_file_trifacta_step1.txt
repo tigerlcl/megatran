@@ -1,0 +1,5 @@
+{"funny": 0, "useful": 2, "cool": 1}		2
+{"funny": 0, "useful": 2, "cool": 0}		2
+{"funny": 0, "useful": 0, "cool": 0}		0
+{"funny": 0, "useful": 1, "cool": 1}		1
+{"funny": 0, "useful": 3, "cool": 1}		3

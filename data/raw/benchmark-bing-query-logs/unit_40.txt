@@ -1,0 +1,6 @@
+//convert meters to miles https://www.google.com/search?q=convert+meters+to+miles&ie=utf-8&oe=utf-8
+5 meter		0.00310686 mile
+180 meter		0.111847 mile
+92 meter		0.0571661 mile
+23 meter		0.0142915 mile
+11 meter		0.00683508 mile

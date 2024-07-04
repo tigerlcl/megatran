@@ -1,0 +1,6 @@
+//Most efficient way to remove special characters from string, only allow A-Z a-Z 0-9
+BA(kfa1237fdn		BAkfa1237fdn
+*9kk12jf7eYTk1		9kk12jf7eYTk1
+()kjfdsk13^$$*A		kjfdsk13A
+092378LLLL111		092378LLLL111
+11PP))(*(&^%%&*		11PP

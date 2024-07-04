@@ -1,0 +1,6 @@
+//convert kilometers to miles   https://www.google.com/search?q=%2F%2Fconvert+celsius+to+fahrenheit&ie=utf-8&oe=utf-8#q=kilometers+to+miles
+5 km		3.10685596 mile
+18 km		11.1846815 mile
+1349 km		838.229738 mile
+3 km		1.86411358 mile
+33 km		20.5052493 mile

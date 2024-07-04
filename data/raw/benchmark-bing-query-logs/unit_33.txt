@@ -1,0 +1,6 @@
+//convert inches to millimeters  https://www.google.com/search?q=convert+fahrenheit+to+celsius&ie=utf-8&oe=utf-8#q=convert+inches+to+millimeters
+4 inch		101.6 mm
+50 inch		1270 mm
+429 inch		10896.6 mm
+5 inch		127 mm
+40 inch		1016 mm

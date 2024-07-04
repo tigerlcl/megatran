@@ -1,0 +1,6 @@
+//convert inches to feet  https://www.google.com/search?q=convert+fahrenheit+to+celsius&ie=utf-8&oe=utf-8#q=inches+to+feet
+3 inch		0.25 feet
+37 inch		3.08333333 feet
+12 inch		1 feet
+169 inch		14.0833333 feet
+44 inch		3.66666667 feet

@@ -1,0 +1,6 @@
+//convert decimal to octal   http://www.binaryhexconverter.com/decimal-to-octal-converter
+2358		4466
+198645		603765
+33		41
+232		350
+1234		2322

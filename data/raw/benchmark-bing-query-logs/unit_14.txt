@@ -1,0 +1,6 @@
+//convert lbs to kg  http://www.bing.com/search?q=convert+lbs+to+kg&qs=n&form=QBLH&pq=convert+lbs+to+kg&sc=8-17&sp=-1&sk=&cvid=ac58462166184654886c0e146be3c81e
+1 b		0.45359237 kg
+18 b		8.16466265 kg
+101 b		45.8128293 kg
+33 b		14.9685482 kg
+12 b		5.44310844 kg

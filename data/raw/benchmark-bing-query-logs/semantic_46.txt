@@ -1,0 +1,6 @@
+//convert mixed fraction to decimal
+7 1/4		7.25
+21 2/5		21.4
+129		129
+6 9/100		6.09
+3 4/5		3.8

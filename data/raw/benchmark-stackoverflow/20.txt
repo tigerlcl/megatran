@@ -1,0 +1,6 @@
+//replace multiple spaces with a single space
+1 2 3 4   5		1 2 3 4 5
+How are    you		How are you
+What   is the   matter		What is the matter
+1   2  4  4		1 2 4 4
+How   fun		How fun

@@ -1,0 +1,6 @@
+//convert liters to gallons https://www.google.com/search?q=square+feet+to+acres&ie=utf-8&oe=utf-8#q=convert+liters+to+gallons
+7 L		1.8492 gal
+15 L		3.96258 gal
+98 L		25.8889 gal
+33 L		8.71768 gal
+17 L		4.49092 gal

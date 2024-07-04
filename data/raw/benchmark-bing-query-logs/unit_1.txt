@@ -1,0 +1,6 @@
+//convert mm to inches  https://www.google.com/search?q=%2F%2Fconvert+celsius+to+fahrenheit&ie=utf-8&oe=utf-8#q=mm+to+inches
+1 mm		0.0393701 inch
+8 mm		0.314961 inch
+17 mm		0.669291 inch
+33 mm		1.29921 inch
+22 mm		0.866142 inch

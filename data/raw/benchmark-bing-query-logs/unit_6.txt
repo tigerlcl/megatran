@@ -1,0 +1,6 @@
+//convert feet to meters  https://www.google.com/search?q=square+feet+to+acres&ie=utf-8&oe=utf-8#q=convert+feet+to+meters
+3 feet		0.9144 m
+7 feet		2.1336 m
+18 feet		5.4864 m
+4 feet		1.2192 m
+22 feet		6.7056 m

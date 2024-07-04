@@ -1,0 +1,6 @@
+//convert excel date to datetime   http://www.dotnetperls.com/fromoadate
+39938		05/05/2009
+39934		05/01/2009
+39958		05/25/2009
+36557		02/01/2000
+39270		07/07/2007

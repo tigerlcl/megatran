@@ -1,0 +1,6 @@
+//Filter out XML attributeshttp://stackoverflow.com/questions/7122109/codemirror-2-how-to-filter-out-xml-attributes
+<sample1 xns:id="e7b014d9-6271-4e32-921d-7488edfd6ea4">a</sample1>		<sample1>a</sample1>
+<sample2 xns:id="d3450e86-7264-4512-9891-6c7183257741">b</sample2>		<sample2>b</sample2>
+<sample4 xns:id="abc">xyz</sample3>		<sample3>xyz</sample3>
+<sample3 xns:id="7f04f178-f235-4647-8584-c4e77f73fecf">c</sample3>		<sample3>c</sample3>
+<sample6 xns:id="test">b</sample6>		<sample6>b</sample6>

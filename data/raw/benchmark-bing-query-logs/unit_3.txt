@@ -1,0 +1,6 @@
+//convert celsius to fahrenheit  https://www.google.com/search?q=%2F%2Fconvert+celsius+to+fahrenheit&ie=utf-8&oe=utf-8#q=convert+celsius+to+fahrenheit
+1 Celsius		33.8 Fahrenheit
+7 Celsius		44.6 Fahrenheit
+18 Celsius		64.4 Fahrenheit
+-17.2222 Celsius		1 Fahrenheit
+50.5556 Celsius		123 Fahrenheit

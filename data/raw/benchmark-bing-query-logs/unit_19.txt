@@ -1,0 +1,6 @@
+//convert millimeters to inches
+15 mm		0.590551 inch
+39 mm		1.53543 inch
+130 mm		5.11811 inch
+4 mm		0.15748 inch
+41 mm		1.61417 inch

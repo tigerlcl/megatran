@@ -1,0 +1,6 @@
+//address
+1 microsoft way, redmond, wa, 98052		WA
+1201 super commerce blvd Ste H, Richmond, VA, 23452		VA
+100 sunset blvd, room 301, Sacramento California		CA
+747 6th St S, Kirkland, WA 98033		WA
+10 commerce way, Richmond, VA, 23452		VA

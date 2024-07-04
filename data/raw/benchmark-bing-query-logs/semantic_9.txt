@@ -1,0 +1,6 @@
+//convert cm to feet and inches  http://www.thecalculatorsite.com/conversions/common/cm-to-feet-inches.php
+3 cm		0 feet and 1.1811 inches
+870 cm		28 feet and 6.5197 inches
+69 cm		2 feet and 3.1654 inches
+44 cm		1 feet and 5.3228 inches
+555 cm		18 feet and 2.5039 inches

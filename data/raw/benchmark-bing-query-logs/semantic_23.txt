@@ -1,0 +1,6 @@
+//convert address to gps coordinates  http://www.latlong.net/convert-address-to-lat-long.html
+400 Bellevue Way Northeast, Bellevue, WA, USA		47.615570, -122.202522
+3002 Mt Angeles Rd, Port Angeles, WA, USA		48.099339, -123.425532
+2329 West Mall, Vancouver, BC V6T 1Z4, Canada		49.261375, -123.253672
+1 microsoft way, redmond, wa, 98052		47.639583, -122.128381
+14820 36th st ne redmond, wa, 98052		47.642095, -122.142068

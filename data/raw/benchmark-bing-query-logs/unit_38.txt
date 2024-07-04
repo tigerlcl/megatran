@@ -1,0 +1,6 @@
+// convert celcius to kelvin  http://www.bing.com/search?q=convert+celcius+to+kelvin&qs=n&form=QBRE&pq=convert+celcius+to+kelvin&sc=8-25&sp=-1&sk=&cvid=72635BAF4E2E4D52A3FD009812644B35
+1 Celsuis		274.15 Kelvin
+12 Celsuis		285.15 Kelvin
+12.3 Celsuis		285.45 Kelvin
+188 Celsuis		461.15 Kelvin
+24 Celsuis		297.15 Kelvin

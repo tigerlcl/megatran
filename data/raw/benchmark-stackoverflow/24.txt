@@ -1,0 +1,6 @@
+//sort alphanumeric string, then alternate numeric/alphabet char output
+D4C3B2A1		A1B2C3D4
+E7C3B2A1		A1B2C3E7
+ABCDE12345		A1B2C3D4E5
+AB12345CDE		A1B2C3D4E5
+E12HY5		E1H2Y5
