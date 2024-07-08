@@ -1,5 +1,6 @@
 import os
 import yaml
+import importlib
 import logging
 
 from util.synthesize import InstructionBuilder
@@ -18,8 +19,9 @@ def main():
 
     result = ResultAnalyzer(cfg["result_dir"], n_shot)
 
-    sorted_list = ['1.txt', '2.txt', '3.txt']
-    for f in sorted_list:
+    # sorted_list = ['1.txt', '2.txt', '3.txt'] # for debug
+    # sorted_list = ['5.txt']
+    for f in sorted_list[:10]:
         test_fp = os.path.join(test_dir, f)
         inst_fp = os.path.join(cfg["instruction_dir"], f)
         logging.info(f"Processing {test_fp}")
@@ -27,7 +29,6 @@ def main():
         # build prompt per sample with N shots, N=0,1,2
         instBuilder = InstructionBuilder(inst_fp, test_fp, n_shot)
         instruction = instBuilder.run()
-        # logging.info(instruction)
 
         test_data = instBuilder.load_test_data()
 
@@ -39,13 +40,13 @@ def main():
 
         # exec code and evaluate result
         if codeExist:
-            logging.info(f"Evaluating result")
-            from temp_solve import solution
+            import temp_solve
+            importlib.reload(temp_solve)  # reload auto-generated module
             for test in test_data:
                 try:
-                    res = solution(test[0])
+                    res = temp_solve.solution(test[0])
                 except Exception as e:
-                    logging.error(f"Error when running code: {e}")
+                    # logging.error(f"Error when running code: {e}")
                     res = None
                 test.append(res)
 
@@ -68,6 +69,7 @@ if __name__ == '__main__':
 
     # Configure the logger
     logging.basicConfig(filename='./log/run.log',
+                        filemode='w',
                         level=logging.INFO,
                         format='%(asctime)s - %(levelname)s - %(message)s')
 

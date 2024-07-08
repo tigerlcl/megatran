@@ -34,7 +34,7 @@ def solution(input):
         llm_response = llm_chain.invoke({"inst": instruction})
         code_snippet = re.sub(self.py_block, "", llm_response.content, flags=re.MULTILINE)
 
-        isCodeGen = code_snippet.startswith("def solution")
+        isCodeGen = len(code_snippet) > 0
 
         # Write the function to a temp file for execution
         with open(self.temp_python_fp, 'w') as f:

@@ -5,3 +5,4 @@ __pycache__/
 .idea
 etc/*_private.yaml
 data/
+log/
