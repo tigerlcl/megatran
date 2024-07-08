@@ -7,6 +7,7 @@ import logging
 from tqdm import tqdm
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
 from util.synthesize import InstructionBuilder
 from util.code_gen import CodeGenerator
 from util.analysis import ResultAnalyzer
@@ -18,8 +19,6 @@ def main():
     files = [f for f in os.listdir(dataset_dir) if f.endswith(".txt")]
     # Sort the list using the numeric part of the filenames
     sorted_list = sorted(files, key=lambda x: int(x.split('.')[0]))
-    n_shot = args.shot
-
     resultAnalyzer = ResultAnalyzer()
 
     # sorted_list = ['1.txt', '2.txt', '3.txt'] # for debug
@@ -30,9 +29,8 @@ def main():
         logging.info(f"Processing {test_fp}")
 
         # build prompt per sample with N shots, N=0,1,2
-        instBuilder = InstructionBuilder(inst_fp, test_fp, n_shot)
+        instBuilder = InstructionBuilder(inst_fp, test_fp, args.shot)
         instruction = instBuilder.run()
-
         test_data = instBuilder.load_test_data()
 
         # run OpenAI inference and generate code

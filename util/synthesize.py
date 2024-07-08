@@ -23,7 +23,7 @@ class InstructionBuilder:
     # TODO: integrate more APIs
     def __load_inst_data(self):
         if not os.path.exists(self.inst_fp):
-            self.inst_data = self.test_header # set header as instruction if not specified
+            self.inst_data = self.test_header  # set header as instruction if not specified
         else:
             with open(self.inst_fp, 'r') as f:
                 for line in f.readlines():
@@ -40,17 +40,18 @@ class InstructionBuilder:
 
             shot_count = 0
             while shot_count < self.n_shot:
-                line = f.readline().strip().split('\t', maxsplit=1)
+                line = re.split('\t+', f.readline().strip())
                 if len(line) != 2:  # temp skip bad case, e.g. stackoverflow/2.txt
                     continue
                 self.shot_data += f"input: {line[0]}, output: {line[1]}\n"
                 shot_count += 1
 
-            # the rest would bd the test data
+            # the rest would be the test data
             self.test_data = [re.split('\t+', line.strip()) for line in f.readlines()]
 
     def load_test_data(self):
-        return self.test_data
+        # filter bad test case
+        return [unit for unit in self.test_data if len(unit) == 2]
 
     # run
     def run(self):
