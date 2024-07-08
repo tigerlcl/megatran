@@ -1,6 +1,0 @@
-//convert 1111two to base ten  http://www.unitconversion.org/numbers/base-2-to-base-10-conversion.html
-11111		31
-10101001		169
-100001101		269
-111		7
-101010		42

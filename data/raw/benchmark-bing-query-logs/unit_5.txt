@@ -1,6 +1,0 @@
-//convert cm to inches  www.bing.com/search?q=convert+cm+to+inches&qs=n&form=QBRE&pq=convert+cm+to+inches&sc=8-24&sp=-1&sk=&cvid=A5A14DEE028043618E89B4BC9FB24B89
-1 cm		0.39370079 inch
-5 cm		1.96850394 inch
-6 cm		2.36220472 inch
-2 cm		0.78740157 inch
-3 cm		1.18110236 inch

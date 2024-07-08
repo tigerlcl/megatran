@@ -1,7 +1,0 @@
-//convert military time to standard time
-0100		1:00 AM
-1800		6:00 PM
-1400		2:00 PM
-1300		1:00 PM
-1600		4:00 PM
-0200		2:00 AM

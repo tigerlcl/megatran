@@ -1,5 +1,0 @@
-| styple = "background #d0e7ff;"|{{Sort|Green Bay Packers 01|[[1966 Green Bay Packers season|Green Bay Packers]]<sup>^</sup>}}		Green Bay Packers
-| styple = "background #d0e7ff;"|{{Sort|Green Bay Packers 02|[[1967 Green Bay Packers season|Green Bay Packers]]<sup>^</sup>}}		Green Bay Packers
-| styple = "background #d0e7ff;"|{{Sort|New York Jets 01|[[1968 Green Bay Packers season|New York Jets]]<sup>^</sup>}}		New York Jets
-| styple = "background #d0e7ff;"|{{Sort|San Francisco 49ers 01|[[1981 San Francisco 49ers season|San Francisco 49ers]]<sup>^</sup>}}		San Francisco 49ers
-| styple = "background #d0e7ff;"|{{Sort|Green Bay Packers 02|[[1911 Green Bay Packers season|Green Bay Packers]]<sup>^</sup>}}		Green Bay Packers

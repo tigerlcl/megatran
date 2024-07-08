@@ -1,5 +1,0 @@
-smith, john		jsmith
-williams, adam		awilliams
-johnson, james		jjohnson
-denis, alice		adenis
-smith, bob		bsmith

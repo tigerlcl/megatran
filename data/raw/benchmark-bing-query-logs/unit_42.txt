@@ -1,6 +1,0 @@
-//convert ounces to cups https://www.google.com/search?q=v&ie=utf-8&oe=utf-8#q=convert+ounces+to+cups
-2 oz		0.25 cup
-1988 oz		248.5 cup
-37 oz		4.625 cup
-33 oz		4.125 cup
-123 oz		15.375 cup

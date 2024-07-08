@@ -1,6 +1,0 @@
-//convert timespan to string
-00:06:32.4458750		0 hrs, 6 mins, 32 secs
-11:12:13.7458750		11 hrs, 12 mins, 14 secs
-23:01:09.0988712		23 hrs, 1 mins, 9 secs
-12:21:09.2988712		12 hrs, 21 mins, 9 secs
-23:31:21.4322211		23 hrs, 31 mins, 21 secs

@@ -1,6 +1,0 @@
-//convert rgb to hex  http://www.javascripter.net/faq/rgbtohex.htm
-255,255,255		#FFFFFF
-238,130,238		#EE82EE
-147,112,219		#9370DB
-219,112,147		#DB7093
-34,139,34		#228B22

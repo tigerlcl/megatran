@@ -1,6 +1,0 @@
-//convert dollars to euros google.com
-3 US Dollar		2.72 euros
-21 US Dollar		19.02 euros
-111 US Dollar		100.56 euros
-33 US Dollar		29.90 euros
-12 US Dollar		10.87 euros

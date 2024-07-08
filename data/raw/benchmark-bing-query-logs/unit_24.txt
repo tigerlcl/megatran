@@ -1,6 +1,0 @@
-//convert cm to feet
-4 cm		0.131234 feet
-17 cm		0.557743 feet
-201 cm		6.59449 feet
-3 cm		0.0984252 feet
-2 cm		0.0656168 feet

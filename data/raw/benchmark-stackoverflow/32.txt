@@ -1,6 +1,0 @@
-//Bioinformatics http://stackoverflow.com/questions/8811335/algorithm-help-fast-algorithm-in-searching-for-a-string-with-its-partner
-TAGTC		ATCAG
-CGCAT		GCGTA
-ACCAG		TGGTC
-GACTA		CTGAT
-CGCAA		GCGTT

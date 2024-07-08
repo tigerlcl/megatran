@@ -1,6 +1,0 @@
-//convert pounds to dollars  https://www.google.com/search?q=convert+ounces+to+pounds&ie=utf-8&oe=utf-8#q=convert+pounds+to+dollars
-1 pound		1.57 dollar
-300 pound		470.78 dollar
-2100 pound		3295.45 dollar
-123 pound		193.02 dollar
-444 pound		696.75 dollar

@@ -1,6 +1,0 @@
-//convert fahrenheit to celsius  https://www.google.com/search?q=convert+fahrenheit+to+celsius&ie=utf-8&oe=utf-8
-19 fahrenheit		-7.22222 celsius
-100 fahrenheit		37.7778 celsius
-350 fahrenheit		176.667 celsius
-1 fahrenheit		-17.2222 celsius
-123 fahrenheit		50.5556 celsius

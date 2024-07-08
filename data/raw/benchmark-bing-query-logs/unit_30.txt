@@ -1,6 +1,0 @@
-//convert inches to centimeters  https://www.google.com/search?q=convert+fahrenheit+to+celsius&ie=utf-8&oe=utf-8#q=convert+inches+to+centimeters
-1 inch		2.54 cm
-23 inch		58.42 cm
-921 inch		2339.34 cm
-13 inch		33.02 cm
-22 inch		55.88 cm

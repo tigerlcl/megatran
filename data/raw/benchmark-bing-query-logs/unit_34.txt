@@ -1,5 +1,0 @@
-// convert gallons to cups
-1 gallons		16 cups
-3 gallons		48 cups
-11 gallons		176 cups
-15 gallons		240 cups

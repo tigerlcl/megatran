@@ -1,6 +1,0 @@
-//convert html to plain text
-<b>Hello World.</b><br/><p><i>Is there anyone out there?</i><p>		Hello World.Is there anyone out there?
-<b>hello world!</b><br /><i>it is me</i>		hello world!it is me
-<b>hello, </b><b>hi.</b><b>welcome</b>		hello, hi.welcome
-<b>test</b>		test
-<b>this</b><b> is</b><b> a</b><b> test</b>		this is a test

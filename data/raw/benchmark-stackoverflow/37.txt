@@ -1,6 +1,0 @@
-//Get month name from Date
-10/11/2009		October
-01/12/2012		January
-03/14/2013		March
-05/09/2014		May
-12/12/2012		December

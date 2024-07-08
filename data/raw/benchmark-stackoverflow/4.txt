@@ -1,6 +1,0 @@
-//Get Distinct chars of a string
-DHCH		DHC
-KLKLHHMO		KLHMO
-XUCHU		XUCH
-123123		123
-9090		90

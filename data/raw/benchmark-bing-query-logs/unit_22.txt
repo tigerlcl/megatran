@@ -1,6 +1,0 @@
-//convert ml to oz  https://www.google.com/search?q=convert+fahrenheit+to+celsius&ie=utf-8&oe=utf-8#q=convert+ml+to+oz
-10 ml		0.33814023 oz
-39 ml		1.31874689 oz
-200 ml		6.76280455 oz
-3 ml		0.10144207 oz
-30 ml		1.01442068 oz

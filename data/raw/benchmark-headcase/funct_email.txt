@@ -1,5 +1,0 @@
-Abcdef@example.com		true
-very.common@example.com		true
-A@b@c@example.com		false
-good@example.com		true
-A@b.com@example.com		false

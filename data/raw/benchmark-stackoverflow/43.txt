@@ -1,7 +1,0 @@
-//email validation
-testing@invalid@email.com		invalid
-walter@xyz.com		walter@xyz.com
-tom@qq.com		tom@qq.com
-asdf		invalid
-ab@xyz.xyz		ab@xyz.xyz
-wa@lter@xyz.com		invalid

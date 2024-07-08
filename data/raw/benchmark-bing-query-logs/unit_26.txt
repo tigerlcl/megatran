@@ -1,6 +1,0 @@
-//convert grams to cups  http://calculator-converter.com/converter_g_to_c_grams_to_cups_calculator.php
-2 grams		0.00845 cups
-15 grams		0.0634 cups
-50 grams		0.21134 cups
-25 grams		0.10567 cups
-10 grams		0.04227 cups

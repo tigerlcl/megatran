@@ -1,6 +1,0 @@
-//Concateneate words with Camel Case
-Hello there everyone		HelloThereEveryone
-What is wrong		WhatIsWrong
-Wait for a while		WaitForAWhile
-Main page		MainPage
-Test is good for everyone		TestIsGoodForEveryone

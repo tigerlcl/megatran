@@ -1,6 +1,0 @@
-//convert pounds to kilograms https://www.google.com/search?q=convert+fahrenheit+to+celsius&ie=utf-8&oe=utf-8#q=convert+pounds+to+kilograms
-17 b		7.71107 kg
-39 b		17.6901 kg
-198 b		89.8113 kg
-33 b		14.9685 kg
-12 b		5.44311 kg

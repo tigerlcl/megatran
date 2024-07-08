@@ -1,6 +1,0 @@
-//convert pounds to grams http://www.bing.com/search?q=convert+pounds+to+grams&qs=n&form=QBRE&pq=convert+pounds+to+grams&sc=8-23&sp=-1&sk=&cvid=7B02D68DA1784B898B6985B9ED9A89CC
-1 lb		453.59237 g
-502 lb		227703.37 g
-76 lb		34473.0201 g
-234 lb		106140.614 g
-122 lb		55338.2691 g

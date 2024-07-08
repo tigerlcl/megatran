@@ -1,6 +1,0 @@
-//convert mm to cm https://www.google.com/search?q=square+feet+to+acres&ie=utf-8&oe=utf-8#q=convert+mm+to+cm
-9 mm		0.9 cm
-145 mm		14.5 cm
-23 mm		2.3 cm
-3 mm		0.3 cm
-199 mm		19.9 cm

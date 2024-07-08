@@ -1,6 +1,0 @@
-//convert meter to feet  https://www.google.com/search?q=convert+meter+to+feet&ie=utf-8&oe=utf-8
-8 m		26.2467 feet
-259 m		849.738 feet
-387 m		1269.69 feet
-333 m		1092.52 feet
-888 m		2913.39 feet

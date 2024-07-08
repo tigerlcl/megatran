@@ -1,6 +1,0 @@
-//convert rgb to cmyk  http://www.rapidtables.com/convert/color/rgb-to-cmyk.htm
-3,4,5		0.4,0.2,0,0.98
-0,0,0		0,0,0,1
-33,44,55		0.4,0.2,0,0.784
-255,0,255		0,1,0,0
-0,255,0		1,0,1,0

@@ -1,9 +1,0 @@
-//Year to common year or leap year
-2007		common
-2008		leap
-2009		common
-2010		common
-2011		common
-2012		leap
-2016		leap
-2017		common

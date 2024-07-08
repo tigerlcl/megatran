@@ -1,6 +1,0 @@
-//convert ascii to hex   http://www.rapidtables.com/convert/number/hex-to-ascii.htm
-DC2		12
-RS		1E
-#		23
-D		44
-"		22

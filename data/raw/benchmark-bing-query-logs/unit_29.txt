@@ -1,6 +1,0 @@
-//convert square feet to acres http://www.bing.com/search?q=convert+square+feet+to+acres&qs=n&form=QBLH&pq=convert+square+feet+to+acres&sc=5-28&sp=-1&sk=&cvid=d472d11b971042988da81476fee2f9ce
-45 square feet		0.00103306 acres
-120 square feet		0.00275482 acres
-2300 square feet		0.05280073 acres
-1300 square feet		0.02984389 acres
-890 square feet		0.02043159 acres

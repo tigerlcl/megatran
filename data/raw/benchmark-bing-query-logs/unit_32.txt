@@ -1,6 +1,0 @@
-//convert ounces to grams https://www.google.com/search?q=square+feet+to+acres&ie=utf-8&oe=utf-8#q=convert+ounces+to+grams
-3 oz		85.0486 g
-19 oz		538.641 g
-320 oz		9071.85 g
-11 oz		311.845 g
-23 oz		652.039 g

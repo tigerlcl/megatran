@@ -1,6 +1,0 @@
-//convert slope to degrees http://www.calcunation.com/calculators/general%20math/geometry/slope-percent-conversion.php?perc=24&calc=yes&Calculate=Convert+to+Degrees
-4%		2.29 Degrees
-30%		16.70 Degrees
-45%		24.23 Degrees
-24%		13.50 Degrees
-12%		6.84 Degrees

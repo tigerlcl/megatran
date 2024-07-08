@@ -1,5 +1,0 @@
-{{a, b}, {cccc, d}, {e, f}}		d
-{{x, aaay}, {aaaz, d}}		aaay
-{{a}, {ffeaa}, {aa, aaa, aaa, aaa}}		ffeaa
-{{ajfj, ajfie, ajaj, aj}, {jwi, ajaj, aj, a}, {aj, ajiw, ajif, jfi}}		a
-{{a}, {b}, {c}}		b

@@ -1,6 +1,0 @@
-//convert central time to eastern time
-11:47 PM,Mon,Aug 17,2015		12:47 AM,Tue,Aug 18,2015
-7:00 AM,Tue,Jul 7,2015		8:00 AM,Tue,Jul 7,2015
-1:30 AM,Thu,May 14,2015		2:30 AM,Thu,May 14,2015
-3:30 AM,Thu,May 14,2015		4:30 AM,Thu,May 14,2015
-1:11 AM,Thu,May 21,2015		2:11 AM,Thu,May 21,2015

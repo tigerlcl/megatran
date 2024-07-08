@@ -1,7 +1,0 @@
-//Math expressions evaluation
-3+6		9
-40-9		31
-2*6		12
-9/3		3
-1+9-2		8
-1+4/2		3

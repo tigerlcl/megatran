@@ -1,6 +1,0 @@
-//convert grams to ounces and pounds http://www.metric-conversions.org/weight/grams-to-pounds.htm
-32g		0lb 1.128767oz
-1000g		2lb 3.273965oz
-3400g		7lb 7.931480oz
-222g		0lb 7.830820oz
-123g		0lb 4.338698oz

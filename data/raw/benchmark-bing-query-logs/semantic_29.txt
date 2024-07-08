@@ -1,6 +1,0 @@
-//convert decimal degrees to degrees minutes seconds  https://www.fcc.gov/encyclopedia/degrees-minutes-seconds-tofrom-decimal-degrees
-4		4 0' 0"
-11.35		11 20' 60"
-129.45		129 26' 60"
-23		23 0' 0"
-21		21 26' 24"

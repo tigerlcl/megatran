@@ -1,6 +1,0 @@
-//convert meters to inches http://www.bing.com/search?q=convert+meters+to+inches&qs=n&form=QBRE&pq=convert+meters+to+inches&sc=8-24&sp=-1&sk=&cvid=AF65D2FF77F64A84A8564E5D7CB50C42
-1 m		39.3700787 inch
-1856 m		73070.8661 inch
-200 m		7874.01575 inch
-188 m		7401.5748 inch
-33 m		1299.2126 inch

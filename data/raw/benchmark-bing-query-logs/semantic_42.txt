@@ -1,6 +1,0 @@
-//convert to hexadecimal http://www.binaryhexconverter.com/decimal-to-hex-converter
-214633		34669
-1246367		13049F
-9872031		96A29F
-323		143
-123234		1E162

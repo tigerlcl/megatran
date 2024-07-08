@@ -1,6 +1,0 @@
-//Extract month from datetime
-Thursday, 1st January, 1970		January
-Wednesday, 2nd March, 1980		March
-Monday, 5th May, 1999		May
-Friday, 3rd April, 1989		April
-Sunday, 3rd March, 2013		March

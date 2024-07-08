@@ -1,6 +1,0 @@
-//person name 
-Jack Bauer		J. Bauer
-Charles Wooten		C. Wooten
-Kim Lee		K. Lee
-Lucy Goodman		L. Goodman
-Rachel Green		R. Green

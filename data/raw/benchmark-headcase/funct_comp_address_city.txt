@@ -1,6 +1,0 @@
-//address
-1 microsoft way, redmond, wa, 98052		Redmond
-1201 super commerce blvd Ste H, Richmond, VA, 23452		Richmond
-100 sunset blvd, room 301, Beverley Hills California		Beverley Hills
-32 super blvd Ste H, Riverside California		Riverside
-100 turing way, Redmond, wa, 98052		Redmond

@@ -1,6 +1,0 @@
-//convert time to decimal  http://calendar.google.com/
-02:45:45		2.7625 hours
-1:30:25		1.5069 hours
-12:10:02		12.1672 hours
-03:22:45		3.3792 hours
-22:22:22		22.3728 hours

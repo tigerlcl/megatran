@@ -1,5 +1,0 @@
-aaaaaaaa		aaa
-bb		bb
-ccc		ccc
-ddddd		ddd
-eeeeeee		eee

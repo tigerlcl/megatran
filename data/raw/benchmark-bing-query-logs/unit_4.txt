@@ -1,6 +1,0 @@
-//convert kg to lbs  https://www.google.com/search?q=%2F%2Fconvert+celsius+to+fahrenheit&ie=utf-8&oe=utf-8#q=kg+to+b
-3 kg		6.61387 b
-7 kg		15.4324 b
-11 kg		24.2508 b
-23 kg		50.7063 b
-1 kg		2.20462 b

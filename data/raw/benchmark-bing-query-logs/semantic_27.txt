@@ -1,6 +1,0 @@
-//convert psia to psig http://www.endmemo.com/cconvert/psiag.php
-33 psia		18.304051 psig
-17 psia		2.304051 psig
-100 psia		85.304051 psig
-22 psia		7.304051 psig
-3 psia		-11.695949 psig

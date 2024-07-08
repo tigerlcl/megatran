@@ -1,8 +1,0 @@
-//number to words  http://stackoverflow.com/questions/3911966/how-to-convert-number-to-words-in-java
-10183		ten thousand one hundred eighty three
-90		ninety
-5888		five thousand eight hundred eighty eight
-100000		one hundred thousand
-999999		nine hundred ninety-nine thousand nine hundred ninety-nine
-1000001		one million one
-10000007		ten million seven

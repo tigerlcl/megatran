@@ -1,6 +1,0 @@
-//Remove spaces in HTML source in between markups?
-<p>blahblahblah</p>            <p>blahblahblah</p>		<p>blahblahblah</p><p>blahblahblah</p>
-<head> <title>A Simple HTML Example</title> </head>		<head><title>A Simple HTML Example</title></head>
-<h2>HTML is Easy To Learn</h2> <p>Welcome to the world of the </p>		<h2>HTML is Easy To Learn</h2><p>Welcome to the world of the </p>
-<h2>test1</h2> <p>test2</p>		<h2>test1</h2><p>test2</p>
-<h2>test1</h2> <p>test2</p> <p>test3</p> <p>test4</p>		<h2>test1</h2><p>test2</p><p>test3</p><p>test4</p>

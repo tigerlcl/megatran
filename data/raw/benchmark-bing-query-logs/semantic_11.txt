@@ -1,6 +1,0 @@
-//convert roman numerals to normal numbers   http://www.onlineconversion.com/roman_numerals_advanced.htm
-III		3
-CCXXXIII		233
-C		100
-CCXXII		222
-MCCXXXIV		1234

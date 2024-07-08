@@ -1,6 +1,0 @@
-//convert kb to mb
-3 kb		0.003 mb
-59 kb		0.059 mb
-140 kb		0.14 mb
-2 kb		0.002 mb
-123 kb		0.123 mb

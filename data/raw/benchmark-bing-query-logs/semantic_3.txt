@@ -1,6 +1,0 @@
-//convert to fractional notation
-0.003		3/1000
-0.125		1/8
-4.5		9/2
-0.25		1/4
-0.2		1/5

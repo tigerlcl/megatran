@@ -1,6 +1,0 @@
-//convert inches to cm  https://www.google.com/search?q=square+feet+to+acres&ie=utf-8&oe=utf-8#q=convert+inches+to+cm
-9 inch		22.86 cm
-15 inch		38.10 cm
-911 inch		2313.94 cm
-33 inch		83.82 cm
-16 inch		40.64 cm

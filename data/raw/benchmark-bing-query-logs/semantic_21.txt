@@ -1,6 +1,0 @@
-//convert hex to binary  http://www.binaryhexconverter.com/hex-to-binary-converter
-123A		0001 0010 0011 1010
-469E		0100 0110 1001 1110
-AAE352		1010 1010 1110 0011 0101 0010
-123		0001 0010 0011
-3333		0011 0011 0011 0011

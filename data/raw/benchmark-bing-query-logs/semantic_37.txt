@@ -1,6 +1,0 @@
-//convert m s to mph   http://www.metric-conversions.org/speed/meters-per-second-to-miles-per-hour.htm
-2 m/s		4.473873 mph
-89 m/s		199.0873 mph
-123 m/s		275.1432 mph
-12 m/s		26.84324 mph
-33 m/s		73.81890 mph

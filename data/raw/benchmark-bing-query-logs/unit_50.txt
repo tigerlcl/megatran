@@ -1,6 +1,0 @@
-//convert mg to ml
-1 mg		2 ml
-43 mg		86 ml
-211 mg		422 ml
-100 mg		200 ml
-304 mg		608 ml

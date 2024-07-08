@@ -1,6 +1,0 @@
-//convert minutes to hundredths http://www.postalemployeenetwork.com/time-conversion-print.htm
-13 minutes		.22
-43 minutes		.72
-58 minutes		.97
-15 minutes		.25
-44 minutes		.73

@@ -1,6 +1,0 @@
-//convert square feet to square yards  http://www.bing.com/search?q=square+feet+to+square+yards&qs=n&form=QBRE&pq=square+feet+to+square+yards&sc=8-27&sp=-1&sk=&cvid=DB7CB65FF57241AFABB51EC37B83D89A
-9 square feet		1 square yards
-390 square feet		43.3333333 square yards
-2456 square feet		272.888889 square yards
-123 square feet		13.6666667 square yards
-872 square feet		96.8888889 square yards

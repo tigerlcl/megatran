@@ -1,6 +1,0 @@
-//prefix a word with a, an
-used car		a used car
-honest mistake		an honest mistake
-computer		a computer
-orange		an orange
-hour		an hour

@@ -1,6 +1,0 @@
-//convert grams to ounces
-1 g		0.03527396 oz
-30 g		1.05821886 oz
-1500 g		52.910943 oz
-3 g		0.10582189 oz
-23 g		0.81130113 oz
