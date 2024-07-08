@@ -1,0 +1,82 @@
+
+2024-07-08 13:56:28,184 - INFO - Loading dataset
+2024-07-08 13:56:28,185 - INFO - Processing data/raw/benchmark-stackoverflow/1.txt
+2024-07-08 13:56:33,348 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-07-08 13:56:33,385 - INFO - Code Gen LLM cost: {'completion_tokens': 301, 'prompt_tokens': 123, 'total_tokens': 424}
+2024-07-08 13:56:33,385 - INFO - Code not found, continue to next
+2024-07-08 13:56:33,385 - INFO - Processing data/raw/benchmark-stackoverflow/2.txt
+2024-07-08 13:56:37,090 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-07-08 13:56:37,096 - INFO - Code Gen LLM cost: {'completion_tokens': 171, 'prompt_tokens': 118, 'total_tokens': 289}
+2024-07-08 13:56:37,096 - INFO - Code not found, continue to next
+2024-07-08 13:56:37,096 - INFO - Processing data/raw/benchmark-stackoverflow/3.txt
+2024-07-08 13:56:41,939 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-07-08 13:56:41,946 - INFO - Code Gen LLM cost: {'completion_tokens': 231, 'prompt_tokens': 159, 'total_tokens': 390}
+2024-07-08 13:56:41,947 - INFO - Code not found, continue to next
+2024-07-08 13:56:41,947 - INFO - Code not found, continue to next
+2024-07-08 13:59:12,461 - INFO - Loading dataset
+2024-07-08 13:59:12,461 - INFO - Processing data/raw/benchmark-stackoverflow/1.txt
+2024-07-08 13:59:20,232 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-07-08 13:59:20,249 - INFO - Code Gen LLM cost: {'completion_tokens': 388, 'prompt_tokens': 123, 'total_tokens': 511}
+2024-07-08 13:59:20,249 - INFO - Code not found, continue to next
+2024-07-08 13:59:20,249 - INFO - Processing data/raw/benchmark-stackoverflow/2.txt
+2024-07-08 13:59:24,017 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-07-08 13:59:24,020 - INFO - Code Gen LLM cost: {'completion_tokens': 168, 'prompt_tokens': 118, 'total_tokens': 286}
+2024-07-08 13:59:24,020 - INFO - Code not found, continue to next
+2024-07-08 13:59:24,020 - INFO - Processing data/raw/benchmark-stackoverflow/3.txt
+2024-07-08 13:59:28,539 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-07-08 13:59:28,543 - INFO - Code Gen LLM cost: {'completion_tokens': 262, 'prompt_tokens': 159, 'total_tokens': 421}
+2024-07-08 13:59:28,543 - INFO - Code not found, continue to next
+2024-07-08 14:03:26,222 - INFO - Loading dataset
+2024-07-08 14:03:26,222 - INFO - Processing data/raw/benchmark-stackoverflow/1.txt
+2024-07-08 14:03:28,555 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-07-08 14:03:28,581 - INFO - Code Gen LLM cost: {'completion_tokens': 82, 'prompt_tokens': 123, 'total_tokens': 205}
+2024-07-08 14:03:28,581 - INFO - Code not found, continue to next
+2024-07-08 14:03:28,581 - INFO - Processing data/raw/benchmark-stackoverflow/2.txt
+2024-07-08 14:03:32,000 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-07-08 14:03:32,013 - INFO - Code Gen LLM cost: {'completion_tokens': 163, 'prompt_tokens': 118, 'total_tokens': 281}
+2024-07-08 14:03:32,013 - INFO - Code not found, continue to next
+2024-07-08 14:03:32,013 - INFO - Processing data/raw/benchmark-stackoverflow/3.txt
+2024-07-08 14:03:37,577 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-07-08 14:03:37,579 - INFO - Code Gen LLM cost: {'completion_tokens': 201, 'prompt_tokens': 159, 'total_tokens': 360}
+2024-07-08 14:03:37,579 - INFO - Code not found, continue to next
+2024-07-08 14:08:45,971 - INFO - Loading dataset
+2024-07-08 14:08:45,971 - INFO - Processing data/raw/benchmark-stackoverflow/1.txt
+2024-07-08 14:08:48,877 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-07-08 14:08:48,900 - INFO - Code Gen LLM cost: {'completion_tokens': 86, 'prompt_tokens': 125, 'total_tokens': 211}
+2024-07-08 14:08:48,900 - INFO - Evaluating result
+2024-07-08 14:08:48,902 - INFO - Processing data/raw/benchmark-stackoverflow/2.txt
+2024-07-08 14:08:51,400 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-07-08 14:08:51,404 - INFO - Code Gen LLM cost: {'completion_tokens': 77, 'prompt_tokens': 120, 'total_tokens': 197}
+2024-07-08 14:08:51,404 - INFO - Evaluating result
+2024-07-08 14:08:51,404 - ERROR - Error when running code: could not convert string to float: '#'
+2024-07-08 14:08:51,404 - ERROR - Error when running code: could not convert string to float: '$'
+2024-07-08 14:08:51,405 - ERROR - Error when running code: could not convert string to float: '%'
+2024-07-08 14:08:51,405 - ERROR - Error when running code: could not convert string to float: '&'
+2024-07-08 14:08:51,405 - ERROR - Error when running code: could not convert string to float: "'"
+2024-07-08 14:08:51,405 - ERROR - Error when running code: could not convert string to float: '('
+2024-07-08 14:08:51,405 - ERROR - Error when running code: could not convert string to float: ')'
+2024-07-08 14:08:51,405 - INFO - Processing data/raw/benchmark-stackoverflow/3.txt
+2024-07-08 14:08:53,426 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-07-08 14:08:53,431 - INFO - Code Gen LLM cost: {'completion_tokens': 38, 'prompt_tokens': 161, 'total_tokens': 199}
+2024-07-08 14:08:53,431 - INFO - Code not found, continue to next
+2024-07-08 14:10:20,618 - INFO - Loading dataset
+2024-07-08 14:10:20,619 - INFO - Processing data/raw/benchmark-stackoverflow/1.txt
+2024-07-08 14:10:23,240 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-07-08 14:10:23,265 - INFO - Code Gen LLM cost: {'completion_tokens': 79, 'prompt_tokens': 125, 'total_tokens': 204}
+2024-07-08 14:10:23,265 - INFO - Evaluating result
+2024-07-08 14:10:23,266 - INFO - Processing data/raw/benchmark-stackoverflow/2.txt
+2024-07-08 14:10:25,439 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-07-08 14:10:25,445 - INFO - Code Gen LLM cost: {'completion_tokens': 66, 'prompt_tokens': 120, 'total_tokens': 186}
+2024-07-08 14:10:25,445 - INFO - Evaluating result
+2024-07-08 14:10:25,445 - ERROR - Error when running code: could not convert string to float: '#'
+2024-07-08 14:10:25,445 - ERROR - Error when running code: could not convert string to float: '$'
+2024-07-08 14:10:25,445 - ERROR - Error when running code: could not convert string to float: '%'
+2024-07-08 14:10:25,446 - ERROR - Error when running code: could not convert string to float: '&'
+2024-07-08 14:10:25,446 - ERROR - Error when running code: could not convert string to float: "'"
+2024-07-08 14:10:25,446 - ERROR - Error when running code: could not convert string to float: '('
+2024-07-08 14:10:25,446 - ERROR - Error when running code: could not convert string to float: ')'
+2024-07-08 14:10:25,446 - INFO - Processing data/raw/benchmark-stackoverflow/3.txt
+2024-07-08 14:10:27,773 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-07-08 14:10:27,777 - INFO - Code Gen LLM cost: {'completion_tokens': 37, 'prompt_tokens': 161, 'total_tokens': 198}
+2024-07-08 14:10:27,777 - INFO - Code not found, continue to next
+2024-07-08 14:10:27,785 - INFO - {'total_pass': 0, 'total_test': 10, 'pass_rate': 0.0}

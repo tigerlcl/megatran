@@ -1,0 +1,1 @@
+convert(): encode the input character to utf-8
