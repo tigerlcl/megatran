@@ -4,7 +4,8 @@ import re
 API_TRIGGER = {
     "format()": "format the input data properly",
     "convert()": "convert the input data to the desired format",
-    "regex()": "apply proper regex pattern to process"
+    "regex()": "apply proper regex pattern to process",
+    "extract()": "extract certain information from input",
 }
 
 
@@ -23,7 +24,7 @@ class InstructionBuilder:
     # TODO: integrate more APIs
     def __load_inst_data(self):
         if not os.path.exists(self.inst_fp):
-            self.inst_data = self.test_header  # set header as instruction if not specified
+            self.inst_data = "perform data transformation: " + self.test_header  # set header as instruction if not specified
         else:
             with open(self.inst_fp, 'r') as f:
                 for line in f.readlines():

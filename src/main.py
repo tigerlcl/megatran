@@ -23,7 +23,7 @@ def main():
 
     # sorted_list = ['1.txt', '2.txt', '3.txt'] # for debug
     # sorted_list = ['5.txt']
-    for f in tqdm(sorted_list[:10]):
+    for f in tqdm(sorted_list):
         test_fp = os.path.join(dataset_dir, f)
         inst_fp = os.path.join(cfg["instruction_dir"], args.dataset, f)
         logging.info(f"Processing {test_fp}")
@@ -32,6 +32,7 @@ def main():
         instBuilder = InstructionBuilder(inst_fp, test_fp, args.shot)
         instruction = instBuilder.run()
         test_data = instBuilder.load_test_data()
+        logging.info(f"Instruction: {instruction}")
 
         # run OpenAI inference and generate code
         py_fn = f.replace('.txt', '.py')
@@ -42,13 +43,18 @@ def main():
 
         # exec code and evaluate result
         if codeExist:
-            import temp_solve
-            importlib.reload(temp_solve)  # reload auto-generated module
+            try:
+                import temp_solve
+                importlib.reload(temp_solve)  # reload auto-generated module
+            except Exception as e:
+                logging.error(f"Error when importing code: {e}")
+                continue  # skip if code failed
+
             for test in test_data:
                 try:
                     res = temp_solve.solution(test[0])
                 except Exception as e:
-                    # logging.error(f"Error when running code: {e}")
+                    logging.error(f"Error when running code: {e}")
                     res = None
                 test.append(res)
 

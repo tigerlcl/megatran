@@ -11,7 +11,7 @@ class CodeGenerator:
         self.llm = ChatOpenAI(
             model_name=cfg["model_name"],
             api_key=cfg["api_key"],
-            temperature=0.2,
+            temperature=0.2,  # pre-set now
         )
 
     def run(self, instruction, code_fp):
