@@ -17,13 +17,10 @@ def main():
     # load dataset
     logging.info("Loading dataset")
     files = [f for f in os.listdir(dataset_dir) if f.endswith(".txt")]
-    # Sort the list using the numeric part of the filenames
-    sorted_list = sorted(files, key=lambda x: int(x.split('.')[0]))
     resultAnalyzer = ResultAnalyzer()
 
     # sorted_list = ['1.txt', '2.txt', '3.txt'] # for debug
-    # sorted_list = ['5.txt']
-    for f in tqdm(sorted_list):
+    for f in tqdm(files):
         test_fp = os.path.join(dataset_dir, f)
         inst_fp = os.path.join(cfg["instruction_dir"], args.dataset, f)
         logging.info(f"Processing {test_fp}")

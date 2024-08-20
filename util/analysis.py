@@ -43,5 +43,6 @@ def compare_values(a, b, tolerance=1e-6):
         a = float(a)
         b = float(b)
         return abs(a - b) < tolerance
-    except ValueError:
+    except Exception:
+
         return a == b

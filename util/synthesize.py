@@ -6,6 +6,7 @@ API_TRIGGER = {
     "convert()": "convert the input data to the desired format",
     "regex()": "apply proper regex pattern to process",
     "extract()": "extract certain information from input",
+    "general()": "complete data transformation",
 }
 
 
@@ -24,7 +25,15 @@ class InstructionBuilder:
     # TODO: integrate more APIs
     def __load_inst_data(self):
         if not os.path.exists(self.inst_fp):
-            self.inst_data = "perform data transformation: " + self.test_header  # set header as instruction if not specified
+            # set header as instruction if not specified
+            self.inst_data = "general()"
+
+            # make dir
+            os.makedirs(os.path.dirname(self.inst_fp), exist_ok=True)
+
+            # write instruction to file
+            with open(self.inst_fp, 'w') as f:
+                f.write(self.inst_data)
         else:
             with open(self.inst_fp, 'r') as f:
                 for line in f.readlines():
