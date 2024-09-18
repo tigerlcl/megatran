@@ -1,0 +1,26 @@
+{
+    "chat": "First element in the second set",
+    "instruction": "extract(): Retrieve the first element from the second set of a given pair.",
+    "context": {
+        "input": "A group of sets",
+        "output": "The first element from the second set"
+    },
+    "tuples": [
+        {
+            "input": "{{aaa, bbb}, {ccc, ddd}, {eee, fff}}",
+            "output": "ccc"
+        },
+        {
+            "input": "{{x, y}, {z, zz}}",
+            "output": "z"
+        },
+        {
+            "input": "{{a}, {bb}, {ccc, ddd, eee, fff}}",
+            "output": "bb"
+        },
+        {
+            "input": "{{p, q}, {r, s, t}, {u, v, w}}",
+            "output": "r"
+        }
+    ]
+}

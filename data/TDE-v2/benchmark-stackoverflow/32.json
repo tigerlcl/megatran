@@ -1,0 +1,30 @@
+{
+    "chat": "Algorithm help! Fast algorithm in searching for a string with its partner",
+    "instruction": "domain_map(): Map a DNA sequence to its partner sequence",
+    "context": {
+        "input": "a DNA sequence",
+        "output": "the partner DNA sequence"
+    },
+    "tuples": [
+        {
+            "input": "TAGTC",
+            "output": "ATCAG"
+        },
+        {
+            "input": "CGCAT",
+            "output": "GCGTA"
+        },
+        {
+            "input": "ACCAG",
+            "output": "TGGTC"
+        },
+        {
+            "input": "GACTA",
+            "output": "CTGAT"
+        },
+        {
+            "input": "CGCAA",
+            "output": "GCGTT"
+        }
+    ]
+}

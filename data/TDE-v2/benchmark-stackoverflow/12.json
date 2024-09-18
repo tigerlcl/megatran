@@ -1,0 +1,58 @@
+{
+    "chat": "Number formatting using K, M, B",
+    "instruction": "format(): Format numbers into K, M, B notation",
+    "context": {
+        "input": "a number",
+        "output": "formatted number with K, M, B"
+    },
+    "tuples": [
+        {
+            "input": "10000",
+            "output": "10K"
+        },
+        {
+            "input": "212321",
+            "output": "212K"
+        },
+        {
+            "input": "9876549",
+            "output": "9M"
+        },
+        {
+            "input": "7321876984",
+            "output": "7M"
+        },
+        {
+            "input": "1111111111",
+            "output": "1B"
+        },
+        {
+            "input": "12123123123",
+            "output": "12B"
+        },
+        {
+            "input": "10001",
+            "output": "10K"
+        },
+        {
+            "input": "212341",
+            "output": "212K"
+        },
+        {
+            "input": "9876149",
+            "output": "9M"
+        },
+        {
+            "input": "7321176984",
+            "output": "7M"
+        },
+        {
+            "input": "2111111111",
+            "output": "2B"
+        },
+        {
+            "input": "22123123123",
+            "output": "22B"
+        }
+    ]
+}

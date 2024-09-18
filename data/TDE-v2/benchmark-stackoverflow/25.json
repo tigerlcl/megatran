@@ -1,0 +1,58 @@
+{
+    "chat": "Month to number conversion",
+    "instruction": "domain_map(): Convert month names to their corresponding numerical values",
+    "context": {
+        "input": "a particular month name",
+        "output": "the corresponding month number"
+    },
+    "tuples": [
+        {
+            "input": "January",
+            "output": "1"
+        },
+        {
+            "input": "February",
+            "output": "2"
+        },
+        {
+            "input": "March",
+            "output": "3"
+        },
+        {
+            "input": "April",
+            "output": "4"
+        },
+        {
+            "input": "May",
+            "output": "5"
+        },
+        {
+            "input": "June",
+            "output": "6"
+        },
+        {
+            "input": "July",
+            "output": "7"
+        },
+        {
+            "input": "August",
+            "output": "8"
+        },
+        {
+            "input": "September",
+            "output": "9"
+        },
+        {
+            "input": "October",
+            "output": "10"
+        },
+        {
+            "input": "November",
+            "output": "11"
+        },
+        {
+            "input": "December",
+            "output": "12"
+        }
+    ]
+}

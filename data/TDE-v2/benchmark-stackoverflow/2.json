@@ -1,0 +1,50 @@
+{
+  "chat": "convert non-ASCII characters to their URL-encoded equivalents",
+  "instruction": "domain_map(): Convert characters to their URL-encoded equivalents",
+  "context": {
+    "input": "single character outside the ASCII set",
+    "output": "URL-encoded string with a \"%\" followed by two hexadecimal digits"
+  },
+  "tuples": [
+    {
+      "input": " ",
+      "output": "%20"
+    },
+    {
+      "input": "!",
+      "output": "%21"
+    },
+    {
+      "input": "\"",
+      "output": "%22"
+    },
+    {
+      "input": "#",
+      "output": "%23"
+    },
+    {
+      "input": "$",
+      "output": "%24"
+    },
+    {
+      "input": "%",
+      "output": "%25"
+    },
+    {
+      "input": "&",
+      "output": "%26"
+    },
+    {
+      "input": "'",
+      "output": "%27"
+    },
+    {
+      "input": "(",
+      "output": "%28"
+    },
+    {
+      "input": ")",
+      "output": "%29"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+    "chat": "How does Stack Overflow generate its SEO-friendly URLs?",
+    "instruction": "format(): Generate a SEO-friendly URL for the given text",
+    "context":{
+        "input": "a string",
+        "output": "a SEO-friendly URL"
+    },
+    "tuples": [
+        {
+            "input": "How do you change a title to be part of the URL like Stack Overflow",
+            "output": "how-do-you-change-a-title-to-be-part-of-the-url-like-stack-overflow"
+        },
+        {
+            "input": "Built-In Character Casing functions in .Net",
+            "output": "built-in-character-casing-functions-in-net"
+        },
+        {
+            "input": "What's the difference between String and string",
+            "output": "whats-the-difference-between-string-and-string"
+        },
+        {
+            "input": "Asp.Net Routing - Replace white spaces %20 with dashes from URLs generated",
+            "output": "asp-net-routing-replace-white-spaces-20-with-dashes-from-urls-generated"
+        },
+        {
+            "input": ".NET method to convert a string to sentence case",
+            "output": "net-method-to-convert-a-string-to-sentence-case"
+        }
+    ]
+}

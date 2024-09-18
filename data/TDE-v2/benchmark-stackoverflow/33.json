@@ -1,0 +1,30 @@
+{
+    "chat": "Prefix a word with 'a' or 'an'",
+    "instruction": "transform(): Determine the correct article ('a' or 'an') to prefix a given word.",
+    "context": {
+        "input": "a word",
+        "output": "the word prefixed with the correct article"
+    },
+    "tuples": [
+        {
+            "input": "used car",
+            "output": "a used car"
+        },
+        {
+            "input": "honest mistake",
+            "output": "an honest mistake"
+        },
+        {
+            "input": "computer",
+            "output": "a computer"
+        },
+        {
+            "input": "orange",
+            "output": "an orange"
+        },
+        {
+            "input": "hour",
+            "output": "an hour"
+        }
+    ]
+}

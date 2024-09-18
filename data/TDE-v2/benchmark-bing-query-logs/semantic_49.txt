@@ -1,0 +1,6 @@
+//convert polar to rectangular  http://www.daycounter.com/Calculators/Polar-To-Rectangular-Calculator.phtml
+(2, 4)		(1.99513, 0.13951)
+(4, 60)		(2.00000, 3.46410)
+(10, 30)		(8.66025, 5.00000)
+(23, 35)		(18.84050, 13.19226)
+(11, 22)		(10.19902, 4.12067)

@@ -1,0 +1,6 @@
+//camelize caseing
+active_record		activeRecord
+good_spirit		goodSpirit
+a_string_var		aStringVar
+num_hit_count_curr		numHitCountCurr
+a_bc_de_fg_hi_jk		aBcDeFgHiJk

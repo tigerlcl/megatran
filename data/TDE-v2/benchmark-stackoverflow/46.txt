@@ -1,0 +1,5 @@
+//first element in the second set
+{{aaa, bbb}, {ccc, ddd}, {eee, fff}}		ccc
+{{x, y}, {z, zz}}		z
+{{a}, {bb}, {ccc, ddd, eee, fff}}		bb
+{{p, q}, {r, s, t}, {u, v, w}}		r

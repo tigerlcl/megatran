@@ -1,0 +1,7 @@
+//ip address to country
+131.107.160.83		United States
+103.235.46.39		Hong Kong
+151.249.89.230		Germany
+129.97.208.23		Canada
+173.194.44.50		United States
+77.67.27.8		Germany

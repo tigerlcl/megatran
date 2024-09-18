@@ -1,0 +1,6 @@
+//convert mb to gb https://www.google.com/search?q=convert+meters+to+miles&ie=utf-8&oe=utf-8#q=convert+mb+to+gb
+1 mb		0.001 gb
+790 mb		0.790 gb
+49 mb		0.049 gb
+744 mb		0.744 gb
+42 mb		0.042 gb

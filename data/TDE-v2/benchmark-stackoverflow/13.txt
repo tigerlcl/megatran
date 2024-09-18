@@ -1,0 +1,5 @@
+//Number formatting, use , before . , and keep two digits after .
+432324		432,234.00
+12334.13		12,334.13
+12334.133		12,334.13
+12334.137		12,334.13

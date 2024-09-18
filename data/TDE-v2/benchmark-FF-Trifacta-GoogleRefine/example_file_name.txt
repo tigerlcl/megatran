@@ -1,0 +1,5 @@
+john	smith		jsmith
+adam	williams		awilliams
+james	johnson		jjohnson
+alice	bob		abob
+charlie	denis		cdenis

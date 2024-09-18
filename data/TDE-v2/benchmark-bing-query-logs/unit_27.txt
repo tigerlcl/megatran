@@ -1,0 +1,6 @@
+//convert feet to inches  https://www.google.com/search?q=convert+fahrenheit+to+celsius&ie=utf-8&oe=utf-8#q=convert+feet+to+inches
+2 feet		24 inches
+30 feet		360 inches
+53 feet		636 inches
+44 feet		528 inches
+23 feet		276 inches

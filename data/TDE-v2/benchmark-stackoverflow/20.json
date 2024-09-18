@@ -1,0 +1,30 @@
+{
+  "chat": "replace multiple spaces with a single space",
+  "instruction": "format(): Replace multiple spaces with a single space",
+  "context": {
+    "input": "string with multiple spaces",
+    "output": "string with a single space"
+  },
+  "tuples": [
+    {
+      "input": "1 2 3 4   5",
+      "output": "1 2 3 4 5"
+    },
+    {
+      "input": "How are    you",
+      "output": "How are you"
+    },
+    {
+      "input": "What   is the   matter",
+      "output": "What is the matter"
+    },
+    {
+      "input": "1   2  4  4",
+      "output": "1 2 4 4"
+    },
+    {
+      "input": "How   fun",
+      "output": "How fun"
+    }
+  ]
+}

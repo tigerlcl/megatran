@@ -1,0 +1,30 @@
+{
+    "chat": "Remove spaces in HTML source in between markups?",
+    "instruction": "extract(): Remove unnecessary spaces in HTML source code",
+    "context": {
+        "input": "HTML source code",
+        "output": "cleaned HTML source code"
+    },
+    "tuples": [
+        {
+            "input": "<p>blahblahblah</p>            <p>blahblahblah</p>",
+            "output": "<p>blahblahblah</p><p>blahblahblah</p>"
+        },
+        {
+            "input": "<head> <title>A Simple HTML Example</title> </head>",
+            "output": "<head><title>A Simple HTML Example</title></head>"
+        },
+        {
+            "input": "<h2>HTML is Easy To Learn</h2> <p>Welcome to the world of the </p>",
+            "output": "<h2>HTML is Easy To Learn</h2><p>Welcome to the world of the </p>"
+        },
+        {
+            "input": "<h2>test1</h2> <p>test2</p>",
+            "output": "<h2>test1</h2><p>test2</p>"
+        },
+        {
+            "input": "<h2>test1</h2> <p>test2</p> <p>test3</p> <p>test4</p>",
+            "output": "<h2>test1</h2><p>test2</p><p>test3</p><p>test4</p>"
+        }
+    ]
+}

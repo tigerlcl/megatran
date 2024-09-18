@@ -1,0 +1,6 @@
+//convert liters to ounces  http://www.bing.com/search?q=convert+liters+to+ounces&qs=n&form=QBRE&pq=convert+liters+to+ounces&sc=8-24&sp=-1&sk=&cvid=72C63370436C468BAF87898878785554
+1 L		33.8140227 oz
+5870 L		198488.313 oz
+35 L		1183.4908 oz
+112 L		3787.17055 oz
+99 L		3347.58825 oz

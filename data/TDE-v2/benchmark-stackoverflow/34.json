@@ -1,0 +1,30 @@
+{
+    "chat": "Median",
+    "instruction": "domain_calculate(): Calculate the median of a list of numbers.",
+    "context": {
+        "input": "a list of numbers",
+        "output": "the median value"
+    },
+    "tuples": [
+        {
+            "input": "2, 2, 3, 4, 7, 8, 9",
+            "output": 4
+        },
+        {
+            "input": "1, 2, 3, 5, 6, 7, 8",
+            "output": 5
+        },
+        {
+            "input": "1, 2, 3",
+            "output": 2
+        },
+        {
+            "input": "4, 5, 6, 7, 8, 9, 10, 11, 12",
+            "output": 8
+        },
+        {
+            "input": "1, 2, 3, 4, 5",
+            "output": 3
+        }
+    ]
+}

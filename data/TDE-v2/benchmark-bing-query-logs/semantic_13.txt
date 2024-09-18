@@ -1,0 +1,6 @@
+//convert regular time to military time  http://www.calculatehours.com/Military_Time_Converter.html
+1:00 PM		1300
+6:00 PM		1800
+11:00 PM		2300
+8:00 AM		0800
+11:00 AM		1100

@@ -1,0 +1,6 @@
+//Remove HTML tags from string
+<b>Hello World.</b><br/><p><i>Is there anyone out there?</i><p>		Hello World. Is there anyone out there?
+<html><body>bla bla</td><td>bla bla<body><html>		bla bla bla bla
+<b>hello world!</b><br /><i>it is me! !</i>		hello world! it is me! !
+<b>hello world!</b><br /><i>it is me! !</i>		hello world! it is me! !
+<b>tests</b>		tests

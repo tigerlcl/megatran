@@ -1,0 +1,34 @@
+{
+    "chat": "Email Validation",
+    "instruction": "transform(): Check if the provided email address is valid.",
+    "context": {
+        "input": "an email address",
+        "output": "return original email address if valid, otherwise return 'invalid'"
+    },
+    "tuples": [
+        {
+            "input": "testing@invalid@email.com",
+            "output": "invalid"
+        },
+        {
+            "input": "walter@xyz.com",
+            "output": "walter@xyz.com"
+        },
+        {
+            "input": "tom@qq.com",
+            "output": "tom@qq.com"
+        },
+        {
+            "input": "asdf",
+            "output": "invalid"
+        },
+        {
+            "input": "ab@xyz.xyz",
+            "output": "ab@xyz.xyz"
+        },
+        {
+            "input": "wa@lter@xyz.com",
+            "output": "invalid"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+//convert grams to pounds  http://www.bing.com/search?q=convert+grams+to+pounds&qs=n&form=QBRE&pq=convert+grams+to+pounds&sc=8-23&sp=-1&sk=&cvid=9BB5A5EDFF42464AB966C353D2AA7869
+6 g		0.01322774 b
+89 g		0.19621141 b
+100 g		0.22046226 b
+66 g		0.14550509 b
+23 g		0.05070632 b

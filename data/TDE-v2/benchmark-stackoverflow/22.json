@@ -1,0 +1,31 @@
+{
+    "chat": "Phone number processing",
+    "instruction": "extract(): Process phone numbers by removing non-numeric characters",
+    "context": {
+        "input": "a phone number",
+        "output": "a numeric phone number"
+    },
+    "tuples": [
+        {
+            "input": "519-781-8816",
+            "output": "5197818816"
+        },
+        {
+            "input": "(913)-444-5555",
+            "output": "9134445555"
+        },
+        {
+            "input": "509-791-8816",
+            "output": "5097918816"
+        },
+        {
+            "input": "(912)-444-5555",
+            "output": "9124445555"
+        },
+        {
+            "input": "4654764768",
+            "output": "4654764768"
+        }
+            
+    ]
+}

@@ -1,0 +1,30 @@
+{
+  "chat": "Use scientific notation only if needed",
+  "instruction": "format(): Convert numbers to scientific notation when appropriate",
+  "context": {
+    "input": "double value which can be int or float",
+    "output": "string with scientific notation"
+  },
+  "tuples": [
+    {
+      "input": ".2367",
+      "output": "0.23"
+    },
+    {
+      "input": ".00367",
+      "output": "3.67E-3"
+    },
+    {
+      "input": "22.3",
+      "output": "22.3"
+    },
+    {
+      "input": "3364.0",
+      "output": "3.36E3"
+    },
+    {
+      "input": "11",
+      "output": "11"
+    }
+  ]
+}

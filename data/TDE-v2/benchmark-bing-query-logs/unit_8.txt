@@ -1,0 +1,6 @@
+//convert inches to mm  https://www.google.com/search?q=%2F%2Fconvert+celsius+to+fahrenheit&ie=utf-8&oe=utf-8#q=convert+inches+to+mm
+3 inch		76.2 mm
+17 inch		431.8 mm
+100 inch		2540 mm
+13 inch		330.2 mm
+33 inch		838.2 mm

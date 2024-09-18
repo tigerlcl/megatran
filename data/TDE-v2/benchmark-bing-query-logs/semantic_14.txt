@@ -1,0 +1,6 @@
+//convert lat long to utm  http://www.earthpoint.us/Convert.aspx
+32.44, 44.11		583662mE, 3589556mN
+36.11, 80.22		429797mE, 3996430mN
+10.82, 20.21		413642mE, 1196188mN
+23.11, 39.33		533791mE, 2555735mN
+10.22, -39.33		463857mE, 1129755mN

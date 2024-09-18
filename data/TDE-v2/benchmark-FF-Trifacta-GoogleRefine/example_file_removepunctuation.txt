@@ -1,0 +1,5 @@
+"Do you like this site?",		Do you like this site
+"--cool--",		cool
+"...ok!",		ok
+"None",		None
+"test if this works"?		test if this works

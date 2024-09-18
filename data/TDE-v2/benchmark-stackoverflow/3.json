@@ -1,0 +1,26 @@
+{
+  "chat": "Remove HTML tags from string",
+  "instruction": "extract(): Remove HTML tags from text",
+  "context": {
+    "input": "string with HTML tags",
+    "output": "string without HTML tags"
+  },
+  "tuples": [
+    {
+      "input": "<b>Hello World.</b><br/><p><i>Is there anyone out there?</i><p>",
+      "output": "Hello World. Is there anyone out there?"
+    },
+    {
+      "input": "<html><body>bla bla</td><td>bla bla<body><html>",
+      "output": "bla bla bla bla"
+    },
+    {
+      "input": "<b>hello world!</b><br /><i>it is me! !</i>",
+      "output": "hello world! it is me! !"
+    },
+    {
+      "input": "<b>test</b>",
+      "output": "test"
+    }
+  ]
+}

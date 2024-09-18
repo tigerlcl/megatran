@@ -1,0 +1,27 @@
+{
+    "chat": "Number formatting, use , before . , and keep two digits after .",
+    "instruction": "format(): Format numbers by adding commas and keeping two decimal places",
+    "context": {
+        "input": "a number",
+        "output": "formatted number with commas and two decimal places"
+    },
+    "tuples": [
+        {
+            "input": "432324",
+            "output": "432,324.00"
+        },
+        {
+            "input": "12334.13",
+            "output": "12,334.13"
+
+        },
+        {
+            "input": "12334.133",
+            "output": "12,334.13"
+        },
+        {
+            "input": "12334.137",
+            "output": "12,334.13"
+        }
+    ]
+}

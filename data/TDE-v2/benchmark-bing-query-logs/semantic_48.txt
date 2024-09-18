@@ -1,0 +1,6 @@
+//convert hourly wage to salary  http://us.thesalarycalculator.co.uk/hourly.php
+$12/hour		$24,960.00
+$15/hour		$31,200.00
+$40/hour		$83,200.00
+$22/hour		$45,760.00
+$11/hour		$22,880.00

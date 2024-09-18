@@ -1,0 +1,30 @@
+{
+    "chat": "plus 20",
+    "instruction": "domain_calculate(): Add 20 to the input number.",
+    "context": {
+        "input": "A number",
+        "output": "A number increased by 20"
+    },
+    "tuples": [
+        {
+            "input": 25,
+            "output": 45
+        },
+        {
+            "input": 35,
+            "output": 55
+        },
+        {
+            "input": 10,
+            "output": 30
+        },
+        {
+            "input": 1,
+            "output": 21
+        },
+        {
+            "input": 11,
+            "output": 31
+        }
+    ]
+}

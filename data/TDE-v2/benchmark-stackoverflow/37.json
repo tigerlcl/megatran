@@ -1,0 +1,30 @@
+{
+    "chat": "Get month name from Date",
+    "instruction": "extract(): Retrieve the month name from a given date in 'MM/DD/YYYY' format.",
+    "context": {
+        "input": "a date in 'MM/DD/YYYY' format",
+        "output": "the name of the month"
+    },
+    "tuples": [
+        {
+            "input": "10/11/2009",
+            "output": "October"
+        },
+        {
+            "input": "01/12/2012",
+            "output": "January"
+        },
+        {
+            "input": "03/14/2013",
+            "output": "March"
+        },
+        {
+            "input": "05/09/2014",
+            "output": "May"
+        },
+        {
+            "input": "12/12/2012",
+            "output": "December"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "chat": "Most efficient way to remove special characters from string, only allow A-Z a-Z 0-9",
+    "instruction": "extract(): Remove special characters and retain only A-Z, a-z, 0-9",
+    "context": {
+        "input": "a string with special characters",
+        "output": "a cleaned string with only alphanumeric characters"
+    },
+    "tuples": [
+        {
+            "input": "BA(kfa1237fdn",
+            "output": "BAkfa1237fdn"
+        },
+        {
+            "input": "*9kk12jf7eYTk1",
+            "output": "9kk12jf7eYTk1"
+        },
+        {
+            "input": "()kjfdsk13^$$*A",
+            "output": "kjfdsk13A"
+        },
+        {
+            "input": "092378LLLL111",
+            "output": "092378LLLL111"
+        },
+        {
+            "input": "11PP))(*(&^%%&*",
+            "output": "11PP"
+        }
+    ]
+}

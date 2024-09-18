@@ -1,0 +1,30 @@
+{
+    "chat": "Phone number processing",
+    "instruction": "format(): Process phone numbers by formatting them into a standard format",
+    "context": {
+        "input": "a phone number",
+        "output": "a formatted phone number"
+    },
+    "tuples": [
+        {
+            "input": "5197818816",
+            "output": "519-781-8816"
+        },
+        {
+            "input": "9134445555",
+            "output": "913-444-5555"
+        },
+        {
+            "input": "5097918816",
+            "output": "509-791-8816"
+        },
+        {
+            "input": "9124445555",
+            "output": "912-444-5555"
+        },
+        {
+            "input": "4654764768",
+            "output": "465-476-4768"
+        }
+    ]
+}

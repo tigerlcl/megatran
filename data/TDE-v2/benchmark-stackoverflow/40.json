@@ -1,0 +1,30 @@
+{
+    "chat": "Standard Deviation Calculation",
+    "instruction": "domain_calculate(): Calculate the standard deviation of a list of numbers.",
+    "context": {
+        "input": "a list of numbers",
+        "output": "the standard deviation value"
+    },
+    "tuples": [
+        {
+            "input": "12, 13, 14, 12",
+            "output": 0.957
+        },
+        {
+            "input": "12, 13, 14, 12, 5",
+            "output": 3.564
+        },
+        {
+            "input": "12, 12",
+            "output": 0
+        },
+        {
+            "input": "1, 100, 2",
+            "output": 56.871
+        },
+        {
+            "input": "1, 100, 2, 50",
+            "output": 47.091
+        }
+    ]
+}

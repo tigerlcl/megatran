@@ -1,0 +1,6 @@
+//convert inches to meters   https://www.google.com/search?q=convert+liters+to+ounces&ie=utf-8&oe=utf-8#q=convert+inches+to+meters
+4 inch		0.1016 m
+980 inch		24.892 m
+2000 inch		50.8 m
+321 inch		8.1534 m
+111 inch		2.8194 m

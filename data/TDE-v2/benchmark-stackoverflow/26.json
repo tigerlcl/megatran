@@ -1,0 +1,30 @@
+{
+    "chat": "How to filter out xml attributes?",
+    "instruction": "extract()",
+    "context": {
+        "input": "xml",
+        "output": "xml without attributes"
+    },
+    "tuples": [
+        {
+            "input": "<sample1 xns:id=\"e7b014d9-6271-4e32-921d-7488edfd6ea4\">a</sample1>",
+            "output": "<sample1>a</sample1>"
+        },
+        {
+            "input": "<sample2 xns:id=\"d3450e86-7264-4512-9891-6c7183257741\">b</sample2>",
+            "output": "<sample2>b</sample2>"
+        },
+        {
+            "input": "<sample4 xns:id=\"abc\">xyz</sample3>",
+            "output": "<sample3>xyz</sample3>"
+        },
+        {
+            "input": "<sample3 xns:id=\"7f04f178-f235-4647-8584-c4e77f73fecf\">c</sample3>",
+            "output": "<sample3>c</sample3>"
+        },
+        {
+            "input": "<sample6 xns:id=\"test\">b</sample6>",
+            "output": "<sample6>b</sample6>"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "chat": "Extract month from datetime",
+    "instruction": "extract(): Extract the month from a given datetime string.",
+    "context": {
+        "input": "a datetime string",
+        "output": "the month as a string"
+    },
+    "tuples": [
+        {
+            "input": "Thursday, 1st January, 1970",
+            "output": "January"
+        },
+        {
+            "input": "Wednesday, 2nd March, 1980",
+            "output": "March"
+        },
+        {
+            "input": "Monday, 5th May, 1999",
+            "output": "May"
+        },
+        {
+            "input": "Friday, 3rd April, 1989",
+            "output": "April"
+        },
+        {
+            "input": "Sunday, 3rd March, 2013",
+            "output": "March"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "chat": "Extract something between the first dot and the last dot, not so good an example, don't know what it tries to do",
+    "instruction": "extract(): Extract substring between the first dot and the last dot",
+    "context": {
+        "input": "full url",
+        "output": "substring between the first dot and the last dot"
+    },
+    "tuples": [
+        {
+            "input": "www.google.com",
+            "output": "google"
+        },
+        {
+            "input": "www.facebook.com",
+            "output": "facebook"
+        },
+        {
+            "input": "www.sina.cn",
+            "output": "sina"
+        },
+        {
+            "input": "www.cs.uwaterloo.ca",
+            "output": "cs.uwaterloo"
+        },
+        {
+            "input": "www.abc.com",
+            "output": "abc"
+        }
+    ]
+}

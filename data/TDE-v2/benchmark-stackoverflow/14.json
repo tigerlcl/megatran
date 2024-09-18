@@ -1,0 +1,30 @@
+{
+    "chat": "Pad numbers to the left",
+    "instruction": "format(): Pad numbers to the left with zeros to ensure they are two digits.",
+    "context": {
+        "input": "a number",
+        "output": "padded number with leading zeros"
+    },
+    "tuples": [
+        {
+            "input": "2",
+            "output": "02"
+        },
+        {
+            "input": "3",
+            "output": "03"
+        },
+        {
+            "input": "12",
+            "output": "12"
+        },
+        {
+            "input": "1",
+            "output": "01"
+        },
+        {
+            "input": "5",
+            "output": "05"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+//convert acres to square feet https://www.google.com/search?q=convert+liters+to+ounces&ie=utf-8&oe=utf-8#q=convert+acres+to+square+feet
+2 acres		87120 square feet
+0.5 acres		21780 square feet
+15 acres		653400 square feet
+1 acres		43560 square feet
+4 acres		174240 square feet

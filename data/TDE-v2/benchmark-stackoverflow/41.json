@@ -1,0 +1,34 @@
+{
+    "chat": "ip address to country",
+    "instruction": "domain_map(): Map an IP address to its corresponding country.",
+    "context": {
+        "input": "an IP address",
+        "output": "the country associated with the IP address"
+    },
+    "tuples": [
+        {
+            "input": "131.107.160.83",
+            "output": "United States"
+        },
+        {
+            "input": "103.235.46.39",
+            "output": "Hong Kong"
+        },
+        {
+            "input": "151.249.89.230",
+            "output": "Germany"
+        },
+        {
+            "input": "129.97.208.23",
+            "output": "Canada"
+        },
+        {
+            "input": "173.194.44.50",
+            "output": "United States"
+        },
+        {
+            "input": "77.67.27.8",
+            "output": "Germany"
+        }
+    ]
+}

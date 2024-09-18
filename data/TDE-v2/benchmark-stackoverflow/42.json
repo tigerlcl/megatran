@@ -1,0 +1,43 @@
+{
+    "chat": "Year to common year or leap year",
+    "instruction": "domain_calculate(): Classify a year as 'common' or 'leap'.",
+    "context": {
+        "input": "a year",
+        "output": "the classification of the year as 'common' or 'leap'"
+    },
+    "tuples": [
+        {
+            "input": "2007",
+            "output": "common"
+        },
+        {
+            "input": "2008",
+            "output": "leap"
+        },
+        {
+            "input": "2009",
+            "output": "common"
+        },
+        {
+            "input": "2010",
+            "output": "common"
+        },
+        {
+            "input": "2011",
+            "output": "common"
+        },
+        {
+            "input": "2012",
+            "output": "leap"
+        },
+        {
+            "input": "2016",
+            "output": "leap"
+        },
+        {
+            "input": "2017",
+            "output": "common"
+        }
+    ]
+}
+

@@ -1,0 +1,30 @@
+{
+    "chat": "Splitting string into sizes of 4",
+    "instruction": "format(): Split a given string into chunks of 4 characters.",
+    "context": {
+        "input": "a string of characters",
+        "output": "a string of characters, with each chunk of 4 characters separated by comma"
+    },
+    "tuples": [
+        {
+            "input": "1111222233334444",
+            "output": "1111,2222,3333,4444"
+        },
+        {
+            "input": "123412341234",
+            "output": "1234,1234,1234"
+        },
+        {
+            "input": "1111222",
+            "output": "1111,222"
+        },
+        {
+            "input": "123412345",
+            "output": "1234,1234,5"
+        },
+        {
+            "input": "1",
+            "output": "1"
+        }
+    ]
+}

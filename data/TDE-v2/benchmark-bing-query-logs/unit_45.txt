@@ -1,0 +1,6 @@
+//convert square meters to square feet  http://www.bing.com/search?q=convert+square+meters+to+square+feet&qs=n&form=QBRE&pq=convert+square+meters+to+square+feet&sc=6-36&sp=-1&sk=&cvid=8508968AFE4A4C1FAE568F78EEE6C5DE
+4 square meters		43.0556417 square feet
+560 square meters		6027.78983 square feet
+2000 square meters		21527.8208 square feet
+42 square meters		452.084238 square feet
+323 square meters		3476.74306 square feet

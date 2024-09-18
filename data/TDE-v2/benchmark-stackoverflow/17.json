@@ -1,0 +1,31 @@
+{
+  "chat": "Leave proper space",
+  "instruction": "format(): Ensure proper spacing in the input text",
+  "context": {
+    "input": "text with inconsistent spacing",
+    "output": "text with proper spacing"
+  },
+  "tuples": [
+    {
+      "input": "SampleText",
+      "output": "Sample Text"
+    },
+    {
+      "input": "DoesNotMatterHowManyWords",
+      "output": "Does Not Matter How Many Words"
+    },
+    {
+      "input": "WhatIf",
+      "output": "What If"
+    },
+    {
+      "input": "SunInTheRain",
+      "output": "Sun In The Rain"
+    },
+    {
+      "input": "TestIsGood",
+      "output": "Test Is Good"
+    }
+  ]
+}
+

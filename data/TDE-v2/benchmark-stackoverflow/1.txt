@@ -1,0 +1,6 @@
+//http://stackoverflow.com/questions/15072552/use-scientific-notation-only-if-needed
+.2367		0.23
+.00367		3.67E-3
+22.3		22.3
+3364.0		3.36E3
+11		11

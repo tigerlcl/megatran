@@ -1,0 +1,30 @@
+{
+  "chat": "Get distinct characters of a string",
+  "instruction": "extract(): Get distinct characters from text",
+  "context": {
+    "input": "string with possibly repeated characters",
+    "output": "string with only distinct characters"
+  },
+  "tuples": [
+    {
+      "input": "DHCH",
+      "output": "DHC"
+    },
+    {
+      "input": "KLKLHHMO",
+      "output": "KLHMO"
+    },
+    {
+      "input": "XUCHU",
+      "output": "XUCH"
+    },
+    {
+      "input": "123123",
+      "output": "123"
+    },
+    {
+      "input": "9090",
+      "output": "90"
+    }
+  ]
+}

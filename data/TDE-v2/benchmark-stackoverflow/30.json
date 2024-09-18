@@ -1,0 +1,34 @@
+{
+    "chat": "Math expressions evaluation",
+    "instruction": "domain_calculate(): Calculate the result of basic math expressions",
+    "context": {
+        "input": "a mathematical expression",
+        "output": "the evaluated result"
+    },
+    "tuples": [
+        {
+            "input": "3+6",
+            "output": "9"
+        },
+        {
+            "input": "40-9",
+            "output": "31"
+        },
+        {
+            "input": "2*6",
+            "output": "12"
+        },
+        {
+            "input": "9/3",
+            "output": "3"
+        },
+        {
+            "input": "1+9-2",
+            "output": "8"
+        },
+        {
+            "input": "1+4/2",
+            "output": "3"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "chat": "F -> C, need calculation + rounding",
+    "instruction": "domain_calculate(): Fahrenheit temperatures to Celsius with rounding",
+    "context": {
+        "input": "a temperature in Fahrenheit",
+        "output": "temperature in Celsius, rounded"
+    },
+    "tuples": [
+        {
+            "input": "40",
+            "output": "4"
+        },
+        {
+            "input": "45",
+            "output": "7"
+        },
+        {
+            "input": "50",
+            "output": "10"
+        },
+        {
+            "input": "55",
+            "output": "13"
+        },
+        {
+            "input": "60",
+            "output": "16"
+        }
+    ]
+}

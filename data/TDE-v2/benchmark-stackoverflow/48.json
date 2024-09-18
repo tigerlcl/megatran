@@ -1,0 +1,30 @@
+{
+    "chat": "convert y-m-d to m/d/y, add 0 if necessary",
+    "instruction": "format(): Convert date format from y-m-d to m/d/y, ensuring zero-padded month and day.",
+    "context": {
+        "input": "A string of dates in y-m-d format",
+        "output": "A string of dates in m/d/y format"
+    },
+    "tuples": [
+        {
+            "input": "2009/8/1",
+            "output": "08/01/2009"
+        },
+        {
+            "input": "2001/12/12",
+            "output": "12/12/2001"
+        },
+        {
+            "input": "2014/3/2",
+            "output": "03/02/2014"
+        },
+        {
+            "input": "2011/12/22",
+            "output": "12/22/2011"
+        },
+        {
+            "input": "2012/4/11",
+            "output": "04/11/2012"
+        }
+    ]
+}

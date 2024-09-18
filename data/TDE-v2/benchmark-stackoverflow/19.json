@@ -1,0 +1,30 @@
+{
+  "chat": "lower to upper case",
+  "instruction": "format(): Convert phrases to upper case",
+  "context": {
+    "input": "text with phrases to convert to upper case",
+    "output": "text with upper case"
+  },
+  "tuples": [
+    {
+      "input": "What is the matter",
+      "output": "WHAT IS THE MATTER"
+    },
+    {
+      "input": "Something is wrong",
+      "output": "SOMETHING IS WRONG"
+    },
+    {
+      "input": "Background color",
+      "output": "BACKGROUND COLOR"
+    },
+    {
+      "input": "Everyday activity",
+      "output": "EVERYDAY ACTIVITY"
+    },
+    {
+      "input": "Test is good for everyone",
+      "output": "TEST IS GOOD FOR EVERYONE"
+    }
+  ]
+}

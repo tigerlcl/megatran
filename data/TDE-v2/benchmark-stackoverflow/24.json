@@ -1,0 +1,30 @@
+{
+    "chat": "Sort alphanumeric string, then alternate numeric and alphabet characters",
+    "instruction": "transform(): Sort alphanumeric strings and alternate numeric and alphabet characters in the output",
+    "context": {
+        "input": "an alphanumeric string",
+        "output": "a sorted string with alternating numeric and alphabet characters"
+    },
+    "tuples": [
+        {
+            "input": "D4C3B2A1",
+            "output": "A1B2C3D4"
+        },
+        {
+            "input": "E7C3B2A1",
+            "output": "A1B2C3E7"
+        },
+        {
+            "input": "ABCDE12345",
+            "output": "A1B2C3D4E5"
+        },
+        {
+            "input": "AB12345CDE",
+            "output": "A1B2C3D4E5"
+        },
+        {
+            "input": "E12HY5",
+            "output": "E1H2Y5"
+        }
+    ]
+}

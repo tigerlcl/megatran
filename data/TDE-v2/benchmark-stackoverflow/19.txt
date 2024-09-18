@@ -1,0 +1,6 @@
+//lower to upper case
+What is the matter		WHAT IS THE MATTER
+Something is wrong		SOMETHING IS WRONG
+Background color		BACKGROUND COLOR
+Everyday activity		EVERYDAY ACTIVITY
+Test is good for everyone		TEST IS GOOD FOR EVERYONE

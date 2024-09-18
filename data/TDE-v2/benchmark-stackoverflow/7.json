@@ -1,0 +1,30 @@
+{
+    "chat": "Get a domain name from a URL",
+    "instruction": "extract(): Extract domain names from URLs",
+    "context": {
+        "input": "URL",
+        "output": "domain name"
+    },
+    "tuples": [
+        {
+            "input": "http://www.google.com/url?sa=t&source=web&ct=res&cd=1&ved=0CAgQFjAA&url=http://www.test.com/&rct=j&q=test&ei=G2phS-HdJJWTjAfckvHJDA&usg=AFQjCNFSEAztaqtkaIvEzxmRm2uOARn1kQ",
+            "output": "google.com"
+        },
+        {
+            "input": "http://www.beta.microsoft.com/path/page.htm",
+            "output": "microsoft.com"
+        },
+        {
+            "input": "http://www.beta.microsoft.co.uk/path/page.htm",
+            "output": "microsoft.co.uk"
+        },
+        {
+            "input": "ftp://username:password@website.com",
+            "output": "website.com"
+        },
+        {
+            "input": "http://www.microsoft.com/",
+            "output": "microsoft.com"
+        }
+    ]
+}

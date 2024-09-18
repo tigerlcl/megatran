@@ -1,0 +1,54 @@
+{
+  "chat": "How to strip http:// and www. from an entered domain name using c#",
+  "instruction": "extract(): Remove http and www from domain names",
+  "context": {
+    "input": "domain names",
+    "output": "domain names without http and www"
+  },
+  "tuples": [
+    {
+      "input": "http://stackoverflow.com",
+      "output": "stackoverflow.com"
+    },
+    {
+      "input": "www.stackoverflow.com",
+      "output": "stackoverflow.com"
+    },
+    {
+      "input": "http://www.stackoverflow.com",
+      "output": "stackoverflow.com"
+    },
+    {
+      "input": "facebook.com",
+      "output": "facebook.com"
+    },
+    {
+      "input": "www.facebook.com",
+      "output": "facebook.com"
+    },
+    {
+      "input": "http://facebook.com",
+      "output": "facebook.com"
+    },
+    {
+      "input": "http://www.facebook.com",
+      "output": "facebook.com"
+    },
+    {
+      "input": "google.com",
+      "output": "google.com"
+    },
+    {
+      "input": "www.google.com",
+      "output": "google.com"
+    },
+    {
+      "input": "http://google.com",
+      "output": "google.com"
+    },
+    {
+      "input": "http://www.google.com",
+      "output": "google.com"
+    }
+  ]
+}

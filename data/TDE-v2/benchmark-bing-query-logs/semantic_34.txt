@@ -1,0 +1,6 @@
+//convert rgb to pantone  http://euro-bags.eu/pantone
+244,237,124		100
+244,237,71		101
+249,232,20		102
+249,214,22		109
+198,160,12		117

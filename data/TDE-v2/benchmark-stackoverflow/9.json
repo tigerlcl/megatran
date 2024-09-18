@@ -1,0 +1,110 @@
+{
+    "chat": "Get MIME type from filename extension",
+    "instruction": "domain_map(): Map the MIME type from the filename extension",
+    "context": {
+        "input": "the extension of the filename",
+        "output": "the MIME type"
+    },
+    "tuples": [
+        {
+            "input": ".html",
+            "output": "text/html"
+        },
+        {
+            "input": ".css",
+            "output": "text/css"
+        },
+        {
+            "input": ".js",
+            "output": "application/javascript"
+        },
+        {
+            "input": ".json",
+            "output": "application/json"
+        },
+        {
+            "input": ".xml",
+            "output": "application/xml"
+        },
+        {
+            "input": ".jpg",
+            "output": "image/jpeg"
+        },
+        {
+            "input": ".jpeg",
+            "output": "image/jpeg"
+        },
+        {
+            "input": ".png",
+            "output": "image/png"
+        },
+        {
+            "input": ".gif",
+            "output": "image/gif"
+        },
+        {
+            "input": ".svg",
+            "output": "image/svg+xml"
+        },
+        {
+            "input": ".pdf",
+            "output": "application/pdf"
+        },
+        {
+            "input": ".zip",
+            "output": "application/zip"
+        },
+        {
+            "input": ".rar",
+            "output": "application/vnd.rar"
+        },
+        {
+            "input": ".mp4",
+            "output": "video/mp4"
+        },
+        {
+            "input": ".mp3",
+            "output": "audio/mpeg"
+        },
+        {
+            "input": ".wav",
+            "output": "audio/wav"
+        },
+        {
+            "input": ".ogg",
+            "output": "audio/ogg"
+        },
+        {
+            "input": ".csv",
+            "output": "text/csv"
+        },
+        {
+            "input": ".txt",
+            "output": "text/plain"
+        },
+        {
+            "input": ".doc",
+            "output": "application/msword"
+        },
+        {
+            "input": ".docx",
+            "output": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        },
+        {
+            "input": ".xls",
+            "output": "application/vnd.ms-excel"
+        },
+        {
+            "input": ".xlsx",
+            "output": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        },
+        {
+            "input": ".ppt",
+            "output": "application/vnd.ms-powerpoint"
+        },
+        {
+            "input": ".pptx",
+            "output": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+//convert inch to centimeter   https://www.google.com/search?q=convert+fahrenheit+to+celsius&ie=utf-8&oe=utf-8#q=convert+inches+to+millimeters
+8 inch		20.32 cm
+39 inch		99.06 cm
+300 inch		762 cm
+30 inch		76.2 cm
+2 inch		5.08 cm

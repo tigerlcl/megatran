@@ -1,0 +1,30 @@
+{
+  "chat": "Concateneate words with Camel Case",
+  "instruction": "format(): Convert phrases to Camel Case",
+  "context": {
+    "input": "text with phrases to convert",
+    "output": "text with Camel Case"
+  },
+  "tuples": [
+    {
+      "input": "Hello there everyone",
+      "output": "HelloThereEveryone"
+    },
+    {
+      "input": "What is wrong",
+      "output": "WhatIsWrong"
+    },
+    {
+      "input": "Wait for a while",
+      "output": "WaitForAWhile"
+    },
+    {
+      "input": "Main page",
+      "output": "MainPage"
+    },
+    {
+      "input": "Test is good for everyone",
+      "output": "TestIsGoodForEveryone"
+    }
+  ]
+}

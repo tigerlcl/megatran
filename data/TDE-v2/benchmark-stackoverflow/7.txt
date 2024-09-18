@@ -1,0 +1,6 @@
+//Get a domain name from a URL
+http://www.google.com/url?sa=t&source=web&ct=res&cd=1&ved=0CAgQFjAA&url=http://www.test.com/&rct=j&q=test&ei=G2phS-HdJJWTjAfckvHJDA&usg=AFQjCNFSEAztaqtkaIvEzxmRm2uOARn1kQ		google.com
+http://www.beta.microsoft.com/path/page.htm		microsoft.com
+http://www.beta.microsoft.co.uk/path/page.htm		microsoft.co.uk
+ftp://username:password@website.com		website.com
+http://www.microsoft.com/		microsoft.com

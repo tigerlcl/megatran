@@ -1,0 +1,30 @@
+{
+    "chat": "person name abbreviation",
+    "instruction": "format(): Generate the abbreviation for a given person's name.",
+    "context": {
+        "input": "a person's full name",
+        "output": "the abbreviated name"
+    },
+    "tuples": [
+        {
+            "input": "Jack Bauer",
+            "output": "J. Bauer"
+        },
+        {
+            "input": "Charles Wooten",
+            "output": "C. Wooten"
+        },
+        {
+            "input": "Kim Lee",
+            "output": "K. Lee"
+        },
+        {
+            "input": "Lucy Goodman",
+            "output": "L. Goodman"
+        },
+        {
+            "input": "Rachel Green",
+            "output": "R. Green"
+        }
+    ]
+}

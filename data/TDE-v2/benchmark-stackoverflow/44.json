@@ -1,0 +1,30 @@
+{
+    "chat": "phone number, default 425",
+    "instruction": "format(): Format a phone number to include a default area code if missing.",
+    "context": {
+        "input": "a phone number",
+        "output": "a formatted phone number"
+    },
+    "tuples": [
+        {
+            "input": "499-999-2020",
+            "output": "499-999-2020"
+        },
+        {
+            "input": "999-2020",
+            "output": "425-999-2020"
+        },
+        {
+            "input": "390-9292",
+            "output": "425-390-9292"
+        },
+        {
+            "input": "299-398-0003",
+            "output": "299-398-0003"
+        },
+        {
+            "input": "321-2020",
+            "output": "425-321-2020"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "chat": "Add commas to numbers",
+    "instruction": "format(): format numbers by adding commas",
+    "context": {
+        "input": "a number",
+        "output": "formatted number with commas at every three digits"
+    },   
+    "tuples": [
+        {
+            "input": "1234567890",
+            "output": "1,234,567,890"
+        },
+        {
+            "input": "2134",
+            "output": "2,134"
+        },
+        {
+            "input": "1234.123",
+            "output": "1,234.123"
+        },
+        {
+            "input": "123456789",
+            "output": "123,456,789"
+        },
+        {
+            "input": "1234",
+            "output": "1,234"
+        }
+    ]
+}

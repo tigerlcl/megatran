@@ -1,0 +1,74 @@
+{
+    "chat": "Chemistry: Parsing a chemical formula",
+    "instruction": "transform(): Convert chemical formulas to their corresponding elemental compositions",
+    "context": {
+        "input": "a chemical formula",
+        "output": "the corresponding elemental composition"
+    },
+    "tuples": [
+        {
+            "input": "Pb",
+            "output": "Pb"
+        },
+        {
+            "input": "H",
+            "output": "H"
+        },
+        {
+            "input": "Pb2",
+            "output": "2Pb"
+        },
+        {
+            "input": "H2",
+            "output": "2H"
+        },
+        {
+            "input": "3Pb2",
+            "output": "6Pb"
+        },
+        {
+            "input": "PbH2",
+            "output": "Pb 2H"
+        },
+        {
+            "input": "(PbH2)2",
+            "output": "2Pb 4H"
+        },
+        {
+            "input": "Pb(H2)2",
+            "output": "Pb 4H"
+        },
+        {
+            "input": "(Pb(H2)2)2NO3",
+            "output": "2Pb 8H N 3O"
+        },
+        {
+            "input": "(Ag(Pb(H2)2)2)2SO4",
+            "output": "2Ag 4Pb 16H S 4O"
+        },
+        {
+            "input": "Pb(CH3(CH2)2CH3)2",
+            "output": "Pb 2C 6H 4C 8H 2C 6H"
+        },
+        {
+            "input": "Na2(CH3(CH2)2CH3)2",
+            "output": "2Na 2C 6H 4C 8H 2C 6H"
+        },
+        {
+            "input": "Tc(H2O)3Fe3(SO4)2",
+            "output": "Tc 6H 3O 3Fe 2S 8O"
+        },
+        {
+            "input": "Tc(H2O)3(Fe3(SO4)2)2",
+            "output": "Tc 6H 3O 6Fe 4S 16O"
+        },
+        {
+            "input": "(Tc(H2O)3(Fe3(SO4)2)2)2",
+            "output": "2Tc 12H 6O 12Fe 8S 32O"
+        },
+        {
+            "input": "(Tc(H2O)3CO(Fe3(SO4)2)2)2",
+            "output": "2Tc 12H 6O 2C 2O 12Fe 8S 32O"
+        }
+    ]
+}

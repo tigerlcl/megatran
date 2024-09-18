@@ -1,0 +1,6 @@
+//Extract something between the first dot and the last dot, not so good an example, don't know what it tries to do 
+www.google.com		google
+www.facebook.com		facebook
+www.sina.cn		sina
+www.cs.uwaterloo.ca		cs.uwaterloo
+www.abc.com		abc

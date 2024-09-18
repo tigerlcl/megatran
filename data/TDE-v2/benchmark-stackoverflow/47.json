@@ -1,0 +1,30 @@
+{
+    "chat": "capture capital words",
+    "instruction": "extract(): Capture all capitalized words from a given text.",
+    "context": {
+        "input": "A string of text",
+        "output": "A list of capitalized words found in the text"
+    },
+    "tuples": [
+        {
+            "input": "This is one of the best breakfasts I have had! Is the decor dated? Absolutely but it just adds to the nostalgic charm! The place just reeks of beef cooking... Ahhh delicious! Check out the pastry cases!!!! OMG, is all I have to say!",
+            "output": ["OMG"]
+        },
+        {
+            "input": "When she asked if we had reservations, I replied no, and she commented NO? You KNOW IT IS SATURDAY. I wanted to say yes, yesterday was Friday and tomorrow is Sunday. Instead I replied that I was TERRIBLY sorry i did not realize i needed a reservation",
+            "output": ["NO", "KNOW", "IT", "IS", "SATURDAY", "TERRIBLY"]
+        },
+        {
+            "input": "ABC ajib DDD xyz",
+            "output": ["ABC", "DDD"]
+        },
+        {
+            "input": "This is MY work",
+            "output": ["MY"]
+        },
+        {
+            "input": "HOW ARE YOU",
+            "output": ["HOW", "ARE", "YOU"]
+        }
+    ]
+}

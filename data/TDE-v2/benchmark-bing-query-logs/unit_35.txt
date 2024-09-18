@@ -1,0 +1,6 @@
+//convert euros to dollars   google.com
+8 euro		8.86 dollar
+67 euro		74.20 dollar
+360 euro		398.70 dollar
+21 euro		23.26 dollar
+11 euro		12.18 dollar
