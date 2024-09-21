@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert roman numerals to normal numbers",
+    "instruction": "domain_calculate(): convert roman numerals to their equivalent normal numbers.",
+    "context": {
+        "input": "a roman numeral",
+        "output": "the equivalent normal number"
+    },
+    "tuples": [
+        {
+            "input": "III",
+            "output": 3
+        },
+        {
+            "input": "CCXXXIII",
+            "output": 233
+        },
+        {
+            "input": "C",
+            "output": 100
+        },
+        {
+            "input": "CCXXII",
+            "output": 222
+        },
+        {
+            "input": "MCCXXXIV",
+            "output": 1234
+        }
+    ]
+}

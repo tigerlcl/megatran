@@ -1,4 +1,4 @@
-//convert 11010two to base ten
+//convert base two to base ten
 010101		21
 111101		61
 1011010		90

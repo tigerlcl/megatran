@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert to scientific notation",
+    "instruction": "format(): convert numbers to scientific notation if needed.",
+    "context": {
+        "input": "numbers in standard format",
+        "output": "numbers in scientific notation"
+    },
+    "tuples": [
+        {
+            "input": "1234",
+            "output": "1.234E3"
+        },
+        {
+            "input": "23912000",
+            "output": "2.3912E7"
+        },
+        {
+            "input": "98100",
+            "output": "9.81E4"
+        },
+        {
+            "input": "110",
+            "output": "1.1E2"
+        },
+        {
+            "input": "12345",
+            "output": "1.2345E4"
+        }
+    ]
+}

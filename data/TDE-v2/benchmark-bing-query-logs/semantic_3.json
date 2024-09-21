@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert to fractional notation",
+    "instruction": "format(): convert a float to a fractional notation",
+    "context": {
+        "input": "a float",
+        "output": "a fractional notation"
+    },
+    "tuples": [
+        {
+            "input": 0.003,
+            "output": "3/1000"
+        },
+        {
+            "input": 0.125,
+            "output": "1/8"
+        },
+        {
+            "input": 4.5,
+            "output": "9/2"
+        },
+        {
+            "input": 0.25,
+            "output": "1/4"
+        },
+        {
+            "input": 0.2,
+            "output": "1/5"
+        }
+    ]
+}

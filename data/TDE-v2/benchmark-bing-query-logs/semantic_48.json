@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert hourly wage to salary",
+    "instruction": "domain_calculate(): Convert hourly wage to annual salary.",
+    "context": {
+        "input": "hourly wage",
+        "output": "annual salary"
+    },
+    "tuples": [
+        {
+            "input": "$12/hour",
+            "output": "$24,960.00"
+        },
+        {
+            "input": "$15/hour",
+            "output": "$31,200.00"
+        },
+        {
+            "input": "$40/hour",
+            "output": "$83,200.00"
+        },
+        {
+            "input": "$22/hour",
+            "output": "$45,760.00"
+        },
+        {
+            "input": "$11/hour",
+            "output": "$22,880.00"
+        }
+    ]
+}

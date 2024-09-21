@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert lat long to utm",
+    "instruction": "domain_calculate(): convert latitude and longitude coordinates to UTM (Universal Transverse Mercator) coordinates.",
+    "context": {
+        "input": "latitude and longitude",
+        "output": "UTM coordinates (easting and northing)"
+    },
+    "tuples": [
+        {
+            "input": "32.44, 44.11",
+            "output": "583662mE, 3589556mN"
+        },
+        {
+            "input": "36.11, 80.22",
+            "output": "429797mE, 3996430mN"
+        },
+        {
+            "input": "10.82, 20.21",
+            "output": "413642mE, 1196188mN"
+        },
+        {
+            "input": "23.11, 39.33",
+            "output": "533791mE, 2555735mN"
+        },
+        {
+            "input": "10.22, -39.33",
+            "output": "463857mE, 1129755mN"
+        }
+    ]
+}

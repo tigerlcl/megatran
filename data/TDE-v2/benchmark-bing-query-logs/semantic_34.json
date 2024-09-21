@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert rgb to pantone",
+    "instruction": "domain_map(): Convert RGB color values to their corresponding Pantone color codes.",
+    "context": {
+        "input": "RGB color values in format R,G,B",
+        "output": "Pantone color code"
+    },
+    "tuples": [
+        {
+            "input": "244,237,124",
+            "output": "100"
+        },
+        {
+            "input": "244,237,71",
+            "output": "101"
+        },
+        {
+            "input": "249,232,20",
+            "output": "102"
+        },
+        {
+            "input": "249,214,22",
+            "output": "109"
+        },
+        {
+            "input": "198,160,12",
+            "output": "117"
+        }
+    ]
+}

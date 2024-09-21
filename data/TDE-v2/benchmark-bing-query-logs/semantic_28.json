@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert decimal minutes to time",
+    "instruction": "domain_calculate(): Convert a given number of decimal minutes to a time format (HH:MM:SS).",
+    "context": {
+        "input": "a number of decimal minutes",
+        "output": "a time in HH:MM:SS format"
+    },
+    "tuples": [
+        {
+            "input": "1439",
+            "output": "23:59:00"
+        },
+        {
+            "input": "60",
+            "output": "01:00:00"
+        },
+        {
+            "input": "95",
+            "output": "01:35:00"
+        },
+        {
+            "input": "64",
+            "output": "01:04:00"
+        },
+        {
+            "input": "91",
+            "output": "01:31:00"
+        }
+    ]
+}

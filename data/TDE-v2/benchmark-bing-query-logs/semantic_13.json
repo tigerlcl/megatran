@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert regular time to military time",
+    "instruction": "format(): convert regular time to military time.",
+    "context": {
+        "input": "regular time (AM/PM)",
+        "output": "military time, 24-hour format"
+    },
+    "tuples": [
+        {
+            "input": "1:00 PM",
+            "output": "1300"
+        },
+        {
+            "input": "6:00 PM",
+            "output": "1800"
+        },
+        {
+            "input": "11:00 PM",
+            "output": "2300"
+        },
+        {
+            "input": "8:00 AM",
+            "output": "0800"
+        },
+        {
+            "input": "11:00 AM",
+            "output": "1100"
+        }
+    ]
+}

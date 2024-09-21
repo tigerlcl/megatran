@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert binary to hexadecimal",
+    "instruction": "domain_calculate(): convert binary numbers to their hexadecimal equivalents.",
+    "context": {
+        "input": "a binary number",
+        "output": "hexadecimal representation"
+    },
+    "tuples": [
+        {
+            "input": "101010",
+            "output": "2A"
+        },
+        {
+            "input": "11111111",
+            "output": "FF"
+        },
+        {
+            "input": "0000101",
+            "output": "5"
+        },
+        {
+            "input": "11",
+            "output": "3"
+        },
+        {
+            "input": "111",
+            "output": "7"
+        }
+    ]
+}

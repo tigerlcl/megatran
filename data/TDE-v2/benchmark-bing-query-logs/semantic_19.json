@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert timespan to string",
+    "instruction": "format(): convert a timespan in HH:MM:SS format to a human-readable string format.",
+    "context": {
+        "input": "timespan in HH:MM:SS format",
+        "output": "human-readable string format"
+    },
+    "tuples": [
+        {
+            "input": "00:06:32.4458750",
+            "output": "0 hrs, 6 mins, 32 secs"
+        },
+        {
+            "input": "11:12:13.7458750",
+            "output": "11 hrs, 12 mins, 14 secs"
+        },
+        {
+            "input": "23:01:09.0988712",
+            "output": "23 hrs, 1 mins, 9 secs"
+        },
+        {
+            "input": "12:21:09.2988712",
+            "output": "12 hrs, 21 mins, 9 secs"
+        },
+        {
+            "input": "23:31:21.4322211",
+            "output": "23 hrs, 31 mins, 21 secs"
+        }
+    ]
+}

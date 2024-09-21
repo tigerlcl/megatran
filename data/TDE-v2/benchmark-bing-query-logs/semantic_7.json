@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert decimal to hex",
+    "instruction": "domain_map(): convert decimal numbers to their hexadecimal equivalents.",
+    "context": {
+        "input": "decimal number",
+        "output": "hexadecimal representation"
+    },
+    "tuples": [
+        {
+            "input": 22,
+            "output": "16"
+        },
+        {
+            "input": 2156,
+            "output": "86C"
+        },
+        {
+            "input": 9876,
+            "output": "2694"
+        },
+        {
+            "input": 323,
+            "output": "143"
+        },
+        {
+            "input": 123234,
+            "output": "1E162"
+        }
+    ]
+}

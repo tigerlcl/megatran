@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert hex to ascii",
+    "instruction": "domain_map(): convert hexadecimal values to their ASCII character equivalents.",
+    "context": {
+        "input": "hexadecimal value",
+        "output": "ASCII character"
+    },
+    "tuples": [
+        {
+            "input": "34",
+            "output": "4"
+        },
+        {
+            "input": "55",
+            "output": "U"
+        },
+        {
+            "input": "74",
+            "output": "t"
+        },
+        {
+            "input": "44",
+            "output": "D"
+        },
+        {
+            "input": "22",
+            "output": "\""
+        }
+    ]
+}

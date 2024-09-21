@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert to hexadecimal",
+    "instruction": "domain_calculate(): Convert decimal numbers to hexadecimal representation.",
+    "context": {
+        "input": "decimal number",
+        "output": "hexadecimal number"
+    },
+    "tuples": [
+        {
+            "input": "214633",
+            "output": "34669"
+        },
+        {
+            "input": "1246367",
+            "output": "13049F"
+        },
+        {
+            "input": "9872031",
+            "output": "96A29F"
+        },
+        {
+            "input": "323",
+            "output": "143"
+        },
+        {
+            "input": "123234",
+            "output": "1E162"
+        }
+    ]
+}

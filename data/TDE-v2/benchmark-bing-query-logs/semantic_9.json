@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert cm to feet and inches",
+    "instruction": "unit_convert(): convert centimeters to feet and inches.",
+    "context": {
+        "input": "a length in centimeters",
+        "output": "length in feet and inches"
+    },
+    "tuples": [
+        {
+            "input": "3 cm",
+            "output": "0 feet and 1.1811 inches"
+        },
+        {
+            "input": "870 cm",
+            "output": "28 feet and 6.5197 inches"
+        },
+        {
+            "input": "69 cm",
+            "output": "2 feet and 3.1654 inches"
+        },
+        {
+            "input": "44 cm",
+            "output": "1 feet and 5.3228 inches"
+        },
+        {
+            "input": "555 cm",
+            "output": "18 feet and 2.5039 inches"
+        }
+    ]
+}

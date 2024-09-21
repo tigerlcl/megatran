@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert central time to eastern time",
+    "instruction": "domain_calculate(): Convert Central Time to Eastern Time.",
+    "context": {
+        "input": "time in Central Time",
+        "output": "time in Eastern Time"
+    },
+    "tuples": [
+        {
+            "input": "11:47 PM,Mon,Aug 17,2015",
+            "output": "12:47 AM,Tue,Aug 18,2015"
+        },
+        {
+            "input": "7:00 AM,Tue,Jul 7,2015",
+            "output": "8:00 AM,Tue,Jul 7,2015"
+        },
+        {
+            "input": "1:30 AM,Thu,May 14,2015",
+            "output": "2:30 AM,Thu,May 14,2015"
+        },
+        {
+            "input": "3:30 AM,Thu,May 14,2015",
+            "output": "4:30 AM,Thu,May 14,2015"
+        },
+        {
+            "input": "1:11 AM,Thu,May 21,2015",
+            "output": "2:11 AM,Thu,May 21,2015"
+        }
+    ]
+}

@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert mixed fraction to decimal",
+    "instruction": "domain_calculate(): Convert mixed fractions to decimal numbers.",
+    "context": {
+        "input": "mixed fraction",
+        "output": "decimal number"
+    },
+    "tuples": [
+        {
+            "input": "7 1/4",
+            "output": "7.25"
+        },
+        {
+            "input": "21 2/5",
+            "output": "21.4"
+        },
+        {
+            "input": "129",
+            "output": "129"
+        },
+        {
+            "input": "6 9/100",
+            "output": "6.09"
+        },
+        {
+            "input": "3 4/5",
+            "output": "3.8"
+        }
+    ]
+}

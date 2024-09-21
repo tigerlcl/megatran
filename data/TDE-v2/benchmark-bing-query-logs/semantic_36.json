@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert month number to month name",
+    "instruction": "domain_map(): Convert a month number to its corresponding month name.",
+    "context": {
+        "input": "month number",
+        "output": "month name"
+    },
+    "tuples": [
+        {
+            "input": "4",
+            "output": "April"
+        },
+        {
+            "input": "7",
+            "output": "July"
+        },
+        {
+            "input": "12",
+            "output": "December"
+        },
+        {
+            "input": "10",
+            "output": "October"
+        },
+        {
+            "input": "3",
+            "output": "March"
+        }
+    ]
+}

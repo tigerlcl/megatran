@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert Geographic Coordinate to nad83",
+    "instruction": "domain_calculate(): Convert geographic coordinates to NAD83 format.",
+    "context": {
+        "input": "latitude, longitude",
+        "output": "NAD83 latitude, NAD83 longitude"
+    },
+    "tuples": [
+        {
+            "input": "38.889139, -77.04942",
+            "output": "38.8892509, -77.0491194"
+        },
+        {
+            "input": "28.889139, -77.1234",
+            "output": "28.8894274, -77.1230153"
+        },
+        {
+            "input": "42.889139, -75.1234",
+            "output": "42.8892103, -75.1230043"
+        },
+        {
+            "input": "33.889139, -77.1234",
+            "output": "33.8893138, -77.1230692"
+        },
+        {
+            "input": "36.889139, -76.1234",
+            "output": "36.8892866, -76.1230571"
+        }
+    ]
+}

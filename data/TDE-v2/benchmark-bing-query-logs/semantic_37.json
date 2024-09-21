@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert m/s to mph",
+    "instruction": "unit_convert(): Convert a speed from meters per second to miles per hour.",
+    "context": {
+        "input": "speed in m/s",
+        "output": "speed in mph"
+    },
+    "tuples": [
+        {
+            "input": "2",
+            "output": "4.473873"
+        },
+        {
+            "input": "89",
+            "output": "199.0873"
+        },
+        {
+            "input": "123",
+            "output": "275.1432"
+        },
+        {
+            "input": "12",
+            "output": "26.84324"
+        },
+        {
+            "input": "33",
+            "output": "73.81890"
+        }
+    ]
+}

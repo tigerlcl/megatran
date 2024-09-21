@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert rgb to hex",
+    "instruction": "domain_map(): convert RGB values to their hexadecimal equivalents.",
+    "context": {
+        "input": "RGB values in the form of r,g,b",
+        "output": "hexadecimal representation"
+    },
+    "tuples": [
+        {
+            "input": "255,255,255",
+            "output": "#FFFFFF"
+        },
+        {
+            "input": "238,130,238",
+            "output": "#EE82EE"
+        },
+        {
+            "input": "147,112,219",
+            "output": "#9370DB"
+        },
+        {
+            "input": "219,112,147",
+            "output": "#DB7093"
+        },
+        {
+            "input": "34,139,34",
+            "output": "#228B22"
+        }
+    ]
+}

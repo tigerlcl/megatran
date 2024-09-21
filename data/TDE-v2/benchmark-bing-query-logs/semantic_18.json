@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert base two to base ten",
+    "instruction": "domain_calculate(): convert binary numbers to their decimal equivalents.",
+    "context": {
+        "input": "a binary number",
+        "output": "decimal representation"
+    },
+    "tuples": [
+        {
+            "input": "11111",
+            "output": 31
+        },
+        {
+            "input": "10101001",
+            "output": 169
+        },
+        {
+            "input": "100001101",
+            "output": 269
+        },
+        {
+            "input": "111",
+            "output": 7
+        },
+        {
+            "input": "101010",
+            "output": 42
+        }
+    ]
+}

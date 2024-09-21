@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert lat long to MGRS",
+    "instruction": "transform(): Convert a given latitude and longitude to MGRS format.",
+    "context": {
+        "input": "latitude and longitude",
+        "output": "the corresponding MGRS coordinate"
+    },
+    "tuples": [
+        {
+            "input": "23.11, -39.33",
+            "output": "24QVL6620855735"
+        },
+        {
+            "input": "44.11, -77.33",
+            "output": "18TUP1353886730"
+        },
+        {
+            "input": "66.99, -33.11",
+            "output": "25WDQ9520130269"
+        },
+        {
+            "input": "23.33, -39.55",
+            "output": "24QVL4377280158"
+        },
+        {
+            "input": "44.22, -77.44",
+            "output": "18TUP0509799203"
+        }
+    ]
+}

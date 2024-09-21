@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert pst to est",
+    "instruction": "domain_calculate(): Convert Pacific Standard Time (PST) to Eastern Standard Time (EST).",
+    "context": {
+        "input": "time in PST",
+        "output": "time in EST"
+    },
+    "tuples": [
+        {
+            "input": "9:41 PM, Aug 17, 2015",
+            "output": "12:41 AM, Aug 18, 2015"
+        },
+        {
+            "input": "1:00 AM, Jun 3, 2015",
+            "output": "4:00 AM, Jun 3, 2015"
+        },
+        {
+            "input": "10:00 AM, Mar 20, 2015",
+            "output": "1:00 PM, Mar 20, 2015"
+        },
+        {
+            "input": "5:00 AM, Jun 5, 2015",
+            "output": "8:00 AM, Jun 5, 2015"
+        },
+        {
+            "input": "11:00 AM, Mar 20, 2015",
+            "output": "2:00 PM, Mar 20, 2015"
+        }
+    ]
+}

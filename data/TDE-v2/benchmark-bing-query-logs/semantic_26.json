@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert ascii to hex",
+    "instruction": "domain_map(): Convert a given ASCII character to its hexadecimal representation.",
+    "context": {
+        "input": "an ASCII character",
+        "output": "a hexadecimal value"
+    },
+    "tuples": [
+        {
+            "input": "DC2",
+            "output": "12"
+        },
+        {
+            "input": "RS",
+            "output": "1E"
+        },
+        {
+            "input": "#",
+            "output": "23"
+        },
+        {
+            "input": "D",
+            "output": "44"
+        },
+        {
+            "input": "\"",
+            "output": "22"
+        }
+    ]
+}

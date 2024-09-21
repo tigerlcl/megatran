@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert to decimal notation",
+    "instruction": "format(): convert fractions to their decimal equivalents.",
+    "context": {
+        "input": "fraction in the form of a/b",
+        "output": "decimal representation"
+    },
+    "tuples": [
+        {
+            "input": "1/4",
+            "output": "0.25"
+        },
+        {
+            "input": "200/4",
+            "output": "50"
+        },
+        {
+            "input": "9/100",
+            "output": "0.09"
+        },
+        {
+            "input": "3/4",
+            "output": "0.75"
+        },
+        {
+            "input": "1/2",
+            "output": "0.5"
+        }
+    ]
+}

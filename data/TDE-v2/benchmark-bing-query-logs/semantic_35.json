@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert yyyymmdd to datetime",
+    "instruction": "format(): Convert a date in yyyymmdd format to a human-readable datetime format.",
+    "context": {
+        "input": "date in yyyymmdd format",
+        "output": "datetime in format 'MMM dd, yyyy'"
+    },
+    "tuples": [
+        {
+            "input": "19851231",
+            "output": "Dec 31, 1985"
+        },
+        {
+            "input": "19811120",
+            "output": "Nov 20, 1981"
+        },
+        {
+            "input": "20110301",
+            "output": "Mar 01, 2011"
+        },
+        {
+            "input": "19841121",
+            "output": "Nov 21, 1984"
+        },
+        {
+            "input": "20210311",
+            "output": "Mar 11, 2021"
+        }
+    ]
+}

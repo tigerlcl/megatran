@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert html to plain text",
+    "instruction": "extract(): convert HTML formatted text to plain text.",
+    "context": {
+        "input": "HTML formatted text",
+        "output": "plain text"
+    },
+    "tuples": [
+        {
+            "input": "<b>Hello World.</b><br/><p><i>Is there anyone out there?</i><p>",
+            "output": "Hello World.Is there anyone out there?"
+        },
+        {
+            "input": "<b>hello world!</b><br /><i>it is me</i>",
+            "output": "hello world!it is me"
+        },
+        {
+            "input": "<b>hello, </b><b>hi.</b><b>welcome</b>",
+            "output": "hello, hi.welcome"
+        },
+        {
+            "input": "<b>test</b>",
+            "output": "test"
+        },
+        {
+            "input": "<b>this</b><b> is</b><b> a</b><b> test</b>",
+            "output": "this is a test"
+        }
+    ]
+}

@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert to roman numerals",
+    "instruction": "domain_calculate(): Convert decimal numbers to Roman numerals.",
+    "context": {
+        "input": "decimal number",
+        "output": "Roman numeral"
+    },
+    "tuples": [
+        {
+            "input": "4",
+            "output": "IV"
+        },
+        {
+            "input": "1350",
+            "output": "MCCCL"
+        },
+        {
+            "input": "981",
+            "output": "CMLXXXI"
+        },
+        {
+            "input": "34",
+            "output": "XXXIV"
+        },
+        {
+            "input": "11",
+            "output": "XI"
+        }
+    ]
+}

@@ -1,1 +1,31 @@
-{}
+{
+    "chat": "convert psia to psig",
+    "instruction": "unit_convert(): Convert a given pressure in psia to psig.",
+    "context": {
+        "input": "a pressure in psia",
+        "output": "the corresponding pressure in psig"
+    },
+    "tuples": [
+        {
+            "input": "33 psia",
+            "output": "18.304051 psig"
+        },
+        {
+            "input": "17 psia",
+            "output": "2.304051 psig"
+        },
+        {
+            "input": "100 psia",
+            "output": "85.304051 psig"
+        },
+        {
+            "input": "22 psia",
+            "output": "7.304051 psig"
+        },
+        {
+            "input": "3 psia",
+            "output": "-11.695949 psig"
+        }
+    ]
+}
+

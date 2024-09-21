@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert hex to rgb",
+    "instruction": "domain_map(): convert a hexadecimal color code to its RGB representation.",
+    "context": {
+        "input": "hexadecimal color code",
+        "output": "RGB representation"
+    },
+    "tuples": [
+        {
+            "input": "#000000",
+            "output": "0,0,0"
+        },
+        {
+            "input": "#00FF00",
+            "output": "0,255,0"
+        },
+        {
+            "input": "#FF00FF",
+            "output": "255,0,255"
+        },
+        {
+            "input": "#FFFF3F",
+            "output": "255,255,63"
+        },
+        {
+            "input": "#223344",
+            "output": "34,51,68"
+        }
+    ]
+}

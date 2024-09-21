@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert excel date to datetime",
+    "instruction": "domain_calculate(): Convert a given Excel date to the corresponding datetime format.",
+    "context": {
+        "input": "Excel date",
+        "output": "datetime in format MM/dd/yyyy"
+    },
+    "tuples": [
+        {
+            "input": "39938",
+            "output": "05/05/2009"
+        },
+        {
+            "input": "39934",
+            "output": "05/01/2009"
+        },
+        {
+            "input": "39958",
+            "output": "05/25/2009"
+        },
+        {
+            "input": "36557",
+            "output": "02/01/2000"
+        },
+        {
+            "input": "39270",
+            "output": "07/07/2007"
+        }
+    ]
+}

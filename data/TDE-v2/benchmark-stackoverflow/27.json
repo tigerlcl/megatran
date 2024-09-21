@@ -1,6 +1,6 @@
 {
     "chat": "F -> C, need calculation + rounding",
-    "instruction": "domain_calculate(): Fahrenheit temperatures to Celsius with rounding",
+    "instruction": "unit_convert(): Fahrenheit temperatures to Celsius with rounding",
     "context": {
         "input": "a temperature in Fahrenheit",
         "output": "temperature in Celsius, rounded"

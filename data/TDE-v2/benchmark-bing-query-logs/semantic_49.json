@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert polar to rectangular",
+    "instruction": "domain_calculate(): Convert polar coordinates to rectangular coordinates.",
+    "context": {
+        "input": "polar coordinates (r, θ)",
+        "output": "rectangular coordinates (x, y)"
+    },
+    "tuples": [
+        {
+            "input": "(2, 4)",
+            "output": "(1.99513, 0.13951)"
+        },
+        {
+            "input": "(4, 60)",
+            "output": "(2.00000, 3.46410)"
+        },
+        {
+            "input": "(10, 30)",
+            "output": "(8.66025, 5.00000)"
+        },
+        {
+            "input": "(23, 35)",
+            "output": "(18.84050, 13.19226)"
+        },
+        {
+            "input": "(11, 22)",
+            "output": "(10.19902, 4.12067)"
+        }
+    ]
+}

@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert mgrs to lat long",
+    "instruction": "domain_calculate(): Convert a Military Grid Reference System (MGRS) coordinate to its latitude and longitude representation.",
+    "context": {
+        "input": "MGRS coordinate",
+        "output": "latitude and longitude"
+    },
+    "tuples": [
+        {
+            "input": "12U UA 84323 40791",
+            "output": "50.00820, -112.61440"
+        },
+        {
+            "input": "15S WC 80817 51205",
+            "output": "38.40543, -92.07440"
+        },
+        {
+            "input": "19T DJ 38588 97366",
+            "output": "44.22694, -69.76892"
+        },
+        {
+            "input": "12U UA 87466 40791",
+            "output": "50.00880, -112.57055"
+        },
+        {
+            "input": "15S WC 40817 12345",
+            "output": "38.05793, -92.53473"
+        }
+    ]
+}

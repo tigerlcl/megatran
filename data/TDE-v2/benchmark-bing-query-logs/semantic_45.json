@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert minutes to hundredths",
+    "instruction": "domain_calculate(): Convert minutes to hundredths of an hour.",
+    "context": {
+        "input": "time in minutes",
+        "output": "time in hundredths of an hour"
+    },
+    "tuples": [
+        {
+            "input": "13 minutes",
+            "output": ".22"
+        },
+        {
+            "input": "43 minutes",
+            "output": ".72"
+        },
+        {
+            "input": "58 minutes",
+            "output": ".97"
+        },
+        {
+            "input": "15 minutes",
+            "output": ".25"
+        },
+        {
+            "input": "44 minutes",
+            "output": ".73"
+        }
+    ]
+}

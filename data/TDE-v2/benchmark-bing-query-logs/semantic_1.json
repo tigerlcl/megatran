@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert time to decimal",
+    "instruction": "format(): convert time to decimal format.",
+    "context": {
+        "input": "time in HH:MM:SS format",
+        "output": "4-decimal hours"
+    },
+    "tuples": [
+        {
+            "input": "02:45:45",
+            "output": "2.7625 hours"
+        },
+        {
+            "input": "1:30:25",
+            "output": "1.5069 hours"
+        },
+        {
+            "input": "12:10:02",
+            "output": "12.1672 hours"
+        },
+        {
+            "input": "03:22:45",
+            "output": "3.3792 hours"
+        },
+        {
+            "input": "22:22:22",
+            "output": "22.3728 hours"
+        }
+    ]
+}

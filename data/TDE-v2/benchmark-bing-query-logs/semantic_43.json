@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert grams to ounces and pounds",
+    "instruction": "unit_convert(): Convert grams to pounds and ounces.",
+    "context": {
+        "input": "weight in grams",
+        "output": "weight in pounds and ounces"
+    },
+    "tuples": [
+        {
+            "input": "32g",
+            "output": "0lb 1.128767oz"
+        },
+        {
+            "input": "1000g",
+            "output": "2lb 3.273965oz"
+        },
+        {
+            "input": "3400g",
+            "output": "7lb 7.931480oz"
+        },
+        {
+            "input": "222g",
+            "output": "0lb 7.830820oz"
+        },
+        {
+            "input": "123g",
+            "output": "0lb 4.338698oz"
+        }
+    ]
+}

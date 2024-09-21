@@ -1,1 +1,30 @@
-{}
+{
+  "chat": "convert decimal degrees to degrees minutes seconds",
+  "instruction": "domain_calculate(): Convert a given number of decimal degrees to degrees, minutes, and seconds format.",
+  "context": {
+    "input": "a number of decimal degrees",
+    "output": "a representation in degrees, minutes, and seconds format"
+  },
+  "tuples": [
+    {
+      "input": "4",
+      "output": "4 0' 0\""
+    },
+    {
+      "input": "11.35",
+      "output": "11 20' 60\""
+    },
+    {
+      "input": "129.45",
+      "output": "129 26' 60\""
+    },
+    {
+      "input": "23",
+      "output": "23 0' 0\""
+    },
+    {
+      "input": "21",
+      "output": "21 26' 24\""
+    }
+  ]
+}

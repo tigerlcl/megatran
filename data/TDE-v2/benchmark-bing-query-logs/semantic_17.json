@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert cmyk to rgb",
+    "instruction": "domain_map(): convert CMYK color values to RGB color values.",
+    "context": {
+        "input": "CMYK values (C,M,Y,K)",
+        "output": "RGB values (R,G,B)"
+    },
+    "tuples": [
+        {
+            "input": "0,0,0,1",
+            "output": "0,0,0"
+        },
+        {
+            "input": "0.16,0.67,0.61,0.73",
+            "output": "58,23,27"
+        },
+        {
+            "input": "0,1,1,0",
+            "output": "255,0,0"
+        },
+        {
+            "input": "0,1,0,0",
+            "output": "255,0,255"
+        },
+        {
+            "input": "0.53,0.42,0.38,0.55",
+            "output": "54,67,71"
+        }
+    ]
+}

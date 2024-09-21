@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert decimal to octal",
+    "instruction": "domain_calculate(): Convert a given decimal number to its octal representation.",
+    "context": {
+        "input": "decimal number",
+        "output": "octal representation"
+    },
+    "tuples": [
+        {
+            "input": "2358",
+            "output": "4466"
+        },
+        {
+            "input": "198645",
+            "output": "603765"
+        },
+        {
+            "input": "33",
+            "output": "41"
+        },
+        {
+            "input": "232",
+            "output": "350"
+        },
+        {
+            "input": "1234",
+            "output": "2322"
+        }
+    ]
+}
