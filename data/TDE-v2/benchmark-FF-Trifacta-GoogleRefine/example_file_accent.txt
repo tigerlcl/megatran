@@ -1,5 +1,0 @@
-áéíóú		aeiou
-aeiou		aeiou
-aeíouxyz		aeiouxyz
-aeío		aeio
-aeíouíóúz		aeiouiouz

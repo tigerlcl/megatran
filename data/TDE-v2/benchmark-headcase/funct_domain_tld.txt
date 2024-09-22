@@ -1,6 +1,0 @@
-//
-photos.facebook.co.uk		co.uk
-photos.twitter.com		com
-cnn.com.au		com.au
-news.abc.com.ca		ca
-cnbc.com		com

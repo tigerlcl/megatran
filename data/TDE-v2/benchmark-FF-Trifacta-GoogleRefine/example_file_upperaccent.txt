@@ -1,5 +1,0 @@
-αινσϊ		AEIOU
-aeiou		AEIOU
-aeνouxyz		AEIOUXYZ
-aeνo		AEIOU
-aeνouνσϊz		AEIOUIOUZ

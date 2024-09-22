@@ -1,6 +1,0 @@
-//pad left
-xxx		  xxx
-yy		   yy
-zzzzz		zzzzz
-abcdefg		abcdefg
-c		    c

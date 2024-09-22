@@ -1,6 +1,0 @@
-10B		1.00E1 Bytes
-100 KB		1.02E5 Bytes
-1000MB		1.05E9 Bytes
-1b		1.25E-1 Bytes
-100 B		1.00E2 Bytes
-1GB		1.07E9 Bytes

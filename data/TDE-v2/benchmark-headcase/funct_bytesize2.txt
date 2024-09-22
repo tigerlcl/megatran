@@ -1,6 +1,0 @@
-10B		10 Bytes
-100 KB		102,400 Bytes
-1000MB		1,048,576,000 Bytes
-1b		0.125 Bytes
-100 B		100 Bytes
-1GB		1,073,741,824 Bytes

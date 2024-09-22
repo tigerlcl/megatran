@@ -1,6 +1,0 @@
-//upper caseing
-xxx		XXX
-this is well		THIS IS WELL
-In my backpack, There is a monkey		IN MY BACKPACK, THERE IS A MONKEY
-test		TEST
-Test Is Good		TEST IS GOOD

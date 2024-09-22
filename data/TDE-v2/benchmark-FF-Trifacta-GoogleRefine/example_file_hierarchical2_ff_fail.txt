@@ -1,5 +1,0 @@
-a, b; cccc, d; e, f		cccc
-x, aaay; aaaz, d		aaaz
-a; ffeaa; aa, aaa, aaa, aaa		ffeaa
-ajfj, ajfie, ajaj, aj; jwi, ajaj, aj, a; aj, ajiw, ajif, jfi		jwi
-ccc; aaa, bbb, ccc, ddd; xyz		aaa

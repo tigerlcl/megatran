@@ -1,5 +1,0 @@
-Association Computing Machinery		ACM
-Principle Of Programming Lanaguages		POPL
-Special Interest Group on Management Of Data		SIGMOD
-Relational Data Base Management System		RDBMS
-Table Extraction by Global Record Alignment		TEGRA
