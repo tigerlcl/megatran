@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert meters to inches.",
+    "instruction": "unit_convert(): Convert meters to inches.",
+    "context": {
+        "input": "meters",
+        "output": "inches"
+    },
+    "tuples": [
+        {
+            "input": "1 m",
+            "output": "39.3700787 inch"
+        },
+        {
+            "input": "1856 m",
+            "output": "73070.8661 inch"
+        },
+        {
+            "input": "200 m",
+            "output": "7874.01575 inch"
+        },
+        {
+            "input": "188 m",
+            "output": "7401.5748 inch"
+        },
+        {
+            "input": "33 m",
+            "output": "1299.2126 inch"
+        }
+    ]
+}

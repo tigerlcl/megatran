@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert centimeters to feet.",
+    "instruction": "unit_convert(): Convert centimeters to feet.",
+    "context": {
+        "input": "cm",
+        "output": "feet"
+    },
+    "tuples": [
+        {
+            "input": "4 cm",
+            "output": "0.131234 feet"
+        },
+        {
+            "input": "17 cm",
+            "output": "0.557743 feet"
+        },
+        {
+            "input": "201 cm",
+            "output": "6.59449 feet"
+        },
+        {
+            "input": "3 cm",
+            "output": "0.0984252 feet"
+        },
+        {
+            "input": "2 cm",
+            "output": "0.0656168 feet"
+        }
+    ]
+}

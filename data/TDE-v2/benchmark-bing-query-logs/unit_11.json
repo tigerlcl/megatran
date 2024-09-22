@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert kilometers to miles.",
+    "instruction": "unit_convert(): Convert kilometers to miles.",
+    "context": {
+        "input": "kilometers",
+        "output": "miles"
+    },
+    "tuples": [
+        {
+            "input": "5 km",
+            "output": "3.10685596 mile"
+        },
+        {
+            "input": "18 km",
+            "output": "11.1846815 mile"
+        },
+        {
+            "input": "1349 km",
+            "output": "838.229738 mile"
+        },
+        {
+            "input": "3 km",
+            "output": "1.86411358 mile"
+        },
+        {
+            "input": "33 km",
+            "output": "20.5052493 mile"
+        }
+    ]
+}

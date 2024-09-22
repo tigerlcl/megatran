@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert inches to millimeters.",
+    "instruction": "unit_convert(): Convert inches to millimeters.",
+    "context": {
+        "input": "inches",
+        "output": "mm"
+    },
+    "tuples": [
+        {
+            "input": "4 inch",
+            "output": "101.6 mm"
+        },
+        {
+            "input": "50 inch",
+            "output": "1270 mm"
+        },
+        {
+            "input": "429 inch",
+            "output": "10896.6 mm"
+        },
+        {
+            "input": "5 inch",
+            "output": "127 mm"
+        },
+        {
+            "input": "40 inch",
+            "output": "1016 mm"
+        }
+    ]
+}

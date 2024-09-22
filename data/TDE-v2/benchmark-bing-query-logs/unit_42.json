@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert ounces to cups.",
+    "instruction": "unit_convert(): Convert ounces to cups.",
+    "context": {
+        "input": "oz",
+        "output": "cups"
+    },
+    "tuples": [
+        {
+            "input": "2 oz",
+            "output": "0.25 cup"
+        },
+        {
+            "input": "1988 oz",
+            "output": "248.5 cup"
+        },
+        {
+            "input": "37 oz",
+            "output": "4.625 cup"
+        },
+        {
+            "input": "33 oz",
+            "output": "4.125 cup"
+        },
+        {
+            "input": "123 oz",
+            "output": "15.375 cup"
+        }
+    ]
+}

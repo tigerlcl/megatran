@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert meter to feet.",
+    "instruction": "unit_convert(): Convert meters to feet.",
+    "context": {
+        "input": "meters",
+        "output": "feet"
+    },
+    "tuples": [
+        {
+            "input": "8 m",
+            "output": "26.2467 feet"
+        },
+        {
+            "input": "259 m",
+            "output": "849.738 feet"
+        },
+        {
+            "input": "387 m",
+            "output": "1269.69 feet"
+        },
+        {
+            "input": "333 m",
+            "output": "1092.52 feet"
+        },
+        {
+            "input": "888 m",
+            "output": "2913.39 feet"
+        }
+    ]
+}

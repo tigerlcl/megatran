@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert meters to miles.",
+    "instruction": "unit_convert(): Convert meters to miles.",
+    "context": {
+        "input": "meters",
+        "output": "miles"
+    },
+    "tuples": [
+        {
+            "input": "5 meter",
+            "output": "0.00310686 mile"
+        },
+        {
+            "input": "180 meter",
+            "output": "0.111847 mile"
+        },
+        {
+            "input": "92 meter",
+            "output": "0.0571661 mile"
+        },
+        {
+            "input": "23 meter",
+            "output": "0.0142915 mile"
+        },
+        {
+            "input": "11 meter",
+            "output": "0.00683508 mile"
+        }
+    ]
+}

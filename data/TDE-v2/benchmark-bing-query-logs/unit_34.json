@@ -1,1 +1,26 @@
-{}
+{
+    "chat": "Convert gallons to cups.",
+    "instruction": "unit_convert(): Convert gallons to cups.",
+    "context": {
+        "input": "gallons",
+        "output": "cups"
+    },
+    "tuples": [
+        {
+            "input": "1 gallons",
+            "output": "16 cups"
+        },
+        {
+            "input": "3 gallons",
+            "output": "48 cups"
+        },
+        {
+            "input": "11 gallons",
+            "output": "176 cups"
+        },
+        {
+            "input": "15 gallons",
+            "output": "240 cups"
+        }
+    ]
+}

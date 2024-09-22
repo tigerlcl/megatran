@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert kg to lbs.",
+    "instruction": "unit_convert(): Convert kilograms to pounds.",
+    "context": {
+        "input": "kg",
+        "output": "lbs"
+    },
+    "tuples": [
+        {
+            "input": "3 kg",
+            "output": "6.61387 b"
+        },
+        {
+            "input": "7 kg",
+            "output": "15.4324 b"
+        },
+        {
+            "input": "11 kg",
+            "output": "24.2508 b"
+        },
+        {
+            "input": "23 kg",
+            "output": "50.7063 b"
+        },
+        {
+            "input": "1 kg",
+            "output": "2.20462 b"
+        }
+    ]
+}

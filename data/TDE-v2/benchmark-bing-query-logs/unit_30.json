@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert inches to centimeters.",
+    "instruction": "unit_convert(): Convert inches to centimeters.",
+    "context": {
+        "input": "inches",
+        "output": "centimeters"
+    },
+    "tuples": [
+        {
+            "input": "1 inch",
+            "output": "2.54 cm"
+        },
+        {
+            "input": "23 inch",
+            "output": "58.42 cm"
+        },
+        {
+            "input": "921 inch",
+            "output": "2339.34 cm"
+        },
+        {
+            "input": "13 inch",
+            "output": "33.02 cm"
+        },
+        {
+            "input": "22 inch",
+            "output": "55.88 cm"
+        }
+    ]
+}

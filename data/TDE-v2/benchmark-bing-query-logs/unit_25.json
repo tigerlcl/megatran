@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert Fahrenheit to Celsius.",
+    "instruction": "unit_convert(): Convert Fahrenheit to Celsius.",
+    "context": {
+        "input": "fahrenheit",
+        "output": "celsius"
+    },
+    "tuples": [
+        {
+            "input": "19 fahrenheit",
+            "output": "-7.22222 celsius"
+        },
+        {
+            "input": "100 fahrenheit",
+            "output": "37.7778 celsius"
+        },
+        {
+            "input": "350 fahrenheit",
+            "output": "176.667 celsius"
+        },
+        {
+            "input": "1 fahrenheit",
+            "output": "-17.2222 celsius"
+        },
+        {
+            "input": "123 fahrenheit",
+            "output": "50.5556 celsius"
+        }
+    ]
+}

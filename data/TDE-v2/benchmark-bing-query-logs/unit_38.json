@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert Celsius to Kelvin.",
+    "instruction": "unit_convert(): Convert Celsius to Kelvin.",
+    "context": {
+        "input": "Celsius",
+        "output": "Kelvin"
+    },
+    "tuples": [
+        {
+            "input": "1 Celsius",
+            "output": "274.15 Kelvin"
+        },
+        {
+            "input": "12 Celsius",
+            "output": "285.15 Kelvin"
+        },
+        {
+            "input": "12.3 Celsius",
+            "output": "285.45 Kelvin"
+        },
+        {
+            "input": "188 Celsius",
+            "output": "461.15 Kelvin"
+        },
+        {
+            "input": "24 Celsius",
+            "output": "297.15 Kelvin"
+        }
+    ]
+}

@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert kilobytes to megabytes.",
+    "instruction": "unit_convert(): Convert kilobytes to megabytes.",
+    "context": {
+        "input": "kb",
+        "output": "mb"
+    },
+    "tuples": [
+        {
+            "input": "3 kb",
+            "output": "0.003 mb"
+        },
+        {
+            "input": "59 kb",
+            "output": "0.059 mb"
+        },
+        {
+            "input": "140 kb",
+            "output": "0.14 mb"
+        },
+        {
+            "input": "2 kb",
+            "output": "0.002 mb"
+        },
+        {
+            "input": "123 kb",
+            "output": "0.123 mb"
+        }
+    ]
+}

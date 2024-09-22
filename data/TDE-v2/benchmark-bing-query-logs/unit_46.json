@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert square feet to square yards.",
+    "instruction": "unit_convert(): Convert square feet to square yards.",
+    "context": {
+        "input": "square feet",
+        "output": "square yards"
+    },
+    "tuples": [
+        {
+            "input": "9 square feet",
+            "output": "1 square yards"
+        },
+        {
+            "input": "390 square feet",
+            "output": "43.3333333 square yards"
+        },
+        {
+            "input": "2456 square feet",
+            "output": "272.888889 square yards"
+        },
+        {
+            "input": "123 square feet",
+            "output": "13.6666667 square yards"
+        },
+        {
+            "input": "872 square feet",
+            "output": "96.8888889 square yards"
+        }
+    ]
+}

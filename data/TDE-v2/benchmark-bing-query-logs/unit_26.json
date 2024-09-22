@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert grams to cups.",
+    "instruction": "unit_convert(): Convert grams to cups.",
+    "context": {
+        "input": "grams",
+        "output": "cups"
+    },
+    "tuples": [
+        {
+            "input": "2 grams",
+            "output": "0.00845 cups"
+        },
+        {
+            "input": "15 grams",
+            "output": "0.0634 cups"
+        },
+        {
+            "input": "50 grams",
+            "output": "0.21134 cups"
+        },
+        {
+            "input": "25 grams",
+            "output": "0.10567 cups"
+        },
+        {
+            "input": "10 grams",
+            "output": "0.04227 cups"
+        }
+    ]
+}

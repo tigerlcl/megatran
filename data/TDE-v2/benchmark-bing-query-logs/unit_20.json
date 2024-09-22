@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert grams to ounces.",
+    "instruction": "unit_convert(): Convert grams to ounces.",
+    "context": {
+        "input": "grams",
+        "output": "ounces"
+    },
+    "tuples": [
+        {
+            "input": "1 g",
+            "output": "0.03527396 oz"
+        },
+        {
+            "input": "30 g",
+            "output": "1.05821886 oz"
+        },
+        {
+            "input": "1500 g",
+            "output": "52.910943 oz"
+        },
+        {
+            "input": "3 g",
+            "output": "0.10582189 oz"
+        },
+        {
+            "input": "23 g",
+            "output": "0.81130113 oz"
+        }
+    ]
+}

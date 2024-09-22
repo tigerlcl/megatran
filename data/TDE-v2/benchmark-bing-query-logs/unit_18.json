@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert dollars to euros.",
+    "instruction": "unit_convert(): Convert US dollars to euros.",
+    "context": {
+        "input": "dollars",
+        "output": "euros"
+    },
+    "tuples": [
+        {
+            "input": "7 dollar",
+            "output": "6.23 euro"
+        },
+        {
+            "input": "20 dollar",
+            "output": "17.79 euro"
+        },
+        {
+            "input": "300 dollar",
+            "output": "266.89 euro"
+        },
+        {
+            "input": "211 dollar",
+            "output": "187.71 euro"
+        },
+        {
+            "input": "222 dollar",
+            "output": "197.50 euro"
+        }
+    ]
+}

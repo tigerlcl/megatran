@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert milliliters to ounces.",
+    "instruction": "unit_convert(): Convert milliliters to ounces.",
+    "context": {
+        "input": "ml",
+        "output": "oz"
+    },
+    "tuples": [
+        {
+            "input": "10 ml",
+            "output": "0.33814023 oz"
+        },
+        {
+            "input": "39 ml",
+            "output": "1.31874689 oz"
+        },
+        {
+            "input": "200 ml",
+            "output": "6.76280455 oz"
+        },
+        {
+            "input": "3 ml",
+            "output": "0.10144207 oz"
+        },
+        {
+            "input": "30 ml",
+            "output": "1.01442068 oz"
+        }
+    ]
+}

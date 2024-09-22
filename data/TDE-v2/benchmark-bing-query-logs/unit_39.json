@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert ounces to pounds.",
+    "instruction": "unit_convert(): Convert ounces to pounds.",
+    "context": {
+        "input": "oz",
+        "output": "lb"
+    },
+    "tuples": [
+        {
+            "input": "3 oz",
+            "output": "0.1875 lb"
+        },
+        {
+            "input": "862 oz",
+            "output": "53.875 lb"
+        },
+        {
+            "input": "51 oz",
+            "output": "3.1875 lb"
+        },
+        {
+            "input": "1 oz",
+            "output": "0.0625 lb"
+        },
+        {
+            "input": "5 oz",
+            "output": "0.3125 lb"
+        }
+    ]
+}

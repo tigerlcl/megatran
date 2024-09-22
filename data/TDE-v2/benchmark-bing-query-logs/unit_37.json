@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert megabytes to gigabytes.",
+    "instruction": "unit_convert(): Convert megabytes to gigabytes.",
+    "context": {
+        "input": "mb",
+        "output": "gb"
+    },
+    "tuples": [
+        {
+            "input": "1 mb",
+            "output": "0.001 gb"
+        },
+        {
+            "input": "790 mb",
+            "output": "0.790 gb"
+        },
+        {
+            "input": "49 mb",
+            "output": "0.049 gb"
+        },
+        {
+            "input": "744 mb",
+            "output": "0.744 gb"
+        },
+        {
+            "input": "42 mb",
+            "output": "0.042 gb"
+        }
+    ]
+}

@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert pounds to grams.",
+    "instruction": "unit_convert(): Convert pounds to grams.",
+    "context": {
+        "input": "pounds",
+        "output": "grams"
+    },
+    "tuples": [
+        {
+            "input": "1 lb",
+            "output": "453.59237 g"
+        },
+        {
+            "input": "502 lb",
+            "output": "227703.37 g"
+        },
+        {
+            "input": "76 lb",
+            "output": "34473.0201 g"
+        },
+        {
+            "input": "234 lb",
+            "output": "106140.614 g"
+        },
+        {
+            "input": "122 lb",
+            "output": "55338.2691 g"
+        }
+    ]
+}

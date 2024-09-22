@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert feet to inches.",
+    "instruction": "unit_convert(): Convert feet to inches.",
+    "context": {
+        "input": "feet",
+        "output": "inches"
+    },
+    "tuples": [
+        {
+            "input": "2 feet",
+            "output": "24 inches"
+        },
+        {
+            "input": "30 feet",
+            "output": "360 inches"
+        },
+        {
+            "input": "53 feet",
+            "output": "636 inches"
+        },
+        {
+            "input": "44 feet",
+            "output": "528 inches"
+        },
+        {
+            "input": "23 feet",
+            "output": "276 inches"
+        }
+    ]
+}

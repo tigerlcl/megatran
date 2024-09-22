@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert pounds to dollars.",
+    "instruction": "unit_convert(): Convert pounds to dollars.",
+    "context": {
+        "input": "pounds",
+        "output": "dollars"
+    },
+    "tuples": [
+        {
+            "input": "1 pound",
+            "output": "1.57 dollar"
+        },
+        {
+            "input": "300 pound",
+            "output": "470.78 dollar"
+        },
+        {
+            "input": "2100 pound",
+            "output": "3295.45 dollar"
+        },
+        {
+            "input": "123 pound",
+            "output": "193.02 dollar"
+        },
+        {
+            "input": "444 pound",
+            "output": "696.75 dollar"
+        }
+    ]
+}

@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert euros to dollars.",
+    "instruction": "unit_convert(): Convert euros to dollars.",
+    "context": {
+        "input": "euro",
+        "output": "dollar"
+    },
+    "tuples": [
+        {
+            "input": "8 euro",
+            "output": "8.86 dollar"
+        },
+        {
+            "input": "67 euro",
+            "output": "74.20 dollar"
+        },
+        {
+            "input": "360 euro",
+            "output": "398.70 dollar"
+        },
+        {
+            "input": "21 euro",
+            "output": "23.26 dollar"
+        },
+        {
+            "input": "11 euro",
+            "output": "12.18 dollar"
+        }
+    ]
+}

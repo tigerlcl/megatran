@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert ounces to grams.",
+    "instruction": "unit_convert(): Convert ounces to grams.",
+    "context": {
+        "input": "oz",
+        "output": "g"
+    },
+    "tuples": [
+        {
+            "input": "3 oz",
+            "output": "85.0486 g"
+        },
+        {
+            "input": "19 oz",
+            "output": "538.641 g"
+        },
+        {
+            "input": "320 oz",
+            "output": "9071.85 g"
+        },
+        {
+            "input": "11 oz",
+            "output": "311.845 g"
+        },
+        {
+            "input": "23 oz",
+            "output": "652.039 g"
+        }
+    ]
+}

@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert square meters to square feet.",
+    "instruction": "unit_convert(): Convert square meters to square feet.",
+    "context": {
+        "input": "square meters",
+        "output": "square feet"
+    },
+    "tuples": [
+        {
+            "input": "4 square meters",
+            "output": "43.0556417 square feet"
+        },
+        {
+            "input": "560 square meters",
+            "output": "6027.78983 square feet"
+        },
+        {
+            "input": "2000 square meters",
+            "output": "21527.8208 square feet"
+        },
+        {
+            "input": "42 square meters",
+            "output": "452.084238 square feet"
+        },
+        {
+            "input": "323 square meters",
+            "output": "3476.74306 square feet"
+        }
+    ]
+}

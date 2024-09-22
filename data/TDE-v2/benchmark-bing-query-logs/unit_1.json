@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert mm to inches.",
+    "instruction": "unit_convert(): Convert millimeters to inches.",
+    "context": {
+        "input": "mm",
+        "output": "inches"
+    },
+    "tuples": [
+        {
+            "input": "1 mm",
+            "output": "0.0393701 inch"
+        },
+        {
+            "input": "8 mm",
+            "output": "0.314961 inch"
+        },
+        {
+            "input": "17 mm",
+            "output": "0.669291 inch"
+        },
+        {
+            "input": "33 mm",
+            "output": "1.29921 inch"
+        },
+        {
+            "input": "22 mm",
+            "output": "0.866142 inch"
+        }
+    ]
+}

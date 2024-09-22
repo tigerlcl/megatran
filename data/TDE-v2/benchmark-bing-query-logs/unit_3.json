@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert celsius to fahrenheit.",
+    "instruction": "unit_convert(): Convert Celsius to Fahrenheit.",
+    "context": {
+        "input": "Celsius",
+        "output": "Fahrenheit"
+    },
+    "tuples": [
+        {
+            "input": "1 Celsius",
+            "output": "33.8 Fahrenheit"
+        },
+        {
+            "input": "7 Celsius",
+            "output": "44.6 Fahrenheit"
+        },
+        {
+            "input": "18 Celsius",
+            "output": "64.4 Fahrenheit"
+        },
+        {
+            "input": "-17.2222 Celsius",
+            "output": "1 Fahrenheit"
+        },
+        {
+            "input": "50.5556 Celsius",
+            "output": "123 Fahrenheit"
+        }
+    ]
+}

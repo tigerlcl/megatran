@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert millimeters to centimeters.",
+    "instruction": "unit_convert(): Convert millimeters to centimeters.",
+    "context": {
+        "input": "mm",
+        "output": "cm"
+    },
+    "tuples": [
+        {
+            "input": "9 mm",
+            "output": "0.9 cm"
+        },
+        {
+            "input": "145 mm",
+            "output": "14.5 cm"
+        },
+        {
+            "input": "23 mm",
+            "output": "2.3 cm"
+        },
+        {
+            "input": "3 mm",
+            "output": "0.3 cm"
+        },
+        {
+            "input": "199 mm",
+            "output": "19.9 cm"
+        }
+    ]
+}

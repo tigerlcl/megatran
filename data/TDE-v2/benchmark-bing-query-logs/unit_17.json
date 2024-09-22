@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert liters to gallons.",
+    "instruction": "unit_convert(): Convert liters to gallons.",
+    "context": {
+        "input": "liters",
+        "output": "gallons"
+    },
+    "tuples": [
+        {
+            "input": "7 L",
+            "output": "1.8492 gal"
+        },
+        {
+            "input": "15 L",
+            "output": "3.96258 gal"
+        },
+        {
+            "input": "98 L",
+            "output": "25.8889 gal"
+        },
+        {
+            "input": "33 L",
+            "output": "8.71768 gal"
+        },
+        {
+            "input": "17 L",
+            "output": "4.49092 gal"
+        }
+    ]
+}

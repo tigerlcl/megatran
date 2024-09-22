@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert square feet to acres.",
+    "instruction": "unit_convert(): Convert square feet to acres.",
+    "context": {
+        "input": "square feet",
+        "output": "acres"
+    },
+    "tuples": [
+        {
+            "input": "45 square feet",
+            "output": "0.00103306 acres"
+        },
+        {
+            "input": "120 square feet",
+            "output": "0.00275482 acres"
+        },
+        {
+            "input": "2300 square feet",
+            "output": "0.05280073 acres"
+        },
+        {
+            "input": "1300 square feet",
+            "output": "0.02984389 acres"
+        },
+        {
+            "input": "890 square feet",
+            "output": "0.02043159 acres"
+        }
+    ]
+}

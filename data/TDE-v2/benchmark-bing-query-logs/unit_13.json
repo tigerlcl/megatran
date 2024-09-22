@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert pounds to kilograms.",
+    "instruction": "unit_convert(): Convert pounds to kilograms.",
+    "context": {
+        "input": "pounds",
+        "output": "kilograms"
+    },
+    "tuples": [
+        {
+            "input": "17 b",
+            "output": "7.71107 kg"
+        },
+        {
+            "input": "39 b",
+            "output": "17.6901 kg"
+        },
+        {
+            "input": "198 b",
+            "output": "89.8113 kg"
+        },
+        {
+            "input": "33 b",
+            "output": "14.9685 kg"
+        },
+        {
+            "input": "12 b",
+            "output": "5.44311 kg"
+        }
+    ]
+}

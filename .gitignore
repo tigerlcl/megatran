@@ -1,8 +1,16 @@
+# IDE and System
 venv/
 __pycache__/
 *.pyc
 .DS_Store
 .idea
+.vscode
+
+# Project 
 etc/*_private.yaml
 exp/
 log/
+
+# exclude data subsets:
+data/TDE-v2/benchmark-FF-Trifacta-GoogleRefine/
+data/TDE-v2/benchmark-headcase/
