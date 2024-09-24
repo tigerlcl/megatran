@@ -1,1 +1,34 @@
-{}
+{
+    "chat": "covert raw size to byte size and present in scientific notation",
+    "instruction": "transform(): Convert the original size to byte size and present in scientific notation",
+    "context": {
+        "input": "raw size",
+        "output": "byte size in scientific notation with 2 decimal places"
+    },
+    "tuples": [
+        {
+            "input": "10B",
+            "output": "1.00E1 Bytes"
+        },
+        {
+            "input": "100 KB",
+            "output": "1.02E5 Bytes"
+        },
+        {
+            "input": "1000MB",
+            "output": "1.05E9 Bytes"
+        },
+        {
+            "input": "1b",
+            "output": "1.25E-1 Bytes"
+        },
+        {
+            "input": "100 B",
+            "output": "1.00E2 Bytes"
+        },
+        {
+            "input": "1GB",
+            "output": "1.07E9 Bytes"
+        }
+    ]
+}

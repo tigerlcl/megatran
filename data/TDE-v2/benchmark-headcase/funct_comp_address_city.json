@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "extract city from address",
+    "instruction": "extract(): Extract the city from the given address",
+    "context": {
+        "input": "full address",
+        "output": "city"
+    },
+    "tuples": [
+        {
+            "input": "1 microsoft way, redmond, wa, 98052",
+            "output": "Redmond"
+        },
+        {
+            "input": "1201 super commerce blvd Ste H, Richmond, VA, 23452",
+            "output": "Richmond"
+        },
+        {
+            "input": "100 sunset blvd, room 301, Beverley Hills California",
+            "output": "Beverley Hills"
+        },
+        {
+            "input": "32 super blvd Ste H, Riverside California",
+            "output": "Riverside"
+        },
+        {
+            "input": "100 turing way, Redmond, wa, 98052",
+            "output": "Redmond"
+        }
+    ]
+}

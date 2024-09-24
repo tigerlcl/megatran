@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "calculate by x3",
+    "instruction": "domain_calculate(): Calculate by x3",
+    "context": {
+        "input": "number",
+        "output": "3x number"
+    },
+    "tuples": [
+        {
+            "input": "1",
+            "output": "3"
+        },
+        {
+            "input": "3",
+            "output": "9"
+        },
+        {
+            "input": "5",
+            "output": "15"
+        },
+        {
+            "input": "8",
+            "output": "24"
+        },
+        {
+            "input": "9",
+            "output": "27"
+        }
+    ]
+}

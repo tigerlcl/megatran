@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "round number",
+    "instruction": "format(): Round the number in 1-decimal format",
+    "context": {
+        "input": "number",
+        "output": "rounded number"
+    },
+    "tuples": [
+        {
+            "input": "2.431",
+            "output": "2.4"
+        },
+        {
+            "input": "1.5857E+0",
+            "output": "1.6"
+        },
+        {
+            "input": "1234567890",
+            "output": "1234567890.0"
+        },
+        {
+            "input": "13.33e-11",
+            "output": "0.0"
+        },
+        {
+            "input": "23.45",
+            "output": "23.5"
+        }
+    ]
+}

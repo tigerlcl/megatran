@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "compute date time by adding 12 hours and 30 minutes",
+    "instruction": "domain_calculate(): Compute the datetime by adding 12 hours and 30 minutes",
+    "context": {
+        "input": "original datetime",
+        "output": "shifted datetime"
+    },
+    "tuples": [
+        {
+            "input": "August 20, 2015, 16:11",
+            "output": "August 21, 2015, 04:41"
+        },
+        {
+            "input": "April 11, 2015, 15:14",
+            "output": "April 12, 2015, 03:44"
+        },
+        {
+            "input": "April 27, 2015, 10:00",
+            "output": "April 27, 2015, 22:30"
+        },
+        {
+            "input": "May 27, 2015, 01:00",
+            "output": "May 27, 2015, 13:30"
+        },
+        {
+            "input": "December 27, 2015, 15:00",
+            "output": "December 28, 2015, 03:30"
+        }
+    ]
+}

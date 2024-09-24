@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "round to significant figures",
+    "instruction": "format(): Round the number to significant figures",
+    "context": {
+        "input": "number",
+        "output": "rounded number"
+    },
+    "tuples": [
+        {
+            "input": "2.431",
+            "output": "2.4"
+        },
+        {
+            "input": "0.15857",
+            "output": "0.16"
+        },
+        {
+            "input": "123",
+            "output": "1.2E+02"
+        },
+        {
+            "input": "13.4",
+            "output": "13"
+        },
+        {
+            "input": "1.234",
+            "output": "1.2"
+        }
+    ]
+}

@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "pad string on the left with 3 spaces",
+    "instruction": "format(): Pad the string on the left with 3 spaces",
+    "context": {
+        "input": "string",
+        "output": "padded string with 3 spaces"
+    },
+    "tuples": [
+        {
+            "input": "xxx",
+            "output": "  xxx"
+        },
+        {
+            "input": "yy",
+            "output": "   yy"
+        },
+        {
+            "input": "zzzzz",
+            "output": "zzzzz"
+        },
+        {
+            "input": "abcdefg",
+            "output": "abcdefg"
+        },
+        {
+            "input": "c",
+            "output": "    c"
+        }
+    ]
+}

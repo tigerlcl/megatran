@@ -1,1 +1,26 @@
-{}
+{
+    "chat": "extract end of IP range",
+    "instruction": "transform(): Extract the end of the IP range",
+    "context": {
+        "input": "IP range",
+        "output": "end IP"
+    },
+    "tuples": [
+        {
+            "input": "192.168.70.30-192.168.70.31",
+            "output": "192.168.70.31"
+        },
+        {
+            "input": "fe80::/10",
+            "output": "febf:ffff:ffff:ffff:ffff:ffff:ffff:ffff"
+        },
+        {
+            "input": "fe80::d501:4ee:3882:c586-fe80::d502:4ee:3882:c586",
+            "output": "fe80::d502:4ee:3882:c586"
+        },
+        {
+            "input": "2001:db8::/48",
+            "output": "2001:db8:0:ffff:ffff:ffff:ffff:ffff"
+        }
+    ]
+}

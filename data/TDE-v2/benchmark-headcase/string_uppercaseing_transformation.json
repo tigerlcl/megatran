@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert to uppercase",
+    "instruction": "format(): Convert the string to uppercase",
+    "context": {
+        "input": "string",
+        "output": "uppercase string"
+    },
+    "tuples": [
+        {
+            "input": "xxx",
+            "output": "XXX"
+        },
+        {
+            "input": "this is well",
+            "output": "THIS IS WELL"
+        },
+        {
+            "input": "In my backpack, There is a monkey",
+            "output": "IN MY BACKPACK, THERE IS A MONKEY"
+        },
+        {
+            "input": "test",
+            "output": "TEST"
+        },
+        {
+            "input": "Test Is Good",
+            "output": "TEST IS GOOD"
+        }
+    ]
+}

@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "extract middle name from full name",
+    "instruction": "extract(): Extract the middle name from the full name",
+    "context": {
+        "input": "full name",
+        "output": "middle name initials"
+    },
+    "tuples": [
+        {
+            "input": "Mr. Charles P. Wooten, III",
+            "output": "P"
+        },
+        {
+            "input": "John Adam Johnson",
+            "output": "A"
+        },
+        {
+            "input": "Doe, John",
+            "output": ""
+        },
+        {
+            "input": "James Bob Smith",
+            "output": "B"
+        },
+        {
+            "input": "Charlie Denis Edwards",
+            "output": "D"
+        }
+    ]
+}

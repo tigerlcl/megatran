@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert to camel case",
+    "instruction": "format(): Convert the string to camel case",
+    "context": {
+        "input": "string",
+        "output": "camel case string"
+    },
+    "tuples": [
+        {
+            "input": "active_record",
+            "output": "activeRecord"
+        },
+        {
+            "input": "good_spirit",
+            "output": "goodSpirit"
+        },
+        {
+            "input": "a_string_var",
+            "output": "aStringVar"
+        },
+        {
+            "input": "num_hit_count_curr",
+            "output": "numHitCountCurr"
+        },
+        {
+            "input": "a_bc_de_fg_hi_jk",
+            "output": "aBcDeFgHiJk"
+        }
+    ]
+}

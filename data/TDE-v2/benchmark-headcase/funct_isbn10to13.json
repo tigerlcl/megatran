@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert ISBN-10 to ISBN-13",
+    "instruction": "domain_map(): Convert the ISBN-10 to ISBN-13",
+    "context": {
+        "input": "ISBN-10",
+        "output": "ISBN-13"
+    },
+    "tuples": [
+        {
+            "input": "0830818030",
+            "output": "978-0-8308-1803-7"
+        },
+        {
+            "input": "316148410X",
+            "output": "978-3-1614-8410-0"
+        },
+        {
+            "input": "1566199093",
+            "output": "978-1-56619-909-4"
+        },
+        {
+            "input": "0198526636",
+            "output": "978-0-19-852663-6"
+        },
+        {
+            "input": "1861972717",
+            "output": "978-1-86197-271-2"
+        }
+    ]
+}

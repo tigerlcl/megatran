@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert IPv4 to IPv6",
+    "instruction": "domain_calculate(): Convert the IPv4 address to IPv6",
+    "context": {
+        "input": "IPv4 address",
+        "output": "IPv6 address"
+    },
+    "tuples": [
+        {
+            "input": "102.3.1.2",
+            "output": "0:0:0:0:0:ffff:6603:102"
+        },
+        {
+            "input": "102.31.1.244",
+            "output": "0:0:0:0:0:ffff:661f:1f4"
+        },
+        {
+            "input": "20.55.255.255",
+            "output": "0:0:0:0:0:ffff:1437:ffff"
+        },
+        {
+            "input": "39.91.29.11",
+            "output": "0:0:0:0:0:ffff:275b:1d0b"
+        },
+        {
+            "input": "39.255.255.255",
+            "output": "0:0:0:0:0:ffff:27ff:ffff"
+        }
+    ]
+}

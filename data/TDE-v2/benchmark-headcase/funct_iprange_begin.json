@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "extract beginning of IP range",
+    "instruction": "transform(): Extract the beginning of the IP range",
+    "context": {
+        "input": "IP range",
+        "output": "beginning IP"
+    },
+    "tuples": [
+        {
+            "input": "192.168.70.30-192.168.70.31",
+            "output": "192.168.70.31"
+        },
+        {
+            "input": "fe80::/10",
+            "output": "fe80::"
+        },
+        {
+            "input": "fe80::d501:4ee:3882:c586-fe80::d502:4ee:3882:c586",
+            "output": "fe80::d502:4ee:3882:c586"
+        },
+        {
+            "input": "192.168.100.0/22",
+            "output": "192.168.100.0"
+        },
+        {
+            "input": "192.168.100.14/24",
+            "output": "192.168.100.14"
+        }
+    ]
+}

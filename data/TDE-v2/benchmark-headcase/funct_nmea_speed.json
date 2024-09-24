@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "parse NMEA speed to km/h",
+    "instruction": "transform(): extract and convert the speed from NMEA sentence to km/h",
+    "context": {
+        "input": "NMEA sentence",
+        "output": "speed in km/h"
+    },
+    "tuples": [
+        {
+            "input": "$GPRMC,084752.000,A,5152.4175,N,00832.5083,W,11.90,62.01,231110,,*12",
+            "output": "22.0388 km/h"
+        },
+        {
+            "input": "$GPRMC,235947.000,V,0000.0000,N,00000.0000,E,,,041299,,*1D",
+            "output": "0 km/h"
+        },
+        {
+            "input": "$GPRMC,155123.000,A,4043.8432,N,07359.7653,W,0.15,83.25,200407,,*28",
+            "output": "0.2778 km/h"
+        },
+        {
+            "input": "$GPRMC,092204.999,A,4250.5589,S,14718.5084,E,0.00,89.68,211200,,*25",
+            "output": "0 km/h"
+        },
+        {
+            "input": "$GPRMC,084752.000,A,5152.4175,N,00832.5083,W,11.90,62.01,231110,,*12",
+            "output": "22.0388 km/h"
+        }
+    ]
+}

@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "validate email address",
+    "instruction": "transform(): Validate the email address",
+    "context": {
+        "input": "email address",
+        "output": "validity boolean"
+    },
+    "tuples": [
+        {
+            "input": "Abcdef@example.com",
+            "output": "true"
+        },
+        {
+            "input": "very.common@example.com",
+            "output": "true"
+        },
+        {
+            "input": "A@b@c@example.com",
+            "output": "false"
+        },
+        {
+            "input": "good@example.com",
+            "output": "true"
+        },
+        {
+            "input": "A@b.com@example.com",
+            "output": "false"
+        }
+    ]
+}

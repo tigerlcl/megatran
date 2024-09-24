@@ -1,6 +1,6 @@
 {
     "chat": "Create username from first and last name",
-    "instruction": "format(): Combine the first letter of the first name (capitalized) with the last name (capitalized)",
+    "instruction": "transform(): Combine the first letter of the first name (capitalized) with the last name (capitalized)",
     "context": {
         "input": "First name and last name separated by a tab",
         "output": "Username created by combining parts of the input names"

@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "pad number with leading zeros",
+    "instruction": "format(): Pad the number with leading zeros in 5-digit format",
+    "context": {
+        "input": "number",
+        "output": "padded number"
+    },
+    "tuples": [
+        {
+            "input": "2",
+            "output": "00002"
+        },
+        {
+            "input": "144",
+            "output": "00144"
+        },
+        {
+            "input": "12345",
+            "output": "12345"
+        },
+        {
+            "input": "789",
+            "output": "00789"
+        },
+        {
+            "input": "99",
+            "output": "00099"
+        }
+    ]
+}

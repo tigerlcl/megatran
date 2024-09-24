@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "parse month from date",
+    "instruction": "extract(): Parse the month from the date",
+    "context": {
+        "input": "date",
+        "output": "month name"
+    },
+    "tuples": [
+        {
+            "input": "2011-10-11",
+            "output": "October"
+        },
+        {
+            "input": "2011-Jan-12",
+            "output": "January"
+        },
+        {
+            "input": "7/1/2009",
+            "output": "July"
+        },
+        {
+            "input": "2012-02-12",
+            "output": "February"
+        },
+        {
+            "input": "6/1/2009 12:01:01",
+            "output": "June"
+        }
+    ]
+}

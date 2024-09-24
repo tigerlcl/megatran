@@ -1,1 +1,34 @@
-{}
+{
+    "chat": "covert raw size to byte size",
+    "instruction": "transform(): Convert the original size to byte size",
+    "context": {
+        "input": "raw size",
+        "output": "byte size"
+    },
+    "tuples": [
+        {
+            "input": "10B",
+            "output": "10 Bytes"
+        },
+        {
+            "input": "100 KB",
+            "output": "102400 Bytes"
+        },
+        {
+            "input": "1000MB",
+            "output": "1048576000 Bytes"
+        },
+        {
+            "input": "1b",
+            "output": "0.125 Bytes"
+        },
+        {
+            "input": "100 B",
+            "output": "100 Bytes"
+        },
+        {
+            "input": "1GB",
+            "output": "1073741824 Bytes"
+        }
+    ]
+}

@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert date to readable format",
+    "instruction": "transform(): Convert the date to a readable format",
+    "context": {
+        "input": "original date",
+        "output": "readable date"
+    },
+    "tuples": [
+        {
+            "input": "2011-09-21",
+            "output": "September 21"
+        },
+        {
+            "input": "2011-Jan-12",
+            "output": "January 12"
+        },
+        {
+            "input": "7/1/2009",
+            "output": "July 1"
+        },
+        {
+            "input": "2012-02-12",
+            "output": "February 12"
+        },
+        {
+            "input": "6/1/2009 12:01:01",
+            "output": "June 1"
+        }
+    ]
+}

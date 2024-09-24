@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "date time roll back 1 hour",
+    "instruction": "domain_calculate(): Roll back the datetime value by 1 hour",
+    "context": {
+        "input": "original datetime value",
+        "output": "datetime value rolled back by 1 hour"
+    },
+    "tuples": [
+        {
+            "input": "2007/02/26 18:37:58",
+            "output": "2007/02/26 17:37:58"
+        },
+        {
+            "input": "2008/02/26 17:37:58",
+            "output": "2008/02/26 16:37:58"
+        },
+        {
+            "input": "2000/02/26 00:37:50",
+            "output": "2000/02/25 23:37:50"
+        },
+        {
+            "input": "2009/02/26 16:37:58",
+            "output": "2009/02/26 15:37:58"
+        },
+        {
+            "input": "2000/02/26 11:37:50",
+            "output": "2000/02/26 10:37:50"
+        }
+    ]
+}

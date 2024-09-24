@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert USD to CAD",
+    "instruction": "transform(): Convert the amount from USD to CAD",
+    "context": {
+        "input": "amount in USD",
+        "output": "amount in CAD"
+    },
+    "tuples": [
+        {
+            "input": "$1",
+            "output": "CAD$1.30"
+        },
+        {
+            "input": "$10",
+            "output": "CAD$12.98"
+        },
+        {
+            "input": "$55",
+            "output": "CAD$71.39"
+        },
+        {
+            "input": "$88",
+            "output": "CAD$114.22"
+        },
+        {
+            "input": "$3",
+            "output": "CAD$3.89"
+        }
+    ]
+}

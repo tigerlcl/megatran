@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "evaluate mathematical expression",
+    "instruction": "domain_calculate(): Evaluate the mathematical expression",
+    "context": {
+        "input": "expression",
+        "output": "result"
+    },
+    "tuples": [
+        {
+            "input": "1 + 23",
+            "output": "24"
+        },
+        {
+            "input": "6/2",
+            "output": "3"
+        },
+        {
+            "input": "(1+3)/2",
+            "output": "2"
+        },
+        {
+            "input": "3 + 4",
+            "output": "7"
+        },
+        {
+            "input": "2 / 2 + 1",
+            "output": "2"
+        }
+    ]
+}

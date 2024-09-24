@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "parse day of the week from date",
+    "instruction": "extract(): Parse the day of the week from the date",
+    "context": {
+        "input": "date",
+        "output": "day of the week"
+    },
+    "tuples": [
+        {
+            "input": "05/13/2015",
+            "output": "Wednesday"
+        },
+        {
+            "input": "05/12/2015",
+            "output": "Tuesday"
+        },
+        {
+            "input": "01/21/2014",
+            "output": "Tuesday"
+        },
+        {
+            "input": "03/01/2013",
+            "output": "Friday"
+        },
+        {
+            "input": "01/01/2014",
+            "output": "Wednesday"
+        }
+    ]
+}

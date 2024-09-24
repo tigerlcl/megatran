@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "extract domain from cookie",
+    "instruction": "extract(): Extract the domain from the cookie",
+    "context": {
+        "input": "cookie string",
+        "output": "domain"
+    },
+    "tuples": [
+        {
+            "input": "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/",
+            "output": ""
+        },
+        {
+            "input": "skin=noskin; path=/; domain=.amazon.com; expires=Mon, 22-Mar-2010 18:40:34 GMT;",
+            "output": ".amazon.com"
+        },
+        {
+            "input": "path=/; expires=Wed, 13 Jan 2021 22:23:01 GMT; domain=.foo.com;",
+            "output": ".foo.com"
+        },
+        {
+            "input": "path=/; domain=.microsoft.com; expires=Mon, 1-Mar-2010 18:40:34 GMT;",
+            "output": ".microsoft.com"
+        },
+        {
+            "input": "path=/; expires=Wed, 13 Jan 2021 22:23:01 GMT; domain=.abc.com;",
+            "output": ".abc.com"
+        }
+    ]
+}

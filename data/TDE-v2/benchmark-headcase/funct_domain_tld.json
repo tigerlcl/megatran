@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "extract top-level domain from URL",
+    "instruction": "extract(): Extract the top-level domain from the URL",
+    "context": {
+        "input": "URL",
+        "output": "top-level domain"
+    },
+    "tuples": [
+        {
+            "input": "photos.facebook.co.uk",
+            "output": "co.uk"
+        },
+        {
+            "input": "photos.twitter.com",
+            "output": "com"
+        },
+        {
+            "input": "cnn.com.au",
+            "output": "com.au"
+        },
+        {
+            "input": "news.abc.com.ca",
+            "output": "ca"
+        },
+        {
+            "input": "cnbc.com",
+            "output": "com"
+        }
+    ]
+}

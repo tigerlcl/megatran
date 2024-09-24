@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert to scientific notation with more precision",
+    "instruction": "transform(): Convert the number to scientific notation with 2 decimal places",
+    "context": {
+        "input": "number",
+        "output": "scientific notation"
+    },
+    "tuples": [
+        {
+            "input": "2.431",
+            "output": "2.43E0"
+        },
+        {
+            "input": "1.5857E+0",
+            "output": "1.59E0"
+        },
+        {
+            "input": "1234567890",
+            "output": "1.23E9"
+        },
+        {
+            "input": "13.33e-11",
+            "output": "1.33E-10"
+        },
+        {
+            "input": "12.34",
+            "output": "1.23E1"
+        }
+    ]
+}

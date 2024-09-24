@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert to scientific notation with 1 decimal place",
+    "instruction": "transform(): Convert the number to scientific notation with 1 decimal place",
+    "context": {
+        "input": "number",
+        "output": "scientific notation with 1 decimal place"
+    },
+    "tuples": [
+        {
+            "input": "2.431",
+            "output": "2.4E0"
+        },
+        {
+            "input": "1.55",
+            "output": "1.6E0"
+        },
+        {
+            "input": "1293.3",
+            "output": "1.3E3"
+        },
+        {
+            "input": "0.0013",
+            "output": "1.3E-3"
+        },
+        {
+            "input": "123",
+            "output": "1.2E2"
+        }
+    ]
+}

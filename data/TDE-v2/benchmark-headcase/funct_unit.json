@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert feet to meters",
+    "instruction": "unit_convert(): Convert the length from feet to meters",
+    "context": {
+        "input": "length in feet",
+        "output": "length in meters"
+    },
+    "tuples": [
+        {
+            "input": "1 ft",
+            "output": "0.3 m"
+        },
+        {
+            "input": "3 ft",
+            "output": "0.9 m"
+        },
+        {
+            "input": "10.5 ft",
+            "output": "3.2 m"
+        },
+        {
+            "input": "11 ft",
+            "output": "3.4 m"
+        },
+        {
+            "input": "12 ft",
+            "output": "3.7 m"
+        }
+    ]
+}

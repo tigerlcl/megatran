@@ -1,6 +1,6 @@
 {
     "chat": "Extract and format movie titles",
-    "instruction": "extract(): Extract the movie title from the input string and convert it to lowercase",
+    "instruction": "transform(): Extract the movie title from the input string and convert it to lowercase",
     "context": {
         "input": "String containing movie information with title in double quotes",
         "output": "Lowercase movie title"

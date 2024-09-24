@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert name to initial and last name",
+    "instruction": "format(): Convert the name to initial and last name",
+    "context": {
+        "input": "full name",
+        "output": "initial and last name"
+    },
+    "tuples": [
+        {
+            "input": "Doe, John",
+            "output": "J. Doe"
+        },
+        {
+            "input": "James Smith",
+            "output": "J. Smith"
+        },
+        {
+            "input": "Mr. Charles P. Wooten, III",
+            "output": "C. Wooten"
+        },
+        {
+            "input": "John Johnson",
+            "output": "J. Johnson"
+        },
+        {
+            "input": "Alice C. Doe",
+            "output": "A. Doe"
+        }
+    ]
+}

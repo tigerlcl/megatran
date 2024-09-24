@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "extract street from address",
+    "instruction": "extract(): Extract the street from the given address",
+    "context": {
+        "input": "full address",
+        "output": "street"
+    },
+    "tuples": [
+        {
+            "input": "1 microsoft way, redmond, wa, 98052",
+            "output": "microsoft way"
+        },
+        {
+            "input": "5 super commerce place blvd Ste H, Richmond, VA, 23452",
+            "output": "super commerce place blvd"
+        },
+        {
+            "input": "1001 sunset blvd, Room 301, Sacramento California",
+            "output": "sunset blvd"
+        },
+        {
+            "input": "747 6th St room 111, Kirkland, WA 98033",
+            "output": "6th st"
+        },
+        {
+            "input": "10 commerce way, Richmond, VA, 23452",
+            "output": "commerce way"
+        }
+    ]
+}

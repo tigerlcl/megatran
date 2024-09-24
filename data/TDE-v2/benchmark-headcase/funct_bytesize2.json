@@ -1,1 +1,34 @@
-{}
+{
+    "chat": "covert raw size to byte size and present in standard format",
+    "instruction": "transform(): Convert the original size to byte size and present in standard format",
+    "context": {
+        "input": "raw size",
+        "output": "byte size in standard format"
+    },
+    "tuples": [
+        {
+            "input": "10B",
+            "output": "10 Bytes"
+        },
+        {
+            "input": "100 KB",
+            "output": "102,400 Bytes"
+        },
+        {
+            "input": "1000MB",
+            "output": "1,048,576,000 Bytes"
+        },
+        {
+            "input": "1b",
+            "output": "0.125 Bytes"
+        },
+        {
+            "input": "100 B",
+            "output": "100 Bytes"
+        },
+        {
+            "input": "1GB",
+            "output": "1,073,741,824 Bytes"
+        }
+    ]
+}

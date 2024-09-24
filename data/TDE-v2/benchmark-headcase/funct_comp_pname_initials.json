@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert name to initials",
+    "instruction": "format(): Convert the name to initials",
+    "context": {
+        "input": "full name",
+        "output": "initials"
+    },
+    "tuples": [
+        {
+            "input": "Doe, John",
+            "output": "DJ"
+        },
+        {
+            "input": "James Smith",
+            "output": "SJ"
+        },
+        {
+            "input": "Mr. Charles P. Wooten, III",
+            "output": "WC"
+        },
+        {
+            "input": "John Johnson",
+            "output": "JJ"
+        },
+        {
+            "input": "Alice Bob Doe",
+            "output": "DA"
+        }
+    ]
+}

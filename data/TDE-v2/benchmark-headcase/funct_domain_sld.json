@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "parse second-level domain from URL",
+    "instruction": "extract(): Parse the second-level domain from the URL",
+    "context": {
+        "input": "URL",
+        "output": "second-level domain"
+    },
+    "tuples": [
+        {
+            "input": "www.news.cnn.com",
+            "output": "cnn"
+        },
+        {
+            "input": "cnn.co.uk",
+            "output": "cnn"
+        },
+        {
+            "input": "drive.google.ca",
+            "output": "google"
+        },
+        {
+            "input": "photos.twitter.com",
+            "output": "twitter"
+        },
+        {
+            "input": "www.photos.abc.com",
+            "output": "abc"
+        }
+    ]
+}

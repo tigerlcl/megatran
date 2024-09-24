@@ -1,1 +1,26 @@
-{}
+{
+    "chat": "extract last name from full name",
+    "instruction": "extract(): Extract the last name from the full name",
+    "context": {
+        "input": "full name",
+        "output": "last name"
+    },
+    "tuples": [
+        {
+            "input": "Doe, John",
+            "output": "Doe"
+        },
+        {
+            "input": "James Smith",
+            "output": "Smith"
+        },
+        {
+            "input": "Mr. Charles P. Wooten, III",
+            "output": "Wooten"
+        },
+        {
+            "input": "John Johnson",
+            "output": "Johnson"
+        }
+    ]
+}
