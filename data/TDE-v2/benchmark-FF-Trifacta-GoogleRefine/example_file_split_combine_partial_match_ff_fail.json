@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Combine parts of underscore-separated string",
+    "instruction": "transform(): Combine the first two characters of the first part with the last two characters of the third part of an underscore-separated string",
+    "context": {
+        "input": "String with underscore-separated parts",
+        "output": "Combined string from specific parts of the input"
+    },
+    "tuples": [
+        {
+            "input": "abc_def_xyz_8922ksd",
+            "output": "abyz"
+        },
+        {
+            "input": "all_i23saii_jjk_fhdkaj",
+            "output": "aljk"
+        },
+        {
+            "input": "ipo_2839a_zif_fjei",
+            "output": "ipif"
+        },
+        {
+            "input": "32a_xxde_ttt_32eresaf",
+            "output": "32tt"
+        },
+        {
+            "input": "axd_effe_xzz_ttesfes",
+            "output": "axzz"
+        }
+    ]
+}

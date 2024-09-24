@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Extract and format movie titles",
+    "instruction": "extract(): Extract the movie title from the input string and convert it to lowercase",
+    "context": {
+        "input": "String containing movie information with title in double quotes",
+        "output": "Lowercase movie title"
+    },
+    "tuples": [
+        {
+            "input": "* '''1953 [[Meena Kumari]] – ''[[Baiju Bawra (film)|Baiju Bawra]]''''' as '''Gauri'''",
+            "output": "baiju bawra"
+        },
+        {
+            "input": "* '''1954 [[Meena Kumari]] – ''[[Parineeta (1953 film)|Parineeta]]''''' as '''Lalita'''",
+            "output": "parineeta"
+        },
+        {
+            "input": "* '''1955 [[Kamini Kaushal]] – ''[[Biraj Bahu]]''''' as '''Biraj Chakravorty'''",
+            "output": "biraj bahu"
+        },
+        {
+            "input": "** [[Geeta Bali]] – ''[[Vachan]]'' as Kamla",
+            "output": "vachan"
+        },
+        {
+            "input": "** [[Meena Kumari]] – ''[[Azaad (1955 film)|Azaad]]'' as Shobha",
+            "output": "azaad"
+        }
+    ]
+}

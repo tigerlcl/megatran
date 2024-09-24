@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Extract 'useful' value from JSON",
+    "instruction": "extract(): Extract the value of the 'useful' key from the JSON input",
+    "context": {
+        "input": "JSON string containing 'funny', 'useful', and 'cool' keys with integer values",
+        "output": "The integer value associated with the 'useful' key"
+    },
+    "tuples": [
+        {
+            "input": "{\"funny\": 0, \"useful\": 2, \"cool\": 1}",
+            "output": "2"
+        },
+        {
+            "input": "{\"funny\": 0, \"useful\": 2, \"cool\": 0}",
+            "output": "2"
+        },
+        {
+            "input": "{\"funny\": 0, \"useful\": 0, \"cool\": 0}",
+            "output": "0"
+        },
+        {
+            "input": "{\"funny\": 0, \"useful\": 1, \"cool\": 1}",
+            "output": "1"
+        },
+        {
+            "input": "{\"funny\": 0, \"useful\": 3, \"cool\": 1}",
+            "output": "3"
+        }
+    ]
+}

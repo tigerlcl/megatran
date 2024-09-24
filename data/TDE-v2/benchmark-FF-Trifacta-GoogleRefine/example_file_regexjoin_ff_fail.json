@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Create acronyms from phrases",
+    "instruction": "transform(): Generate acronyms by taking the first letter of each word in the input phrase",
+    "context": {
+        "input": "Phrases or organization names",
+        "output": "Acronyms created from the input phrases"
+    },
+    "tuples": [
+        {
+            "input": "Association Computing Machinery",
+            "output": "ACM"
+        },
+        {
+            "input": "Principle Of Programming Lanaguages",
+            "output": "POPL"
+        },
+        {
+            "input": "Special Interest Group on Management Of Data",
+            "output": "SIGMOD"
+        },
+        {
+            "input": "Relational Data Base Management System",
+            "output": "RDBMS"
+        },
+        {
+            "input": "Table Extraction by Global Record Alignment",
+            "output": "TEGRA"
+        }
+    ]
+}

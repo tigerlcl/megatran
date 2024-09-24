@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Format Social Security Numbers",
+    "instruction": "format(): Add hyphens to 9-digit Social Security Numbers",
+    "context": {
+        "input": "9-digit number representing a Social Security Number",
+        "output": "Formatted Social Security Number with hyphens"
+    },
+    "tuples": [
+        {
+            "input": "1922123456",
+            "output": "192-212-3456"
+        },
+        {
+            "input": "9822135882",
+            "output": "982-213-5882"
+        },
+        {
+            "input": "8332213215",
+            "output": "833-221-3215"
+        },
+        {
+            "input": "9918882777",
+            "output": "991-888-2777"
+        },
+        {
+            "input": "1234567890",
+            "output": "123-456-7890"
+        }
+    ]
+}

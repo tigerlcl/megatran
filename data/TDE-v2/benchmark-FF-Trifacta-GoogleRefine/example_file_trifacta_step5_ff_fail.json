@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Extract uppercase words",
+    "instruction": "extract(): Extract all fully uppercase words from the input text",
+    "context": {
+        "input": "Text containing mixed case words",
+        "output": "Comma-separated list of fully uppercase words found in the input"
+    },
+    "tuples": [
+        {
+            "input": "This is one of the best breakfasts I have had! Is the decor dated? Absolutely but it just adds to the nostalgic charm! The place just reeks of beef cooking... Ahhh delicious! Check out the pastry cases!!!! OMG, is all I have to say!",
+            "output": "OMG"
+        },
+        {
+            "input": "When she asked if we had reservations, I replied no,  and she commented NO?  You KNOW IT IS SATURDAY.  I wanted to say yes, yesterday was Friday and tomorrow is Sunday.  Instead I replied that I was TERRIBLY sorry i did not realize i needed a reservation",
+            "output": "NO, KNOW, IT, IS, SATURDAY, TERRIBLY"
+        },
+        {
+            "input": "This is a TEST, NOT a real line",
+            "output": "TEST, NOT"
+        },
+        {
+            "input": "test ONE, test TWO, test THREE",
+            "output": "ONE, TWO, THREE"
+        },
+        {
+            "input": "This is a TEST, not a real line",
+            "output": "TEST"
+        }
+    ]
+}

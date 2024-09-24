@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Transform first and last names into username",
+    "instruction": "format(): Combine first letter of first name with full last name to create username",
+    "context": {
+        "input": "First and last names separated by a tab character.",
+        "output": "Username created by combining the first letter of the first name with the full last name."
+    },
+    "tuples": [
+        {
+            "input": "john\tsmith",
+            "output": "jsmith"
+        },
+        {
+            "input": "adam\twilliams",
+            "output": "awilliams"
+        },
+        {
+            "input": "james\tjohnson",
+            "output": "jjohnson"
+        },
+        {
+            "input": "alice\tbob",
+            "output": "abob"
+        },
+        {
+            "input": "charlie\tdenis",
+            "output": "cdenis"
+        }
+    ]
+}

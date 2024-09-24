@@ -1,1 +1,38 @@
-{}
+{
+    "chat": "Standardize phone numbers",
+    "instruction": "format(): Convert various phone number formats to XXX-XXX-XXXX",
+    "context": {
+        "input": "Phone numbers in different formats",
+        "output": "Phone numbers standardized to XXX-XXX-XXXX format"
+    },
+    "tuples": [
+        {
+            "input": "323-708-7700",
+            "output": "323-708-7700"
+        },
+        {
+            "input": "(425)-706-7709",
+            "output": "425-706-7709"
+        },
+        {
+            "input": "510.220.5586",
+            "output": "510-220-5586"
+        },
+        {
+            "input": "235 7654",
+            "output": "425-235-7654"
+        },
+        {
+            "input": "745-8139",
+            "output": "425-745-8139"
+        },
+        {
+            "input": "111-222-3333",
+            "output": "111-222-3333"
+        },
+        {
+            "input": "888 9999",
+            "output": "425-888-9999"
+        }
+    ]
+}

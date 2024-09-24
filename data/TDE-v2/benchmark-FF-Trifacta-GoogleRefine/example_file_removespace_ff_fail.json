@@ -1,1 +1,15 @@
-{}
+{
+    "chat": "Normalize spaces in text",
+    "instruction": "extract(): Replace multiple spaces with a single space",
+    "context": {
+        "input": "Text with varying numbers of spaces between words",
+        "output": "Text with single spaces between words"
+    },
+    "tuples": [
+        {"input": "a bb  cc    dd ee", "output": "a bb cc dd ee"},
+        {"input": "a b  c   d    e", "output": "a b c d e"},
+        {"input": "a b     e", "output": "a b e"},
+        {"input": "a b c d e  f", "output": "a b c d e f"},
+        {"input": "aaa  bbb  ccc  ddd", "output": "aaa bbb ccc ddd"}
+    ]
+}

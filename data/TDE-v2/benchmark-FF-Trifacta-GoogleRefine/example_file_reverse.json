@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Extract last element from comma-separated list",
+    "instruction": "extract(): Extract the last element from a comma-separated list of items",
+    "context": {
+        "input": "Comma-separated list of items",
+        "output": "The last element from the input list"
+    },
+    "tuples": [
+        {
+            "input": "a, b, c, d",
+            "output": "d"
+        },
+        {
+            "input": "x, y, z",
+            "output": "z"
+        },
+        {
+            "input": "1, 2, 3",
+            "output": "3"
+        },
+        {
+            "input": "o, p",
+            "output": "p"
+        },
+        {
+            "input": "1, 2, 3, 4, 5, 6, 7",
+            "output": "7"
+        }
+    ]
+}

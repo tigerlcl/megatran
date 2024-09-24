@@ -1,1 +1,58 @@
-{}
+{
+    "chat": "Format and standardize phone numbers",
+    "instruction": "format(): Standardize phone numbers to XXX-XXX-XXXX format",
+    "context": {
+        "input": "Phone numbers in various formats",
+        "output": "Standardized phone numbers in XXX-XXX-XXXX format"
+    },
+    "tuples": [
+        {
+            "input": "4259990200",
+            "output": "425-999-0200"
+        },
+        {
+            "input": "390-9292",
+            "output": "425-390-9292"
+        },
+        {
+            "input": "499-999-2020",
+            "output": "499-999-2020"
+        },
+        {
+            "input": "(299)-398-0003",
+            "output": "299-398-0003"
+        },
+        {
+            "input": "(288) 3998888",
+            "output": "288-399-8888"
+        },
+        {
+            "input": "999-2020",
+            "output": "425-999-2020"
+        },
+        {
+            "input": "425-9990200",
+            "output": "425-999-0200"
+        },
+        {
+            "input": "(288) 3998888",
+            "output": "288-399-8888"
+        },
+        {
+            "input": "499-999-2020",
+            "output": "499-999-2020"
+        },
+        {
+            "input": "(299)-398-0003",
+            "output": "299-398-0003"
+        },
+        {
+            "input": "(288) 3998888",
+            "output": "288-399-8888"
+        },
+        {
+            "input": "425-9990200",
+            "output": "425-999-0200"
+        }
+    ]
+}

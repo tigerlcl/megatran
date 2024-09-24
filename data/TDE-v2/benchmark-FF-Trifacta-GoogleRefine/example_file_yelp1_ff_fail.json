@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Extract business ID from Yelp JSON data",
+    "instruction": "extract(): Extract the business_id from the Yelp JSON data",
+    "context": {
+        "input": "JSON string containing Yelp business data",
+        "output": "The business_id extracted from the input"
+    },
+    "tuples": [
+        {
+            "input": "{\"checkin_info\": {\"3-4\": 1, \"13-5\": 1, \"6-6\": 1, \"14-5\": 1, \"14-6\": 1, \"14-2\": 1, \"14-3\": 1, \"19-0\": 1, \"11-5\": 1, \"13-2\": 1, \"11-6\": 2, \"11-3\": 1, \"12-6\": 1, \"6-5\": 1, \"5-5\": 1, \"9-2\": 1, \"9-5\": 1, \"9-6\": 1, \"5-2\": 1, \"7-6\": 1, \"7-5\": 1, \"7-4\": 1, \"17-5\": 1, \"8-5\": 1, \"10-2\": 1, \"10-5\": 1, \"10-6\": 1}, \"type\": \"checkin\", \"business_id\": \"JwUE5GmEO-sH1FuwJgKBlQ\"}",
+            "output": "JwUE5GmEO-sH1FuwJgKBlQ"
+        },
+        {
+            "input": "{\"checkin_info\": {\"9-3\": 1, \"12-5\": 1, \"15-3\": 1, \"15-5\": 1, \"7-6\": 1, \"7-5\": 1, \"15-6\": 1, \"16-3\": 1, \"10-0\": 1, \"15-4\": 1, \"6-6\": 2, \"8-5\": 2, \"6-5\": 1, \"10-4\": 1, \"10-5\": 1, \"8-2\": 1}, \"type\": \"checkin\", \"business_id\": \"uGykseHzyS5xAMWoN6YUqA\"}",
+            "output": "uGykseHzyS5xAMWoN6YUqA"
+        },
+        {
+            "input": "{\"checkin_info\": {\"16-3\": 1, \"15-3\": 2, \"15-5\": 1, \"15-4\": 1, \"15-6\": 2, \"14-5\": 1, \"14-6\": 1, \"17-5\": 1, \"14-3\": 1, \"19-4\": 1, \"16-5\": 1, \"11-4\": 1, \"11-6\": 2, \"11-0\": 1, \"12-6\": 1, \"12-3\": 1, \"12-0\": 2, \"9-6\": 1, \"7-3\": 1, \"20-5\": 1, \"14-1\": 1, \"17-6\": 1, \"16-0\": 1, \"16-1\": 1, \"16-6\": 2, \"16-4\": 1, \"17-0\": 1, \"10-0\": 2, \"8-1\": 1, \"8-2\": 1}, \"type\": \"checkin\", \"business_id\": \"LRKJF43s9-3jG9Lgx4zODg\"}",
+            "output": "LRKJF43s9-3jG9Lgx4zODg"
+        },
+        {
+            "input": "{\"checkin_info\": {\"16-3\": 1, \"15-3\": 2, \"15-5\": 1, \"15-4\": 1, \"15-6\": 2, \"14-5\": 1, \"14-6\": 1, \"17-5\": 1, \"14-3\": 1, \"8-2\": 1}, \"type\": \"checkin\", \"business_id\": \"AMWoN6YUqA-sH1FuwJgKBlQ\"}",
+            "output": "AMWoN6YUqA-sH1FuwJgKBlQ"
+        },
+        {
+            "input": "{\"checkin_info\": {\"8-5\": 2, \"6-5\": 1, \"10-4\": 1, \"10-5\": 1, \"8-2\": 1}, \"type\": \"checkin\", \"business_id\": \"sH1FuwJgKBlQ5xAMWoN6YUqA\"}",
+            "output": "sH1FuwJgKBlQ5xAMWoN6YUqA"
+        }
+    ]
+}

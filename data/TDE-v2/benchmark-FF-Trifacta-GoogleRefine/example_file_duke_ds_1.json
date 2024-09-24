@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "parse Super Bowl information",
+    "instruction": "extract(): extract Super Bowl number and title from the text.",
+    "context": {
+        "input": "Super Bowl listing in text format",
+        "output": "Super Bowl number and title"
+    },
+    "tuples": [
+        {
+            "input": "| style=\"text-align:  center;\"| {{Sort|01|[[Super Bowl I|I]]}}",
+            "output": "Super Bowl I"
+        },
+        {
+            "input": "| style=\"text-align:  center;\"| {{Sort|02|[[Super Bowl II|II]]}}",
+            "output": "Super Bowl II"
+        },
+        {
+            "input": "| style=\"text-align:  center;\"| {{Sort|03|[[Super Bowl III|III]]}}",
+            "output": "Super Bowl III"
+        },
+        {
+            "input": "| style=\"text-align:  center;\"| {{Sort|05|[[Super Bowl IV|IV]]}}",
+            "output": "Super Bowl IV"
+        },
+        {
+            "input": "| style=\"text-align:  center;\"| {{Sort|03|[[Super Bowl V|III]]}}",
+            "output": "Super Bowl V"
+        }
+    ]
+}

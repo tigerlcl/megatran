@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Extract uppercase words from Yelp reviews",
+    "instruction": "extract(): Extract uppercase words from the Yelp review text",
+    "context": {
+        "input": "Yelp review text",
+        "output": "Uppercase words extracted from the input"
+    },
+    "tuples": [
+        {
+            "input": "This is one of the best breakfasts I have had! Is the decor dated? Absolutely but it just adds to the nostalgic charm! The place just reeks of beef cooking... Ahhh delicious! Check out the pastry cases!!!! OMG, is all I have to say!",
+            "output": "OMG"
+        },
+        {
+            "input": "When she asked if we had reservations, I replied no,  and she commented NO?  You KNOW IT IS SATURDAY.  I wanted to say yes, yesterday was Friday and tomorrow is Sunday.  Instead I replied that I was TERRIBLY sorry i did not realize i needed a reservation",
+            "output": "NO, KNOW, IT, IS, SATURDAY, TERRIBLY"
+        },
+        {
+            "input": "This is a TEST, NOT a real line",
+            "output": "TEST, NOT"
+        },
+        {
+            "input": "test ONE, test TWO, test THREE",
+            "output": "ONE, TWO, THREE"
+        },
+        {
+            "input": "This is a TEST, not a real line",
+            "output": "TEST"
+        }
+    ]
+}

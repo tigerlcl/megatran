@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Reformat names",
+    "instruction": "format(): Split input by tabs, rearrange components, and format as 'LastName, FirstName MiddleInitial.'",
+    "context": {
+        "input": "Raw name separated by tabs.",
+        "output": "Names formatted as 'LastName, FirstName MiddleInitial.'"
+    },
+    "tuples": [
+        {
+            "input": "Freehafer\tDrew\tNancy",
+            "output": "Freehafer, Nancy D."
+        },
+        {
+            "input": "Cencini\tA\tAndrew",
+            "output": "Cencini, Andrew A."
+        },
+        {
+            "input": "Kotas\tBollen\tJan",
+            "output": "Kotas, Jan B."
+        },
+        {
+            "input": "Thorpe\tJ\tSteven",
+            "output": "Thorpe, Steven J."
+        },
+        {
+            "input": "Charlie\tBob\tAlice",
+            "output": "Charlie, Alice B."
+        }
+    ]
+}

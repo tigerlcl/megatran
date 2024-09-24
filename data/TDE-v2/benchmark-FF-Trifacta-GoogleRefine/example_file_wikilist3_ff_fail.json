@@ -1,1 +1,62 @@
-{}
+{
+    "chat": "Extract character names from wiki-style list",
+    "instruction": "extract(): Extract the character name from the wiki-style list item",
+    "context": {
+        "input": "Wiki-style list item containing actor and character information",
+        "output": "Character name extracted from the input"
+    },
+    "tuples": [
+        {
+            "input": "* '''1953 [[Meena Kumari]] – ''[[Baiju Bawra (film)|Baiju Bawra]]''''' as '''Gauri'''",
+            "output": "Gauri"
+        },
+        {
+            "input": "* '''1954 [[Meena Kumari]] – ''[[Parineeta (1953 film)|Parineeta]]''''' as '''Lalita'''",
+            "output": "Lalita"
+        },
+        {
+            "input": "* '''1955 [[Kamini Kaushal]] – ''[[Biraj Bahu]]''''' as '''Biraj Chakravorty'''",
+            "output": "Biraj Chakravorty"
+        },
+        {
+            "input": "** [[Geeta Bali]] – ''[[Vachan]]'' as Kamla",
+            "output": "Kamla"
+        },
+        {
+            "input": "** [[Meena Kumari]] – ''[[Azaad (1955 film)|Azaad]]'' as Shobha",
+            "output": "Shobha"
+        },
+        {
+            "input": "* '''1956 [[Nutan]] – ''[[Seema (1955 film)|Seema]]''''' as '''Gauri'''",
+            "output": "Gauri"
+        },
+        {
+            "input": "* '''1957 [[Nargis Dutt]] – ''[[Mother India]]''''' as '''Radha'''",
+            "output": "Radha"
+        },
+        {
+            "input": "* '''1958 [[Vyjayanthimala]] – ''[[Sadhna]]''''' as '''Champabai / Rajani'''",
+            "output": "Champabai / Rajani"
+        },
+        {
+            "input": "** [[Meena Kumari]] – ''[[Sahara (1958 film)|Sahara]]'' as Leela",
+            "output": "Leela"
+        },
+        {
+            "input": "** [[Vyjayanthimala]] – ''[[Madhumati]]'' as Madhumati / Madhavi / Radha",
+            "output": "Madhumati / Madhavi / Radha"
+        },
+        {
+            "input": "* '''1959 [[Nutan]] – ''[[Sujata (1959 film)|Sujata]]''''' as '''Sujata'''",
+            "output": "Sujata"
+        },
+        {
+            "input": "** [[Mala Sinha]] – ''[[Dhool Ka Phool]]'' as Meena Khosla",
+            "output": "Meena Khosla"
+        },
+        {
+            "input": "** [[Meena Kumari]] – ''[[Chirag Kahan Roshni Kahan]]'' as Ratna",
+            "output": "Ratna"
+        }
+    ]
+}

@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Extract ZIP code from address",
+    "instruction": "extract(): Extract the 5-digit ZIP code from the end of the address string",
+    "context": {
+        "input": "Full address string including street, city, state, and ZIP code",
+        "output": "5-digit ZIP code"
+    },
+    "tuples": [
+        {
+            "input": "2 N Central Avenue Phoenix, AZ 85004",
+            "output": "85004"
+        },
+        {
+            "input": "University Ave Middleton, WI 53562",
+            "output": "53562"
+        },
+        {
+            "input": "Farwell St Mc Farland, WI 53558",
+            "output": "53558"
+        },
+        {
+            "input": "1 Microsoft Way, Redmond, WA 98052",
+            "output": "98052"
+        },
+        {
+            "input": "14820 36th ST NE, Redmond, WA 98052",
+            "output": "98052"
+        }
+    ]
+}

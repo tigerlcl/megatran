@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Transform hierarchical data",
+    "instruction": "extract(): extract the first element of the second tuple from the hierarchical data.",
+    "context": {
+        "input": "Hierarchical data represented as tuples separated by brackets, with elements in each tuple separated by commas.",
+        "output": "The first element of the second tuple from the input data."
+    },
+    "tuples": [
+        {
+            "input": "{{a, b}, {cccc, d}, {e, f}}",
+            "output": "cccc"
+        },
+        {
+            "input": "{{x, aaay}, {aaaz, d}}",
+            "output": "aaaz"
+        },
+        {
+            "input": "{{a}, {ffeaa}, {aa, aaa, aaa, aaa}}",
+            "output": "ffeaa"
+        },
+        {
+            "input": "{{ajfj, ajfie, ajaj, aj}, {jwi, ajaj, aj, a}, {aj, ajiw, ajif, jfi}}",
+            "output": "jwi"
+        },
+        {
+            "input": "{{a}, {b}, {c}}",
+            "output": "b"
+        }
+    ]
+}

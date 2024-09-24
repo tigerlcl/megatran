@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Extract specific element from nested structure",
+    "instruction": "extract(): Extract the second element of the second tuple from the nested structure",
+    "context": {
+        "input": "Nested structure with curly braces and comma-separated elements",
+        "output": "The second element of the second tuple from the input"
+    },
+    "tuples": [
+        {
+            "input": "{{a, b}, {cccc, d}, {e, f}}",
+            "output": "d"
+        },
+        {
+            "input": "{{x, aaay}, {aaaz, d}}",
+            "output": "d"
+        },
+        {
+            "input": "{{a}, {ffeaa}, {aa, aaa, aaa, aaa}}",
+            "output": "ffeaa"
+        },
+        {
+            "input": "{{ajfj, ajfie, ajaj, aj}, {jwi, ajaj, aj, a}, {aj, ajiw, ajif, jfi}}",
+            "output": "a"
+        },
+        {
+            "input": "{{a}, {b}, {c}}",
+            "output": "b"
+        }
+    ]
+}

@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "format phone number data",
+    "instruction": "format(): Add parentheses and dashes to phone numbers",
+    "context": {
+        "input": "Phone numbers represented in a 10 digit format.",
+        "output": "Formatted phone numbers with parentheses and dashes."
+    },
+    "tuples": [
+        {
+            "input": "1235550102",
+            "output": "(123) 555-0102"
+        },
+        {
+            "input": "4254423457",
+            "output": "(425) 442-3457"
+        },
+        {
+            "input": "4251239876",
+            "output": "(425) 123-9876"
+        },
+        {
+            "input": "1231239876",
+            "output": "(123) 123-9876"
+        },
+        {
+            "input": "4259876543",
+            "output": "(425) 987-6543"
+        }
+    ]
+}

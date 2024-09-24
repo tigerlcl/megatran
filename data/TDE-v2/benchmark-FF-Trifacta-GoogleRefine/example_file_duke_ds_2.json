@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Extract team names",
+    "instruction": "extract(): extract team names and seasons from the text file.",
+    "context": {
+        "input": "text format containing team listings",
+        "output": "extracted team names and seasons"
+    },
+    "tuples": [
+        {
+            "input": "| styple = \"background #d0e7ff;\"|{{Sort|Green Bay Packers 01|[[1966 Green Bay Packers season|Green Bay Packers]]<sup>^</sup>}}",
+            "output": "Green Bay Packers"
+        },
+        {
+            "input": "| styple = \"background #d0e7ff;\"|{{Sort|Green Bay Packers 02|[[1967 Green Bay Packers season|Green Bay Packers]]<sup>^</sup>}}",
+            "output": "Green Bay Packers"
+        },
+        {
+            "input": "| styple = \"background #d0e7ff;\"|{{Sort|New York Jets 01|[[1968 Green Bay Packers season|New York Jets]]<sup>^</sup>}}",
+            "output": "New York Jets"
+        },
+        {
+            "input": "| styple = \"background #d0e7ff;\"|{{Sort|San Francisco 49ers 01|[[1981 San Francisco 49ers season|San Francisco 49ers]]<sup>^</sup>}}",
+            "output": "San Francisco 49ers"
+        },
+        {
+            "input": "| styple = \"background #d0e7ff;\"|{{Sort|Green Bay Packers 02|[[1911 Green Bay Packers season|Green Bay Packers]]<sup>^</sup>}}",
+            "output": "Green Bay Packers"
+        }
+    ]
+}

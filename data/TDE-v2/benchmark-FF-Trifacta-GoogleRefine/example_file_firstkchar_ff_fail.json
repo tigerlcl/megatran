@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "slice first k characters",
+    "instruction": "extract(): slice first k characters from the text.",
+    "context": {
+        "input": "raw text",
+        "output": "sliced text"
+    },
+    "tuples": [
+        {
+            "input": "aaaaaaaa",
+            "output": "aaa"
+        },
+        {
+            "input": "bb",
+            "output": "bb"
+        },
+        {
+            "input": "ccc",
+            "output": "ccc"
+        },
+        {
+            "input": "ddddd",
+            "output": "ddd"
+        },
+        {
+            "input": "eeeeeee",
+            "output": "eee"
+        }
+    ]
+}

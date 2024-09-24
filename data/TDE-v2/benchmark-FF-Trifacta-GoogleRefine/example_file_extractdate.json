@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Extract dates from file name",
+    "instruction": "extract(): extract dates from the file name.",
+    "context": {
+        "input": "file name containing dates",
+        "output": "extracted dates in format MM/DD/YYYY"
+    },
+    "tuples": [
+        {
+            "input": "03_2005_XXX.xls",
+            "output": "03/01/2005"
+        },
+        {
+            "input": "12_2011_xaz.xls",
+            "output": "12/01/2011"
+        },
+        {
+            "input": "04_2015_rrrrr.xls",
+            "output": "04/01/2015"
+        },
+        {
+            "input": "03_2015_rrrrr.xls",
+            "output": "03/01/2015"
+        },
+        {
+            "input": "11_2012_rrrrr.xls",
+            "output": "11/01/2012"
+        }
+    ]
+}

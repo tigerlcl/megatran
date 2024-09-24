@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert first column to uppercase",
+    "instruction": "transform(): Convert the first column of tab-separated input to uppercase",
+    "context": {
+        "input": "Two columns of text separated by a tab",
+        "output": "First column converted to uppercase"
+    },
+    "tuples": [
+        {
+            "input": "abc\txyz",
+            "output": "ABC"
+        },
+        {
+            "input": "azzz\tttt",
+            "output": "AZZZ"
+        },
+        {
+            "input": "xyz\tttttt",
+            "output": "XYZ"
+        },
+        {
+            "input": "cccc\tabc",
+            "output": "CCCC"
+        },
+        {
+            "input": "abcdefg\tuvw",
+            "output": "ABCDEFG"
+        }
+    ]
+}

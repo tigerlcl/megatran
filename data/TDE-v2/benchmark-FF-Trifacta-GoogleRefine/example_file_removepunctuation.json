@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Remove punctuation from text",
+    "instruction": "extract(): Remove all punctuation marks from the input text",
+    "context": {
+        "input": "Text with various punctuation marks",
+        "output": "Text with punctuation marks removed"
+    },
+    "tuples": [
+        {
+            "input": "\"Do you like this site?\",",
+            "output": "Do you like this site"
+        },
+        {
+            "input": "\"--cool--\",",
+            "output": "cool"
+        },
+        {
+            "input": "\"...ok!\",",
+            "output": "ok"
+        },
+        {
+            "input": "\"None\",",
+            "output": "None"
+        },
+        {
+            "input": "\"test if this works\"?",
+            "output": "test if this works"
+        }
+    ]
+}

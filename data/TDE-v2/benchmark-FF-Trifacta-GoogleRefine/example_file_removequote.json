@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Remove quotation marks from text",
+    "instruction": "extract(): Remove surrounding quotation marks from the input text",
+    "context": {
+        "input": "Text surrounded by quotation marks",
+        "output": "Text with surrounding quotation marks removed"
+    },
+    "tuples": [
+        {
+            "input": "\"Do you like this site?\"",
+            "output": "Do you like this site?"
+        },
+        {
+            "input": "\"--cool--\"",
+            "output": "--cool--"
+        },
+        {
+            "input": "\"...ok!\"",
+            "output": "...ok!"
+        },
+        {
+            "input": "\"None\"",
+            "output": "None"
+        },
+        {
+            "input": "\"test if this works\"",
+            "output": "test if this works"
+        }
+    ]
+}

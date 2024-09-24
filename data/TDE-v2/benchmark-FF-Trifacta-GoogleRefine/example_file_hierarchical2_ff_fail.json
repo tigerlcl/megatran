@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Extract first element of second tuple from hierarchical data",
+    "instruction": "extract(): extract the first element of the second tuple from the hierarchical data separated by semicolons.",
+    "context": {
+        "input": "Hierarchical data represented as tuples separated by semicolons, with elements in each tuple separated by commas.",
+        "output": "The first element of the second tuple from the input data."
+    },
+    "tuples": [
+        {
+            "input": "a, b; cccc, d; e, f",
+            "output": "cccc"
+        },
+        {
+            "input": "x, aaay; aaaz, d",
+            "output": "aaaz"
+        },
+        {
+            "input": "a; ffeaa; aa, aaa, aaa, aaa",
+            "output": "ffeaa"
+        },
+        {
+            "input": "ajfj, ajfie, ajaj, aj; jwi, ajaj, aj, a; aj, ajiw, ajif, jfi",
+            "output": "jwi"
+        },
+        {
+            "input": "ccc; aaa, bbb, ccc, ddd; xyz",
+            "output": "aaa"
+        }
+    ]
+}

@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Transform last name, first name to username",
+    "instruction": "format(): Split input by comma, trim spaces, take first letter of first name and concatenate with full last name",
+    "context": {
+        "input": "Names represented as 'first name, last name'.",
+        "output": "Username"
+    },
+    "tuples": [
+        {
+            "input": "smith, john",
+            "output": "jsmith"
+        },
+        {
+            "input": "williams, adam",
+            "output": "awilliams"
+        },
+        {
+            "input": "johnson, james",
+            "output": "jjohnson"
+        },
+        {
+            "input": "denis, alice",
+            "output": "adenis"
+        },
+        {
+            "input": "smith, bob",
+            "output": "bsmith"
+        }
+    ]
+}

@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Convert text to uppercase and remove accents",
+    "instruction": "transform(): Convert input text to uppercase and remove accent marks",
+    "context": {
+        "input": "Text with possible lowercase letters and accent marks",
+        "output": "Uppercase text with accent marks removed"
+    },
+    "tuples": [
+        {
+            "input": "áéíóú",
+            "output": "AEIOU"
+        },
+        {
+            "input": "aeiou",
+            "output": "AEIOU"
+        },
+        {
+            "input": "aeíouxyz",
+            "output": "AEIOUXYZ"
+        },
+        {
+            "input": "aeío",
+            "output": "AEIOU"
+        },
+        {
+            "input": "aeíouïöüz",
+            "output": "AEIOUIOUZ"
+        }
+    ]
+}

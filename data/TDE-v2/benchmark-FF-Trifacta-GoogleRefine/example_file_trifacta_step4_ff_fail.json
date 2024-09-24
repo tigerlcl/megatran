@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "Extract exclamation marks",
+    "instruction": "extract(): Extract all exclamation marks from the input text",
+    "context": {
+        "input": "Long text containing various punctuation marks",
+        "output": "String of consecutive exclamation marks found in long text"
+    },
+    "tuples": [
+        {
+            "input": "This is one of the best breakfasts I have had! Is the decor dated? Absolutely but it just adds to the nostalgic charm! The place just reeks of beef cooking... Ahhh delicious! Check out the pastry cases!!!! OMG, is all I have to say!",
+            "output": "!, !, !, !!!!, !"
+        },
+        {
+            "input": "Went here for lunch with two co-workers, checked Yelp before we went and the reviews were very positive so we decided to give it a try.\n\nYikes! How can the reviews be 4-5 stars and the service at best \"average\", the food was terrible and myself and my co-workers all agreed, this restaurant doesn't rate two stars.\n\nI had one of the special Friday offerings, Smelt. It came with a salad (very average but fresh), fries (ordinary) and the Smelt. After a 20-25 minute wait our server came with our orders. I looked at my plate and was shocked! There was 12-15 so-called Smelt about 3\" long and deep fried. They looked like little fat cigarettes! I bit into one and it was all batter, I tried another and it was the same!! I had deep fried batter for lunch!!",
+            "output": "!, !, !, !!, !!"
+        },
+        {
+            "input": "Test example!!! This is a test!!!",
+            "output": "!!!, !!!"
+        },
+        {
+            "input": "Test one!",
+            "output": "!"
+        },
+        {
+            "input": "one! two!! three!!!",
+            "output": "!, !!, !!!"
+        }
+    ]
+}
