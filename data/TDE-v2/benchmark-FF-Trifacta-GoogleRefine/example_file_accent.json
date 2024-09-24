@@ -1,0 +1,30 @@
+{
+    "chat": "normalize accented string",
+    "instruction": "format(): normalize string by replacing accented characters with their ASCII equivalents.",
+    "context": {
+        "input": "string with accented characters",
+        "output": "normalized string"
+    },
+    "tuples": [
+        {
+            "input": "áéíóú",
+            "output": "aeiou"
+        },
+        {
+            "input": "aeiou",
+            "output": "aeiou"
+        },
+        {
+            "input": "aeíouxyz",
+            "output": "aeiouxyz"
+        },
+        {
+            "input": "aeío",
+            "output": "aeio"
+        },
+        {
+            "input": "aeíouíóúz",
+            "output": "aeiouiouz"
+        }
+    ]
+}

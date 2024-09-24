@@ -1,0 +1,5 @@
+abc	xyz		ABC
+azzz	ttt		AZZZ
+xyz	ttttt		XYZ
+cccc	abc		CCCC
+abcdefg	uvw		ABCDEFG

@@ -1,0 +1,6 @@
+//
+www.news.cnn.com		cnn
+cnn.co.uk		cnn
+drive.google.ca		google
+photos.twitter.com		twitter
+www.photos.abc.com		abc

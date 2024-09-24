@@ -1,0 +1,30 @@
+{
+    "chat": "normalize movie titles",
+    "instruction": "transform(): normalize movie titles by removing redundant information",
+    "context": {
+        "input": "movie titles with redundant information",
+        "output": "normalized movie titles"
+    },
+    "tuples": [
+        {
+            "input": "Harry Potter 4 aka Harry Potter and the Goblet of Fire",
+            "output": "Harry Potter and the Goblet of Fire"
+        },
+        {
+            "input": "Indy 4 aka Indiana Jones and the Kingdom of the Crystal Skull",
+            "output": "Indiana Jones and the Kingdom of the Crystal Skull"
+        },
+        {
+            "input": "New Star Trek aka Star Trek Into Darkness",
+            "output": "Star Trek Into Darkness"
+        },
+        {
+            "input": "The Hunger Games 3 aka the hunger games mockingjay part 1",
+            "output": "the hunger games mockingjay part 1"
+        },
+        {
+            "input": "New X man aka X-Men: Days of Future Past",
+            "output": "X-Men: Days of Future Past"
+        }
+    ]
+}

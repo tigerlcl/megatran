@@ -1,0 +1,6 @@
+// name to initial+last
+Doe, John		J. Doe
+James Smith		J. Smith
+Mr. Charles P. Wooten, III		C. Wooten
+John Johnson		J. Johnson
+Alice C. Doe		A. Doe

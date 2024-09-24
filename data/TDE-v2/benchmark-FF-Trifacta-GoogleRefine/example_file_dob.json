@@ -1,0 +1,30 @@
+{
+    "chat": "format date of birth",
+    "instruction": "format(): convert YYYYMMDD to MM-DD-YYYY",
+    "context": {
+        "input": "date in YYYYMMDD format",
+        "output": "formatted date in MM-DD-YYYY"
+    },
+    "tuples": [
+        {
+            "input": "19610223",
+            "output": "02-23-1961"
+        },
+        {
+            "input": "19700101",
+            "output": "01-01-1970"
+        },
+        {
+            "input": "19330212",
+            "output": "02-12-1933"
+        },
+        {
+            "input": "19221213",
+            "output": "12-13-1922"
+        },
+        {
+            "input": "19111122",
+            "output": "11-22-1911"
+        }
+    ]
+}

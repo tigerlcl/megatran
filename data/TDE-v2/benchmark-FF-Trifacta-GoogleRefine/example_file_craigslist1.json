@@ -1,0 +1,30 @@
+{
+    "chat": "parse the house area from the description",
+    "instruction": "extract(): extract the house area from the description.",
+    "context": {
+        "input": "house listings information",
+        "output": "house area"
+    },
+    "tuples": [
+        {
+            "input": "Mar 18 Beautiful One bedroom Available. Schedule your appointment today $1410 / 1br - 938ft2 - (Downtown Tacoma, Theater District) pic map",
+            "output": "938"
+        },
+        {
+            "input": "Mar 18 1. Warm sunsets, Lake Washington, Downtown Seattle Skyline. Act fast! $2829 / 3br - 1535ft2 - (Renton, WA) pic map",
+            "output": "1535"
+        },
+        {
+            "input": "Mar 18 New AVAILABLE NOW FURNISHED $1650 / 1br - 750ft2 - (Bellevue) pic",
+            "output": "750"
+        },
+        {
+            "input": "Mar 1 Lake Washington, Bellevue $1234 / 3br - 1899ft2 - (Bellevue, WA) pic map",
+            "output": "1899"
+        },
+        {
+            "input": "Mar 23 Downtown Seattle Skyline. Act fast! $2829 / 3br - 355ft2 - (Seattle, WA) pic map",
+            "output": "355"
+        }
+    ]
+}

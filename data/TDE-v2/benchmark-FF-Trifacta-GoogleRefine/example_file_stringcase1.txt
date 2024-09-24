@@ -1,0 +1,5 @@
+james	smith		JSmith
+jane	johnson		JJohnson
+bob	white		BWhite
+alice	johnson		AJohnson
+charlie	denis		CDenis

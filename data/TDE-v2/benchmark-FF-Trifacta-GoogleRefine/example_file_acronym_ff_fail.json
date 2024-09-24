@@ -1,0 +1,30 @@
+{
+    "chat": "normalize acronyms",
+    "instruction": "format(): map full phrases to their acronyms.",
+    "context": {
+        "input": "full phrases with acronyms",
+        "output": "acronyms"
+    },
+    "tuples": [
+        {
+            "input": "association computing machinery",
+            "output": "acm"
+        },
+        {
+            "input": "principle of programming languages",
+            "output": "popl"
+        },
+        {
+            "input": "special interest group management of data",
+            "output": "sigmod"
+        },
+        {
+            "input": "special interest group information retrieval",
+            "output": "sigir"
+        },
+        {
+            "input": "relational data base management system",
+            "output": "rdbms"
+        }
+    ]
+}
