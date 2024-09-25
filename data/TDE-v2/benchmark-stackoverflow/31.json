@@ -1,10 +1,10 @@
 {
     "chat": "How to convert number to words in Python",
     "instruction": "transform(): Provide a mapping of numbers to their corresponding words.",
-    "context": [
-        "input: a number",
-        "output: number described in words"
-    ],
+    "context": {
+        "input": "a number",
+        "output": "number described in words"
+    },
     "tuples": [
         {
             "input": 10183,

@@ -1,9 +1,9 @@
 {
-    "chat": "Extract movie roles",
-    "instruction": "extract(): extract movie roles from the text file.",
+    "chat": "Extract name of actor/actress",
+    "instruction": "extract(): extract name of actor/actress from the text file.",
     "context": {
         "input": "text format containing movie details",
-        "output": "extracted movie roles"
+        "output": "extracted name of actor/actress"
     },
     "tuples": [
         {

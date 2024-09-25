@@ -10,3 +10,4 @@ __pycache__/
 etc/*_private.yaml
 exp/
 log/
+notebooks/

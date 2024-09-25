@@ -1,1 +1,30 @@
-{}
+{
+    "chat": "convert liters to ounces",
+    "instruction": "unit_convert(): Convert the original liters to ounces",
+    "context": {
+        "input": "liters",
+        "output": "ounces"
+    },
+    "tuples": [
+        {
+            "input": "1 L",
+            "output": "33.8140227 oz"
+        },
+        {
+            "input": "5870 L",
+            "output": "198488.313 oz"
+        },
+        {
+            "input": "35 L",
+            "output": "1183.4908 oz"
+        },
+        {
+            "input": "112 L",
+            "output": "3787.17055 oz"
+        },
+        {
+            "input": "99 L",
+            "output": "3347.58825 oz"
+        }
+    ]
+}
