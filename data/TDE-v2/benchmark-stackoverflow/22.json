@@ -1,6 +1,6 @@
 {
     "chat": "Phone number processing",
-    "instruction": "extract(): Process phone numbers by removing non-numeric characters",
+    "instruction": "format(): Process phone numbers by removing non-numeric characters",
     "context": {
         "input": "a phone number",
         "output": "a numeric phone number"
