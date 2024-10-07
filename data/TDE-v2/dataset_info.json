@@ -1,0 +1,34 @@
+{
+  "tde-o1": {
+    "file_name": "tde-alpaca.json",
+    "columns": {
+      "prompt": "chat",
+      "query": "",
+      "response": "instruction"
+    }
+  },
+  "tde-o2": {
+    "file_name": "tde-alpaca.json",
+    "columns": {
+      "prompt": "chat",
+      "query": "io_pairs",
+      "response": "instruction"
+    }
+  },
+  "tde-o3": {
+    "file_name": "tde-alpaca.json",
+    "columns": {
+      "prompt": "chat_ctx",
+      "query": "",
+      "response": "instruction"
+    }
+  },
+  "tde-o4": {
+    "file_name": "tde-alpaca.json",
+    "columns": {
+      "prompt": "chat_ctx",
+      "query": "io_pairs",
+      "response": "instruction"
+    }
+  }
+}
