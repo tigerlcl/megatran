@@ -4,31 +4,35 @@
     "columns": {
       "prompt": "chat",
       "query": "",
-      "response": "instruction"
+      "response": "instruction",
+      "system": "system"
     }
   },
   "tde-o2": {
     "file_name": "tde-alpaca.json",
     "columns": {
       "prompt": "chat",
-      "query": "io_pairs",
-      "response": "instruction"
+      "query": "pairs",
+      "response": "instruction",
+      "system": "system"
     }
   },
   "tde-o3": {
     "file_name": "tde-alpaca.json",
     "columns": {
-      "prompt": "chat_ctx",
-      "query": "",
-      "response": "instruction"
+      "prompt": "chat",
+      "query": "ctx",
+      "response": "instruction",
+      "system": "system"
     }
   },
   "tde-o4": {
     "file_name": "tde-alpaca.json",
     "columns": {
-      "prompt": "chat_ctx",
-      "query": "io_pairs",
-      "response": "instruction"
+      "prompt": "chat",
+      "query": "ctx_pairs",
+      "response": "instruction",
+      "system": "system"
     }
   }
 }
