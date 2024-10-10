@@ -11,8 +11,8 @@
   "tde-o2": {
     "file_name": "tde-alpaca.json",
     "columns": {
-      "prompt": "chat",
-      "query": "pairs",
+      "prompt": "",
+      "query": "train_pairs",
       "response": "instruction",
       "system": "system"
     }
@@ -20,7 +20,7 @@
   "tde-o3": {
     "file_name": "tde-alpaca.json",
     "columns": {
-      "prompt": "chat",
+      "prompt": "",
       "query": "ctx",
       "response": "instruction",
       "system": "system"
@@ -30,7 +30,34 @@
     "file_name": "tde-alpaca.json",
     "columns": {
       "prompt": "chat",
-      "query": "ctx_pairs",
+      "query": "train_pairs",
+      "response": "instruction",
+      "system": "system"
+    }
+  },
+  "tde-o5": {
+    "file_name": "tde-alpaca.json",
+    "columns": {
+      "prompt": "chat",
+      "query": "ctx",
+      "response": "instruction",
+      "system": "system"
+    }
+  },
+  "tde-o6": {
+    "file_name": "tde-alpaca.json",
+    "columns": {
+      "prompt": "",
+      "query": "ctx_t_pairs",
+      "response": "instruction",
+      "system": "system"
+    }
+  },
+  "tde-o7": {
+    "file_name": "tde-alpaca.json",
+    "columns": {
+      "prompt": "chat",
+      "query": "ctx_t_pairs",
       "response": "instruction",
       "system": "system"
     }
