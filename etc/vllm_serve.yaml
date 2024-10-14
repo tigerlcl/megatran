@@ -1,0 +1,6 @@
+---
+host: "127.0.0.1"          # Server host
+port: 8000               # Server port
+api_key: "token-abc123"
+uvicorn_log_level: "info"  # Log level for uvicorn
+device: "cuda"             # Device type for vLLM execution
