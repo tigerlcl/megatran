@@ -11,7 +11,7 @@ def vllm_chat(prompt):
     )
 
     completion = client.chat.completions.create(
-        model="/home/lichanglun/LLaMA-Factory/models/llama3_lora_sft",
+        model="models/llama3_lora_sft", # local model
         messages=[
             {"role": "user", "content": prompt}
         ]

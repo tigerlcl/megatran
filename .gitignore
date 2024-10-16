@@ -9,5 +9,6 @@ __pycache__/
 # Project 
 etc/*_private.yaml
 exp/
-log/
-
+logs/
+models/
+temp/

@@ -1,11 +1,3 @@
-# Path
-dataset_dir: "data/raw"
-instruction_dir: "data/instruction"
-code_dir: "exp/code"
-result_dir: "exp/result"
-
-# OPENAI
-llm:
+openai:
   model_name: "xxx"
   api_key: "sk-xxx"
-  temp_python_file: "src/temp_solve.py"

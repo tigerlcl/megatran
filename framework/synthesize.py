@@ -11,10 +11,9 @@ API_TRIGGER = {
 
 
 class InstructionBuilder:
-    def __init__(self, inst_fp, test_fp, n_shot):
+    def __init__(self, inst_fp, test_fp):
         self.inst_fp = inst_fp
         self.test_fp = test_fp
-        self.n_shot = n_shot
 
         self.inst_data = ""
         self.shot_data = ""
@@ -47,15 +46,11 @@ class InstructionBuilder:
         with open(self.test_fp, 'r') as f:
             # preprocess func on TDE data only, need adapt other datasets
             self.test_header = f.readline()  # skip header
-
-            shot_count = 0
-            while shot_count < self.n_shot:
-                line = re.split('\t+', f.readline().strip())
-                if len(line) != 2:  # temp skip bad case, e.g. stackoverflow/2.txt
-                    continue
-                self.shot_data += f"input: {line[0]}, output: {line[1]}\n"
-                shot_count += 1
-
+            line = re.split('\t+', f.readline().strip())
+            if len(line) != 2:  # temp skip bad case, e.g. stackoverflow/2.txt
+                return
+            self.shot_data += f"input: {line[0]}, output: {line[1]}\n"
+                
             # the rest would be the test data
             self.test_data = [re.split('\t+', line.strip()) for line in f.readlines()]
 
