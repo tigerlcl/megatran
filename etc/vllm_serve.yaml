@@ -4,3 +4,5 @@ port: 8000                 # Server port
 api_key: "token-abc123"    # API key for vLLM, any string is fine
 uvicorn_log_level: "info"  # Log level for uvicorn
 device: "cuda"             # Device type for vLLM execution
+disable-log-stats: true    # Disable log stats
+disable-log-requests: true # Disable log requests

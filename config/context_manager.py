@@ -5,9 +5,10 @@ import yaml
 class Context:
     def __init__(self, args):
         self.exp_name = args.exp_name
-        self.dataset_name = args.dataset_name
-        self.cfg = self._load_config(args.config)  # Load the config once
-        self.logger = self.setup_logger()  # Initialize the logger first
+        self.config = self._load_config(args.config)  # Load the config once
+        
+        # Initialize the logger first
+        self.logger = self.setup_logger()  
         
         # Setup directories
         self.code_dir = self.setup_directory(os.path.join('exp', self.exp_name, 'code'))

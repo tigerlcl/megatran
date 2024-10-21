@@ -1,6 +1,7 @@
 import os
 import json
 
+
 def create_json():
     """Create JSON files from TXT files in the raw data directory."""
     # Define the path to the raw data directory
