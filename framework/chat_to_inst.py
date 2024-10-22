@@ -24,6 +24,7 @@ class ChatBuilder:
         self.logger.info(f"Generating instruction for {item['file_path']}")
         try:
             query = self.query_generator.get_prompt_by_mode(item)
+            self.logger.info(f"Chat-to-instruction query:\n{query}")
         except ValueError as e:
             self.logger.error(f"Error when generating prompt: {e}")
             return None

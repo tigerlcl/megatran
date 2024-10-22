@@ -14,10 +14,10 @@ class CodeGenerator:
         self.code_dir = ctx.code_dir
         self.oai_model = ctx.openai_model
         self.logger = ctx.logger
+        self.n_shot = ctx.n_shot
 
         self.oai_client = OpenAI(**ctx.openai_cfg)
         self.query_generator = CodePrompt(ctx.code_mode, ctx.n_shot)
-        
         self.temp_python_fp = os.path.join(ctx.temp_dir, "code_solution.py")
         self.py_block = r'```python\n(.*?)\n```'
     
@@ -25,9 +25,10 @@ class CodeGenerator:
     def generate_code(self, item):
         try:
             query = self.query_generator.get_prompt_by_mode(item)
+            self.logger.info(f"Code generation query:\n{query}")
         except ValueError as e:
             self.logger.error(f"Error when generating prompt: {e}")
-            return None
+            return False
         
         messages = [
             {"role": "system", "content": "You are a Python code generator based on the given instruction."},
@@ -122,16 +123,12 @@ class CodeGenerator:
 
     def run(self, item):
         self.logger.info(f"Generating code for {item['file_path']}")
-        try:
-            isCodeGen = self.generate_code(item)
-        except Exception as e:
-            self.logger.error(f"Error when generating code: {e}")
-            isCodeGen = False
+
+        # prepare test, skip the few shot examples
+        tests = [{'input': t['input'], 'output': t['output'], 'code_output': None} for t in item['tuples'][self.n_shot:]]
         
         # Execute code and evaluate result
-        tests = [{'input': t['input'], 'output': t['output'], 'code_output': None} for t in item['tuples']]
-
-        if isCodeGen:
+        if self.generate_code(item):
             tests = self.execute_code(tests)
         
         return tests

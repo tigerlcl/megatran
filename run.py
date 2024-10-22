@@ -10,7 +10,7 @@ def main(ctx):
     dataset = load_dataset_by_name(ctx.dataset_name)
 
     # get subset for testing
-    dataset = dataset[:10]
+    # dataset = dataset[:10]
 
     # chat-to-instruction
     chatBuilder = ChatBuilder(dataset, ctx)
