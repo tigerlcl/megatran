@@ -6,19 +6,20 @@ from framework import ChatBuilder, CodeGenerator, ResultAnalyzer
 
 def main(ctx):
      # Load the dataset based on the dataset_name
-    ctx.logger.info("Loading dataset...")
+    ctx.logger.info(f"Loading dataset {ctx.dataset_name}...")
     dataset = load_dataset_by_name(ctx.dataset_name)
 
     # get subset for testing
-    dataset = dataset[:5]
-    resultAnalyzer = ResultAnalyzer(ctx)
+    dataset = dataset[:10]
 
     # chat-to-instruction
     chatBuilder = ChatBuilder(dataset, ctx)
     dataset = chatBuilder.run()
 
-    # Inference Code Per test case and evaluate result
+    # Inference Code Per test case and evaluate result with Analyzer
     codeGen = CodeGenerator(ctx)
+    resultAnalyzer = ResultAnalyzer(ctx)
+
     for item in tqdm(dataset, desc="Processing test cases"):
         tests = codeGen.run(item)
         resultAnalyzer.add_record(item['file_path'], tests)

@@ -11,19 +11,24 @@ class ResultAnalyzer:
         self.summary = list() # dataset-level summary
 
     def add_record(self, test_fp, test_data):
-        pass_ct = 0
+        pass_cnt = 0
+        fail_test = list()
         for item in test_data:
-            if 'code_output' in item and compare_values(item['output'], item['code_output']):  # ans is not None
-                pass_ct += 1
+            if compare_values(item['output'], item['code_output']):
+                pass_cnt += 1
+            else:
+                # collect failure case
+                fail_test.append(item)
 
         record = {
-            "test_fp": test_fp,
-            "pass_ct": pass_ct,
-            "total_ct": len(test_data),
-            "pass_rate": np.round(pass_ct / len(test_data), 3),
-            "test": test_data,
+            "test_file_path": test_fp,
+            "pass_cnt": pass_cnt,
+            "total_cnt": len(test_data),
+            "pass_rate": np.round(pass_cnt / len(test_data), 3),
+            "fail_test": fail_test
         }
         self.summary.append(record)
+
 
     def export_csv_full_result(self):
         csv_fp = os.path.join(self.result_dir, 'full_result.csv')
@@ -36,8 +41,8 @@ class ResultAnalyzer:
         if self.df is None:
             self.df = pd.DataFrame(self.summary)
 
-        total_pass = int(self.df["pass_ct"].sum())  # Convert to int
-        total_test = int(self.df["total_ct"].sum())  # Convert to int
+        total_pass = int(self.df["pass_cnt"].sum())  # Convert to int
+        total_test = int(self.df["total_cnt"].sum())  # Convert to int
         prate_per_test = np.round(total_pass / total_test, 3)
 
         total_test_case = self.df.shape[0]
@@ -56,6 +61,8 @@ class ResultAnalyzer:
         json_fp = os.path.join(self.result_dir, 'summary.json')
         with open(json_fp, 'w') as f:
             json.dump(stat, f, indent=4)
+
+        self.logger.info(f"Summary: {stat}, exported to {json_fp}")
 
 
 def compare_values(a, b):

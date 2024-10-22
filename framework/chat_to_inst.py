@@ -17,7 +17,7 @@ class ChatBuilder:
         self.model_path = ctx.vllm_model
         
         self.vllm_client = OpenAI(**ctx.vllm_cfg)
-        self.query_generator = ChatPrompt(ctx.chat_mode)
+        self.query_generator = ChatPrompt(ctx.chat_mode, ctx.n_shot)
         self.logger = ctx.logger
     
     def _process_data(self, item):

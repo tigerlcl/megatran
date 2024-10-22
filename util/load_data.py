@@ -29,9 +29,7 @@ def _load_tde_v2(dataset_info: dict):
             json_fp = os.path.join(dataset_info["path"], file)
             with open(json_fp, 'r') as f:
                 obj = json.load(f)
-                obj['file_path'] = json_fp  
-                # skip first 3 tuples due to training examples
-                obj['tuples'] = obj['tuples'][3:]
+                obj['file_path'] = json_fp
                 data.append(obj)
 
     return data

@@ -1,0 +1,44 @@
+2024-10-22 07:45:04,017 - INFO - Logger initialized.
+2024-10-22 07:45:04,018 - INFO - Loading dataset...
+2024-10-22 07:45:04,053 - INFO - Generating instruction for ./data/TDE-v2/benchmark-stackoverflow/28.json
+2024-10-22 07:45:04,063 - INFO - Generating instruction for ./data/TDE-v2/benchmark-stackoverflow/2.json
+2024-10-22 07:45:04,077 - INFO - Generating instruction for ./data/TDE-v2/benchmark-stackoverflow/3.json
+2024-10-22 07:45:04,088 - INFO - Generating instruction for ./data/TDE-v2/benchmark-stackoverflow/20.json
+2024-10-22 07:45:04,099 - INFO - Generating instruction for ./data/TDE-v2/benchmark-stackoverflow/17.json
+2024-10-22 07:45:04,109 - INFO - Generating instruction for ./data/TDE-v2/benchmark-stackoverflow/44.json
+2024-10-22 07:45:04,119 - INFO - Generating instruction for ./data/TDE-v2/benchmark-stackoverflow/48.json
+2024-10-22 07:45:04,129 - INFO - Generating instruction for ./data/TDE-v2/benchmark-stackoverflow/47.json
+2024-10-22 07:45:04,141 - INFO - Generating instruction for ./data/TDE-v2/benchmark-stackoverflow/32.json
+2024-10-22 07:45:04,150 - INFO - Generating instruction for ./data/TDE-v2/benchmark-stackoverflow/13.json
+2024-10-22 07:45:04,429 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:04,430 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:04,432 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:04,476 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:04,478 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:04,488 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:04,490 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:04,532 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:04,587 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:04,604 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:04,695 - INFO - Generating code for ./data/TDE-v2/benchmark-stackoverflow/47.json
+2024-10-22 07:45:07,027 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:07,036 - INFO - Generating code for ./data/TDE-v2/benchmark-stackoverflow/20.json
+2024-10-22 07:45:08,056 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:08,063 - INFO - Generating code for ./data/TDE-v2/benchmark-stackoverflow/17.json
+2024-10-22 07:45:09,715 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:09,718 - INFO - Generating code for ./data/TDE-v2/benchmark-stackoverflow/32.json
+2024-10-22 07:45:10,954 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:10,958 - INFO - Generating code for ./data/TDE-v2/benchmark-stackoverflow/2.json
+2024-10-22 07:45:11,836 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:11,841 - INFO - Generating code for ./data/TDE-v2/benchmark-stackoverflow/3.json
+2024-10-22 07:45:13,081 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:13,088 - INFO - Generating code for ./data/TDE-v2/benchmark-stackoverflow/13.json
+2024-10-22 07:45:14,129 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:14,136 - INFO - Generating code for ./data/TDE-v2/benchmark-stackoverflow/44.json
+2024-10-22 07:45:15,797 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:15,804 - INFO - Generating code for ./data/TDE-v2/benchmark-stackoverflow/28.json
+2024-10-22 07:45:16,867 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:16,876 - INFO - Generating code for ./data/TDE-v2/benchmark-stackoverflow/48.json
+2024-10-22 07:45:18,134 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-22 07:45:18,155 - INFO - Full result exported to exp/demo-1021/result/full_result.csv
+2024-10-22 07:45:18,163 - INFO - Summary exported to exp/demo-1021/result/summary.json

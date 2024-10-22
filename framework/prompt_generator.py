@@ -12,14 +12,16 @@ class ChatPrompt:
     CTX_EXAMPLE: str = "ctx_example"
     CHAT_CTX_EXAMPLE: str = "chat_ctx_example"
 
-    def __init__(self, mode: str):
+    def __init__(self, mode: str, n_shot: int):
         self.mode = mode
+        self.n_shot = n_shot
 
     def get_prompt_by_mode(self, item: dict):
+        item_ctx = f'Input: {item["context"]["input"]}\nOutput: {item["context"]["output"]}'
     
-        item_ctx = f'Input: {item["context"]["input"]}\nOutput: {item["context"]["output"]}'  
+        tuple_shots = item["tuples"][:self.n_shot]
         item_examples = '\n'.join([f'Input: {example["input"]}\nOutput: {example["output"]}' 
-                                                for example in item["tuples"]])
+                                                for example in tuple_shots])
 
         if self.mode == self.CHAT:
             new_query = f"### Instruction ###\n{item['chat']}"
@@ -45,14 +47,16 @@ class CodePrompt:
     INST_CTX: str = "inst_ctx"
     INST_CTX_EXAMPLE: str = "inst_ctx_example"
 
-    def __init__(self, mode: str):
+    def __init__(self, mode: str, n_shot: int):
         self.mode = mode
+        self.n_shot = n_shot
 
     def get_prompt_by_mode(self, item: dict):
+        item_ctx = f'Input: {item["context"]["input"]}\nOutput: {item["context"]["output"]}'
     
-        item_ctx = f'Input: {item["context"]["input"]}\nOutput: {item["context"]["output"]}'  
+        tuple_shots = item["tuples"][:self.n_shot]
         item_examples = '\n'.join([f'Input: {example["input"]}\nOutput: {example["output"]}' 
-                                                for example in item["tuples"]])
+                                                for example in tuple_shots])
 
         if self.mode == self.INST:
             new_query = f"### Instruction ###\n{item['code_inst']}"

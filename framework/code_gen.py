@@ -1,10 +1,12 @@
 import os
 import re
+import signal
+import importlib
 from openai import OpenAI
 from .prompt_generator import CodePrompt
 
-import importlib
-import temp.code_solution  # Import the module first
+# Import the code module at first time, clear the content if error occured
+import temp.code_solution  
 
 class CodeGenerator:
     def __init__(self, ctx):
@@ -14,10 +16,10 @@ class CodeGenerator:
         self.logger = ctx.logger
 
         self.oai_client = OpenAI(**ctx.openai_cfg)
-        self.query_generator = CodePrompt(ctx.code_mode)
+        self.query_generator = CodePrompt(ctx.code_mode, ctx.n_shot)
         
         self.temp_python_fp = os.path.join(ctx.temp_dir, "code_solution.py")
-        self.py_block = r"^```python\n|\n```$"
+        self.py_block = r'```python\n(.*?)\n```'
     
 
     def generate_code(self, item):
@@ -29,28 +31,42 @@ class CodeGenerator:
         
         messages = [
             {"role": "system", "content": "You are a Python code generator based on the given instruction."},
-            {"role": "user", "content": f"{query}\n\nYou are required to write an executable function that performs the task. The function input and output are both string. You must format the python code as below:\n\n```python\ndef solution(input):\n    # Coding here...\n    return output\n```"}
+            {"role": "user", "content": f"{query}\n\nYou are required to write an executable function that performs the task. The function input and output are both string. You must format the python code as below:\n\n```python\ndef solution(input):\n    # Coding here...\n    return output\n```"
+            }
         ]
 
-        completion = self.oai_client.chat.completions.create(
-            model=self.oai_model,
-            messages=messages,
-            temperature=0.2
-        )
-        response = completion.choices[0].message.content
+        try:
+            completion = self.oai_client.chat.completions.create(
+                model=self.oai_model,
+                messages=messages,
+                temperature=0.2
+            )
+            response = completion.choices[0].message.content
+        except Exception as e:
+            self.logger.error(f"Error when generating code: {e}")
+            return False
 
-        # extract the code snippet from the response
-        code_snippet = re.sub(self.py_block, "", response, flags=re.MULTILINE)
-        isCodeGen = len(code_snippet) > 0
+        # Extract the code snippet from the response
+        code_match = re.search(self.py_block, response, re.DOTALL)
+        if code_match:
+            code_snippet = code_match.group(1)
+            # Verify that the code snippet contains a function definition
+            if re.search(r'def\s+solution\s*\(', code_snippet):
+                # Write the function to a temp file for execution
+                with open(self.temp_python_fp, 'w') as f:
+                    f.write(code_snippet)
 
-        # Write the function to a temp file for execution
-        with open(self.temp_python_fp, 'w') as f:
-            f.write(code_snippet)
+                # store a copy of the code snippet in the code_fp
+                self.save_code(self.code_dir, item['file_path'], code_snippet)
 
-        # store a copy of the code snippet in the code_fp
-        self.save_code(self.code_dir, item['file_path'], code_snippet)
+                return True
 
-        return isCodeGen
+            else:
+                self.logger.warning("Generated code does not contain a 'solution' function.")
+                return False
+        else:
+            self.logger.warning("No Python code block found in the response.")
+            return False
 
     
     def save_code(self, code_dir, file_path, code_snippet):
@@ -65,25 +81,43 @@ class CodeGenerator:
         with open(code_fp, 'w') as f:
             f.write(code_snippet)
 
+
     def execute_code(self, tests):
-        solution_func = self._reload_func()
+        try:
+            # Attempt to reload the solution function
+            solution_func = self._reload_func()
+        except ImportError as e:
+            self.logger.error(f"Import error:  {e}")
+            return tests  # Return early if the import fails
 
         for t in tests:
             try:
+                # Set the timeout handler, will stop the execution after 5 seconds, timeout! 
+                signal.signal(signal.SIGALRM, self._timeout_handler)
+                signal.alarm(5)  
+                
+                # Call the solution function
                 func_output = solution_func(t['input'])
-            except Exception:
-                func_output = None
+                t['code_output'] = func_output
+                
+                signal.alarm(0)  # Disable the alarm after successful execution
+                
+            except TimeoutError:
+                self.logger.error(f"Timeout occurred for input: {t['input']}")
+            except Exception as e:
+                self.logger.error(f"Code solution error occurred: {e}")
             
-            t['code_output'] = func_output
-
-        # Add code execution result
         return tests
 
     # Reload the solution function
-    def _reload_func(self):
+    def _reload_func(self):    
         importlib.reload(temp.code_solution)  # Reload the module
         from temp.code_solution import solution  # Import the updated solution function
         return solution
+    
+    # Define a timeout handler
+    def _timeout_handler(self, signum, frame):
+        raise TimeoutError("Function execution timed out")
 
 
     def run(self, item):
@@ -95,15 +129,12 @@ class CodeGenerator:
             isCodeGen = False
         
         # Execute code and evaluate result
-        tests = item['tuples']
+        tests = [{'input': t['input'], 'output': t['output'], 'code_output': None} for t in item['tuples']]
+
         if isCodeGen:
-            try:
-                tests = self.execute_code(tests)
-            except Exception as e:
-                self.logger.error(f"Error when executing code: {e}")
+            tests = self.execute_code(tests)
         
         return tests
-
 
 
 

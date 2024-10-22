@@ -10,5 +10,6 @@ __pycache__/
 etc/*_private.yaml
 exp/
 logs/
-models/
+models/*
+!models/.gitkeep
 temp/
