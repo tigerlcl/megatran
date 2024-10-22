@@ -31,6 +31,7 @@ class ChatBuilder:
         completion = self.vllm_client.chat.completions.create(
             model=self.model_path,
             messages=[{"role": "user", "content": query}],
+            temperature=0.2
         )
         response = completion.choices[0].message.content
         item['code_inst'] = response

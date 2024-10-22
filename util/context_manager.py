@@ -11,20 +11,22 @@ class Context:
         self.logger = self.setup_logger()  
         
         # Setup directories
-        self.code_dir = self.setup_directory(os.path.join('exp', self.exp_name, 'code'))
-        self.result_dir = self.setup_directory(os.path.join('exp', self.exp_name, 'result'))
-        self.temp_dir = self.setup_directory('temp')  # For executable python files
+        self.code_dir = os.path.join('exp', self.exp_name, 'code')
+        os.makedirs(self.code_dir, exist_ok=True)
+        
+        self.result_dir = os.path.join('exp', self.exp_name, 'result')
+        os.makedirs(self.result_dir, exist_ok=True)
+        
+        self.temp_dir = 'temp'
+        os.makedirs(self.temp_dir, exist_ok=True)  # For executable python files
 
     def _load_config(self, config_path):
-        """Load the configuration from the YAML file."""
+        """Load the configuration from the YAML file and set as instance properties."""
         with open(config_path, 'r') as file:
-            return yaml.safe_load(file)  # Return the loaded config
+            config = yaml.safe_load(file)  # Load the config
+            for key, value in config.items():
+                setattr(self, key, value)  # Set each key as an instance property
 
-    def setup_directory(self, directory):
-        """Ensure that a directory exists; create it if it does not."""
-        os.makedirs(directory, exist_ok=True)
-        self.logger.info(f"Ensured directory exists: {directory}")
-        return directory
 
     def setup_logger(self):
         """Configure the logger for experiment tracking."""

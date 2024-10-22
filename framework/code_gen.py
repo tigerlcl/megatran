@@ -22,7 +22,7 @@ class CodeGenerator:
 
     def generate_code(self, item):
         try:
-            query = self.get_prompt_by_mode(item)
+            query = self.query_generator.get_prompt_by_mode(item)
         except ValueError as e:
             self.logger.error(f"Error when generating prompt: {e}")
             return None
@@ -35,6 +35,7 @@ class CodeGenerator:
         completion = self.oai_client.chat.completions.create(
             model=self.oai_model,
             messages=messages,
+            temperature=0.2
         )
         response = completion.choices[0].message.content
 
@@ -53,11 +54,13 @@ class CodeGenerator:
 
     
     def save_code(self, code_dir, file_path, code_snippet):
-        # process file_path
-        # ./data/TDE-v2/benchmark-stackoverflow/1.json --> {code_dir}/TDE-v2/benchmark-stackoverflow/1.py
-        file_root, _ = os.path.splitext(file_path)
-        python_file_path = file_root.replace('data/', '') + '.py'  # Add .py extension
-        code_fp = os.path.join(code_dir, python_file_path)
+        # prepare the code file path
+        dir_name, base_name = os.path.split(file_path)
+        dir_name = os.path.join(code_dir, dir_name.replace('./data/', ''))
+        os.makedirs(dir_name, exist_ok=True)
+        
+        base_name = os.path.splitext(base_name)[0] + '.py'
+        code_fp = os.path.join(dir_name, base_name)
 
         with open(code_fp, 'w') as f:
             f.write(code_snippet)
@@ -89,6 +92,7 @@ class CodeGenerator:
             isCodeGen = self.generate_code(item)
         except Exception as e:
             self.logger.error(f"Error when generating code: {e}")
+            isCodeGen = False
         
         # Execute code and evaluate result
         tests = item['tuples']

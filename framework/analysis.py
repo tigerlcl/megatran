@@ -29,6 +29,8 @@ class ResultAnalyzer:
 
 
     def get_stat(self):
+        # TODO: optimize
+
         return {
             "total_pass": self.df["pass_ct"].sum(),
             "total_test": self.df["total_ct"].sum(),
@@ -39,8 +41,9 @@ class ResultAnalyzer:
         }
     
     def export_stat(self, json_fp):
+        stat = self.get_stat()
         with open(json_fp, 'w') as f:
-            json.dump(self.get_stat(), f)
+            json.dump(stat, f)
 
 
 def compare_values(a, b, tolerance=1e-6):

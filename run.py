@@ -1,23 +1,17 @@
 import os
-import sys
-import importlib
 import argparse
 
-# sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-
-from util import load_data
-
-from config.context_manager import Context
+from util import Context, load_dataset_by_name
 from framework import ChatBuilder, CodeGenerator, ResultAnalyzer
 
 
 def main(ctx):
      # Load the dataset based on the dataset_name
     ctx.logger.info("Loading dataset...")
-    dataset = load_data.load_dataset_by_name(ctx.dataset_name)
+    dataset = load_dataset_by_name(ctx.dataset_name)
 
     # get subset for testing
-    dataset = dataset[:10]
+    dataset = dataset[:5]
 
     resultAnalyzer = ResultAnalyzer()
 
