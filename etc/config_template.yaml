@@ -10,10 +10,9 @@ vllm_model: "./models/llama3_lora_sft"
 vllm_cfg:
   base_url: "http://localhost:8000/v1"
   api_key: "token-abc123"
-  temperature: 0.2
 
 # OPENAI
 openai_model: "gpt-4o-mini"
 openai_cfg:
+  base_url: "https://api.openai.com/v1"
   api_key: "sk-xxx"
-  temperature: 0.2

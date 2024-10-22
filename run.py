@@ -1,6 +1,5 @@
-import os
 import argparse
-
+from tqdm import tqdm
 from util import Context, load_dataset_by_name
 from framework import ChatBuilder, CodeGenerator, ResultAnalyzer
 
@@ -12,28 +11,20 @@ def main(ctx):
 
     # get subset for testing
     dataset = dataset[:5]
-
-    resultAnalyzer = ResultAnalyzer()
+    resultAnalyzer = ResultAnalyzer(ctx)
 
     # chat-to-instruction
     chatBuilder = ChatBuilder(dataset, ctx)
     dataset = chatBuilder.run()
 
-    # Inference Code and evaluate result
+    # Inference Code Per test case and evaluate result
     codeGen = CodeGenerator(ctx)
-    for item in dataset:
+    for item in tqdm(dataset, desc="Processing test cases"):
         tests = codeGen.run(item)
         resultAnalyzer.add_record(item['file_path'], tests)
-
     # Save output to file
-    csv_fp = os.path.join(ctx.result_dir, 'full_result.csv')
-    resultAnalyzer.export_from_dataframe(csv_fp)
-
-    summary = resultAnalyzer.get_stat()
-    ctx.logger.info(summary)
-
-    summary_json_fp = os.path.join(ctx.result_dir, 'summary.json')
-    resultAnalyzer.export_stat(summary_json_fp)
+    resultAnalyzer.export_csv_full_result()
+    resultAnalyzer.export_json_summary()
 
     return
 
