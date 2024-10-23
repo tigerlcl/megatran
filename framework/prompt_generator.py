@@ -42,6 +42,7 @@ class CodePrompt:
     CodePrompt is used to generate the prompt for the code generation task.
     """
 
+    CHAT: str = "chat"
     INST: str = "inst"
     INST_EXAMPLE: str = "inst_example"
     INST_CTX: str = "inst_ctx"
@@ -58,7 +59,9 @@ class CodePrompt:
         item_examples = '\n'.join([f'Input: {example["input"]}\nOutput: {example["output"]}' 
                                                 for example in tuple_shots])
 
-        if self.mode == self.INST:
+        if self.mode == self.CHAT:
+            new_query = f"### Instruction ###\n{item['chat']}" 
+        elif self.mode == self.INST:
             new_query = f"### Instruction ###\n{item['code_inst']}"
         elif self.mode == self.INST_CTX:
             new_query = f"### Instruction ###\n{item['code_inst']}\n\n### Context ###\n{item_ctx}"

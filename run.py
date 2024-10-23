@@ -9,8 +9,9 @@ def main(ctx):
     ctx.logger.info(f"Loading dataset {ctx.dataset_name}...")
     dataset = load_dataset_by_name(ctx.dataset_name)
 
-    # get subset for testing
-    # dataset = dataset[:10]
+    # debug testing
+    if ctx.test:
+        dataset = dataset[:5]
 
     # chat-to-instruction
     chatBuilder = ChatBuilder(dataset, ctx)
@@ -36,7 +37,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Run experiment')
     parser.add_argument('--exp_name', default='demo', type=str, help='unique to current experiment')
     parser.add_argument('--config', default='./etc/config_private.yaml', type=str, help='path to config file')
-
+    parser.add_argument('--test', action='store_true', help='test mode')
     args = parser.parse_args()
 
     # Setup experiment context

@@ -3,10 +3,9 @@ import re
 import signal
 import importlib
 from openai import OpenAI
-from .prompt_generator import CodePrompt
+from .prompt_generator import CodePrompt  
 
-# Import the code module at first time, clear the content if error occured
-import temp.code_solution  
+import temp.code_solution # temp code holder, it will be empty at first
 
 class CodeGenerator:
     def __init__(self, ctx):
@@ -130,6 +129,10 @@ class CodeGenerator:
         # Execute code and evaluate result
         if self.generate_code(item):
             tests = self.execute_code(tests)
+            
+            # clear the content of temp file
+            with open(self.temp_python_fp, 'w') as f:
+                f.write('')
         
         return tests
 

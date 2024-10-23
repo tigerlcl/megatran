@@ -14,5 +14,5 @@ CUDA_VISIBLE_DEVICES=7 vllm serve ./models/llama3_lora_sft --config ./etc/vllm_s
 
 2. Run the experiment
 ```bash
-python run.py --config etc/config_private.yaml --exp_name tde-stk
+python run.py --config etc/config_private.yaml --exp_name any_name [--test]
 ```

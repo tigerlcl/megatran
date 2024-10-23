@@ -1,14 +1,17 @@
 import os
-import logging
 import yaml
+import shutil
+import logging
 
 class Context:
     def __init__(self, args):
         self.exp_name = args.exp_name
+        self.test = args.test
         self.config = self._load_config(args.config)  # Load the config once
-        
-        # Initialize the logger first
-        self.logger = self.setup_logger()  
+
+        # clear the exp directory for re-do
+        if os.path.exists(os.path.join('exp', self.exp_name)):
+            shutil.rmtree(os.path.join('exp', self.exp_name))
         
         # Setup directories
         self.code_dir = os.path.join('exp', self.exp_name, 'code')
@@ -20,6 +23,11 @@ class Context:
         self.temp_dir = 'temp'
         os.makedirs(self.temp_dir, exist_ok=True)  # For executable python files
 
+        # Initialize logger
+        self.logger = self.setup_logger()
+
+        self.logger.info(f"Code backend LLM: {self.openai_model}")
+
     def _load_config(self, config_path):
         """Load the configuration from the YAML file and set as instance properties."""
         with open(config_path, 'r') as file:
@@ -30,12 +38,11 @@ class Context:
 
     def setup_logger(self):
         """Configure the logger for experiment tracking."""
-        log_dir = 'logs'
-        os.makedirs(log_dir, exist_ok=True)  # Ensure logs directory exists
+        log_fp = os.path.join('exp', self.exp_name, f'{self.exp_name}.log')
 
         logger = logging.getLogger()
         logger.setLevel(logging.INFO)
-        handler = logging.FileHandler(os.path.join(log_dir, f'{self.exp_name}.log'), mode='w')
+        handler = logging.FileHandler(log_fp, mode='w')
         formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
         handler.setFormatter(formatter)
         logger.addHandler(handler)

@@ -2,8 +2,11 @@ import os
 import json
     
 DATASET_DICT = {
-    "TDE-v2": {
+    "stackoverflow": {
         "path": "./data/TDE-v2/benchmark-stackoverflow"
+    },
+    "bingquery-logs": {
+        "path": "./data/TDE-v2/benchmark-bing-query-logs"
     }
 }
 
@@ -16,16 +19,32 @@ def load_dataset_by_name(dataset_name):
         raise ValueError(f"Dataset '{dataset_name}' not found in the configuration.")
     
     # Load the dataset using the datasets library
-    if dataset_name == "TDE-v2":
-        return _load_tde_v2(dataset_info)
+    if dataset_name == "stackoverflow":
+        return _load_stackoverflow(dataset_info)
+    elif dataset_name == "bingquery-logs":
+        return _load_bingquery_logs(dataset_info)
 
 
-def _load_tde_v2(dataset_info: dict):
-    # load all json files in the directory
+def _load_stackoverflow(dataset_info: dict):
+    # source from TDE-v2/benchmark-stackoverflow
     data = []
     
     for file in os.listdir(dataset_info["path"]):
         if file.endswith('.json'):
+            json_fp = os.path.join(dataset_info["path"], file)
+            with open(json_fp, 'r') as f:
+                obj = json.load(f)
+                obj['file_path'] = json_fp
+                data.append(obj)
+
+    return data
+
+def _load_bingquery_logs(dataset_info: dict):
+    # source from TDE-v2/benchmark-bingquery-logs: filter by prefix 'semantic_'
+    data = []
+    
+    for file in os.listdir(dataset_info["path"]):
+        if file.startswith('semantic_') and file.endswith('.json'):
             json_fp = os.path.join(dataset_info["path"], file)
             with open(json_fp, 'r') as f:
                 obj = json.load(f)

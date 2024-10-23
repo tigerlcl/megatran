@@ -14,7 +14,7 @@ class ResultAnalyzer:
         pass_cnt = 0
         fail_test = list()
         for item in test_data:
-            if compare_values(item['output'], item['code_output']):
+            if self.compare_values(item['output'], item['code_output']):
                 pass_cnt += 1
             else:
                 # collect failure case
@@ -65,16 +65,14 @@ class ResultAnalyzer:
         self.logger.info(f"Summary: {stat}, exported to {json_fp}")
 
 
-def compare_values(a, b):
-    if type(a) != type(b):
-        return False
-    
-    if isinstance(a, (int, float, str)):
-        return abs(a - b) < 1e-5 if isinstance(a, float) and isinstance(b, float) else a == b
-    elif isinstance(a, list):
-        return len(a) == len(b) and all(compare_values(x, y) for x, y in zip(a, b))
-    elif isinstance(a, dict):
-        return a.keys() == b.keys() and all(compare_values(a[k], b[k]) for k in a)
-    
-    return False  # For unsupported types, return False
+    def compare_values(self, a, b):
+        """
+        Compare two values, handle the case when the values are numeric strings
+        """
+        try:
+            a = float(a)
+            b = float(b)
+            return np.isclose(a, b, atol=1e-5)
+        except:
+            return a == b
 

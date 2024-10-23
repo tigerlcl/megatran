@@ -13,3 +13,4 @@ logs/
 models/*
 !models/.gitkeep
 temp/
+artifacts/
