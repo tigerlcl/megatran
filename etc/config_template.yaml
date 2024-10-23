@@ -1,3 +1,6 @@
+# method: code LLM
+method: "chat-transform"
+
 # util/load_data.py, DATASET_DICT
 dataset_name: "TDE-v2" 
 n_shot: 3

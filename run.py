@@ -1,6 +1,6 @@
 import argparse
 from tqdm import tqdm
-from util import Context, load_dataset_by_name
+from util import load_dataset_by_name, Context, MethodZoo
 from framework import ChatBuilder, CodeGenerator, ResultAnalyzer
 
 
@@ -8,22 +8,24 @@ def main(ctx):
      # Load the dataset based on the dataset_name
     ctx.logger.info(f"Loading dataset {ctx.dataset_name}...")
     dataset = load_dataset_by_name(ctx.dataset_name)
+    
+    # uncomment for testing
+    # dataset = dataset[:5]
 
-    # debug testing
-    if ctx.test:
-        dataset = dataset[:5]
-
-    # chat-to-instruction
-    chatBuilder = ChatBuilder(dataset, ctx)
-    dataset = chatBuilder.run()
+    if ctx.method == MethodZoo.CHAT_TRANSFORM:
+        # chat-to-instruction
+        chatBuilder = ChatBuilder(dataset, ctx)
+        dataset = chatBuilder.run()
 
     # Inference Code Per test case and evaluate result with Analyzer
-    codeGen = CodeGenerator(ctx)
     resultAnalyzer = ResultAnalyzer(ctx)
+    codeGen = CodeGenerator(ctx)
+
 
     for item in tqdm(dataset, desc="Processing test cases"):
         tests = codeGen.run(item)
         resultAnalyzer.add_record(item['file_path'], tests)
+
     # Save output to file
     resultAnalyzer.export_csv_full_result()
     resultAnalyzer.export_json_summary()
@@ -36,8 +38,8 @@ if __name__ == '__main__':
     # Argument parser
     parser = argparse.ArgumentParser(description='Run experiment')
     parser.add_argument('--exp_name', default='demo', type=str, help='unique to current experiment')
-    parser.add_argument('--config', default='./etc/config_private.yaml', type=str, help='path to config file')
-    parser.add_argument('--test', action='store_true', help='test mode')
+    parser.add_argument('--config', default='./etc/config_template.yaml', type=str, help='path to config file')
+    
     args = parser.parse_args()
 
     # Setup experiment context

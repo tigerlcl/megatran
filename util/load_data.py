@@ -20,10 +20,14 @@ def load_dataset_by_name(dataset_name):
     
     # Load the dataset using the datasets library
     if dataset_name == "stackoverflow":
-        return _load_stackoverflow(dataset_info)
+        dataset =  _load_stackoverflow(dataset_info)
     elif dataset_name == "bingquery-logs":
-        return _load_bingquery_logs(dataset_info)
+        dataset = _load_bingquery_logs(dataset_info)
 
+    # sort dataset by file_path
+    dataset = sorted(dataset, key=lambda x: x['file_path'])
+
+    return dataset
 
 def _load_stackoverflow(dataset_info: dict):
     # source from TDE-v2/benchmark-stackoverflow

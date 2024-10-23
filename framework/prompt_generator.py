@@ -1,3 +1,4 @@
+# TODO: Merge ChatPrompt and CodePrompt, extend the 'chat' with 'inst'
 
 class ChatPrompt:
     """
@@ -42,7 +43,11 @@ class CodePrompt:
     CodePrompt is used to generate the prompt for the code generation task.
     """
 
+    # baseline
     CHAT: str = "chat"
+    CHAT_EXAMPLE: str = "chat_example"
+    
+    # below for framwork
     INST: str = "inst"
     INST_EXAMPLE: str = "inst_example"
     INST_CTX: str = "inst_ctx"
@@ -60,7 +65,9 @@ class CodePrompt:
                                                 for example in tuple_shots])
 
         if self.mode == self.CHAT:
-            new_query = f"### Instruction ###\n{item['chat']}" 
+            new_query = f"### Instruction ###\n{item['chat']}"
+        elif self.mode == self.CHAT_EXAMPLE:
+            new_query = f"### Instruction ###\n{item['chat']}\n\n### Examples ###\n{item_examples}"  
         elif self.mode == self.INST:
             new_query = f"### Instruction ###\n{item['code_inst']}"
         elif self.mode == self.INST_CTX:

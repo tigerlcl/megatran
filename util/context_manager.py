@@ -3,10 +3,15 @@ import yaml
 import shutil
 import logging
 
+
+class MethodZoo:
+    CODE_LLM: str = "code-llm"
+    CHAT_TRANSFORM: str = "chat-transform"
+
+
 class Context:
     def __init__(self, args):
         self.exp_name = args.exp_name
-        self.test = args.test
         self.config = self._load_config(args.config)  # Load the config once
 
         # clear the exp directory for re-do
