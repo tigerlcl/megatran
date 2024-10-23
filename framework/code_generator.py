@@ -1,9 +1,8 @@
 import os
 import re
-import signal
 import importlib
 from openai import OpenAI
-from .prompt_generator import CodePrompt  
+from .prompt_generator import PromptMaker  
 
 import temp.code_solution # temp code holder, it will be empty at first
 
@@ -16,7 +15,7 @@ class CodeGenerator:
         self.n_shot = ctx.n_shot
 
         self.oai_client = OpenAI(**ctx.openai_cfg)
-        self.query_generator = CodePrompt(ctx.code_mode, ctx.n_shot)
+        self.query_generator = PromptMaker(ctx.prompt_mode, ctx.n_shot)
         self.temp_python_fp = os.path.join(ctx.temp_dir, "code_solution.py")
         self.py_block = r'```python\n(.*?)\n```'
     
@@ -89,21 +88,18 @@ class CodeGenerator:
         except ImportError as e:
             self.logger.error(f"Import error:  {e}")
             return tests  # Return early if the import fails
+        except SyntaxError as e:
+            self.logger.error(f"Syntax error:  {e}")
+            return tests  # Return early if syntax error
+        except Exception as e:
+            self.logger.error(f"Code solution error occurred: {e}")
+            return tests
 
         for t in tests:
             try:
-                # Set the timeout handler, will stop the execution after 5 seconds, timeout! 
-                signal.signal(signal.SIGALRM, self._timeout_handler)
-                signal.alarm(5)  
-                
                 # Call the solution function
                 func_output = solution_func(t['input'])
                 t['code_output'] = func_output
-                
-                signal.alarm(0)  # Disable the alarm after successful execution
-                
-            except TimeoutError:
-                self.logger.error(f"Timeout occurred for input: {t['input']}")
             except Exception as e:
                 self.logger.error(f"Code solution error occurred: {e}")
             
@@ -114,20 +110,14 @@ class CodeGenerator:
         importlib.reload(temp.code_solution)  # Reload the module
         from temp.code_solution import solution  # Import the updated solution function
         return solution
-    
-    # Define a timeout handler
-    def _timeout_handler(self, signum, frame):
-        raise TimeoutError("Function execution timed out")
-
 
     def run(self, item):
-        self.logger.info(f"Generating code for {item['file_path']}")
-
         # prepare test, skip the few shot examples
         tests = [{'input': t['input'], 'output': t['output'], 'code_output': None} for t in item['tuples'][self.n_shot:]]
+        self.logger.info(f"Generating code for {item['file_path']}")
         
-        # Execute code and evaluate result
         if self.generate_code(item):
+            self.logger.info(f"Generation done, executing code...")
             tests = self.execute_code(tests)
             
             # clear the content of temp file

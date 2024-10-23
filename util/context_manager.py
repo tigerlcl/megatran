@@ -4,14 +4,10 @@ import shutil
 import logging
 
 
-class MethodZoo:
-    CODE_LLM: str = "code-llm"
-    CHAT_TRANSFORM: str = "chat-transform"
-
-
 class Context:
     def __init__(self, args):
         self.exp_name = args.exp_name
+        self.dataset_name = args.dataset_name
         self.config = self._load_config(args.config)  # Load the config once
 
         # clear the exp directory for re-do
@@ -29,7 +25,7 @@ class Context:
         os.makedirs(self.temp_dir, exist_ok=True)  # For executable python files
 
         # Initialize logger
-        self.logger = self.setup_logger()
+        self.logger = self._setup_logger()
 
         self.logger.info(f"Code backend LLM: {self.openai_model}")
 
@@ -41,7 +37,7 @@ class Context:
                 setattr(self, key, value)  # Set each key as an instance property
 
 
-    def setup_logger(self):
+    def _setup_logger(self):
         """Configure the logger for experiment tracking."""
         log_fp = os.path.join('exp', self.exp_name, f'{self.exp_name}.log')
 
@@ -53,3 +49,6 @@ class Context:
         logger.addHandler(handler)
         logger.info("Logger initialized.")
         return logger
+
+    def get(self, key, default=None):
+        return getattr(self, key, default)

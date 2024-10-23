@@ -1,6 +1,6 @@
 import concurrent.futures
 from openai import OpenAI
-from .prompt_generator import ChatPrompt
+from .prompt_generator import PromptMaker
 
 
 class ChatBuilder:
@@ -17,11 +17,11 @@ class ChatBuilder:
         self.model_path = ctx.vllm_model
         
         self.vllm_client = OpenAI(**ctx.vllm_cfg)
-        self.query_generator = ChatPrompt(ctx.chat_mode, ctx.n_shot)
+        self.query_generator = PromptMaker(ctx.prompt_mode, ctx.n_shot)
         self.logger = ctx.logger
     
     def _process_data(self, item):
-        self.logger.info(f"Generating instruction for {item['file_path']}")
+        self.logger.info(f"Generating code instruction for {item['file_path']}")
         try:
             query = self.query_generator.get_prompt_by_mode(item)
             self.logger.info(f"Chat-to-instruction query:\n{query}")
@@ -34,8 +34,10 @@ class ChatBuilder:
             messages=[{"role": "user", "content": query}],
             temperature=0.2
         )
-        response = completion.choices[0].message.content
-        item['code_inst'] = response
+        code_inst = completion.choices[0].message.content
+        
+        # append the code instruction to the original chat
+        item['chat'] = f"{item['chat']}\n{code_inst}"
 
         return item
     

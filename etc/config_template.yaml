@@ -1,13 +1,7 @@
-# method: code LLM
-method: "chat-transform"
-
-# util/load_data.py, DATASET_DICT
-dataset_name: "TDE-v2" 
+# module config
+chat_to_inst: true
 n_shot: 3
-
-# framework/prompt_generator.py
-chat_mode: "example"
-code_mode: "inst_example"
+prompt_mode: "chat_example" # Can use chat, ctx, example as keywords to control the prompt
 
 # vLLM for FT model
 vllm_model: "./models/llama3_lora_sft"
