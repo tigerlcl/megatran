@@ -56,4 +56,3 @@ class ChatBuilder:
                 instruction_lst.append(inst)
 
         return instruction_lst
-

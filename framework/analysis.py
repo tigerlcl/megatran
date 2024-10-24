@@ -75,4 +75,3 @@ class ResultAnalyzer:
             return np.isclose(a, b, atol=1e-5)
         except:
             return a == b
-
