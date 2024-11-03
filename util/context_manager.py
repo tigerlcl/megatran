@@ -8,6 +8,7 @@ class Context:
     def __init__(self, args):
         self.exp_name = args.exp_name
         self.dataset_name = args.dataset_name
+        self.testing = args.testing
         self.config = self._load_config(args.config)  # Load the config once
 
         # clear the exp directory for re-do

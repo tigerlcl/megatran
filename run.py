@@ -10,7 +10,8 @@ def main(ctx):
     dataset = load_dataset_by_name(ctx.dataset_name)
     
     # uncomment for testing
-    # dataset = dataset[:5]
+    if ctx.testing:
+        dataset = dataset[:5]
 
     if ctx.get('chat_to_inst', False):  # Use False as default if key doesn't exist
         # chat-to-instruction
@@ -39,7 +40,8 @@ if __name__ == '__main__':
     parser.add_argument('--exp_name', default='demo', type=str, help='unique to current experiment')
     parser.add_argument('--dataset_name', required=True, type=str, help='dataset name, refer to util/load_data.py, DATASET_DICT')
     parser.add_argument('--config', default='./etc/config_template.yaml', type=str, help='path to config file')
-    
+    parser.add_argument('--testing', action='store_true', help='run on subset of data for testing')
+
     args = parser.parse_args()
 
     # Setup experiment context

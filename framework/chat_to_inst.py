@@ -15,13 +15,13 @@ class ChatBuilder:
     def __init__(self, dataset, ctx):
         self.dataset = dataset
         self.model_path = ctx.vllm_model
-        
         self.vllm_client = OpenAI(**ctx.vllm_cfg)
         self.query_generator = PromptMaker(ctx.prompt_mode, ctx.n_shot)
         self.logger = ctx.logger
     
     def _process_data(self, item):
         self.logger.info(f"Generating code instruction for {item['file_path']}")
+        
         try:
             query = self.query_generator.get_prompt_by_mode(item)
             self.logger.info(f"Chat-to-instruction query:\n{query}")
@@ -48,6 +48,7 @@ class ChatBuilder:
             future_to_inst = {executor.submit(self._process_data, item): item for item in self.dataset}
             for future in concurrent.futures.as_completed(future_to_inst):
                 result = future_to_inst[future]
+
                 try:
                     inst = future.result()
                 except Exception as e:

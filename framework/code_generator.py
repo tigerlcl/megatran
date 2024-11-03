@@ -21,6 +21,7 @@ class CodeGenerator:
     
 
     def generate_code(self, item):
+
         try:
             query = self.query_generator.get_prompt_by_mode(item)
             self.logger.info(f"Code generation query:\n{query}")
@@ -57,9 +58,7 @@ class CodeGenerator:
 
                 # store a copy of the code snippet in the code_fp
                 self.save_code(self.code_dir, item['file_path'], code_snippet)
-
                 return True
-
             else:
                 self.logger.warning("Generated code does not contain a 'solution' function.")
                 return False
