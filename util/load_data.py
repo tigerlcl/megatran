@@ -1,6 +1,8 @@
 import os
 import json
-    
+from typing import List, Dict
+
+# Dataset configuration mapping
 DATASET_DICT = {
     "stackoverflow": {
         "path": "./data/TDE-v2/benchmark-stackoverflow"
@@ -19,29 +21,25 @@ DATASET_DICT = {
     }
 }
 
-# for non-special datasets, the data is stored in json files
+# Datasets using standard JSON format
 JSON_NORMAL_GROUP = ["stackoverflow", "headcase", "prep-software"]
 
-
-def load_dataset_by_name(dataset_name):
-    """Load the dataset based on the dataset_name from the configuration."""
-
-    dataset_info = DATASET_DICT.get(dataset_name, None)
+def load_dataset_by_name(dataset_name: str) -> List[Dict]:
+    """Load dataset based on name from configuration"""
+    dataset_info = DATASET_DICT.get(dataset_name)
     if dataset_info is None:
-        raise ValueError(f"Dataset '{dataset_name}' not found in the configuration.")
+        raise ValueError(f"Dataset '{dataset_name}' not found in configuration")
     
-    # Load the dataset using the datasets library
+    # Load dataset based on type
     if dataset_name in JSON_NORMAL_GROUP:
-        dataset =  _load_json_files(dataset_info)
+        dataset = _load_json_files(dataset_info)
     elif dataset_name == "bingquery-logs":
         dataset = _load_bingquery_logs(dataset_info)
     elif dataset_name == "unit_convert":
         dataset = _load_unit_convert(dataset_info)
 
-    # sort dataset by file_path
-    dataset = sorted(dataset, key=lambda x: x['file_path'])
-
-    return dataset
+    # Sort by file path for consistent ordering
+    return sorted(dataset, key=lambda x: x['file_path'])
 
 def _load_json_files(dataset_info: dict):
     data = []
@@ -56,7 +54,7 @@ def _load_json_files(dataset_info: dict):
     return data
 
 def _load_bingquery_logs(dataset_info: dict):
-    # source from TDE-v2/benchmark-bingquery-logs: filter by prefix 'semantic_'
+    """source from TDE-v2/benchmark-bingquery-logs: filter by prefix 'semantic_"""
     data = []
     
     for file in os.listdir(dataset_info["path"]):
@@ -70,7 +68,7 @@ def _load_bingquery_logs(dataset_info: dict):
     return data
 
 def _load_unit_convert(dataset_info: dict):
-    # source from TDE-v2/benchmark-unit-convert: filter by prefix 'semantic_'
+    """source from TDE-v2/benchmark-bing-query-logs: filter by prefix 'unit_'"""
     data = []
     
     for file in os.listdir(dataset_info["path"]):

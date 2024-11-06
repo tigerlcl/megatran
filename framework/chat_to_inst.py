@@ -1,7 +1,7 @@
-import concurrent.futures
+import threading
+from queue import Queue
 from openai import OpenAI
 from .prompt_generator import PromptMaker
-
 
 class ChatBuilder:
     """
@@ -10,7 +10,6 @@ class ChatBuilder:
     1. chat: the user's chat
     2. context/ctx: the context information
     3. tuples/examples: the transformation examples
-
     """
     def __init__(self, dataset, ctx):
         self.dataset = dataset
@@ -18,15 +17,40 @@ class ChatBuilder:
         self.vllm_client = OpenAI(**ctx.vllm_cfg)
         self.query_generator = PromptMaker(ctx.prompt_mode, ctx.n_shot)
         self.logger = ctx.logger
+        self.result_queue = Queue()
+        self.max_workers = 16
+        # Lock for thread-safe logging
+        self.log_lock = threading.Lock()
+
+        # Check if the vllm backend client is connected
+        if not self._check_client_connection():
+            raise RuntimeError("Failed to connect to the vLLM client, please check your config.")
     
-    def _process_data(self, item):
-        self.logger.info(f"Generating code instruction for {item['file_path']}")
+    def _check_client_connection(self):
+        try:
+            # Attempt to make a simple API call to check connection
+            self.vllm_client.chat.completions.create(
+                model=self.model_path,
+                messages=[{"role": "user", "content": "Test connection"}],
+                temperature=0.0
+            )
+            return True  # Connection successful
+        except Exception as e:
+            self.logger.error(f"Connection check failed: {e}")
+            return False  # Connection failed
+
+    def _process_data(self, item, idx):
+        # Use lock to ensure thread-safe logging
+        with self.log_lock:
+            self.logger.info(f"[{idx}] Generating code instruction for {item['file_path']}")
         
         try:
             query = self.query_generator.get_prompt_by_mode(item)
-            self.logger.info(f"Chat-to-instruction query:\n{query}")
+            with self.log_lock:
+                self.logger.info(f"[{idx}] Chat-to-instruction query:\n{query}")
         except ValueError as e:
-            self.logger.error(f"Error when generating prompt: {e}")
+            with self.log_lock:
+                self.logger.error(f"[{idx}] Error when generating prompt: {e}")
             return None
 
         completion = self.vllm_client.chat.completions.create(
@@ -36,24 +60,26 @@ class ChatBuilder:
         )
         code_inst = completion.choices[0].message.content
         
-        # append the code instruction to the original chat
         item['chat'] = f"{item['chat']}\n{code_inst}"
-
-        return item
+        self.result_queue.put((idx, item))
     
-    # batch processing
     def run(self):
-        instruction_lst = []
-        with concurrent.futures.ThreadPoolExecutor() as executor:
-            future_to_inst = {executor.submit(self._process_data, item): item for item in self.dataset}
-            for future in concurrent.futures.as_completed(future_to_inst):
-                result = future_to_inst[future]
-
-                try:
-                    inst = future.result()
-                except Exception as e:
-                    self.logger.error(f"Error processing item {result}: {e}")
-                
-                instruction_lst.append(inst)
-
+        instruction_lst = [None] * len(self.dataset)
+        
+        threads = []
+        for idx, item in enumerate(self.dataset):
+            thread = threading.Thread(
+                target=self._process_data,
+                args=(item, idx)
+            )
+            threads.append(thread)
+            thread.start()
+        
+        for thread in threads:
+            thread.join()
+        
+        while not self.result_queue.empty():
+            idx, result = self.result_queue.get()
+            instruction_lst[idx] = result
+        
         return instruction_lst
