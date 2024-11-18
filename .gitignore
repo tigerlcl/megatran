@@ -10,8 +10,8 @@ __pycache__/
 etc/*_private.yaml
 exp/
 logs/
-assets/models
-!assets/models/.gitkeep
+assets/models/*
+assets/rag/repo/*
 temp/
 artifacts/
 notebooks/
