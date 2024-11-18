@@ -1,0 +1,30 @@
+{
+    "chat": "convert pacific time to eastern time",
+    "instruction": "domain_calculate(): convert time from Pacific Time (PT) to Eastern Time (ET).",
+    "context": {
+        "input": "time in Pacific Time",
+        "output": "time in Eastern Time"
+    },
+    "tuples": [
+        {
+            "input": "2:30 AM,Mon,Aug 17,2015",
+            "output": "5:30 AM,Mon,Aug,2015"
+        },
+        {
+            "input": "11:00 PM,Sun,Aug 2,2015",
+            "output": "2:00 AM,Mon,Aug 3,2015"
+        },
+        {
+            "input": "3:30 AM,Mon,Feb 2,2015",
+            "output": "6:30 AM,Mon,Feb 2,2015"
+        },
+        {
+            "input": "10:00 PM,Sun,Aug 2,2015",
+            "output": "1:00 AM,Mon,Aug 3,2015"
+        },
+        {
+            "input": "2:30 AM,Mon,Feb 2,2015",
+            "output": "5:30 AM,Mon,Feb 2,2015"
+        }
+    ]
+}

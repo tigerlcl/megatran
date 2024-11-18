@@ -18,11 +18,15 @@ DATASET_DICT = {
     },
     "prep-software": {
         "path": "./data/TDE-v2/benchmark-FF-Trifacta-GoogleRefine"
+    },
+    "testing": {
+        "path": "./data/testset/"
     }
 }
 
 # Datasets using standard JSON format
-JSON_NORMAL_GROUP = ["stackoverflow", "headcase", "prep-software"]
+JSON_NORMAL_GROUP = ["stackoverflow", "headcase", "prep-software", 
+                     "test-data"]
 
 def load_dataset_by_name(dataset_name: str) -> List[Dict]:
     """Load dataset based on name from configuration"""
@@ -48,7 +52,7 @@ def _load_json_files(dataset_info: dict):
             json_fp = os.path.join(dataset_info["path"], file)
             with open(json_fp, 'r') as f:
                 obj = json.load(f)
-                obj['file_path'] = json_fp
+                obj['file_path'] = json_fp # store file path for logging
                 data.append(obj)
 
     return data

@@ -15,7 +15,7 @@ class ChatBuilder:
         self.dataset = dataset
         self.model_path = ctx.vllm_model
         self.vllm_client = OpenAI(**ctx.vllm_cfg)
-        self.query_generator = PromptMaker(ctx.prompt_mode, ctx.n_shot)
+        self.prompt_maker = PromptMaker(ctx.prompt_mode, ctx.n_shot)
         self.logger = ctx.logger
         self.result_queue = Queue()
         self.max_workers = 16
@@ -44,14 +44,9 @@ class ChatBuilder:
         with self.log_lock:
             self.logger.info(f"[{idx}] Generating code instruction for {item['file_path']}")
         
-        try:
-            query = self.query_generator.get_prompt_by_mode(item)
-            with self.log_lock:
-                self.logger.info(f"[{idx}] Chat-to-instruction query:\n{query}")
-        except ValueError as e:
-            with self.log_lock:
-                self.logger.error(f"[{idx}] Error when generating prompt: {e}")
-            return None
+        query = self.prompt_maker.get_prompt_by_mode(item)
+        with self.log_lock:
+            self.logger.info(f"[{idx}] Chat-to-instruction query:\n{query}")
 
         completion = self.vllm_client.chat.completions.create(
             model=self.model_path,

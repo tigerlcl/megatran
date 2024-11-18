@@ -10,7 +10,7 @@ __pycache__/
 etc/*_private.yaml
 exp/
 logs/
-models/*
+assets/
 !models/.gitkeep
 temp/
 artifacts/

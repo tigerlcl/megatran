@@ -1,0 +1,30 @@
+{
+    "chat": "convert hijri to gregorian",
+    "instruction": "domain_map(): Convert a given Hijri date to Gregorian date.",
+    "context": {
+        "input": "a Hijri date",
+        "output": "return the corresponding Gregorian date"
+    },
+    "tuples": [
+        {
+            "input": "11 Shawwal 1430",
+            "output": "Wednesday 30 September 2009 C.E"
+        },
+        {
+            "input": "5 Muharram 1300",
+            "output": "Thursday 16 November 1882 C.E"
+        },
+        {
+            "input": "19 Rajab 1460",
+            "output": "Friday 20 August 2038 C.E"
+        },
+        {
+            "input": "6 Muharram 1300",
+            "output": "Friday 17 November 1882 C.E"
+        },
+        {
+            "input": "1 Muharram 1431",
+            "output": "Friday 18 December 2009 C.E"
+        }
+    ]
+}

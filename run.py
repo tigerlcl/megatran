@@ -14,14 +14,13 @@ def main(ctx: Context) -> None:
     4. Analyze and export results
 
     """
-    # Load and prepare dataset
-    ctx.logger.info(f"Loading dataset {ctx.dataset_name}...")
-    dataset = load_dataset_by_name(ctx.dataset_name)
-    
-    # Use subset for testing if specified
+    # Load and prepare dataset/testset
     if ctx.testing:
         ctx.logger.info("Running in test mode with subset of data")
-        dataset = dataset[:5]
+        dataset = load_dataset_by_name(ctx.testing)
+    else:
+        ctx.logger.info(f"Loading dataset {ctx.dataset_name}...")
+        dataset = load_dataset_by_name(ctx.dataset_name)
 
     # Optional: Convert natural language to formal instruction
     if ctx.get('chat_to_inst', False):
@@ -51,26 +50,21 @@ def main(ctx: Context) -> None:
 
 
 if __name__ == '__main__':
-    try:
-        # Parse command line arguments
-        parser = argparse.ArgumentParser(
-            description='Run ChatTransform experiment',
-            formatter_class=argparse.ArgumentDefaultsHelpFormatter
-        )
-        
-        parser.add_argument('--exp_name', default='demo', type=str, help='Unique experiment name')
-        parser.add_argument('--dataset_name', required=True, type=str, help='Dataset name from load_data.py/DATASET_DICT')
-        parser.add_argument('--config', default='./etc/config_template.yaml', type=str, help='Path to config file')
-        parser.add_argument('--testing', action='store_true', help='Run on small subset of data for testing')
-        
-        args = parser.parse_args()
-        
-        # Setup experiment context and run
-        ctx = Context(args)
-        main(ctx)
-        
-    except Exception as e:
-        # Log any unhandled exceptions
-        if 'ctx' in locals() and hasattr(ctx, 'logger'):
-            ctx.logger.error(f"Experiment failed: {str(e)}", exc_info=True)
-        raise
+
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(
+        description='Run ChatTransform experiment',
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter
+    )
+    
+    parser.add_argument('--exp_name', default='demo', type=str, help='Unique experiment name')
+    parser.add_argument('--dataset_name', required=True, type=str, help='Dataset name from load_data.py/DATASET_DICT')
+    parser.add_argument('--config', default='./etc/config_template.yaml', type=str, help='Path to config file')
+    parser.add_argument('--testing', action='store_true', help='Run on small subset of data for testing')
+    
+    args = parser.parse_args()
+    
+    # Setup experiment context and run
+    ctx = Context(args)
+    main(ctx)
+

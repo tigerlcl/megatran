@@ -33,18 +33,15 @@ class PromptMaker:
                 
         Returns:
             str: Formatted prompt text
-            
-        Raises:
-            ValueError: If invalid mode
         """
         query = ""
 
         # add instruction
-        if self.CHAT in self.mode and self.CHAT in item:
+        if self.CHAT in self.mode:
             query += f"### Instruction ###\n{item['chat']}"
         
         # add context
-        if self.CTX in self.mode and self.CTX in item:
+        if self.CTX in self.mode:
             item_ctx = f'Input: {item["context"]["input"]}\nOutput: {item["context"]["output"]}'
             query += f"\n\n### Context ###\n{item_ctx}"
         
@@ -53,8 +50,5 @@ class PromptMaker:
             item_examples = '\n'.join([f'Input: {example["input"]}\nOutput: {example["output"]}' 
                                                 for example in item["tuples"][:self.n_shot]])
             query += f"\n\n### Examples ###\n{item_examples}"
-
-        if not query.strip():
-            raise ValueError(f"No content generated for query mode: {self.mode}")
 
         return query

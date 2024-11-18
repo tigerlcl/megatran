@@ -2,11 +2,11 @@ import os
 import re
 import importlib
 from openai import OpenAI
-from typing import List
+from typing import Optional
 
 from .lazy_rag import LazyRAG
-from .prompt_generator import PromptMaker  
-
+from .prompt_generator import PromptMaker
+from .reflection import ReflectionCtx
 import temp.code_solution # temp code holder, it will be empty at first
 
 
@@ -39,71 +39,73 @@ class CodeGenerator:
         self.code_dir = ctx.code_dir
         self.oai_model = ctx.openai_model
         self.logger = ctx.logger
-        self.n_shot = ctx.n_shot
-        self.oai_client = OpenAI(**ctx.openai_cfg)
-        self.query_generator = PromptMaker(ctx.prompt_mode, ctx.n_shot)
-        self.temp_python_fp = os.path.join(ctx.temp_dir, "code_solution.py")
-        self.py_block = r'```python\n(.*?)\n```'
-        self.rag = LazyRAG(ctx)
+        self.code_n_shot = ctx.n_shot
+        self.code_retry = ctx.code_retry
 
-    def generate_code(self, item, additional_context=None) -> bool:
+        self.oai_client = OpenAI(**ctx.openai_cfg)
+        self.prompt_maker = PromptMaker(ctx.prompt_mode, ctx.n_shot)
+        self.temp_python_fp = os.path.join(ctx.temp_dir, "code_solution.py")
+        self.rag = LazyRAG(ctx)
+    
+        # regexes
+        self.py_block = r'```python\n(.*?)\n```'
+        self.func_def = r'def\s+solution\s*\('
+        self.import_stmt = r'^(import .+|from .+ import .+)'
+
+
+    def generate_code(self, item: dict, reflection_ctx: Optional[ReflectionCtx] = None) -> str:
         """
         Generate Python code based on the instruction
         
         Args:
-            item (dict): Dataset item containing instruction and examples
-            additional_context (str, optional): Additional documentation context
+            item: Dataset item containing instruction and examples
+            reflection_ctx: Optional context from previous attempts
         
         Returns:
-            bool: True if code generation successful, False otherwise
+            str: Generated code snippet
+        
+        Raises:
+            ValueError: If code generation fails
         """
-        try:
-            query = self.query_generator.get_prompt_by_mode(item)
-            if additional_context:
-                query += f"\n\nRelevant Documentation:\n{additional_context}"
-            self.logger.info(f"Code generation query:\n{query}")
-        except ValueError as e:
-            self.logger.error(f"Error when generating prompt: {e}")
-            return False
+        # Get base prompt
+        prompt = self.prompt_maker.get_prompt_by_mode(item)
+        
+        # Add reflection context if available
+        if reflection_ctx:
+            prompt += reflection_ctx.build_reflection_prompt()
+
+        self.logger.info(f"Code generation query:\n{prompt}")
         
         messages = [
             {"role": "system", "content": "You are a Python code generator based on the given instruction."},
-            {"role": "user", "content": f"{query}\n\nYou are required to write an executable function that performs the task. The function input and output are both string. You must format the python code as below:\n\n```python\ndef solution(input):\n    # Coding here...\n    return output\n```"
+            {"role": "user", "content": f"{prompt}\n\nYou are required to write an executable function that performs the task. The function input and output are both string. You must format the python code as below:\n\n```python\ndef solution(input):\n    # Coding here...\n    return output\n```"
             }
         ]
 
-        try:
-            completion = self.oai_client.chat.completions.create(
-                model=self.oai_model,
-                messages=messages,
-                temperature=0.2
-            )
-            response = completion.choices[0].message.content
-        except Exception as e:
-            self.logger.error(f"Error when generating code: {e}")
-            return False
-
-        # Extract the code snippet from the response
-        code_match = re.search(self.py_block, response, re.DOTALL)
-        if code_match:
-            code_snippet = code_match.group(1)
-            # Verify that the code snippet contains a function definition
-            if re.search(r'def\s+solution\s*\(', code_snippet):
-                # Write the function to a temp file for execution
-                with open(self.temp_python_fp, 'w') as f:
-                    f.write(code_snippet)
-
-                # store a copy of the code snippet in the code_fp
-                self.save_code(self.code_dir, item['file_path'], code_snippet)
-                return True
-            else:
-                self.logger.warning("Generated code does not contain a 'solution' function.")
-                return False
-        else:
-            self.logger.warning("No Python code block found in the response.")
-            return False
-
+        completion = self.oai_client.chat.completions.create(
+            model=self.oai_model,
+            messages=messages,
+            temperature=0.2
+        )
+        response = completion.choices[0].message.content
     
+
+        # Extract the code snippet
+        code_match = re.search(self.py_block, response, re.DOTALL)
+        if not code_match:
+            raise ValueError("No Python code block found in the response.")
+        
+        code_snippet = code_match.group(1)
+        if not re.search(self.func_def, code_snippet):
+            raise ValueError("Generated code does not contain a 'solution' function.")
+
+        # Save the code
+        with open(self.temp_python_fp, 'w') as f:
+            f.write(code_snippet)
+        self.save_code(self.code_dir, item['file_path'], code_snippet)
+        
+        return code_snippet
+
     def save_code(self, code_dir, file_path, code_snippet):
         """Save generated code to file"""
         # prepare the code file path
@@ -117,52 +119,18 @@ class CodeGenerator:
         with open(code_fp, 'w') as f:
             f.write(code_snippet)
 
-
-    def execute_code(self, tests, chat) -> List[dict]:
-        """
-        Execute generated code against test cases
-        
-        Args:
-            tests (list): List of test cases with input/output pairs
-            chat (str): Original chat message for error context
-            
-        Returns:
-            list: Test cases with execution results
-            
-        Example input:
-            tests = [{'input': 'hello', 'output': 'HELLO', 'code_output': None}]
-            
-        Example output:
-            [{'input': 'hello', 'output': 'HELLO', 'code_output': 'HELLO'}]
-        """
+    def execute_code(self, tests: list) -> list:
+        """Execute generated code with reflection on errors"""
         try:
-            # Attempt to reload the solution function
             solution_func = self._reload_func()
         except ImportError as e:
-            # Handle import error with RAG
-            self.rag.handle_import_error(e, chat)
-            # Try to get relevant documentation
-            docs = self.rag.get_function_context(chat)
-            if docs:
-                # Regenerate code with documentation context
-                self.generate_code(tests, additional_context=docs)
-                return self.execute_code(tests, chat)  # Retry execution
-            return tests
-        except Exception as e:
-            self.logger.error(f"Code solution error occurred: {e}")
+            self.rag.handle_import_error(e)
             return tests
 
         for t in tests:
-            try:
-                # Call the solution function
-                func_output = solution_func(t['input'])
-                t['code_output'] = func_output
-            except ValueError as e:
-                # the value error will be handled in the Sanity Reflection module
-                self.logger.error(f"Value error:  {e}")
-            except Exception as e:
-                self.logger.error(f"Code solution error occurred: {e}")
-            
+            func_output = solution_func(t['input'])
+            t['code_output'] = func_output
+
         return tests
 
     # Reload the solution function
@@ -172,37 +140,33 @@ class CodeGenerator:
         from temp.code_solution import solution  # Import the updated solution function
         return solution
 
-    def run(self, item) -> List[dict]:
-        """
-        Main execution method - generates and tests code
+    def run(self, item: dict):
+        """Main execution loop with reflection and lazy RAG"""
+        tests = [{'input': t['input'], 'output': t['output'], 'code_output': None} 
+                 for t in item['tuples'][self.n_shot:]]
         
-        Args:
-            item (dict): Dataset item containing:
-                - file_path: Path to test file
-                - tuples: List of test cases
-                - chat: Original instruction
+        reflection_ctx = ReflectionCtx()
+        retry_count = 0
+        
+        while retry_count < self.code_retry:
+            try:
+                # Try to generate code
+                code_snippet = self.generate_code(item, reflection_ctx)
+                reflection_ctx.code_snippet = code_snippet
+                # runtime error will be captured by the try-except block
+                tests = self.execute_code(tests)
+            except Exception as e:
+                # Update reflection context
+                reflection_ctx.runtime_err = str(e)
+
+                # Capture import statements
+                import_statements = re.findall(self.import_stmt, code_snippet, re.MULTILINE)
+                self.logger.info(f"Captured import statements: {import_statements}")
+
+                reflection_ctx.rag_doc = self.rag.find_pkg_info(import_statements)
                 
-        Returns:
-            list: Test cases with execution results
-            
-        Example:
-            tests = generator.run({
-                'file_path': 'test1.json',
-                'tuples': [{'input': 'hello', 'output': 'HELLO'}],
-                'chat': 'Convert to uppercase'
-            })
-        """
-        # prepare test, skip the few shot examples
-        tests = [{'input': t['input'], 'output': t['output'], 'code_output': None} for t in item['tuples'][self.n_shot:]]
-        self.logger.info(f"Generating code for {item['file_path']}")
-        
-        if self.generate_code(item):
-            self.logger.info(f"Generation done, executing code...")
-            tests = self.execute_code(tests, item['file_path'])
-            
-            # clear the content of temp file
-            with open(self.temp_python_fp, 'w') as f:
-                f.write('')
+                retry_count += 1
+                self.logger.warning(f"Attempt {retry_count}/{self.code_retry} failed: {e}")
         
         return tests
 
