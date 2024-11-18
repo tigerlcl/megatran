@@ -18,7 +18,7 @@ def get_loader_for_package(pkg_info: Dict):
     1. doc_url (official documentation)
     2. git_url (GitHub repository)
     """
-    # TODO: optimize the WebBaseLoader logic
+    
     if 'doc_url' in pkg_info:
         return WebBaseLoader(pkg_info['doc_url'])
         

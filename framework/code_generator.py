@@ -50,7 +50,6 @@ class CodeGenerator:
         # regexes
         self.py_block = r'```python\n(.*?)\n```'
         self.func_def = r'def\s+solution\s*\('
-        self.import_stmt = r'^(import .+|from .+ import .+)'
 
 
     def generate_code(self, item: dict, reflection_ctx: Optional[ReflectionCtx] = None) -> str:
@@ -161,16 +160,10 @@ class CodeGenerator:
                 tests = self.execute_code(tests)
                 break
             except Exception as e:
-                reflection_ctx.code_snippet = code_snippet
-
                 # Update reflection context
+                reflection_ctx.code_snippet = code_snippet
                 reflection_ctx.runtime_err = str(e)
-
-                # Capture import statements
-                import_statements = re.findall(self.import_stmt, code_snippet, re.MULTILINE)
-                self.logger.info(f"Captured import statements: {import_statements}")
-
-                reflection_ctx.rag_doc = self.rag.find_pkg_info(import_statements)
+                reflection_ctx.rag_doc = self.rag.find_pkg_info(code_snippet)
                 
                 retry_count += 1
                 self.logger.warning(f"Test attempt {retry_count}/{self.code_retry} failed: {e}")

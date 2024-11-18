@@ -1,0 +1,8 @@
+{
+    "total_pass": 8,
+    "total_test": 10,
+    "prate_per_test": 0.8,
+    "total_test_case": 5,
+    "total_pass_case": 4,
+    "prate_per_case": 0.8
+}

@@ -1,4 +1,5 @@
 import os
+import re
 import json
 from typing import List, Optional
 
@@ -14,7 +15,7 @@ class LazyRAG:
     """
     def __init__(self, ctx):
         self.logger = ctx.logger
-        self.embeddings = OpenAIEmbeddings(**ctx.openai_cfg)
+        self.embeddings = OpenAIEmbeddings(**ctx.openai_cfg, model=ctx.embedding_model)
         self.db_path = ctx.vec_db_dir
         self.pkg_info_path = ctx.pkg_info_path
         self.missing_pkg_path = os.path.join(ctx.code_dir, "missing_packages.txt")
@@ -39,42 +40,13 @@ class LazyRAG:
 
         self.logger.warning(f"Missing package '{missing_module}' logged. Please install it manually.")
 
-    def find_pkg_info(self, import_stmts: List[str]) -> Optional[str]:
-        """
-        Find package information based on import statements
-            
-        Example:
-            import_stmts = ['import utm', 'from mgrs import MGRS']
-            docs = find_pkg_info(import_stmts)
-        """
-            
-        # Process each import statement
-        docs = []
-        for stmt in import_stmts:
-            # Handle 'import pkg' and 'from pkg import x'
-            if stmt.startswith('from'):
-                pkg = stmt.split()[1]
-            else:
-                pkg = stmt.split()[1].split('.')[0]
-            
-            # Filter out packages we have docs
-            if pkg not in self.pkg_names:
-                self.logger.warning(f"No documentation indexed in DB for package {pkg}")
-                continue
-
-            try:
-                current_docs = self._retrieve_docs(stmt)
-                docs.extend(current_docs)
-            except Exception as e:
-                self.logger.error(f"Error retrieving documentation: {e}")
-
-        # remove duplicated docs if two statements import the same package
-        docs = list(set(docs))
-
-        return "\n".join(docs) if docs else None
-
-    def _retrieve_docs(self, query: str, k: int = 3) -> List[str]:
-        """Retrieve relevant documentation based on query"""
-        docs = self.vector_db.similarity_search(query, k=k)
-        return [doc.page_content for doc in docs]
+    def find_pkg_info(self, code_snippet: str, top_k: int = 3) -> Optional[str]:
+        """Find package documentation based on code snippet"""
+        
+        try:
+            docs = self.vector_db.similarity_search(code_snippet, k=top_k)
+            return "\n".join([doc.page_content for doc in docs])
+        except Exception as e:
+            self.logger.error(f"Error retrieving documentation: {e}")
+            return None
         
