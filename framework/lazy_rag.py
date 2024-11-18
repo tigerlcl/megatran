@@ -2,8 +2,8 @@ import os
 import json
 from typing import List, Optional
 
+from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import OpenAIEmbeddings
 
 
 class LazyRAG:
@@ -18,11 +18,17 @@ class LazyRAG:
         self.db_path = ctx.vec_db_dir
         self.pkg_info_path = ctx.pkg_info_path
         self.missing_pkg_path = os.path.join(ctx.code_dir, "missing_packages.txt")
+
+        if not os.path.exists(self.db_path):
+            self.logger.warning("Local vector database not found. Please run build_vector_db.py first.")
+            raise FileNotFoundError("Local vector database not found. Please run build_vector_db.py first.")
+        else:
+            self.vector_db = FAISS.load_local(self.db_path, self.embeddings, allow_dangerous_deserialization=True)
         
         # Load package info
         with open(self.pkg_info_path, 'r') as f:
             self.pkg_info = json.load(f)
-            self.pkg_names = {pkg['name'].lower() for pkg in self.pkg_info}
+            self.pkg_names = [pkg['name'].lower() for pkg in self.pkg_info]
     
     def handle_import_error(self, error: ImportError):
         """Log missing packages into text file"""
@@ -41,9 +47,6 @@ class LazyRAG:
             import_stmts = ['import utm', 'from mgrs import MGRS']
             docs = find_pkg_info(import_stmts)
         """
-        if not os.path.exists(self.db_path):
-            self.logger.warning("Local vector database not found. Please run build_vector_db.py first.")
-            return None
             
         # Process each import statement
         docs = []
@@ -60,7 +63,8 @@ class LazyRAG:
                 continue
 
             try:
-                docs.extend(self._retrieve_docs(stmt))
+                current_docs = self._retrieve_docs(stmt)
+                docs.extend(current_docs)
             except Exception as e:
                 self.logger.error(f"Error retrieving documentation: {e}")
 
@@ -71,7 +75,6 @@ class LazyRAG:
 
     def _retrieve_docs(self, query: str, k: int = 3) -> List[str]:
         """Retrieve relevant documentation based on query"""
-        vector_db = FAISS.load_local(self.db_path, self.embeddings)
-        docs = vector_db.similarity_search(query, k=k)
+        docs = self.vector_db.similarity_search(query, k=k)
         return [doc.page_content for doc in docs]
         

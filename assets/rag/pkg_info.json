@@ -1,0 +1,20 @@
+[
+    {
+        "name": "utm",
+        "git_url": "https://github.com/Turbo87/utm",
+        "git_branch": "master"
+    },
+    {
+        "name": "mgrs",
+        "git_url": "https://github.com/hobuinc/mgrs/",
+        "git_branch": "main"
+    },
+    {
+        "name": "hijri_converter",
+        "doc_url": "https://hijri-converter.readthedocs.io/en/stable/"
+    },
+    {
+        "name": "hijridate",
+        "doc_url": "https://pypi.org/project/hijridate/"
+    }
+]

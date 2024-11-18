@@ -1,9 +1,12 @@
 pyyaml==6.0.1
 numpy==1.26.4
 pandas==2.2.2
-openai==1.51.2
+openai==1.54.4
 vllm==0.6.2
 tqdm==4.66.5
 langchain==0.3.7 
 langchain-community==0.3.5
+langchain-openai==0.2.8
+beautifulsoup4==4.12.3
 faiss-cpu==1.9.0
+gitpython==3.1.42

@@ -128,8 +128,12 @@ class CodeGenerator:
             return tests
 
         for t in tests:
+            # runtime error will be captured by the outside try-except block
             func_output = solution_func(t['input'])
             t['code_output'] = func_output
+
+            if func_output != t['output']:
+                raise ValueError(f"Test failed: expected {t['output']}, got {func_output}")
 
         return tests
 
@@ -142,20 +146,23 @@ class CodeGenerator:
 
     def run(self, item: dict):
         """Main execution loop with reflection and lazy RAG"""
+        self.logger.info(f"Generating code for {item['file_path']}...")
         tests = [{'input': t['input'], 'output': t['output'], 'code_output': None} 
-                 for t in item['tuples'][self.n_shot:]]
+                 for t in item['tuples'][self.code_n_shot:]]
         
         reflection_ctx = ReflectionCtx()
         retry_count = 0
-        
+
         while retry_count < self.code_retry:
             try:
                 # Try to generate code
                 code_snippet = self.generate_code(item, reflection_ctx)
-                reflection_ctx.code_snippet = code_snippet
-                # runtime error will be captured by the try-except block
+                self.logger.info("Code generated successfully, running tests...")
                 tests = self.execute_code(tests)
+                break
             except Exception as e:
+                reflection_ctx.code_snippet = code_snippet
+
                 # Update reflection context
                 reflection_ctx.runtime_err = str(e)
 
@@ -166,7 +173,11 @@ class CodeGenerator:
                 reflection_ctx.rag_doc = self.rag.find_pkg_info(import_statements)
                 
                 retry_count += 1
-                self.logger.warning(f"Attempt {retry_count}/{self.code_retry} failed: {e}")
+                self.logger.warning(f"Test attempt {retry_count}/{self.code_retry} failed: {e}")
+            
+        # clean temporary code file content
+        with open(self.temp_python_fp, 'w') as f:
+            f.write('')
         
         return tests
 

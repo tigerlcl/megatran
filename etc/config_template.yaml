@@ -1,16 +1,18 @@
 # module config
-chat_to_inst: true
+chat_to_type: true
 n_shot: 3
+code_retry: 3
 prompt_mode: "chat_example" # Can use chat, ctx, example as keywords to control the prompt
 
 # vLLM for FT model
-vllm_model: "./models/llama3_lora_sft"
+vllm_model: "./assets/models/llama3_lora_sft"
 vllm_cfg:
   base_url: "http://localhost:8000/v1"
   api_key: "token-abc123"
 
 # OPENAI
-openai_model: "gpt-4o-mini"
+openai_model: "gpt-4o-mini" # gpt-4o, gpt-4o-mini
+embedding_model: "text-embedding-3-small"
 openai_cfg:
-  base_url: "https://api.openai.com/v1"
+  base_url: "https://api.openai.com/v1/chat/completions"
   api_key: "sk-xxx"

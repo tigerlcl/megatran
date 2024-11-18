@@ -5,9 +5,9 @@ import argparse
 from typing import Dict
 import shutil
 
-from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import WebBaseLoader, GitLoader
 
 def get_loader_for_package(pkg_info: Dict):
@@ -17,8 +17,8 @@ def get_loader_for_package(pkg_info: Dict):
     Priorities:
     1. doc_url (official documentation)
     2. git_url (GitHub repository)
-    3. pypi_url (PyPI page)
     """
+    # TODO: optimize the WebBaseLoader logic
     if 'doc_url' in pkg_info:
         return WebBaseLoader(pkg_info['doc_url'])
         
@@ -27,18 +27,13 @@ def get_loader_for_package(pkg_info: Dict):
         return GitLoader(
             clone_url=pkg_info['git_url'],
             repo_path=repo_path,
-            branch="main"
+            branch=pkg_info['git_branch']
         )
-        
-    if 'pypi_url' in pkg_info:
-        return WebBaseLoader(pkg_info['pypi_url'])
         
     raise ValueError(f"No valid documentation source for {pkg_info['name']}")
 
 def main(config: Dict):
     """Build vector database from package documentation"""
-    # Create embeddings instance
-    embeddings = OpenAIEmbeddings(**config['openai_cfg'], model=config['embedding_model'])
     
     # Load package info
     with open(config['pkg_info_path'], 'r') as f:
@@ -46,30 +41,23 @@ def main(config: Dict):
     
     # Setup document splitting
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,
-        chunk_overlap=200
+        chunk_size=500,
+        chunk_overlap=100
     )
     
-    documents = []
-    
     # Process each package
+    documents = []
     for pkg in pkg_info:
         try:
             print(f"Processing documentation for {pkg['name']}...")
-            
             # Get appropriate loader
             loader = get_loader_for_package(pkg)
-            
-            # Load and split documents
             docs = loader.load()
             split_docs = text_splitter.split_documents(docs)
             documents.extend(split_docs)
-            
         except Exception as e:
             print(f"Error processing {pkg['name']}: {e}")
             continue
-            
-
     if documents:
         # Create and save vector database
         vector_db = FAISS.from_documents(documents, embeddings)
@@ -81,15 +69,26 @@ def main(config: Dict):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Build vector database from package documentation')
     parser.add_argument('--config', default='./etc/config_template.yaml', type=str, help='Path to config file')
+    parser.add_argument('--query', '-q', type=str, help='query to test vector db') # if specified, will not build db
     
     args = parser.parse_args()
 
     with open(args.config, 'r') as file:
         config = yaml.safe_load(file)
 
+    # Create embeddings instance
+    embeddings = OpenAIEmbeddings(**config['openai_cfg'], model=config['embedding_model'])
+
     # setup directory
     os.makedirs(config['vec_db_dir'], exist_ok=True)
     os.makedirs(config['pkg_repo_dir'], exist_ok=True)
-    
-    # Build database
-    main(config) 
+
+    if args.query:
+        vector_db = FAISS.load_local(config['vec_db_dir'], embeddings, allow_dangerous_deserialization=True)
+        docs = vector_db.similarity_search_with_relevance_scores(args.query, k=3)
+        for doc, score in docs:
+            print(f"Page Content:\n{doc.page_content}\nRelevance Score: {score}")
+
+    else:
+        # Build database
+        main(config) 

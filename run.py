@@ -9,7 +9,7 @@ def main(ctx: Context) -> None:
     
     Workflow:
     1. Load dataset
-    2. (Optional) Convert chat to instruction using fine-tuned model
+    2. (Optional) Predict transformation type from user input
     3. Generate and test code for each item
     4. Analyze and export results
 
@@ -17,14 +17,14 @@ def main(ctx: Context) -> None:
     # Load and prepare dataset/testset
     if ctx.testing:
         ctx.logger.info("Running in test mode with subset of data")
-        dataset = load_dataset_by_name(ctx.testing)
+        dataset = load_dataset_by_name("test-data")
     else:
         ctx.logger.info(f"Loading dataset {ctx.dataset_name}...")
         dataset = load_dataset_by_name(ctx.dataset_name)
 
-    # Optional: Convert natural language to formal instruction
-    if ctx.get('chat_to_inst', False):
-        ctx.logger.info("Converting chat to instruction format...")
+    # Optional: Predict transformation type from user input
+    if ctx.get('chat_to_type', False):
+        ctx.logger.info("Predicting transformation type from user input...")
         chat_builder = ChatBuilder(dataset, ctx)
         dataset = chat_builder.run()
         ctx.logger.info("Chat conversion completed")
@@ -58,7 +58,7 @@ if __name__ == '__main__':
     )
     
     parser.add_argument('--exp_name', default='demo', type=str, help='Unique experiment name')
-    parser.add_argument('--dataset_name', required=True, type=str, help='Dataset name from load_data.py/DATASET_DICT')
+    parser.add_argument('--dataset_name', type=str, help='Dataset name from load_data.py/DATASET_DICT')
     parser.add_argument('--config', default='./etc/config_template.yaml', type=str, help='Path to config file')
     parser.add_argument('--testing', action='store_true', help='Run on small subset of data for testing')
     

@@ -19,7 +19,7 @@ DATASET_DICT = {
     "prep-software": {
         "path": "./data/TDE-v2/benchmark-FF-Trifacta-GoogleRefine"
     },
-    "testing": {
+    "test-data": {
         "path": "./data/testset/"
     }
 }
