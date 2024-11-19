@@ -14,7 +14,7 @@ class ReflectionCtx:
     code_snippet: Optional[str] = None
     runtime_err: Optional[str] = None
     rag_doc: Optional[str] = None
-
+    
     def build_reflection_prompt(self) -> str:
         """
         Build reflection prompt from available context
@@ -25,13 +25,13 @@ class ReflectionCtx:
         prompt = ""
         
         if self.code_snippet:
-            prompt += f"\n\nPrevious code attempt:\n```python\n{self.code_snippet}\n```"
+            prompt += f"\n\n### Previous code attempt ###\n```python\n{self.code_snippet}\n```"
             
         if self.runtime_err:
-            prompt += f"\n\nRuntime error:\n{self.runtime_err}"
+            prompt += f"\n\n### Runtime error ###\n{self.runtime_err}"
             
         if self.rag_doc:
-            prompt += f"\n\nRelevant Documentation:\n{self.rag_doc}"
+            prompt += f"\n\n### Relevant Documentation ###\n{self.rag_doc}"
             
         if prompt:
             prompt += "\n\nPlease reflect on the previous attempt and errors to generate improved code."

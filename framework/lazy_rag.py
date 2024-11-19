@@ -1,7 +1,6 @@
 import os
-import re
 import json
-from typing import List, Optional
+from typing import Optional
 
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
@@ -42,10 +41,17 @@ class LazyRAG:
 
     def find_pkg_info(self, code_snippet: str, top_k: int = 3) -> Optional[str]:
         """Find package documentation based on code snippet"""
+        if not code_snippet:
+            return None
         
         try:
             docs = self.vector_db.similarity_search(code_snippet, k=top_k)
-            return "\n".join([doc.page_content for doc in docs])
+            # Clean and remove consecutive newlines and spaces from each doc
+            cleaned_docs = [
+                ' '.join(' '.join(line.split()) for line in doc.page_content.splitlines() if line.strip())
+                for doc in docs
+            ]
+            return "\n".join(cleaned_docs)
         except Exception as e:
             self.logger.error(f"Error retrieving documentation: {e}")
             return None

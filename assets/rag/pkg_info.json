@@ -16,5 +16,18 @@
     {
         "name": "hijridate",
         "doc_url": "https://pypi.org/project/hijridate/"
+    },
+    {
+        "name": "dataprep.clean",
+        "doc_url": [
+            "https://docs.dataprep.ai/user_guide/clean/clean_country.html",
+            "https://docs.dataprep.ai/user_guide/clean/clean_date.html",
+            "https://docs.dataprep.ai/user_guide/clean/clean_email.html",
+            "https://docs.dataprep.ai/user_guide/clean/clean_lat_long.html",
+            "https://docs.dataprep.ai/user_guide/clean/clean_ip.html",
+            "https://docs.dataprep.ai/user_guide/clean/clean_phone.html",
+            "https://docs.dataprep.ai/user_guide/clean/clean_url.html",
+            "https://docs.dataprep.ai/user_guide/clean/clean_text.html"
+        ]
     }
 ]

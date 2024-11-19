@@ -155,6 +155,7 @@ class CodeGenerator:
         while retry_count < self.code_retry:
             try:
                 # Try to generate code
+                code_snippet = None
                 code_snippet = self.generate_code(item, reflection_ctx)
                 self.logger.info("Code generated successfully, running tests...")
                 tests = self.execute_code(tests)
@@ -163,10 +164,13 @@ class CodeGenerator:
                 # Update reflection context
                 reflection_ctx.code_snippet = code_snippet
                 reflection_ctx.runtime_err = str(e)
-                reflection_ctx.rag_doc = self.rag.find_pkg_info(code_snippet)
-                
+
                 retry_count += 1
                 self.logger.warning(f"Test attempt {retry_count}/{self.code_retry} failed: {e}")
+
+            # TODO: opt-RAG, trigger by code snippet 'import statement'
+            # if code_snippet:
+            #     reflection_ctx.rag_doc = self.rag.find_pkg_info(code_snippet)
             
         # clean temporary code file content
         with open(self.temp_python_fp, 'w') as f:

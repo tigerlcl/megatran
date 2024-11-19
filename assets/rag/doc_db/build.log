@@ -1,0 +1,20 @@
+2024-11-19 10:58:46,742 - INFO - Starting to process 5 packages
+2024-11-19 10:58:46,743 - INFO - [1/5] Processing utm...
+2024-11-19 10:58:46,868 - INFO - Successfully processed utm: 8 chunks created
+2024-11-19 10:58:46,868 - INFO - [2/5] Processing mgrs...
+2024-11-19 10:58:46,946 - INFO - Successfully processed mgrs: 3 chunks created
+2024-11-19 10:58:46,947 - INFO - [3/5] Processing hijri_converter...
+2024-11-19 10:58:49,994 - INFO - Successfully processed hijri_converter: 3 chunks created
+2024-11-19 10:58:49,994 - INFO - [4/5] Processing hijridate...
+2024-11-19 10:58:52,578 - INFO - Successfully processed hijridate: 14 chunks created
+2024-11-19 10:58:52,578 - INFO - [5/5] Processing dataprep.clean...
+2024-11-19 10:58:57,659 - INFO - Successfully processed dataprep.clean: 245 chunks created
+2024-11-19 10:58:57,660 - INFO - Total documents to process: 273
+2024-11-19 10:59:05,421 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 10:59:11,992 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 10:59:17,629 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 10:59:18,174 - INFO - Creating FAISS index...
+2024-11-19 10:59:18,180 - INFO - Loading faiss with AVX512 support.
+2024-11-19 10:59:18,234 - INFO - Successfully loaded faiss with AVX512 support.
+2024-11-19 10:59:18,265 - INFO - Saving vector database to ./assets/rag/doc_db
+2024-11-19 10:59:18,270 - INFO - Vector database built successfully

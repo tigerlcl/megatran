@@ -69,15 +69,22 @@ class Context:
             return config
 
     def _setup_logger(self):
-        """Configure experiment logger"""
+        """Configure experiment logger with both file and console output"""
         log_fp = os.path.join('exp', self.exp_name, f'{self.exp_name}.log')
 
         logger = logging.getLogger()
         logger.setLevel(logging.INFO)
-        handler = logging.FileHandler(log_fp, mode='w')
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        handler.setFormatter(formatter)
-        logger.addHandler(handler)
+        
+        # File handler
+        file_handler = logging.FileHandler(log_fp, mode='w')
+        file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+        logger.addHandler(file_handler)
+        
+        # Stream handler (console)
+        stream_handler = logging.StreamHandler()
+        stream_handler.setFormatter(logging.Formatter('%(levelname)s - %(message)s'))
+        logger.addHandler(stream_handler)
+        
         logger.info("Logger initialized.")
         return logger
 
