@@ -1,6 +1,5 @@
 import os
 import yaml
-import shutil
 import logging
 
 
@@ -46,9 +45,9 @@ class Context:
         │   └── {exp_name}.log
         └── temp/          # Temporary files
         """
-        # Clear existing experiment directory
+        # Check if experiment directory already exists
         if os.path.exists(os.path.join('exp', self.exp_name)):
-            shutil.rmtree(os.path.join('exp', self.exp_name))
+            raise ValueError(f"Experiment directory 'exp/{self.exp_name}' already exists. Please use a different experiment name to avoid overwriting existing results.")
         
         # Create new directories
         self.code_dir = os.path.join('exp', self.exp_name, 'code')

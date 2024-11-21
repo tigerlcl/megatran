@@ -29,5 +29,9 @@
             "https://docs.dataprep.ai/user_guide/clean/clean_url.html",
             "https://docs.dataprep.ai/user_guide/clean/clean_text.html"
         ]
+    },
+    {
+        "name": "geopy",
+        "doc_url": "https://geopy.readthedocs.io/en/stable/"
     }
 ]

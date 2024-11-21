@@ -45,8 +45,12 @@ class CodeGenerator:
         self.oai_client = OpenAI(**ctx.openai_cfg)
         self.prompt_maker = PromptMaker(ctx.prompt_mode, ctx.n_shot)
         self.temp_python_fp = os.path.join(ctx.temp_dir, "code_solution.py")
-        self.rag = LazyRAG(ctx)
-    
+        
+        self.allow_rag = ctx.allow_rag
+        if self.allow_rag:
+            self.rag = LazyRAG(ctx)
+            self.logger.info("Lazy RAG enabled")
+
         # regexes
         self.py_block = r'```python\n(.*?)\n```'
         self.func_def = r'def\s+solution\s*\('
@@ -123,16 +127,14 @@ class CodeGenerator:
         try:
             solution_func = self._reload_func()
         except ImportError as e:
-            self.rag.handle_import_error(e)
+            missing_module = str(e).split("No module named '")[-1].strip("'")
+            self.logger.warning(f"Missing package '{missing_module}' logged. Please install it manually.")
             return tests
 
         for t in tests:
             # runtime error will be captured by the outside try-except block
-            func_output = solution_func(t['input'])
-            t['code_output'] = func_output
-
-            if func_output != t['output']:
-                raise ValueError(f"Test failed: expected {t['output']}, got {func_output}")
+            # semantic output will be reviewed by the comparison in analysis.py
+            t['code_output'] = solution_func(t['input'])
 
         return tests
 
@@ -159,18 +161,18 @@ class CodeGenerator:
                 code_snippet = self.generate_code(item, reflection_ctx)
                 self.logger.info("Code generated successfully, running tests...")
                 tests = self.execute_code(tests)
-                break
+                break # no more retry
             except Exception as e:
                 # Update reflection context
                 reflection_ctx.code_snippet = code_snippet
-                reflection_ctx.runtime_err = str(e)
+                reflection_ctx.runtime_err = f'{type(e).__name__}: {str(e)}'
+                
+                # lazy-RAG, trigger by code snippet 'import statement'
+                if self.allow_rag:
+                    reflection_ctx.rag_doc = self.rag.find_pkg_info(code_snippet)
 
                 retry_count += 1
-                self.logger.warning(f"Test attempt {retry_count}/{self.code_retry} failed: {e}")
-
-            # TODO: opt-RAG, trigger by code snippet 'import statement'
-            # if code_snippet:
-            #     reflection_ctx.rag_doc = self.rag.find_pkg_info(code_snippet)
+                self.logger.warning(f"Test attempt {retry_count}/{self.code_retry} failed")
             
         # clean temporary code file content
         with open(self.temp_python_fp, 'w') as f:

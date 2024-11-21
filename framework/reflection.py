@@ -28,14 +28,13 @@ class ReflectionCtx:
             prompt += f"\n\n### Previous code attempt ###\n```python\n{self.code_snippet}\n```"
             
         if self.runtime_err:
-            prompt += f"\n\n### Runtime error ###\n{self.runtime_err}"
+            prompt += f"\n\n### Runtime error ###\n{self.runtime_err}\n"
             
         if self.rag_doc:
-            prompt += f"\n\n### Relevant Documentation ###\n{self.rag_doc}"
-            
-        if prompt:
-            prompt += "\n\nPlease reflect on the previous attempt and errors to generate improved code."
-            
+            prompt += f"\n\n### Relevant Documentation ###\n{self.rag_doc}\n"
+        
+        prompt += "\nYou can reflect on the last attempt, runtime errors, and relevant documentation to generate improved code."
+
         return prompt
 
 

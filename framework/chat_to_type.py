@@ -42,11 +42,8 @@ class ChatBuilder:
     def _process_data(self, item, idx):
         # Use lock to ensure thread-safe logging
         with self.log_lock:
-            self.logger.info(f"[{idx}] Generating code instruction for {item['file_path']}")
-        
-        query = self.prompt_maker.get_prompt_by_mode(item)
-        with self.log_lock:
-            self.logger.info(f"[{idx}] Chat-to-instruction query:\n{query}")
+            query = self.prompt_maker.get_prompt_by_mode(item)
+            self.logger.info(f"[{idx}] Chat-to-Type for {item['file_path']}, query:\n{query}")
 
         completion = self.vllm_client.chat.completions.create(
             model=self.model_path,

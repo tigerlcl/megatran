@@ -40,8 +40,6 @@ def get_loader_for_package(pkg_info: Dict):
 
 def batch_process_embeddings(documents: List, embeddings, batch_size: int = 100):
     """Process documents in batches with rate limiting"""
-    # remove duplicates
-    documents = list(set(documents))
 
     batches = [documents[i:i + batch_size] for i in range(0, len(documents), batch_size)]
     all_embeddings = []
@@ -74,6 +72,9 @@ def main(config: Dict):
     logger = logging.getLogger(__name__)
     
     # Load package info
+    if not os.path.exists(config['pkg_info_path']):
+        raise FileNotFoundError(f"Package info file not found at {config['pkg_info_path']}")
+        
     with open(config['pkg_info_path'], 'r') as f:
         pkg_info = json.load(f)
     

@@ -15,35 +15,50 @@ class LazyRAG:
     def __init__(self, ctx):
         self.logger = ctx.logger
         self.embeddings = OpenAIEmbeddings(**ctx.openai_cfg, model=ctx.embedding_model)
-        self.db_path = ctx.vec_db_dir
-        self.pkg_info_path = ctx.pkg_info_path
-        self.missing_pkg_path = os.path.join(ctx.code_dir, "missing_packages.txt")
+        
+        # regexes
+        self.import_stmt_patterns = [
+            r'import\s+([\w\s,]+)',  # matches: import numpy, pandas
+            r'from\s+([\w.]+)\s+import'  # matches: from numpy import array
+        ]
 
-        if not os.path.exists(self.db_path):
+        if not os.path.exists(ctx.vec_db_dir):
             self.logger.warning("Local vector database not found. Please run build_vector_db.py first.")
             raise FileNotFoundError("Local vector database not found. Please run build_vector_db.py first.")
         else:
-            self.vector_db = FAISS.load_local(self.db_path, self.embeddings, allow_dangerous_deserialization=True)
-        
-        # Load package info
-        with open(self.pkg_info_path, 'r') as f:
-            self.pkg_info = json.load(f)
-            self.pkg_names = [pkg['name'].lower() for pkg in self.pkg_info]
-    
-    def handle_import_error(self, error: ImportError):
-        """Log missing packages into text file"""
-        missing_module = str(error).split("No module named '")[-1].strip("'")
-        
-        with open(self.missing_pkg_path, 'a') as f:
-            f.write(missing_module + "\n")
+            self.vector_db = FAISS.load_local(ctx.vec_db_dir, self.embeddings, allow_dangerous_deserialization=True)
 
-        self.logger.warning(f"Missing package '{missing_module}' logged. Please install it manually.")
+        # load package info list
+        try:
+            with open(ctx.pkg_info_path, 'r') as f:
+                pkg_list = json.load(f)
+                self.pkg_info = [pkg['name'] for pkg in pkg_list]
+        except FileNotFoundError:
+            self.pkg_info = []
+        
+
+    def _check_import_pkg(self, code_snippet: str) -> bool:
+        """
+        Check if any missing package appears in import statements
+        Simple string matching against missing packages
+        """
+        if not self.pkg_info:
+            return False
+            
+        # Only proceed if this is an import statement
+        if not ('import' in code_snippet or 'from' in code_snippet):
+            return False
+            
+        # Check if RAG supported package appears in the statement
+        return any(pkg in code_snippet for pkg in self.pkg_info)
 
     def find_pkg_info(self, code_snippet: str, top_k: int = 3) -> Optional[str]:
-        """Find package documentation based on code snippet"""
-        if not code_snippet:
+        """Retrieve package documentation based on code snippet"""
+        if not code_snippet or not self._check_import_pkg(code_snippet):
             return None
         
+
+        self.logger.info(f"Retrieving package info...")
         try:
             docs = self.vector_db.similarity_search(code_snippet, k=top_k)
             # Clean and remove consecutive newlines and spaces from each doc
