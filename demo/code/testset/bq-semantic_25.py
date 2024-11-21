@@ -1,20 +1,14 @@
-from hijridate import Hijri, Gregorian
+from hijri_converter import convert
 
 def solution(input):
-    # Split the input string to extract day, month, and year
-    hijri_date_parts = input.split()
-    day = int(hijri_date_parts[0])
-    month = hijri_date_parts[1]
-    year = int(hijri_date_parts[2])
-    
-    # Map Hijri month names to numbers
-    hijri_month_map = {
+    # Mapping of Hijri month names to their numbers
+    hijri_months = {
         "Muharram": 1,
         "Safar": 2,
-        "Rabi' al-Awwal": 3,
-        "Rabi' al-Thani": 4,
-        "Jumada al-Awwal": 5,
-        "Jumada al-Thani": 6,
+        "Rabi' al-awwal": 3,
+        "Rabi' al-thani": 4,
+        "Jumada al-awwal": 5,
+        "Jumada al-thani": 6,
         "Rajab": 7,
         "Sha'ban": 8,
         "Ramadan": 9,
@@ -23,23 +17,27 @@ def solution(input):
         "Dhu al-Hijjah": 12
     }
     
-    # Get the month number from the map
-    month_number = hijri_month_map[month]
+    # Parse the input
+    parts = input.split()
+    day = int(parts[0])
+    month_name = parts[1]
+    year = int(parts[2])
     
-    # Create a Hijri date object
-    hijri_date = Hijri(year, month_number, day)
+    # Get the month number
+    month = hijri_months[month_name]
     
-    # Convert to Gregorian
-    gregorian_date = hijri_date.to_gregorian()
-    
-    # Format the output string
-    output = f"{gregorian_date.day} {gregorian_date.month_name} {gregorian_date.year} C.E"
+    # Convert Hijri to Gregorian
+    gregorian_date = convert.Hijri(year, month, day).to_gregorian()
     
     # Get the day of the week
-    day_of_week = gregorian_date.day_of_week()
-    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    weekday = gregorian_date.strftime('%A')
     
-    # Combine day of the week with the output
-    output = f"{days[day_of_week]} {output}"
+    # Format the output
+    output = f"{weekday} {gregorian_date.day} {gregorian_date.strftime('%B')} {gregorian_date.year} C.E"
     
     return output
+
+# Example usage:
+# print(solution("11 Shawwal 1430"))  # Output: Wednesday 30 September 2009 C.E
+# print(solution("5 Muharram 1300"))  # Output: Thursday 16 November 1882 C.E
+# print(solution("19 Rajab 1460"))    # Output: Friday 20 August 2038 C.E

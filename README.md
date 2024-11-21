@@ -29,7 +29,7 @@ pip install -r requirements.txt
 openai_cfg:
   api_key: YOUR_API_KEY
   base_url: "https://api.openai.com/v1"
-  model: "gpt-4"
+  model: "gpt-4o"
 ```
 
 3. Build RAG vector database
@@ -109,6 +109,12 @@ chat_to_type: true           # Enable chat-to-type
 n_shot: 3                    # Number of examples to use for code generation
 code_retry: 3                # Max code generation retries
 prompt_mode: "chat_example"  # Prompt composition mode
+allow_rag: true              # Enable RAG
+
+# Vector DB for RAG
+pkg_info_path: "./assets/rag/pkg_info.json"
+pkg_repo_dir: "./assets/rag/repo"
+vec_db_dir: "./assets/rag/doc_db"
 ```
 
 ## License

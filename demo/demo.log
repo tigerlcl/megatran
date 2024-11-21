@@ -1,10 +1,9 @@
-2024-11-18 16:31:26,602 - INFO - Logger initialized.
-2024-11-18 16:31:26,602 - INFO - Code backend LLM: gpt-4o-mini
-2024-11-18 16:31:26,602 - INFO - Running in test mode with subset of data
-2024-11-18 16:31:26,603 - INFO - Predicting transformation type from user input...
-2024-11-18 16:31:27,689 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2024-11-18 16:31:27,702 - INFO - [0] Generating code instruction for ./data/testset/bq-semantic_22.json
-2024-11-18 16:31:27,702 - INFO - [0] Chat-to-instruction query:
+2024-11-21 07:12:25,957 - INFO - Logger initialized.
+2024-11-21 07:12:25,958 - INFO - Code backend LLM: gpt-4o
+2024-11-21 07:12:25,958 - INFO - Running in test mode with subset of data
+2024-11-21 07:12:25,959 - INFO - Predicting transformation type from user input...
+2024-11-21 07:12:26,248 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 07:12:26,263 - INFO - [0] Chat-to-Type for ./data/testset/bq-semantic_22.json, query:
 ### Instruction ###
 convert pacific time to eastern time
 
@@ -15,8 +14,7 @@ Input: 11:00 PM,Sun,Aug 2,2015
 Output: 2:00 AM,Mon,Aug 3,2015
 Input: 3:30 AM,Mon,Feb 2,2015
 Output: 6:30 AM,Mon,Feb 2,2015
-2024-11-18 16:31:27,713 - INFO - [1] Generating code instruction for ./data/testset/bq-semantic_25.json
-2024-11-18 16:31:27,713 - INFO - [1] Chat-to-instruction query:
+2024-11-21 07:12:26,274 - INFO - [1] Chat-to-Type for ./data/testset/bq-semantic_25.json, query:
 ### Instruction ###
 convert hijri to gregorian
 
@@ -27,8 +25,7 @@ Input: 5 Muharram 1300
 Output: Thursday 16 November 1882 C.E
 Input: 19 Rajab 1460
 Output: Friday 20 August 2038 C.E
-2024-11-18 16:31:27,725 - INFO - [2] Generating code instruction for ./data/testset/bq-semantic_30.json
-2024-11-18 16:31:27,726 - INFO - [2] Chat-to-instruction query:
+2024-11-21 07:12:26,286 - INFO - [2] Chat-to-Type for ./data/testset/bq-semantic_30.json, query:
 ### Instruction ###
 convert lat long to MGRS
 
@@ -39,8 +36,7 @@ Input: 44.11, -77.33
 Output: 18TUP1353886730
 Input: 66.99, -33.11
 Output: 25WDQ9520130269
-2024-11-18 16:31:27,735 - INFO - [3] Generating code instruction for ./data/testset/stk-38.json
-2024-11-18 16:31:27,736 - INFO - [3] Chat-to-instruction query:
+2024-11-21 07:12:26,298 - INFO - [3] Chat-to-Type for ./data/testset/stk-38.json, query:
 ### Instruction ###
 person name abbreviation
 
@@ -51,8 +47,7 @@ Input: Charles Wooten
 Output: C. Wooten
 Input: Kim Lee
 Output: K. Lee
-2024-11-18 16:31:27,747 - INFO - [4] Generating code instruction for ./data/testset/stk-4.json
-2024-11-18 16:31:27,747 - INFO - [4] Chat-to-instruction query:
+2024-11-21 07:12:26,309 - INFO - [4] Chat-to-Type for ./data/testset/stk-4.json, query:
 ### Instruction ###
 Get distinct characters of a string
 
@@ -63,33 +58,17 @@ Input: KLKLHHMO
 Output: KLHMO
 Input: XUCHU
 Output: XUCH
-2024-11-18 16:31:27,940 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2024-11-18 16:31:28,029 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2024-11-18 16:31:28,065 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2024-11-18 16:31:28,066 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2024-11-18 16:31:28,134 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2024-11-18 16:31:28,136 - INFO - Chat conversion completed
-2024-11-18 16:31:28,274 - INFO - Loading faiss with AVX512 support.
-2024-11-18 16:31:28,291 - INFO - Successfully loaded faiss with AVX512 support.
-2024-11-18 16:31:28,301 - INFO - Starting code generation and testing...
-2024-11-18 16:31:28,307 - INFO - Generating code for ./data/testset/bq-semantic_22.json...
-2024-11-18 16:31:28,308 - INFO - Code generation query:
-### Instruction ###
-convert pacific time to eastern time
-domain_calculate(): convert time from Pacific Time (PT) to Eastern Time (ET).
-
-### Examples ###
-Input: 2:30 AM,Mon,Aug 17,2015
-Output: 5:30 AM,Mon,Aug,2015
-Input: 11:00 PM,Sun,Aug 2,2015
-Output: 2:00 AM,Mon,Aug 3,2015
-Input: 3:30 AM,Mon,Feb 2,2015
-Output: 6:30 AM,Mon,Feb 2,2015
-2024-11-18 16:31:34,069 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
-2024-11-18 16:31:34,075 - INFO - Code generated successfully, running tests...
-2024-11-18 16:31:35,407 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/embeddings "HTTP/1.1 200 OK"
-2024-11-18 16:31:35,427 - WARNING - Test attempt 1/3 failed: Test failed: expected 1:00 AM,Mon,Aug 3,2015, got 01:00 AM,Mon,Aug 03,2015
-2024-11-18 16:31:35,427 - INFO - Code generation query:
+2024-11-21 07:12:26,507 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 07:12:26,598 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 07:12:26,635 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 07:12:26,636 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 07:12:26,705 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 07:12:26,707 - INFO - Chat conversion completed
+2024-11-21 07:12:26,829 - INFO - Loading faiss with AVX512 support.
+2024-11-21 07:12:26,851 - INFO - Successfully loaded faiss with AVX512 support.
+2024-11-21 07:12:26,864 - INFO - Starting code generation and testing...
+2024-11-21 07:12:26,872 - INFO - Generating code for ./data/testset/bq-semantic_22.json...
+2024-11-21 07:12:26,872 - INFO - Code generation query:
 ### Instruction ###
 convert pacific time to eastern time
 domain_calculate(): convert time from Pacific Time (PT) to Eastern Time (ET).
@@ -102,103 +81,52 @@ Output: 2:00 AM,Mon,Aug 3,2015
 Input: 3:30 AM,Mon,Feb 2,2015
 Output: 6:30 AM,Mon,Feb 2,2015
 
-Previous code attempt:
+You can reflect on the last attempt, runtime errors, and relevant documentation to generate improved code.
+2024-11-21 07:12:31,109 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 07:12:31,115 - INFO - Code generated successfully, running tests...
+2024-11-21 07:12:31,123 - WARNING - Test attempt 1/3 failed: Test failed: expected 1:00 AM,Mon,Aug 3,2015, got 01:00 AM,Mon,Aug 03,2015
+2024-11-21 07:12:31,124 - INFO - Code generation query:
+### Instruction ###
+convert pacific time to eastern time
+domain_calculate(): convert time from Pacific Time (PT) to Eastern Time (ET).
+
+### Examples ###
+Input: 2:30 AM,Mon,Aug 17,2015
+Output: 5:30 AM,Mon,Aug,2015
+Input: 11:00 PM,Sun,Aug 2,2015
+Output: 2:00 AM,Mon,Aug 3,2015
+Input: 3:30 AM,Mon,Feb 2,2015
+Output: 6:30 AM,Mon,Feb 2,2015
+
+### Previous code attempt ###
 ```python
 from datetime import datetime, timedelta
 
 def solution(input):
-    # Define the format of the input date string
-    date_format = "%I:%M %p,%a,%b %d,%Y"
-    
     # Parse the input string into a datetime object
-    pacific_time = datetime.strptime(input, date_format)
+    dt = datetime.strptime(input, "%I:%M %p,%a,%b %d,%Y")
     
-    # Convert Pacific Time to Eastern Time (ET is 3 hours ahead of PT)
-    eastern_time = pacific_time + timedelta(hours=3)
+    # Calculate the time difference between PT and ET (ET is 3 hours ahead of PT)
+    time_difference = timedelta(hours=3)
+    
+    # Convert the time from PT to ET by adding the time difference
+    et_time = dt + time_difference
     
     # Format the output string
-    output = eastern_time.strftime(date_format)
+    output = et_time.strftime("%I:%M %p,%a,%b %d,%Y")
     
     return output
 ```
 
-Runtime error:
-Test failed: expected 1:00 AM,Mon,Aug 3,2015, got 01:00 AM,Mon,Aug 03,2015
+### Runtime error ###
+ValueError: Test failed: expected 1:00 AM,Mon,Aug 3,2015, got 01:00 AM,Mon,Aug 03,2015
 
-Relevant Documentation:
-.. code-block:: python
-
-  >>> utm.to_latlon(340000, 5710000, 32, 'U')
-  (51.51852098408468, 6.693872395145327)
-
-The syntax is ``utm.to_latlon(EASTING, NORTHING, ZONE_NUMBER, ZONE_LETTER)``.
-
-The return has the form ``(LATITUDE, LONGITUDE)``.
-
-You can also use NumPy arrays for ``EASTING`` and ``NORTHING``. In the result
-``LATITUDE`` and ``LONGITUDE`` will have the same shape.  ``ZONE_NUMBER`` and
-``ZONE_LETTER`` are scalars.
-
-.. code-block:: python
-Accurate and verified date conversion.
-Optimized code performance compared to similar packages.
-Intuitive, clean, and easy-to-use interface.
-Most of the methods and formats are similar to those of standard library.
-Multilingual representation of weekday names, months, and calendar era
-notations.
-Easily extendable to support other natural languages.
-Rich comparison between dates.
-Validation of input dates.
-Works on Python 3.7+ with zero dependencies.
-Thoroughly tested with 100% test coverage.
-utm
-===
-
-Bidirectional UTM-WGS84 converter for python
-
-Usage
------
-
-.. code-block:: python
-
-  >>> import utm
-
-Latitude/Longitude to UTM
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Convert a ``(latitude, longitude)`` tuple into an UTM coordinate:
-
-.. code-block:: python
-
-  >>> utm.from_latlon(51.2, 7.5)
-  (395201.3103811303, 5673135.241182375, 32, 'U')
-
-The syntax is ``utm.from_latlon(LATITUDE, LONGITUDE)``.
-
-The return has the form ``(EASTING, NORTHING, ZONE_NUMBER, ZONE_LETTER)``.
-
-Please reflect on the previous attempt and errors to generate improved code.
-2024-11-18 16:31:43,144 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
-2024-11-18 16:31:43,148 - INFO - Code generated successfully, running tests...
-2024-11-18 16:31:43,150 - INFO - All 2 test cases passed for ./data/testset/bq-semantic_22.json
-2024-11-18 16:31:43,151 - INFO - Generating code for ./data/testset/bq-semantic_25.json...
-2024-11-18 16:31:43,151 - INFO - Code generation query:
-### Instruction ###
-convert hijri to gregorian
-domain_map(): Convert a given Hijri date to Gregorian date.
-
-### Examples ###
-Input: 11 Shawwal 1430
-Output: Wednesday 30 September 2009 C.E
-Input: 5 Muharram 1300
-Output: Thursday 16 November 1882 C.E
-Input: 19 Rajab 1460
-Output: Friday 20 August 2038 C.E
-2024-11-18 16:31:53,240 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
-2024-11-18 16:31:53,244 - INFO - Code generated successfully, running tests...
-2024-11-18 16:31:54,363 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/embeddings "HTTP/1.1 200 OK"
-2024-11-18 16:31:54,367 - WARNING - Test attempt 1/3 failed: date out of range
-2024-11-18 16:31:54,368 - INFO - Code generation query:
+You can reflect on the last attempt, runtime errors, and relevant documentation to generate improved code.
+2024-11-21 07:12:39,945 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 07:12:39,950 - INFO - Code generated successfully, running tests...
+2024-11-21 07:12:39,952 - INFO - All 2 test cases passed for ./data/testset/bq-semantic_22.json
+2024-11-21 07:12:39,953 - INFO - Generating code for ./data/testset/bq-semantic_25.json...
+2024-11-21 07:12:39,954 - INFO - Code generation query:
 ### Instruction ###
 convert hijri to gregorian
 domain_map(): Convert a given Hijri date to Gregorian date.
@@ -211,25 +139,39 @@ Output: Thursday 16 November 1882 C.E
 Input: 19 Rajab 1460
 Output: Friday 20 August 2038 C.E
 
-Previous code attempt:
+You can reflect on the last attempt, runtime errors, and relevant documentation to generate improved code.
+2024-11-21 07:12:47,448 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 07:12:47,452 - INFO - Code generated successfully, running tests...
+2024-11-21 07:12:47,461 - WARNING - Test attempt 1/3 failed: date out of range
+2024-11-21 07:12:47,462 - INFO - Retrieving package info...
+2024-11-21 07:12:48,805 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-21 07:12:48,825 - INFO - Code generation query:
+### Instruction ###
+convert hijri to gregorian
+domain_map(): Convert a given Hijri date to Gregorian date.
+
+### Examples ###
+Input: 11 Shawwal 1430
+Output: Wednesday 30 September 2009 C.E
+Input: 5 Muharram 1300
+Output: Thursday 16 November 1882 C.E
+Input: 19 Rajab 1460
+Output: Friday 20 August 2038 C.E
+
+### Previous code attempt ###
 ```python
-from hijri_converter import Hijri, Gregorian
+from hijri_converter import convert
+import datetime
 
 def solution(input):
-    # Split the input string to extract day, month, and year
-    hijri_date_parts = input.split()
-    day = int(hijri_date_parts[0])
-    month = hijri_date_parts[1]
-    year = int(hijri_date_parts[2])
-    
-    # Map Hijri month names to numbers
-    hijri_month_map = {
+    # Mapping of Hijri month names to their numbers
+    hijri_months = {
         "Muharram": 1,
         "Safar": 2,
-        "Rabi' al-Awwal": 3,
-        "Rabi' al-Thani": 4,
-        "Jumada al-Awwal": 5,
-        "Jumada al-Thani": 6,
+        "Rabi' al-awwal": 3,
+        "Rabi' al-thani": 4,
+        "Jumada al-awwal": 5,
+        "Jumada al-thani": 6,
         "Rajab": 7,
         "Sha'ban": 8,
         "Ramadan": 9,
@@ -238,171 +180,47 @@ def solution(input):
         "Dhu al-Hijjah": 12
     }
     
-    # Get the month number from the map
-    month_number = hijri_month_map[month]
+    # Parse the input
+    parts = input.split()
+    day = int(parts[0])
+    month_name = parts[1]
+    year = int(parts[2])
     
-    # Create a Hijri date object
-    hijri_date = Hijri(year, month_number, day)
+    # Get the month number
+    month = hijri_months[month_name]
     
-    # Convert to Gregorian
-    gregorian_date = hijri_date.to_gregorian()
-    
-    # Format the output string
-    output = f"{gregorian_date.day} {gregorian_date.month_name} {gregorian_date.year} C.E"
+    # Convert Hijri to Gregorian
+    gregorian_date = convert.Hijri(year, month, day).to_gregorian()
     
     # Get the day of the week
-    day_of_week = gregorian_date.day_of_week()
-    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    weekday = gregorian_date.strftime('%A')
     
-    # Combine day of the week with the output
-    output = f"{days[day_of_week]} {output}"
+    # Format the output
+    output = f"{weekday} {gregorian_date.day} {gregorian_date.strftime('%B')} {gregorian_date.year} C.E"
     
     return output
+
+# Example usage:
+# print(solution("11 Shawwal 1430"))  # Output: Wednesday 30 September 2009 C.E
+# print(solution("5 Muharram 1300"))  # Output: Thursday 16 November 1882 C.E
+# print(solution("19 Rajab 1460"))    # Output: Friday 20 August 2038 C.E
 ```
 
-Runtime error:
-date out of range
-
-Relevant Documentation:
-To install using conda, run:
-conda install -c conda-forge hijri-converter
-
-
-
-
-Basic Usage
-from hijri_converter import Hijri, Gregorian
-
-
-# Convert a Hijri date to Gregorian
-g = Hijri(1403, 2, 17).to_gregorian()
-
-# Convert a Gregorian date to Hijri
-h = Gregorian(1982, 12, 2).to_hijri()
-
-
-
-Documentation
-
-Background
-Benchmarking
-Usage Examples
-API Reference
-Changelog
-
-
-
-Development
-
-Contributing
-License
-GitHub
-PyPI
-
-
-
-
-
-
-
-Next
-⚠️ Deprecation Notice
-This package has been deprecated and will not receive future updates.
-Please use the hijridate package
-instead.
-For migration to hijridate, install the package:
-pip install hijridate~=2.3.0
-
-
-Then change the import statement as:
-from hijridate import Hijri, Gregorian
-
-
-
-
-Features
-hijri-converter — hijri-converter  documentation
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            hijri-converter
-          
-
-                stable
-              
-
-
-
-
-
-
-
-
-Documentation
-
-Background
-Benchmarking
-Usage Examples
-API Reference
-Changelog
-
-Development
-
-Contributing
-License
-GitHub
-PyPI
-
-
-
-
-
-
-hijri-converter
-
-
-
-
-
-
-hijri-converter
-
-
-
-
-
-
-hijri-converter
-A Python package to convert accurately between Hijri and Gregorian dates using
-the Umm al-Qura calendar.
-
-Please reflect on the previous attempt and errors to generate improved code.
-2024-11-18 16:32:02,221 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
-2024-11-18 16:32:02,226 - INFO - Code generated successfully, running tests...
-2024-11-18 16:32:03,014 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/embeddings "HTTP/1.1 200 OK"
-2024-11-18 16:32:03,019 - WARNING - Test attempt 2/3 failed: year must be in 1343-1500, got '1300'
-2024-11-18 16:32:03,019 - INFO - Code generation query:
+### Runtime error ###
+OverflowError: date out of range
+
+### Relevant Documentation ###
+Installation To install using pip, run: pip install hijri-converter To install using conda, run: conda install -c conda-forge hijri-converter Basic Usage from hijri_converter import Hijri, Gregorian # Convert a Hijri date to Gregorian g = Hijri(1403, 2, 17).to_gregorian() # Convert a Gregorian date to Hijri h = Gregorian(1982, 12, 2).to_hijri() Documentation Background Benchmarking Usage Examples API Reference Changelog Development Contributing License GitHub PyPI Next © Copyright 2018 Mohammed Alshehri (https://www.dralshehri.com). Revision b0183d2e.
+Then change the import statement as: from hijridate import Hijri, Gregorian Features Accurate and verified date conversion. Optimized code performance compared to similar packages. Intuitive, clean, and easy-to-use interface. Most of the methods and formats are similar to those of standard library. Multilingual representation of weekday names, months, and calendar era notations. Easily extendable to support other natural languages. Rich comparison between dates. Validation of input dates. Works on Python 3.7+ with zero dependencies. Thoroughly tested with 100% test coverage. Limitations The date range supported by converter is limited to the period from the beginning of 1343 AH (1 August 1924 CE) to the end of 1500 AH (16 November 2077 CE). The conversion is not intended for religious purposes where sighting of the lunar crescent at the beginning of Hijri month is still preferred. Installation To install using pip, run: pip install hijri-converter
+hijri-converter — hijri-converter documentation hijri-converter stable Documentation Background Benchmarking Usage Examples API Reference Changelog Development Contributing License GitHub PyPI hijri-converter hijri-converter hijri-converter A Python package to convert accurately between Hijri and Gregorian dates using the Umm al-Qura calendar. ⚠️ Deprecation Notice This package has been deprecated and will not receive future updates. Please use the hijridate package instead. For migration to hijridate, install the package: pip install hijridate~=2.3.0 Then change the import statement as: from hijridate import Hijri, Gregorian Features
+
+You can reflect on the last attempt, runtime errors, and relevant documentation to generate improved code.
+2024-11-21 07:13:09,506 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 07:13:09,511 - INFO - Code generated successfully, running tests...
+2024-11-21 07:13:09,521 - WARNING - Test attempt 2/3 failed: Test failed: expected Friday 17 November 1882 C.E, got Date out of supported range
+2024-11-21 07:13:09,522 - INFO - Retrieving package info...
+2024-11-21 07:13:10,216 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-21 07:13:10,221 - INFO - Code generation query:
 ### Instruction ###
 convert hijri to gregorian
 domain_map(): Convert a given Hijri date to Gregorian date.
@@ -415,25 +233,19 @@ Output: Thursday 16 November 1882 C.E
 Input: 19 Rajab 1460
 Output: Friday 20 August 2038 C.E
 
-Previous code attempt:
+### Previous code attempt ###
 ```python
-from hijridate import Hijri, Gregorian
+from hijridate import Hijri
 
 def solution(input):
-    # Split the input string to extract day, month, and year
-    hijri_date_parts = input.split()
-    day = int(hijri_date_parts[0])
-    month = hijri_date_parts[1]
-    year = int(hijri_date_parts[2])
-    
-    # Map Hijri month names to numbers
-    hijri_month_map = {
+    # Mapping of Hijri month names to their numbers
+    hijri_months = {
         "Muharram": 1,
         "Safar": 2,
-        "Rabi' al-Awwal": 3,
-        "Rabi' al-Thani": 4,
-        "Jumada al-Awwal": 5,
-        "Jumada al-Thani": 6,
+        "Rabi' al-awwal": 3,
+        "Rabi' al-thani": 4,
+        "Jumada al-awwal": 5,
+        "Jumada al-thani": 6,
         "Rajab": 7,
         "Sha'ban": 8,
         "Ramadan": 9,
@@ -442,173 +254,54 @@ def solution(input):
         "Dhu al-Hijjah": 12
     }
     
-    # Get the month number from the map
-    month_number = hijri_month_map[month]
+    # Parse the input
+    parts = input.split()
+    day = int(parts[0])
+    month_name = parts[1]
+    year = int(parts[2])
     
-    # Create a Hijri date object
-    hijri_date = Hijri(year, month_number, day)
+    # Get the month number
+    month = hijri_months[month_name]
     
-    # Convert to Gregorian
+    # Check if the date is within the supported range
+    if year < 1343 or year > 1500:
+        return "Date out of supported range"
+    
+    # Convert Hijri to Gregorian
+    hijri_date = Hijri(year, month, day)
     gregorian_date = hijri_date.to_gregorian()
     
-    # Format the output string
-    output = f"{gregorian_date.day} {gregorian_date.month_name} {gregorian_date.year} C.E"
-    
     # Get the day of the week
-    day_of_week = gregorian_date.day_of_week()
-    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    weekday = gregorian_date.strftime('%A')
     
-    # Combine day of the week with the output
-    output = f"{days[day_of_week]} {output}"
+    # Format the output
+    output = f"{weekday} {gregorian_date.day} {gregorian_date.strftime('%B')} {gregorian_date.year} C.E"
     
     return output
+
+# Example usage:
+# print(solution("11 Shawwal 1430"))  # Output: Wednesday 30 September 2009 C.E
+# print(solution("5 Muharram 1300"))  # Output: Date out of supported range
+# print(solution("19 Rajab 1460"))    # Output: Friday 20 August 2038 C.E
 ```
 
-Runtime error:
-year must be in 1343-1500, got '1300'
-
-Relevant Documentation:
-To install using conda, run:
-conda install -c conda-forge hijri-converter
-
-
-
-
-Basic Usage
-from hijri_converter import Hijri, Gregorian
-
-
-# Convert a Hijri date to Gregorian
-g = Hijri(1403, 2, 17).to_gregorian()
-
-# Convert a Gregorian date to Hijri
-h = Gregorian(1982, 12, 2).to_hijri()
-
-
-
-Documentation
-
-Background
-Benchmarking
-Usage Examples
-API Reference
-Changelog
-
-
-
-Development
-
-Contributing
-License
-GitHub
-PyPI
-
-
-
-
-
-
-
-Next
-⚠️ Deprecation Notice
-This package has been deprecated and will not receive future updates.
-Please use the hijridate package
-instead.
-For migration to hijridate, install the package:
-pip install hijridate~=2.3.0
-
-
-Then change the import statement as:
-from hijridate import Hijri, Gregorian
-
-
-
-
-Features
-hijri-converter — hijri-converter  documentation
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            hijri-converter
-          
-
-                stable
-              
-
-
-
-
-
-
-
-
-Documentation
-
-Background
-Benchmarking
-Usage Examples
-API Reference
-Changelog
-
-Development
-
-Contributing
-License
-GitHub
-PyPI
-
-
-
-
-
-
-hijri-converter
-
-
-
-
-
-
-hijri-converter
-
-
-
-
-
-
-hijri-converter
-A Python package to convert accurately between Hijri and Gregorian dates using
-the Umm al-Qura calendar.
-
-Please reflect on the previous attempt and errors to generate improved code.
-2024-11-18 16:32:09,155 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
-2024-11-18 16:32:09,159 - INFO - Code generated successfully, running tests...
-2024-11-18 16:32:10,481 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/embeddings "HTTP/1.1 200 OK"
-2024-11-18 16:32:10,486 - WARNING - Test attempt 3/3 failed: year must be in 1343-1500, got '1300'
-2024-11-18 16:32:10,486 - INFO - Passed 0/2 test cases for ./data/testset/bq-semantic_25.json
-2024-11-18 16:32:10,488 - INFO - Generating code for ./data/testset/bq-semantic_30.json...
-2024-11-18 16:32:10,488 - INFO - Code generation query:
+### Runtime error ###
+ValueError: Test failed: expected Friday 17 November 1882 C.E, got Date out of supported range
+
+### Relevant Documentation ###
+Then change the import statement as: from hijridate import Hijri, Gregorian Features Accurate and verified date conversion. Optimized code performance compared to similar packages. Intuitive, clean, and easy-to-use interface. Most of the methods and formats are similar to those of standard library. Multilingual representation of weekday names, months, and calendar era notations. Easily extendable to support other natural languages. Rich comparison between dates. Validation of input dates. Works on Python 3.7+ with zero dependencies. Thoroughly tested with 100% test coverage. Limitations The date range supported by converter is limited to the period from the beginning of 1343 AH (1 August 1924 CE) to the end of 1500 AH (16 November 2077 CE). The conversion is not intended for religious purposes where sighting of the lunar crescent at the beginning of Hijri month is still preferred. Installation To install using pip, run: pip install hijri-converter
+Installation To install using pip, run: pip install hijridate To install using conda, run: conda install -c conda-forge hijridate Basic Usage from hijridate import Hijri, Gregorian # Convert a Hijri date to Gregorian g = Hijri(1403, 2, 17).to_gregorian() # Convert a Gregorian date to Hijri h = Gregorian(1982, 12, 2).to_hijri() Documentation Please refer to https://hijridate.readthedocs.io for complete documentation on this package, which includes background information, benchmarking, usage examples, and API reference. Contributing If you're interested in contributing, please check out the Contributing guide for more information on how you can help! License This project is licensed under the terms of the MIT license. Acknowledgements R.H. van Gent — inspiration, scientific guidance and resources. @AZalshehri7 — support in dates review and conversion accuracy verification.
+Accurate and verified Hijri-Gregorian date conversion. Optimized code performance compared to similar packages. Intuitive, clean, and easy-to-use interface. Most of the methods and formats are similar to those of standard library. Multilingual representation of weekday names, months, and calendar era notations. Easily extendable to support other natural languages. Rich comparison between dates. Validation of input dates. Works on Python 3.8+ with zero dependencies. Thoroughly tested with 100% test coverage. Limitations The date range supported by converter is limited to the period from the beginning of 1343 AH (1 August 1924 CE) to the end of 1500 AH (16 November 2077 CE). The conversion is not intended for religious purposes where sighting of the lunar crescent at the beginning of Hijri month is still preferred. Installation To install using pip, run: pip install hijridate To install using conda, run: conda install -c conda-forge hijridate
+
+You can reflect on the last attempt, runtime errors, and relevant documentation to generate improved code.
+2024-11-21 07:13:23,927 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 07:13:23,931 - INFO - Code generated successfully, running tests...
+2024-11-21 07:13:23,934 - WARNING - Test attempt 3/3 failed: date out of range
+2024-11-21 07:13:23,934 - INFO - Retrieving package info...
+2024-11-21 07:13:24,418 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-21 07:13:24,424 - INFO - Passed 0/2 test cases for ./data/testset/bq-semantic_25.json
+2024-11-21 07:13:24,425 - INFO - Generating code for ./data/testset/bq-semantic_30.json...
+2024-11-21 07:13:24,426 - INFO - Code generation query:
 ### Instruction ###
 convert lat long to MGRS
 transform(): Convert a given latitude and longitude to MGRS format.
@@ -620,11 +313,13 @@ Input: 44.11, -77.33
 Output: 18TUP1353886730
 Input: 66.99, -33.11
 Output: 25WDQ9520130269
-2024-11-18 16:32:13,518 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
-2024-11-18 16:32:13,521 - INFO - Code generated successfully, running tests...
-2024-11-18 16:32:13,546 - INFO - All 2 test cases passed for ./data/testset/bq-semantic_30.json
-2024-11-18 16:32:13,547 - INFO - Generating code for ./data/testset/stk-38.json...
-2024-11-18 16:32:13,547 - INFO - Code generation query:
+
+You can reflect on the last attempt, runtime errors, and relevant documentation to generate improved code.
+2024-11-21 07:13:29,569 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 07:13:29,573 - INFO - Code generated successfully, running tests...
+2024-11-21 07:13:29,598 - INFO - All 2 test cases passed for ./data/testset/bq-semantic_30.json
+2024-11-21 07:13:29,600 - INFO - Generating code for ./data/testset/stk-38.json...
+2024-11-21 07:13:29,600 - INFO - Code generation query:
 ### Instruction ###
 person name abbreviation
 format(): Generate the abbreviation for a given person's name.
@@ -636,11 +331,13 @@ Input: Charles Wooten
 Output: C. Wooten
 Input: Kim Lee
 Output: K. Lee
-2024-11-18 16:32:14,723 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
-2024-11-18 16:32:14,726 - INFO - Code generated successfully, running tests...
-2024-11-18 16:32:14,728 - INFO - All 2 test cases passed for ./data/testset/stk-38.json
-2024-11-18 16:32:14,729 - INFO - Generating code for ./data/testset/stk-4.json...
-2024-11-18 16:32:14,729 - INFO - Code generation query:
+
+You can reflect on the last attempt, runtime errors, and relevant documentation to generate improved code.
+2024-11-21 07:13:31,812 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 07:13:31,816 - INFO - Code generated successfully, running tests...
+2024-11-21 07:13:31,817 - INFO - All 2 test cases passed for ./data/testset/stk-38.json
+2024-11-21 07:13:31,818 - INFO - Generating code for ./data/testset/stk-4.json...
+2024-11-21 07:13:31,819 - INFO - Code generation query:
 ### Instruction ###
 Get distinct characters of a string
 extract(): Get distinct characters from text
@@ -652,10 +349,12 @@ Input: KLKLHHMO
 Output: KLHMO
 Input: XUCHU
 Output: XUCH
-2024-11-18 16:32:20,108 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
-2024-11-18 16:32:20,111 - INFO - Code generated successfully, running tests...
-2024-11-18 16:32:20,114 - INFO - All 2 test cases passed for ./data/testset/stk-4.json
-2024-11-18 16:32:20,117 - INFO - Exporting results...
-2024-11-18 16:32:20,141 - INFO - Full result exported to exp/demo/result/full_result.csv
-2024-11-18 16:32:20,154 - INFO - Summary: {'total_pass': 8, 'total_test': 10, 'prate_per_test': 0.8, 'total_test_case': 5, 'total_pass_case': 4, 'prate_per_case': 0.8}, exported to exp/demo/result/summary.json
-2024-11-18 16:32:20,154 - INFO - Experiment completed successfully
+
+You can reflect on the last attempt, runtime errors, and relevant documentation to generate improved code.
+2024-11-21 07:13:34,228 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 07:13:34,232 - INFO - Code generated successfully, running tests...
+2024-11-21 07:13:34,235 - INFO - All 2 test cases passed for ./data/testset/stk-4.json
+2024-11-21 07:13:34,238 - INFO - Exporting results...
+2024-11-21 07:13:34,253 - INFO - Full result exported to exp/demo/result/full_result.csv
+2024-11-21 07:13:34,266 - INFO - Summary: {'total_pass': 8, 'total_test': 10, 'prate_per_test': 0.8, 'total_test_case': 5, 'total_pass_case': 4, 'prate_per_case': 0.8}, exported to exp/demo/result/summary.json
+2024-11-21 07:13:34,266 - INFO - Experiment completed successfully

@@ -1,6 +1,6 @@
 test_file_path,pass_cnt,total_cnt,pass_rate,full_test
 ./data/testset/bq-semantic_22.json,2,2,1.0,"[{'input': '10:00 PM,Sun,Aug 2,2015', 'output': '1:00 AM,Mon,Aug 3,2015', 'code_output': '1:00 AM,Mon,Aug 3,2015'}, {'input': '2:30 AM,Mon,Feb 2,2015', 'output': '5:30 AM,Mon,Feb 2,2015', 'code_output': '5:30 AM,Mon,Feb 2,2015'}]"
-./data/testset/bq-semantic_25.json,0,2,0.0,"[{'input': '6 Muharram 1300', 'output': 'Friday 17 November 1882 C.E', 'code_output': None}, {'input': '1 Muharram 1431', 'output': 'Friday 18 December 2009 C.E', 'code_output': None}]"
+./data/testset/bq-semantic_25.json,0,2,0.0,"[{'input': '6 Muharram 1300', 'output': 'Friday 17 November 1882 C.E', 'code_output': 'Date out of supported range'}, {'input': '1 Muharram 1431', 'output': 'Friday 18 December 2009 C.E', 'code_output': None}]"
 ./data/testset/bq-semantic_30.json,2,2,1.0,"[{'input': '23.33, -39.55', 'output': '24QVL4377280158', 'code_output': '24QVL4377280158'}, {'input': '44.22, -77.44', 'output': '18TUP0509799203', 'code_output': '18TUP0509799203'}]"
 ./data/testset/stk-38.json,2,2,1.0,"[{'input': 'Lucy Goodman', 'output': 'L. Goodman', 'code_output': 'L. Goodman'}, {'input': 'Rachel Green', 'output': 'R. Green', 'code_output': 'R. Green'}]"
 ./data/testset/stk-4.json,2,2,1.0,"[{'input': '123123', 'output': '123', 'code_output': '123'}, {'input': '9090', 'output': '90', 'code_output': '90'}]"

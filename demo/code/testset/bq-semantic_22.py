@@ -1,16 +1,16 @@
 from datetime import datetime, timedelta
 
 def solution(input):
-    # Define the format of the input date string
-    date_format = "%I:%M %p,%a,%b %d,%Y"
-    
     # Parse the input string into a datetime object
-    pacific_time = datetime.strptime(input, date_format)
+    dt = datetime.strptime(input, "%I:%M %p,%a,%b %d,%Y")
     
-    # Convert Pacific Time to Eastern Time (ET is 3 hours ahead of PT)
-    eastern_time = pacific_time + timedelta(hours=3)
+    # Calculate the time difference between PT and ET (ET is 3 hours ahead of PT)
+    time_difference = timedelta(hours=3)
     
-    # Format the output string without zero-padding for hours and days
-    output = eastern_time.strftime("%-I:%M %p,%a,%b %-d,%Y")
+    # Convert the time from PT to ET by adding the time difference
+    et_time = dt + time_difference
+    
+    # Format the output string without leading zeros for hour and day
+    output = et_time.strftime("%-I:%M %p,%a,%b %-d,%Y")
     
     return output
