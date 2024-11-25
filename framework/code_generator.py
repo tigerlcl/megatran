@@ -166,7 +166,6 @@ class CodeGenerator:
                         raise RuntimeError(f"Solution output: {debug['code_output']} != expected output: {debug['output']}")
 
                 break # debug cases all passed, no need to retry
-
             except Exception as e:
                 if isinstance(e, (ImportError, ModuleNotFoundError)):
                     self.logger.warning(f"{type(e).__name__}: {str(e)}. Please handle it manually.")
@@ -175,16 +174,18 @@ class CodeGenerator:
                 # save the last attempt
                 self.last_attempt = code_snippet
                 
-                # Sanity check reflection
-                if hasattr(self, 'reflection') and self.reflection:
-                    self.reflection_prompt = self.reflection.get_reflection_prompt(code_snippet, e)
-                
-                # Lazy RAG
-                if hasattr(self, 'lazy_rag') and self.lazy_rag:
-                    self.rag_prompt = self.lazy_rag.get_rag_prompt(code_snippet)
-
                 retry_count += 1
                 self.logger.warning(f"Code Generation attempt {retry_count}/{self.code_attempt} failed")
+
+                # Only get reflection and RAG prompts if we have more attempts left
+                if retry_count < self.code_attempt:
+                    # Sanity check reflection
+                    if hasattr(self, 'reflection') and self.reflection:
+                        self.reflection_prompt = self.reflection.get_reflection_prompt(code_snippet, e)
+                    
+                    # Lazy RAG
+                    if hasattr(self, 'lazy_rag') and self.lazy_rag:
+                        self.rag_prompt = self.lazy_rag.get_rag_prompt(code_snippet)
 
         # run tests with the rest of the examples (unseen to the framework)
         try:

@@ -62,6 +62,7 @@ class LazyRAG:
         """Build rag prompt Retrieve package documentation based on code snippet"""
 
         if not code_snippet or not self._check_import_pkg(code_snippet):
+            self.logger.warning("No import statement found or unsupported package")
             return None
         
         self.logger.info(f"Retrieving package info...")
