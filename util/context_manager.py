@@ -31,6 +31,7 @@ class Context:
         self.testing = args.testing
         self.config = self._load_config(args.config)
 
+
         # OpenAI Auth
         self.openai_api_key = os.getenv("OPENAI_API_KEY")
         self.openai_base_url = os.getenv("OPENAI_BASE_URL")
@@ -41,6 +42,12 @@ class Context:
         # Initialize logger
         self.logger = self._setup_logger()
         self.logger.info(f"Code backend LLM: {self.openai_model}")
+
+        # Framework config
+        self.chat_to_inst = self.get('chat_to_inst', False)
+        self.allow_reflection = self.get('allow_reflection', False)
+        self.allow_rag = self.get('allow_rag', False)
+        self.logger.info(f"Chat-to-inst: {self.chat_to_inst}, Reflection: {self.allow_reflection}, Lazy RAG: {self.allow_rag}")
 
         # Initialize Result Analyzer
         self.result_analyzer = ResultAnalyzer(self.result_dir)

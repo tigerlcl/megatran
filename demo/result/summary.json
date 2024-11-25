@@ -1,36 +1,36 @@
 {
     "test_summary": {
-        "total_pass": 4,
-        "total_test": 10,
-        "prate_per_test": 0.4,
-        "total_test_case": 5,
-        "total_pass_case": 2,
-        "prate_per_case": 0.4
+        "total_pass": 6,
+        "total_test": 12,
+        "prate_per_test": 0.5,
+        "total_task": 6,
+        "total_pass_task": 3,
+        "prate_per_task": 0.5
     },
     "token_usage": {
         "chat_to_inst": {
-            "total_api_calls": 5,
-            "avg_prompt": 83.6,
-            "avg_completion": 14.0,
-            "avg_total": 97.6
+            "total_api_calls": 6,
+            "avg_prompt": 86.83,
+            "avg_completion": 15.67,
+            "avg_total": 102.5
         },
         "code_generation": {
-            "total_api_calls": 5,
-            "avg_prompt": 149.0,
-            "avg_completion": 240.6,
-            "avg_total": 389.6
+            "total_api_calls": 12,
+            "avg_prompt": 551.42,
+            "avg_completion": 344.92,
+            "avg_total": 896.33
         },
         "reflection": {
-            "total_api_calls": 0,
-            "avg_prompt": 0,
-            "avg_completion": 0,
-            "avg_total": 0
+            "total_api_calls": 7,
+            "avg_prompt": 323.29,
+            "avg_completion": 180.0,
+            "avg_total": 503.29
         },
         "lazy_rag": {
-            "total_api_calls": 0,
-            "avg_prompt": 0,
-            "avg_completion": 0,
-            "avg_total": 0
+            "total_api_calls": 5,
+            "avg_prompt": 267.0,
+            "avg_completion": 0.0,
+            "avg_total": 267.0
         }
     }
 }

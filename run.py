@@ -25,7 +25,7 @@ def main(ctx: Context) -> None:
         dataset = load_dataset_by_name(ctx.dataset_name)
 
     # Predict transformation type from user input
-    if ctx.get('chat_to_inst', False):
+    if ctx.chat_to_inst:
         chatBuilder = ChatBuilder(ctx)
     else:
         chatBuilder = None

@@ -3,6 +3,7 @@ import json
 from typing import Optional
 
 from openai import OpenAI
+from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 
 
@@ -15,6 +16,7 @@ class LazyRAG:
 
     def __init__(self, ctx):
         self.oai_embedding = OpenAI(api_key=ctx.openai_api_key, base_url=ctx.openai_base_url)
+        self.lc_embedding = OpenAIEmbeddings(api_key=ctx.openai_api_key, base_url=ctx.openai_base_url, model=ctx.embedding_model)
         self.embedding_model = ctx.embedding_model
         self.analyzer = ctx.result_analyzer
         self.logger = ctx.logger
@@ -29,7 +31,7 @@ class LazyRAG:
         if not os.path.exists(ctx.vec_db_dir):
             raise FileNotFoundError("Local vector database not found. Please run build_vector_db.py first.")
         else:
-            self.vector_db = FAISS.load_local(ctx.vec_db_dir, allow_dangerous_deserialization=True)
+            self.vector_db = FAISS.load_local(ctx.vec_db_dir, self.lc_embedding, allow_dangerous_deserialization=True)
 
         # load package info list (includes the code libs that are supported for RAG)
         if not os.path.exists(ctx.pkg_info_path):

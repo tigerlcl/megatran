@@ -1,18 +1,18 @@
 from hijri_converter import Hijri, Gregorian
 
 def solution(input):
-    # Split the input string to extract day, month, and year
-    parts = input.split()
-    day = int(parts[0])
-    month = parts[1]
-    year = int(parts[2])
+    # Split the input string into components
+    hijri_date_parts = input.split()
+    hijri_day = int(hijri_date_parts[0])
+    hijri_month = hijri_date_parts[1]
+    hijri_year = int(hijri_date_parts[2])
     
-    # Mapping Hijri month names to numbers
+    # Map Hijri month names to numbers
     hijri_month_map = {
         'Muharram': 1,
         'Safar': 2,
-        'Rabi\' al-Awwal': 3,
-        'Rabi\' al-Thani': 4,
+        'Rabi al-Awwal': 3,
+        'Rabi al-Thani': 4,
         'Jumada al-Awwal': 5,
         'Jumada al-Thani': 6,
         'Rajab': 7,
@@ -23,18 +23,22 @@ def solution(input):
         'Dhu al-Hijjah': 12
     }
     
-    # Convert Hijri month name to number
-    hijri_month = hijri_month_map[month]
+    # Get the month number from the map
+    hijri_month_number = hijri_month_map[hijri_month]
     
     # Create a Hijri date object
-    hijri_date = Hijri(year, hijri_month, day)
+    hijri_date = Hijri(hijri_year, hijri_month_number, hijri_day)
     
     # Convert to Gregorian date
     gregorian_date = hijri_date.to_gregorian()
     
     # Format the output
-    output = gregorian_date.isoformat()
-    day_of_week = gregorian_date.strftime("%A")
-    formatted_output = f"{day_of_week} {gregorian_date.day} {gregorian_date.strftime('%B')} {gregorian_date.year} C.E"
+    output = f"{gregorian_date.day} {gregorian_date.month} {gregorian_date.year} C.E"
     
-    return formatted_output
+    # Get the day of the week
+    day_of_week = gregorian_date.strftime("%A")
+    
+    # Combine day of the week with the output
+    final_output = f"{day_of_week} {output}"
+    
+    return final_output

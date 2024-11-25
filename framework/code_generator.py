@@ -33,11 +33,11 @@ class CodeGenerator:
         self.prompt_maker = PromptMaker(ctx.prompt_mode, ctx.n_shot)
         self.temp_python_fp = os.path.join(ctx.temp_dir, "code_solution.py")
         
-        if ctx.get('allow_reflection', False):
+        if ctx.allow_reflection:
             self.reflection = SanityCheckReflection(ctx)
             self.logger.info("Reflection enabled")
 
-        if ctx.get('allow_rag', False):
+        if ctx.allow_rag:
             self.lazy_rag = LazyRAG(ctx)
             self.logger.info("Lazy RAG enabled")
 
@@ -131,34 +131,48 @@ class CodeGenerator:
         """Main execution loop with sanity-check reflection and lazy RAG"""
         
         self.logger.info(f"Generating code...")
+
+        # debug with first n examples
+        debugs = [{'input': t['input'], 'output': t['output'], 'code_output': None} 
+                       for t in item['tuples'][:self.code_n_shot]]
+
+        # test with the rest of the examples
         tests = [{'input': t['input'], 'output': t['output'], 'code_output': None} 
-                 for t in item['tuples'][self.code_n_shot:]]
+                       for t in item['tuples'][self.code_n_shot:]]
         
+        
+        # Initialize prompts for each attempt
+        self.last_attempt = None
+        self.reflection_prompt = None
+        self.rag_prompt = None
         
         retry_count = 0
         while retry_count < self.code_attempt:
-            # Initialize prompts for each attempt
-            self.last_attempt = None
-            self.reflection_prompt = None
-            self.rag_prompt = None
-        
             try:
                 # Try to generate code
                 code_snippet = None
                 code_snippet = self._generate_code(item)
                 self.logger.info("Code generated successfully, running tests...")
 
-                # execute the code
+                # load the code
                 solution_func = self._reload_func()
-                for t in tests:
-                    t['code_output'] = solution_func(t['input'])
-                break # no more attempt
+
+                # debug the code using the first n examples
+                for debug in debugs:
+                    debug['code_output'] = solution_func(debug['input'])
+                
+                    # compare the code output with the expected output
+                    if debug['code_output'] != debug['output']:
+                        raise RuntimeError(f"Solution output: {debug['code_output']} != expected output: {debug['output']}")
+
+                break # debug cases all passed, no need to retry
 
             except Exception as e:
                 if isinstance(e, (ImportError, ModuleNotFoundError)):
                     self.logger.warning(f"{type(e).__name__}: {str(e)}. Please handle it manually.")
                     break # no more attempt
 
+                # save the last attempt
                 self.last_attempt = code_snippet
                 
                 # Sanity check reflection
@@ -170,8 +184,15 @@ class CodeGenerator:
                     self.rag_prompt = self.lazy_rag.get_rag_prompt(code_snippet)
 
                 retry_count += 1
-                self.logger.warning(f"Test attempt {retry_count}/{self.code_attempt} failed")
-            
+                self.logger.warning(f"Code Generation attempt {retry_count}/{self.code_attempt} failed")
+
+        # run tests with the rest of the examples (unseen to the framework)
+        try:
+            for test in tests:
+                test['code_output'] = solution_func(test['input'])
+        except Exception as e:
+            self.logger.error(f"Current task failed: {e}")
+
         # clean temporary code file content
         with open(self.temp_python_fp, 'w') as f:
             f.write('')
