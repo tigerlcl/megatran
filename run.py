@@ -45,7 +45,7 @@ def main(ctx: Context) -> None:
         tests = code_generator.run(item)
 
         # Record results
-        ctx.logger.info(f"Final results: {tests}")
+        ctx.logger.info(f"Task [{idx}] final results: {tests}")
         pass_cnt = ctx.result_analyzer.add_record(item['file_path'], tests)
         if pass_cnt > 0 and pass_cnt == len(tests):
             ctx.logger.info(f"All {len(tests)} test cases passed")
