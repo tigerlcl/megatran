@@ -5,6 +5,7 @@ import argparse
 import logging
 import time
 from typing import Dict, List
+from dotenv import load_dotenv
 from tqdm import tqdm
 
 from langchain_openai import OpenAIEmbeddings
@@ -12,8 +13,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import WebBaseLoader, GitLoader
 
-
-
+load_dotenv()
 
 def get_loader_for_package(pkg_info: Dict):
     """
@@ -126,7 +126,7 @@ def main(config: Dict):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Build vector database from package documentation')
-    parser.add_argument('--config', default='./etc/config_template.yaml', type=str, help='Path to config file')
+    parser.add_argument('--config', default='./etc/vec-db.yaml', type=str, help='Path to config file')
     parser.add_argument('--query', '-q', type=str, help='query to test vector db') # if specified, will not build db
     
     args = parser.parse_args()
@@ -135,7 +135,11 @@ if __name__ == "__main__":
         config = yaml.safe_load(file)
 
     # Create embeddings instance
-    embeddings = OpenAIEmbeddings(**config['openai_cfg'], model=config['embedding_model'])
+    embeddings = OpenAIEmbeddings(
+        openai_api_key=os.getenv("OPENAI_API_KEY"),
+        openai_base_url=os.getenv("OPENAI_BASE_URL"),
+        model=config['embedding_model'],
+    )
 
     # setup directory
     os.makedirs(config['vec_db_dir'], exist_ok=True)

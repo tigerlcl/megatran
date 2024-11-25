@@ -1,14 +1,6 @@
 def solution(input):
-    # Use a set to keep track of distinct characters
-    distinct_chars = set()
-    # Use a list to maintain the order of first appearance
-    result = []
-    
-    for char in input:
-        if char not in distinct_chars:
-            distinct_chars.add(char)
-            result.append(char)
-    
-    # Join the list into a string to form the output
-    output = ''.join(result)
+    # Use a set to get distinct characters
+    distinct_characters = set(input)
+    # Convert the set back to a string
+    output = ''.join(distinct_characters)
     return output

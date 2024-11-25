@@ -5,9 +5,9 @@ __pycache__/
 .DS_Store
 .idea
 .vscode
+.env
 
 # Project 
-etc/*_private.yaml
 exp/
 logs/
 assets/models/llama3_lora_sft

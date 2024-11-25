@@ -1,0 +1,7 @@
+# OPENAI embedding model
+embedding_model: "text-embedding-3-small" 
+
+# Lazy RAG (offline)
+pkg_info_path: "./assets/rag/pkg_info.json"
+pkg_repo_dir: "./assets/rag/repo"
+vec_db_dir: "./assets/rag/code_db"

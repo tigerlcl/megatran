@@ -1,7 +1,10 @@
 import os
 import yaml
 import logging
+from .analyzer import ResultAnalyzer
 
+from dotenv import load_dotenv
+load_dotenv() # take environment variables from .env file
 
 class Context:
     """
@@ -28,12 +31,19 @@ class Context:
         self.testing = args.testing
         self.config = self._load_config(args.config)
 
+        # OpenAI Auth
+        self.openai_api_key = os.getenv("OPENAI_API_KEY")
+        self.openai_base_url = os.getenv("OPENAI_BASE_URL")
+        
         # Setup experiment directories
         self._setup_directories()
         
         # Initialize logger
         self.logger = self._setup_logger()
         self.logger.info(f"Code backend LLM: {self.openai_model}")
+
+        # Initialize Result Analyzer
+        self.result_analyzer = ResultAnalyzer(self.result_dir)
 
     def _setup_directories(self):
         """
@@ -46,7 +56,7 @@ class Context:
         └── temp/          # Temporary files
         """
         # Check if experiment directory already exists
-        if os.path.exists(os.path.join('exp', self.exp_name)):
+        if os.path.exists(os.path.join('exp', self.exp_name)) and not self.testing:
             raise ValueError(f"Experiment directory 'exp/{self.exp_name}' already exists. Please use a different experiment name to avoid overwriting existing results.")
         
         # Create new directories

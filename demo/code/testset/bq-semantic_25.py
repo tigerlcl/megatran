@@ -1,43 +1,40 @@
-from hijri_converter import convert
+from hijri_converter import Hijri, Gregorian
 
 def solution(input):
-    # Mapping of Hijri month names to their numbers
-    hijri_months = {
-        "Muharram": 1,
-        "Safar": 2,
-        "Rabi' al-awwal": 3,
-        "Rabi' al-thani": 4,
-        "Jumada al-awwal": 5,
-        "Jumada al-thani": 6,
-        "Rajab": 7,
-        "Sha'ban": 8,
-        "Ramadan": 9,
-        "Shawwal": 10,
-        "Dhu al-Qi'dah": 11,
-        "Dhu al-Hijjah": 12
-    }
-    
-    # Parse the input
+    # Split the input string to extract day, month, and year
     parts = input.split()
     day = int(parts[0])
-    month_name = parts[1]
+    month = parts[1]
     year = int(parts[2])
     
-    # Get the month number
-    month = hijri_months[month_name]
+    # Mapping Hijri month names to numbers
+    hijri_month_map = {
+        'Muharram': 1,
+        'Safar': 2,
+        'Rabi\' al-Awwal': 3,
+        'Rabi\' al-Thani': 4,
+        'Jumada al-Awwal': 5,
+        'Jumada al-Thani': 6,
+        'Rajab': 7,
+        'Sha\'ban': 8,
+        'Ramadan': 9,
+        'Shawwal': 10,
+        'Dhu al-Qi\'dah': 11,
+        'Dhu al-Hijjah': 12
+    }
     
-    # Convert Hijri to Gregorian
-    gregorian_date = convert.Hijri(year, month, day).to_gregorian()
+    # Convert Hijri month name to number
+    hijri_month = hijri_month_map[month]
     
-    # Get the day of the week
-    weekday = gregorian_date.strftime('%A')
+    # Create a Hijri date object
+    hijri_date = Hijri(year, hijri_month, day)
+    
+    # Convert to Gregorian date
+    gregorian_date = hijri_date.to_gregorian()
     
     # Format the output
-    output = f"{weekday} {gregorian_date.day} {gregorian_date.strftime('%B')} {gregorian_date.year} C.E"
+    output = gregorian_date.isoformat()
+    day_of_week = gregorian_date.strftime("%A")
+    formatted_output = f"{day_of_week} {gregorian_date.day} {gregorian_date.strftime('%B')} {gregorian_date.year} C.E"
     
-    return output
-
-# Example usage:
-# print(solution("11 Shawwal 1430"))  # Output: Wednesday 30 September 2009 C.E
-# print(solution("5 Muharram 1300"))  # Output: Thursday 16 November 1882 C.E
-# print(solution("19 Rajab 1460"))    # Output: Friday 20 August 2038 C.E
+    return formatted_output

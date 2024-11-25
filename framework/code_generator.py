@@ -2,80 +2,77 @@ import os
 import re
 import importlib
 from openai import OpenAI
-from typing import Optional
 
-from .lazy_rag import LazyRAG
 from .prompt_generator import PromptMaker
-from .reflection import ReflectionCtx
-import temp.code_solution # temp code holder, it will be empty at first
+from .lazy_rag import LazyRAG
+from .reflection import SanityCheckReflection
 
+import temp.code_solution # temp code holder, it will be empty at first
 
 class CodeGenerator:
     """
     CodeGenerator handles code generation and execution:
-    1. Generates code based on instructions using LLM
+    1. Generates code based on instructions (if chat_to_inst is enabled)
     2. Executes generated code in a controlled environment
     3. Integrates with LazyRAG for API documentation lookup
-    4. Handles import errors and package dependencies
-    
-    Workflow:
-    1. Get prompt from PromptMaker
-    2. Retrieve relevant docs from LazyRAG if needed
-    3. Generate code using LLM
-    4. Execute code and return results
+    4. Integrates with Reflection for error handling and code improvement
+
     """
     def __init__(self, ctx):
-        """
-        Initialize CodeGenerator with context
-        Args:
-            ctx: Context object containing:
-                - code_dir: Directory for saving generated code
-                - openai_model: Model name for code generation
-                - logger: Logging instance
-                - n_shot: Number of examples to use
-                - openai_cfg: OpenAI API configuration
-                - temp_dir: Directory for temporary python script
-        """
-        self.code_dir = ctx.code_dir
-        self.oai_model = ctx.openai_model
-        self.logger = ctx.logger
-        self.code_n_shot = ctx.n_shot
-        self.code_retry = ctx.code_retry
+        """Initialize CodeGenerator with context"""
 
-        self.oai_client = OpenAI(**ctx.openai_cfg)
+        self.code_dir = ctx.code_dir
+        self.code_n_shot = ctx.n_shot
+        self.code_attempt = ctx.code_attempt
+        self.logger = ctx.logger
+        self.analyzer = ctx.result_analyzer
+
+        self.oai_model = ctx.openai_model
+        self.oai_temperature = ctx.openai_temperature
+        self.oai_client = OpenAI(api_key=ctx.openai_api_key, base_url=ctx.openai_base_url)
         self.prompt_maker = PromptMaker(ctx.prompt_mode, ctx.n_shot)
         self.temp_python_fp = os.path.join(ctx.temp_dir, "code_solution.py")
         
-        self.allow_rag = ctx.allow_rag
-        if self.allow_rag:
-            self.rag = LazyRAG(ctx)
+        if ctx.get('allow_reflection', False):
+            self.reflection = SanityCheckReflection(ctx)
+            self.logger.info("Reflection enabled")
+
+        if ctx.get('allow_rag', False):
+            self.lazy_rag = LazyRAG(ctx)
             self.logger.info("Lazy RAG enabled")
+
 
         # regexes
         self.py_block = r'```python\n(.*?)\n```'
         self.func_def = r'def\s+solution\s*\('
 
+        # Check if the OpenAI backend client is connected
+        try:
+            self.oai_client.chat.completions.create(
+                model=self.oai_model,
+                messages=[{"role": "user", "content": "Test connection"}],
+                temperature=self.oai_temperature
+            )
+            self.logger.info(f"Code Generator: OpenAI backend connected")
+        except Exception:
+            raise RuntimeError("Failed to connect to the OpenAI client, please check your config.")
 
-    def generate_code(self, item: dict, reflection_ctx: Optional[ReflectionCtx] = None) -> str:
-        """
-        Generate Python code based on the instruction
-        
-        Args:
-            item: Dataset item containing instruction and examples
-            reflection_ctx: Optional context from previous attempts
-        
-        Returns:
-            str: Generated code snippet
-        
-        Raises:
-            ValueError: If code generation fails
-        """
+    def _generate_code(self, item: dict) -> str:
+        """Generate Python code based on the instruction"""
         # Get base prompt
         prompt = self.prompt_maker.get_prompt_by_mode(item)
         
-        # Add reflection context if available
-        if reflection_ctx:
-            prompt += reflection_ctx.build_reflection_prompt()
+        # append last attempt
+        if self.last_attempt:
+            prompt += f"\n\n### Last Coding Attempt ###\n{self.last_attempt}"
+        
+        # append reflection prompt if enabled
+        if self.reflection_prompt:
+            prompt += self.reflection_prompt
+
+        # append RAG prompt if enabled
+        if self.rag_prompt:
+            prompt += self.rag_prompt
 
         self.logger.info(f"Code generation query:\n{prompt}")
         
@@ -88,19 +85,20 @@ class CodeGenerator:
         completion = self.oai_client.chat.completions.create(
             model=self.oai_model,
             messages=messages,
-            temperature=0.2
+            temperature=self.oai_temperature
         )
         response = completion.choices[0].message.content
-    
+        self.logger.info(f"Code generation token usage: Prompt: {completion.usage.prompt_tokens}, Completion: {completion.usage.completion_tokens}")
+        self.analyzer.add_token_usage("code_generation", completion.usage.prompt_tokens, completion.usage.completion_tokens)
 
         # Extract the code snippet
         code_match = re.search(self.py_block, response, re.DOTALL)
         if not code_match:
-            raise ValueError("No Python code block found in the response.")
+            raise RuntimeError("No Python code block found in the response.")
         
         code_snippet = code_match.group(1)
         if not re.search(self.func_def, code_snippet):
-            raise ValueError("Generated code does not contain a 'solution' function.")
+            raise RuntimeError("Generated code does not contain a 'solution' function.")
 
         # Save the code
         with open(self.temp_python_fp, 'w') as f:
@@ -116,27 +114,11 @@ class CodeGenerator:
         dir_name = os.path.join(code_dir, dir_name.replace('./data/', ''))
         os.makedirs(dir_name, exist_ok=True)
         
-        base_name = os.path.splitext(base_name)[0] + '.py'
+        base_name = f"{os.path.splitext(base_name)[0]}.py"
         code_fp = os.path.join(dir_name, base_name)
 
         with open(code_fp, 'w') as f:
             f.write(code_snippet)
-
-    def execute_code(self, tests: list) -> list:
-        """Execute generated code with reflection on errors"""
-        try:
-            solution_func = self._reload_func()
-        except ImportError as e:
-            missing_module = str(e).split("No module named '")[-1].strip("'")
-            self.logger.warning(f"Missing package '{missing_module}' logged. Please install it manually.")
-            return tests
-
-        for t in tests:
-            # runtime error will be captured by the outside try-except block
-            # semantic output will be reviewed by the comparison in analysis.py
-            t['code_output'] = solution_func(t['input'])
-
-        return tests
 
     # Reload the solution function
     def _reload_func(self):    
@@ -145,34 +127,50 @@ class CodeGenerator:
         from temp.code_solution import solution  # Import the updated solution function
         return solution
 
-    def run(self, item: dict):
-        """Main execution loop with reflection and lazy RAG"""
-        self.logger.info(f"Generating code for {item['file_path']}...")
+    def run(self, item: dict) -> list:
+        """Main execution loop with sanity-check reflection and lazy RAG"""
+        
+        self.logger.info(f"Generating code...")
         tests = [{'input': t['input'], 'output': t['output'], 'code_output': None} 
                  for t in item['tuples'][self.code_n_shot:]]
         
-        reflection_ctx = ReflectionCtx()
+        
         retry_count = 0
-
-        while retry_count < self.code_retry:
+        while retry_count < self.code_attempt:
+            # Initialize prompts for each attempt
+            self.last_attempt = None
+            self.reflection_prompt = None
+            self.rag_prompt = None
+        
             try:
                 # Try to generate code
                 code_snippet = None
-                code_snippet = self.generate_code(item, reflection_ctx)
+                code_snippet = self._generate_code(item)
                 self.logger.info("Code generated successfully, running tests...")
-                tests = self.execute_code(tests)
-                break # no more retry
+
+                # execute the code
+                solution_func = self._reload_func()
+                for t in tests:
+                    t['code_output'] = solution_func(t['input'])
+                break # no more attempt
+
             except Exception as e:
-                # Update reflection context
-                reflection_ctx.code_snippet = code_snippet
-                reflection_ctx.runtime_err = f'{type(e).__name__}: {str(e)}'
+                if isinstance(e, (ImportError, ModuleNotFoundError)):
+                    self.logger.warning(f"{type(e).__name__}: {str(e)}. Please handle it manually.")
+                    break # no more attempt
+
+                self.last_attempt = code_snippet
                 
-                # lazy-RAG, trigger by code snippet 'import statement'
-                if self.allow_rag:
-                    reflection_ctx.rag_doc = self.rag.find_pkg_info(code_snippet)
+                # Sanity check reflection
+                if hasattr(self, 'reflection') and self.reflection:
+                    self.reflection_prompt = self.reflection.get_reflection_prompt(code_snippet, e)
+                
+                # Lazy RAG
+                if hasattr(self, 'lazy_rag') and self.lazy_rag:
+                    self.rag_prompt = self.lazy_rag.get_rag_prompt(code_snippet)
 
                 retry_count += 1
-                self.logger.warning(f"Test attempt {retry_count}/{self.code_retry} failed")
+                self.logger.warning(f"Test attempt {retry_count}/{self.code_attempt} failed")
             
         # clean temporary code file content
         with open(self.temp_python_fp, 'w') as f:
