@@ -1,13 +1,13 @@
 def solution(input):
     # Using a set to store distinct characters
-    distinct_characters = set()
-    output = ""
+    distinct_chars = set()
+    # Using a list to maintain the order of first appearance
+    result = []
     
-    # Iterate through each character in the input string
     for char in input:
-        # If the character is not already in the set, add it
-        if char not in distinct_characters:
-            distinct_characters.add(char)
-            output += char  # Append to output string
+        if char not in distinct_chars:
+            distinct_chars.add(char)
+            result.append(char)
     
-    return output
+    # Joining the list to form the output string
+    return ''.join(result)

@@ -1,0 +1,23 @@
+2024-11-26 04:44:35,158 - INFO - Starting to process 6 packages
+2024-11-26 04:44:35,159 - INFO - [1/6] Processing utm...
+2024-11-26 04:44:35,280 - INFO - Successfully processed utm: 8 chunks created
+2024-11-26 04:44:35,280 - INFO - [2/6] Processing mgrs...
+2024-11-26 04:44:35,354 - INFO - Successfully processed mgrs: 3 chunks created
+2024-11-26 04:44:35,354 - INFO - [3/6] Processing hijri_converter...
+2024-11-26 04:44:36,213 - INFO - Successfully processed hijri_converter: 3 chunks created
+2024-11-26 04:44:36,213 - INFO - [4/6] Processing geopy...
+2024-11-26 04:44:39,040 - INFO - Successfully processed geopy: 222 chunks created
+2024-11-26 04:44:39,041 - INFO - [5/6] Processing geographiclib...
+2024-11-26 04:44:41,275 - INFO - Successfully processed geographiclib: 27 chunks created
+2024-11-26 04:44:41,276 - INFO - [6/6] Processing pyproj...
+2024-11-26 04:44:42,680 - INFO - Successfully processed pyproj: 95 chunks created
+2024-11-26 04:44:42,680 - INFO - Total documents to process: 358
+2024-11-26 04:44:48,908 - INFO - HTTP Request: POST https://svip.yi-zhan.top/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-26 04:44:55,839 - INFO - HTTP Request: POST https://svip.yi-zhan.top/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-26 04:45:06,614 - INFO - HTTP Request: POST https://svip.yi-zhan.top/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-26 04:45:12,728 - INFO - HTTP Request: POST https://svip.yi-zhan.top/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-26 04:45:15,258 - INFO - Creating FAISS index...
+2024-11-26 04:45:15,265 - INFO - Loading faiss with AVX512 support.
+2024-11-26 04:45:15,306 - INFO - Successfully loaded faiss with AVX512 support.
+2024-11-26 04:45:15,350 - INFO - Saving vector database to ./assets/rag/code_db
+2024-11-26 04:45:15,356 - INFO - Vector database built successfully

@@ -33,10 +33,12 @@ class CodeGenerator:
         self.prompt_maker = PromptMaker(ctx.prompt_mode, ctx.n_shot)
         self.temp_python_fp = os.path.join(ctx.temp_dir, "code_solution.py")
         
+        self.reflection = None
         if ctx.allow_reflection:
             self.reflection = SanityCheckReflection(ctx)
             self.logger.info("Reflection enabled")
 
+        self.lazy_rag = None
         if ctx.allow_rag:
             self.lazy_rag = LazyRAG(ctx)
             self.logger.info("Lazy RAG enabled")
@@ -162,7 +164,7 @@ class CodeGenerator:
                     debug['code_output'] = solution_func(debug['input'])
                 
                     # compare the code output with the expected output
-                    if debug['code_output'] != debug['output']:
+                    if not self.analyzer.compare_values(expected=debug['output'], actual=debug['code_output']):
                         raise RuntimeError(f"Solution output: {debug['code_output']} != expected output: {debug['output']}")
 
                 break # debug cases all passed, no need to retry
@@ -180,11 +182,11 @@ class CodeGenerator:
                 # Only get reflection and RAG prompts if we have more attempts left
                 if retry_count < self.code_attempt:
                     # Sanity check reflection
-                    if hasattr(self, 'reflection') and self.reflection:
+                    if self.reflection:
                         self.reflection_prompt = self.reflection.get_reflection_prompt(code_snippet, e)
                     
                     # Lazy RAG
-                    if hasattr(self, 'lazy_rag') and self.lazy_rag:
+                    if self.lazy_rag:
                         self.rag_prompt = self.lazy_rag.get_rag_prompt(code_snippet)
 
         # run tests with the rest of the examples (unseen to the framework)

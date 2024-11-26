@@ -7,7 +7,8 @@ __pycache__/
 .vscode
 .env
 
-# Project 
+# Project
+experiments/
 exp/
 logs/
 assets/models/llama3_lora_sft

@@ -1,8 +1,6 @@
-from dataclasses import dataclass
 from typing import Optional
 from openai import OpenAI
 
-@dataclass
 class SanityCheckReflection:
     """SanityCheckReflection is used to generate debug suggestion for the code based on check list"""
 
@@ -14,32 +12,33 @@ class SanityCheckReflection:
         self.logger = ctx.logger
 
         # Python Error Check List - common error types to handle
-        self.py_err_check_list = [
-            # ImportError,
-            # ModuleNotFoundError,
-            SyntaxError, 
-            NameError,
-            TypeError,
-            ValueError,
-            AttributeError,
-            IndexError,
-            KeyError,
-            ZeroDivisionError,
-            RuntimeError
-        ]
+        # self.py_err_check_list = [
+        #     ImportError,
+        #     ModuleNotFoundError,
+        #     SyntaxError, 
+        #     NameError,
+        #     TypeError,
+        #     ValueError,
+        #     AttributeError,
+        #     IndexError,
+        #     KeyError,
+        #     ZeroDivisionError,
+        #     RuntimeError
+        # ]
 
-    def _should_reflect(self, err: Exception) -> bool:
-        """Check if the error type is in the predefined checklist"""
-        return any(isinstance(err, err_type) for err_type in self.py_err_check_list)
+    # def _should_reflect(self, err: Exception) -> bool:
+    #     """Check if the error type is in the predefined checklist"""
+    #     return any(isinstance(err, err_type) for err_type in self.py_err_check_list)
 
     def get_reflection_prompt(self, code_snippet: str, err: Exception) -> Optional[str]:
         """Generate debug message if error type is in checklist"""
         
         # Check if we should handle this error type
-        if not self._should_reflect(err):
-            self.logger.info(f"Error type {type(err).__name__} not in checklist, skipping reflection")
-            return None
-        
+        # if not self._should_reflect(err):
+        #     self.logger.info(f"Error type {type(err).__name__} not in checklist, skipping reflection")
+        #     return None
+        self.logger.error(f"Error {type(err).__name__}: {str(err)}")
+
         # Build the prompt with code and error context
         prompt = f"\n\n### Previous code attempt ###\n```python\n{code_snippet}\n```"
         prompt += f"\n\n### Runtime error ###\n{type(err).__name__}: {str(err)}\n"

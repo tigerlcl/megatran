@@ -14,24 +14,22 @@
         "doc_url": "https://hijri-converter.readthedocs.io/en/stable/"
     },
     {
-        "name": "hijridate",
-        "doc_url": "https://pypi.org/project/hijridate/"
+        "name": "geopy",
+        "doc_url": "https://geopy.readthedocs.io/en/stable/"
     },
     {
-        "name": "dataprep.clean",
+        "name": "geographiclib",
         "doc_url": [
-            "https://docs.dataprep.ai/user_guide/clean/clean_country.html",
-            "https://docs.dataprep.ai/user_guide/clean/clean_date.html",
-            "https://docs.dataprep.ai/user_guide/clean/clean_email.html",
-            "https://docs.dataprep.ai/user_guide/clean/clean_lat_long.html",
-            "https://docs.dataprep.ai/user_guide/clean/clean_ip.html",
-            "https://docs.dataprep.ai/user_guide/clean/clean_phone.html",
-            "https://docs.dataprep.ai/user_guide/clean/clean_url.html",
-            "https://docs.dataprep.ai/user_guide/clean/clean_text.html"
+            "https://geographiclib.sourceforge.io/Python/doc/code.html",
+            "https://geographiclib.sourceforge.io/Python/doc/examples.html"
         ]
     },
     {
-        "name": "geopy",
-        "doc_url": "https://geopy.readthedocs.io/en/stable/"
+        "name": "pyproj",
+        "doc_url": [
+            "https://pyproj4.github.io/pyproj/stable/examples.html",
+            "https://pyproj4.github.io/pyproj/stable/api/transformer.html",
+            "https://pyproj4.github.io/pyproj/stable/api/proj.html"
+        ]
     }
 ]

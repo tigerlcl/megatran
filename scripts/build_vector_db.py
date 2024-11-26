@@ -136,8 +136,8 @@ if __name__ == "__main__":
 
     # Create embeddings instance
     embeddings = OpenAIEmbeddings(
-        openai_api_key=os.getenv("OPENAI_API_KEY"),
-        openai_base_url=os.getenv("OPENAI_BASE_URL"),
+        api_key=os.getenv("OPENAI_API_KEY"),
+        base_url=os.getenv("OPENAI_BASE_URL"),
         model=config['embedding_model'],
     )
 

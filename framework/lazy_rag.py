@@ -16,8 +16,8 @@ class LazyRAG:
 
     def __init__(self, ctx):
         self.oai_embedding = OpenAI(api_key=ctx.openai_api_key, base_url=ctx.openai_base_url)
-        self.lc_embedding = OpenAIEmbeddings(api_key=ctx.openai_api_key, base_url=ctx.openai_base_url, model=ctx.embedding_model)
         self.embedding_model = ctx.embedding_model
+        self.lc_embedding = OpenAIEmbeddings(client=self.oai_embedding, model=ctx.embedding_model)
         self.analyzer = ctx.result_analyzer
         self.logger = ctx.logger
         
@@ -60,9 +60,13 @@ class LazyRAG:
         
     def get_rag_prompt(self, code_snippet: str, top_k: int = 3) -> Optional[str]:
         """Build rag prompt Retrieve package documentation based on code snippet"""
+        
+        if not code_snippet:
+            return None
 
-        if not code_snippet or not self._check_import_pkg(code_snippet):
-            self.logger.warning("No import statement found or unsupported package")
+        # comment below code if go eager-RAG
+        if not self._check_import_pkg(code_snippet):
+            self.logger.info("No import statement found or unsupported package")
             return None
         
         self.logger.info(f"Retrieving package info...")
@@ -82,13 +86,7 @@ class LazyRAG:
             
             # Use the pre-computed embedding
             docs = self.vector_db.similarity_search_by_vector(embedding, k=top_k)
-            
-            # Clean and remove consecutive newlines and spaces from each doc
-            cleaned_docs = [
-                ' '.join(' '.join(line.split()) for line in doc.page_content.splitlines() if line.strip())
-                for doc in docs
-            ]
-            rag_doc = "\n".join(cleaned_docs)
+            rag_doc = "\n".join([doc.page_content for doc in docs])
         except Exception as e:
             self.logger.error(f"Error retrieving documentation: {e}")
             return None

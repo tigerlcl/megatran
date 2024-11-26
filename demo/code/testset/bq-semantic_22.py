@@ -1,17 +1,26 @@
 from datetime import datetime, timedelta
 
 def solution(input):
-    # Define the format of the input string
-    input_format = "%I:%M %p,%a,%b %d,%Y"
+    try:
+        # Parse the input string
+        time_str, day, month, date, year = input.split(',')
+    except ValueError:
+        raise ValueError("Input string must be in the format: 'HH:MM AM/PM,Day,Month,Date,Year'")
+
+    # Create a datetime object from the input string
+    time_obj = datetime.strptime(f"{time_str} {day} {month} {date} {year}", "%I:%M %p %a %b %d %Y")
     
-    # Parse the input string into a datetime object
-    pacific_time = datetime.strptime(input, input_format)
+    # Convert from Pacific Time to Eastern Time by adding 3 hours
+    eastern_time_obj = time_obj + timedelta(hours=3)
     
-    # Convert Pacific Time to Eastern Time (PT is 3 hours behind ET)
-    eastern_time = pacific_time + timedelta(hours=3)
+    # Format the output string
+    output_time_str = eastern_time_obj.strftime("%I:%M %p")
+    output_day = eastern_time_obj.strftime("%a")
+    output_month = eastern_time_obj.strftime("%b")
+    output_date = eastern_time_obj.strftime("%d")
+    output_year = eastern_time_obj.strftime("%Y")
     
-    # Format the output string without leading zeros for the hour
-    output_format = "%-I:%M %p,%a,%b %d %Y"
-    output = eastern_time.strftime(output_format)
+    # Construct the output string
+    output = f"{output_time_str},{output_day},{output_month},{output_date},{output_year}"
     
     return output
