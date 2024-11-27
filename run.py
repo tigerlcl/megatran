@@ -66,8 +66,10 @@ def main(ctx: Context) -> None:
     # Export results
     ctx.logger.info("Exporting results...")
     csv_fp = ctx.result_analyzer.export_csv_full_result()
-    json_fp = ctx.result_analyzer.export_json_summary()
-    ctx.logger.info(f"Full result exported to {csv_fp}, Summary exported to {json_fp}")
+    ctx.logger.info(f"Full result exported to {csv_fp}")
+    
+    json_fp, test_stats, token_stats = ctx.result_analyzer.export_json_summary()
+    ctx.logger.info(f"Summary exported to {json_fp}, Test stats: {test_stats}, Token stats: {token_stats}")
 
     duration = perf_counter() - start_time
     ctx.logger.info(f"Experiment completed successfully. Duration: {timedelta(minutes=duration//60, seconds=duration%60)}")

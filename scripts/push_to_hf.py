@@ -6,7 +6,7 @@ load_dotenv()
 
 if __name__ == "__main__":
     # Define your model path and repository name
-    model_path = './assets/models/llama3_lora_sft'
+    model_path = '../assets/models/llama3_lora_sft'
     repo_name = os.getenv("MODEL_REPO")
     
     api = HfApi(token=os.getenv("HF_TOKEN"))

@@ -41,7 +41,7 @@ def run(dataset: list, client: OpenAI, logger: logging.Logger) -> None:
             # generate response
             time.sleep(0.5)
             response = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-4o-mini",
             messages=[
                     {"role": "system", "content": "You are a helpful assistant."},
                     {"role": "user", "content": user_input}

@@ -43,5 +43,7 @@ class ChatBuilder:
         
         self.analyzer.add_token_usage("chat_to_inst", completion.usage.prompt_tokens, completion.usage.completion_tokens)
         
-        item['chat'] = f"{item['chat']}\n{code_inst}"
+        # item['chat'] = f"{item['chat']}\n{code_inst}"
+        item['chat'] = code_inst
+        
         return item

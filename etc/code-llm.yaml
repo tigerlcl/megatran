@@ -1,7 +1,7 @@
 # basic config
 n_shot: 3
-code_attempt: 1
-prompt_mode: "chat_example"
+code_attempt: 3
+prompt_mode: "code_example" 
 
 # OPENAI chat model
 openai_model: "gpt-4o" # gpt-4o, gpt-4o-mini

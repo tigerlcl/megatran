@@ -32,9 +32,9 @@ OPENAI_API_KEY=your_api_key_here
 3. Build RAG vector database
 ```bash
 # Build vector database for package documentation
-python build_vector_db.py \
+python scripts/build_vector_db.py \
     --config etc/vec_db.yaml \
-    [--query "xxxx"] # test single query by adding this argument
+    [-q "hijri date to gregorian date"] # test single query by adding this argument
 ```
 
 4. Start vLLM endpoint for chat-to-instruction model
@@ -45,6 +45,11 @@ vllm serve \
     --config ./etc/vllm-server.yaml
 ```
 > Note: You can use `CUDA_VISIBLE_DEVICES` to specify the GPU device
+
+5. Test chat-to-inst inference
+```bash
+python chat_to_inst_inference.py -q "input:abc, output:ABC"
+```
 
 ## Usage
 
@@ -74,6 +79,7 @@ Results will include:
 ```
 chat-transform/
 ├── run.py                # Main execution script
+├── chat_to_inst_inference.py # Chat-to-inst inference
 ├── etc/                  # Configuration files
 │   ├── mega-transform.yaml # pipeline config
 │   ├── vllm-server.yaml    # vLLM server config
@@ -92,22 +98,24 @@ chat-transform/
 ├── assets/               # Model assets
 │   ├── models/           # Fine-tuned models
 │   └── rag/              # RAG related files
+├── scripts/              # Utility scripts
+│   ├── build_vector_db.py # Build RAG vector database
+│   ├── foundation_model.py # Foundation model baseline
+│   └── push_to_hf.py      # Push to HF
 ├── temp/                 # Temporary files (on-the-fly generated code)
 ├── .env                  # Environment variables
 └── requirements.txt      # Project dependencies
 ```
 
-Key settings in `etc/mega-transform.yaml`:
-Turn on/off relevant module:
-- `chat_to_inst`: true
-- `allow_reflection`: true
-- `allow_rag`: true
-
 
 ## Baseline
 Foundation model baseline, [link](https://github.com/HazyResearch/fm_data_tasks/blob/main/notebooks/data_transformation_experiments.ipynb)
 ```bash
+# Dataset: benchmark-stackoverflow
 python scripts/foundation_model.py --dataset stackoverflow
+
+# Dataset: benchmark-BinqQuery (semantic)
+python scripts/foundation_model.py --dataset bingquery-logs
 ```
 
 ## License

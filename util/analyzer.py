@@ -101,6 +101,15 @@ class ResultAnalyzer:
         total_pass_case = int(summary_df[summary_df["pass_rate"] == 1].shape[0])
         prate_per_case = np.round(total_pass_case / total_test_case, 3) 
 
+        test_stats = {
+            "total_pass": total_pass,
+            "total_test": total_test,
+            "prate_per_test": prate_per_test,
+            "total_task": total_test_case,
+            "total_pass_task": total_pass_case,
+            "prate_per_task": prate_per_case 
+        }
+        
         # Include token usage in summary
         token_stats = {
             module: usage.avg_usage
@@ -108,14 +117,7 @@ class ResultAnalyzer:
         }
         
         stat = {
-            "test_summary": {
-                "total_pass": total_pass,
-                "total_test": total_test,
-                "prate_per_test": prate_per_test,
-                "total_task": total_test_case,
-                "total_pass_task": total_pass_case,
-                "prate_per_task": prate_per_case 
-            },
+            "test_summary": test_stats,
             "token_usage": token_stats
         }
 
@@ -123,4 +125,4 @@ class ResultAnalyzer:
         with open(json_fp, 'w') as f:
             json.dump(stat, f, indent=4)
 
-        return json_fp
+        return json_fp, test_stats, token_stats

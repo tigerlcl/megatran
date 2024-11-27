@@ -16,6 +16,7 @@ class PromptMaker:
     CHAT: str = "chat"
     CTX: str = "ctx" 
     EXAMPLE: str = "example"
+    CODE:str = "code"
 
     def __init__(self, mode: str, n_shot: int):
         self.mode = mode
@@ -35,6 +36,10 @@ class PromptMaker:
             str: Formatted prompt text
         """
         query = ""
+
+        # Code LLM
+        if self.CODE in self.mode:
+            query += f"### Instruction ###\nWrite function to transform the input data into the desired output"
 
         # add instruction
         if self.CHAT in self.mode:
