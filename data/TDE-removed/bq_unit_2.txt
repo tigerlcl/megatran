@@ -1,6 +1,0 @@
-//convert meters to feet   https://www.google.com/search?q=convert+fahrenheit+to+celsius&ie=utf-8&oe=utf-8#q=convert+meters+to+fee
-3 meter		9.84252 feet
-19 meter		62.336 feet
-20 meter		65.6168 feet
-4 meter		13.1234 feet
-2 meter		6.56168 feet

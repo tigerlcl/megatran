@@ -37,6 +37,16 @@ class TokenUsage:
             "avg_total": round(self.total_tokens / self.count, 2)
         }
 
+
+def compare_values(expected: Any, actual: Any) -> bool:
+        """Compare two values after normalization"""
+        try:
+            expected = float(expected)
+            actual = float(actual)
+            return np.isclose(expected, actual, atol=1e-5)
+        except:
+            return expected == actual
+
 class ResultAnalyzer:
     def __init__(self, result_dir):
         self.result_dir = result_dir
@@ -50,19 +60,11 @@ class ResultAnalyzer:
             "lazy_rag": TokenUsage(0, 0, 0, 0)
         }
 
-    def compare_values(self, expected: Any, actual: Any) -> bool:
-        """Compare two values after normalization"""
-        try:
-            expected = float(expected)
-            actual = float(actual)
-            return np.isclose(expected, actual, atol=1e-5)
-        except:
-            return expected == actual
 
     def add_record(self, test_fp: str, test_data: List[Dict[str, Any]]):
         """Add test record with improved value comparison"""
         pass_cnt = sum(1 for item in test_data 
-                      if self.compare_values(item['output'], item['code_output']))
+                      if compare_values(item['output'], item['code_output']))
         
         record = TestRecord(
             test_file_path=test_fp,

@@ -13,8 +13,6 @@ class SanityCheckReflection:
 
     def get_reflection_prompt(self, code_snippet: str, err: Exception) -> Optional[str]:
         """Generate debug message if error type is in checklist"""
-        
-        self.logger.error(f"Error {type(err).__name__}: {str(err)}")
 
         # Build the prompt with code and error context
         prompt = f"\n\n### Previous code attempt ###\n```python\n{code_snippet}\n```"

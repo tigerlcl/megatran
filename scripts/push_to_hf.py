@@ -9,7 +9,7 @@ if __name__ == "__main__":
     model_path = './assets/models/llama3_lora_sft'
     repo_name = os.getenv("MODEL_REPO")
     
-    api = HfApi()
+    api = HfApi(token=os.getenv("HF_TOKEN"))
     if not api.repo_exists(repo_name):
         api.create_repo(repo_name)
 

@@ -8,11 +8,12 @@ load_dotenv() # take environment variables from .env file
 
 class Context:
     """
-    Context manages experiment configuration and setup:
+    Context manages experiment configuration and result analysis:
     1. Loads configuration from YAML
     2. Sets up experiment directories
     3. Configures logging
     4. Provides access to experiment settings
+    5. Add ResultAnalyzer
     """
     
     def __init__(self, args):

@@ -6,6 +6,7 @@ from openai import OpenAI
 from .prompt_generator import PromptMaker
 from .lazy_rag import LazyRAG
 from .reflection import SanityCheckReflection
+from util import compare_values
 
 import temp.code_solution # temp code holder, it will be empty at first
 
@@ -160,15 +161,17 @@ class CodeGenerator:
                 solution_func = self._reload_func()
 
                 # debug the code using the first n examples
-                for debug in debugs:
+                for idx, debug in enumerate(debugs):
                     debug['code_output'] = solution_func(debug['input'])
                 
                     # compare the code output with the expected output
-                    if not self.analyzer.compare_values(expected=debug['output'], actual=debug['code_output']):
-                        raise RuntimeError(f"Solution output: {debug['code_output']} != expected output: {debug['output']}")
+                    if not compare_values(expected=debug['output'], actual=debug['code_output']):
+                        raise RuntimeError(f"Debug case [{idx+1}]: Solution output: {debug['code_output']} != expected output: {debug['output']}")
 
                 break # debug cases all passed, no need to retry
             except Exception as e:
+                self.logger.error(f"Error {type(e).__name__}: {str(e)}")
+
                 if isinstance(e, (ImportError, ModuleNotFoundError)):
                     self.logger.warning(f"{type(e).__name__}: {str(e)}. Please handle it manually.")
                     break # no more attempt

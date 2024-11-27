@@ -34,7 +34,7 @@ OPENAI_API_KEY=your_api_key_here
 # Build vector database for package documentation
 python build_vector_db.py \
     --config etc/vec_db.yaml \
-    [--query "xxxx"] # test by adding this argument
+    [--query "xxxx"] # test single query by adding this argument
 ```
 
 4. Start vLLM endpoint for chat-to-instruction model
@@ -102,6 +102,13 @@ Turn on/off relevant module:
 - `chat_to_inst`: true
 - `allow_reflection`: true
 - `allow_rag`: true
+
+
+## Baseline
+Foundation model baseline, [link](https://github.com/HazyResearch/fm_data_tasks/blob/main/notebooks/data_transformation_experiments.ipynb)
+```bash
+python scripts/foundation_model.py --dataset stackoverflow
+```
 
 ## License
 [MIT License](LICENSE)
