@@ -1,12 +1,12 @@
-# ChatTransform
+# MegaTran
 
 ## Overview
-A LLM-powered framework that converts natural language queries into executable Python code for data transformation tasks. The system uses a multi-stage approach:
+A LLM-powered framework that converts natural language queries into executable Python code for data transformation tasks. The system uses a two-stage approach:
 
-1. **Chat-to-Instruction**: Fine-tuned LLaMA model that converts natural language queries into structured code instructions
-2. **Code Generation**: GPT-4 based code generator that produces Python functions
-3. **RAG (Retrieval-Augmented Generation)**: Documentation lookup system for package APIs
-4. **Reflection**: Self-improvement mechanism for code generation through error analysis
+1. **Weak2StrongPrompt**: Fine-tuned LLaMA model that converts natural language queries into structured code instructions
+2. **Prompt2Code**: GPT-4 based code generator that produces Python functions
+3. **Lazy-RAG (Retrieval-Augmented Generation)**: Documentation lookup system for package APIs
+4. **Sanity-check Reflection**: Sanity-check Reflection mechanism for code generation through error analysis
 
 ## Features
 - [x] Natural language to code transformation
@@ -37,9 +37,8 @@ python scripts/build_vector_db.py \
     [-q "hijri date to gregorian date"] # test single query by adding this argument
 ```
 
-4. Start vLLM endpoint for chat-to-instruction model
+4. Start vLLM server for fine-tuned model
 ```bash
-# Start vLLM server for fine-tuned model
 vllm serve \
     --model ./assets/models/llama3_lora_sft \
     --config ./etc/vllm-server.yaml
@@ -117,6 +116,9 @@ python scripts/foundation_model.py --dataset stackoverflow
 # Dataset: benchmark-BinqQuery (semantic)
 python scripts/foundation_model.py --dataset bingquery-logs
 ```
+
+## Download model
+The **Weak2StrongPrompt** Fine-tuning Model is avaliable at [HuggingFace](https://huggingface.co/Ti-ger/llama3_lora_dt_chat)
 
 ## License
 [MIT License](LICENSE)
