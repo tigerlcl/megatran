@@ -3,18 +3,10 @@
 ## Overview
 A LLM-powered framework that converts natural language queries into executable Python code for data transformation tasks. The system uses a two-stage approach:
 
-1. **Weak2StrongPrompt**: Fine-tuned LLaMA model that converts natural language queries into structured code instructions
-2. **Prompt2Code**: GPT-4 based code generator that produces Python functions
-3. **Lazy-RAG (Retrieval-Augmented Generation)**: Documentation lookup system for package APIs
-4. **Sanity-check Reflection**: Sanity-check Reflection mechanism for code generation through error analysis
-
-## Features
-- [x] Natural language to code transformation
-- [x] Multi-stage pipeline with specialized models
-- [x] Automated package documentation retrieval
-- [x] Error handling and code improvement through reflection
-- [x] Support for various data transformation tasks (unit conversion, text formatting, etc.)
-- [x] Comprehensive result analysis and reporting
+1. **Weak2StrongPrompt**: Fine-tuned LLaMA model that converts natural language queries into articulated code instructions
+2. **Prompt2Code**: GPT-4o based code generator that produces Python functions, with below two optimizations:
+    - **Lazy-RAG (Retrieval-Augmented Generation)**: Code libraries retrieval system for third-party packages
+    - **Sanity-check Reflection**: Sanity-check Reflection mechanism through error analysis
 
 ## Setup
 
@@ -48,31 +40,34 @@ vllm serve \
 5. Test chat-to-inst inference
 ```bash
 python chat_to_inst_inference.py -q "input:abc, output:ABC"
+
+# Expected output: 
+# format(): Convert the string to uppercase
 ```
 
 ## Usage
 
 1. Run the transformation pipeline
 ```bash
+# Test mode (with smaller dataset)
+python run.py \
+    --config etc/mega-transform.yaml \
+    --exp_name demo \
+    --testing
+
 # Full dataset run
 python run.py \
     --config etc/mega-transform.yaml \
-    --exp_name stk-demo \
+    --exp_name exp-1 \
     --dataset_name stackoverflow
-
-# Test run (with smaller dataset)
-python run.py \
-    --config etc/mega-transform.yaml \
-    --exp_name test_run \
-    --testing
 ```
 
-2. Check experiment results
-```
-Results will include:
+2. Check experiment results as show in `demo` folder. Results will include:
+- Code Generation Results (per task)
 - Full test results (full_result.csv)
 - Summary statistics (task-level accuracy, token usage, etc.)
-```
+- Runtime logs for current run
+
 
 ## Project Structure
 ```
@@ -81,6 +76,7 @@ chat-transform/
 ├── chat_to_inst_inference.py # Chat-to-inst inference
 ├── etc/                  # Configuration files
 │   ├── mega-transform.yaml # pipeline config
+│   ├── code-llm.yaml       # baseline Code LLM
 │   ├── vllm-server.yaml    # vLLM server config
 │   └── vec_db.yaml         # RAG vector database config
 ├── framework/            # Core components
@@ -96,7 +92,7 @@ chat-transform/
 │   └── __init__.py
 ├── assets/               # Model assets
 │   ├── models/           # Fine-tuned models
-│   └── rag/              # RAG related files
+│   └── rag/              # RAG related files (Vec DB, list of missing packages)
 ├── scripts/              # Utility scripts
 │   ├── build_vector_db.py # Build RAG vector database
 │   ├── foundation_model.py # Foundation model baseline
@@ -107,7 +103,7 @@ chat-transform/
 ```
 
 
-## Baseline
+## Baselines
 Foundation model baseline, [link](https://github.com/HazyResearch/fm_data_tasks/blob/main/notebooks/data_transformation_experiments.ipynb)
 ```bash
 # Dataset: benchmark-stackoverflow
@@ -116,9 +112,19 @@ python scripts/foundation_model.py --dataset stackoverflow
 # Dataset: benchmark-BinqQuery (semantic)
 python scripts/foundation_model.py --dataset bingquery-logs
 ```
+> you can specify the `model` parameter in line:44 to try other models
 
-## Download model
-The **Weak2StrongPrompt** Fine-tuning Model is avaliable at [HuggingFace](https://huggingface.co/Ti-ger/llama3_lora_dt_chat)
+
+Naive code generation baseline:
+```bash
+python run.py \
+    --config etc/code-llm.yaml \ # use code-llm config here
+    --exp_name exp-1 \
+    --dataset_name stackoverflow
+```
+
+## Download Model
+The **Weak2StrongPrompt** Fine-tuning Model is avaliable at [HuggingFace](https://huggingface.co/Ti-ger/llama3_lora_dt_chat). Move the model files to `assets/models/`.
 
 ## License
 [MIT License](LICENSE)
