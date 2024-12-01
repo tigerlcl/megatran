@@ -1,44 +1,41 @@
-from hijri_converter import convert
+from hijridate import Hijri, Gregorian
 
 def solution(input):
-    # Split the input into parts
-    parts = input.split()
-    day = int(parts[0])
-    month_name = parts[1]
-    year = int(parts[2])
+    # Parse the input Hijri date
+    hijri_day, hijri_month, hijri_year = input.split()
     
-    # Map month names to numbers
-    hijri_months = {
-        "Muharram": 1,
-        "Safar": 2,
-        "Rabi' al-awwal": 3,
-        "Rabi' al-thani": 4,
-        "Jumada al-awwal": 5,
-        "Jumada al-thani": 6,
-        "Rajab": 7,
-        "Sha'ban": 8,
-        "Ramadan": 9,
-        "Shawwal": 10,
-        "Dhu al-Qi'dah": 11,
-        "Dhu al-Hijjah": 12
+    # Convert Hijri month name to number
+    hijri_month_map = {
+        'Muharram': 1,
+        'Safar': 2,
+        'Rabi\' al-Awwal': 3,
+        'Rabi\' al-Thani': 4,
+        'Jumada al-Awwal': 5,
+        'Jumada al-Thani': 6,
+        'Rajab': 7,
+        'Sha\'ban': 8,
+        'Ramadan': 9,
+        'Shawwal': 10,
+        'Dhu al-Qi\'dah': 11,
+        'Dhu al-Hijjah': 12
     }
     
-    # Get the month number
-    month = hijri_months[month_name]
+    # Validate the Hijri year
+    hijri_year = int(hijri_year)
+    if hijri_year < 1343 or hijri_year > 1500:
+        raise ValueError(f"Hijri year must be between 1343 and 1500, got '{hijri_year}'")
     
-    # Convert Hijri to Gregorian
-    try:
-        gregorian_date = convert.Hijri(year, month, day).to_gregorian()
-    except Exception as e:
-        return f"Error in conversion: {str(e)}"
+    # Convert the Hijri date to Gregorian
+    hijri_date = Hijri(hijri_year, hijri_month_map[hijri_month], int(hijri_day))
+    gregorian_date = hijri_date.to_gregorian()
     
     # Format the output
-    day_name = gregorian_date.strftime("%A")
-    formatted_date = gregorian_date.strftime("%d %B %Y")
+    output = f"{gregorian_date.day} {gregorian_date.month_name()} {gregorian_date.year} C.E"
     
-    return f"{day_name} {formatted_date} C.E"
-
-# Example usage:
-# print(solution("11 Shawwal 1430"))  # Output: "Wednesday 30 September 2009 C.E"
-# print(solution("5 Muharram 1300"))  # Output: "Thursday 16 November 1882 C.E"
-# print(solution("19 Rajab 1460"))    # Output: "Friday 20 August 2038 C.E"
+    # Get the day of the week
+    day_of_week = gregorian_date.strftime('%A')
+    
+    # Combine day of the week with the output
+    final_output = f"{day_of_week} {output}"
+    
+    return final_output

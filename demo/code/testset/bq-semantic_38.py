@@ -1,17 +1,16 @@
-def solution(input):
-    from mgrs import MGRS
+import mgrs
 
-    # Initialize the MGRS converter
-    mgrs_converter = MGRS()
+def solution(input):
+    # Create an instance of the MGRS class
+    m = mgrs.MGRS()
     
     try:
-        # Convert the MGRS coordinate to latitude and longitude
-        lat, lon = mgrs_converter.toLatLon(input)
+        # Convert MGRS to latitude and longitude
+        lat, lon = m.toLatLon(input)
         
-        # Format the output to match the required precision
+        # Format the output to 5 decimal places
         output = f"{lat:.5f}, {lon:.5f}"
-    except Exception as e:
-        # Handle any exceptions that occur during conversion
-        output = f"Invalid MGRS input: {e}"
-    
-    return output
+        
+        return output
+    except Exception as e:  # Catching a general exception
+        return f"Error: {str(e)} - Please provide a valid MGRS string."

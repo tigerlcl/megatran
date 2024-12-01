@@ -1,8 +1,8 @@
 {
     "test_summary": {
-        "total_pass": 7,
+        "total_pass": 6,
         "total_test": 12,
-        "prate_per_test": 0.583,
+        "prate_per_test": 0.5,
         "total_task": 6,
         "total_pass_task": 3,
         "prate_per_task": 0.5
@@ -11,26 +11,26 @@
         "chat_to_inst": {
             "total_api_calls": 6,
             "avg_prompt": 86.83,
-            "avg_completion": 15.67,
-            "avg_total": 102.5
+            "avg_completion": 15.5,
+            "avg_total": 102.33
         },
         "code_generation": {
             "total_api_calls": 12,
-            "avg_prompt": 612.33,
-            "avg_completion": 362.67,
-            "avg_total": 975.0
+            "avg_prompt": 561.25,
+            "avg_completion": 308.33,
+            "avg_total": 869.58
         },
         "reflection": {
             "total_api_calls": 6,
-            "avg_prompt": 322.5,
-            "avg_completion": 303.83,
-            "avg_total": 626.33
+            "avg_prompt": 296.17,
+            "avg_completion": 251.5,
+            "avg_total": 547.67
         },
         "lazy_rag": {
             "total_api_calls": 3,
-            "avg_prompt": 197.67,
+            "avg_prompt": 177.33,
             "avg_completion": 0.0,
-            "avg_total": 197.67
+            "avg_total": 177.33
         }
     }
 }

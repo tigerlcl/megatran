@@ -1,14 +1,11 @@
 def solution(input):
-    # Split the input string into parts
+    # Split the input name into parts
     parts = input.split()
     
-    # Get the first letter of the first name and capitalize it
-    first_initial = parts[0][0].upper()
+    # Get the first initial and the last name
+    first_initial = parts[0][0] + '.'
+    last_name = parts[-1]
     
-    # Get the last name
-    last_name = parts[1]
-    
-    # Format the abbreviation
-    output = f"{first_initial}. {last_name}"
-    
+    # Format the output
+    output = f"{first_initial} {last_name}"
     return output
