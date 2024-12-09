@@ -1,10 +1,8 @@
 import os
 import yaml
 import logging
-from .analyzer import ResultAnalyzer
-
 from dotenv import load_dotenv
-load_dotenv() # take environment variables from .env file
+from .analyzer import ResultAnalyzer
 
 class Context:
     """
@@ -16,6 +14,11 @@ class Context:
     5. Add ResultAnalyzer
     """
     
+    @classmethod
+    def load_environment(cls):
+        """Load environment variables from .env file"""
+        load_dotenv()
+
     def __init__(self, args):
         """
         Initialize experiment context
@@ -27,6 +30,7 @@ class Context:
                 - testing: Boolean for test mode
                 - config: Path to config YAML
         """
+        self.load_environment()
         self.exp_name = args.exp_name
         self.dataset_name = args.dataset_name
         self.testing = args.testing

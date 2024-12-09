@@ -21,29 +21,31 @@ pip install -r requirements.txt
 OPENAI_API_KEY=your_api_key_here
 ```
 
-3. Build RAG vector database
-```bash
-# Build vector database for package documentation
-python scripts/build_vector_db.py \
-    --config etc/vec_db.yaml \
-    [-q "hijri date to gregorian date"] # test single query by adding this argument
-```
-
-4. Start vLLM server for fine-tuned model
+3. Start vLLM server for fine-tuned model
 ```bash
 vllm serve \
-    --model ./assets/models/llama3_lora_sft \
+    --model ./assets/models/llama3_lora_sft \ # after downloading ...
     --config ./etc/vllm-server.yaml
 ```
 > Note: You can use `CUDA_VISIBLE_DEVICES` to specify the GPU device
 
-5. Test chat-to-inst inference
+4. Test weak2strong prompt inference
 ```bash
-python chat_to_inst_inference.py -q "input:abc, output:ABC"
+python w2s_prompt_inference.py -q "input:abc, output:ABC"
 
 # Expected output: 
 # format(): Convert the string to uppercase
 ```
+
+5. [offline, optional] Build RAG vector database
+```bash
+# Build vector database for code libs retrieval
+python scripts/build_vector_db.py \
+    --config etc/vec_db.yaml \
+    [-q "hijri date to gregorian date"] # test single query by adding this argument
+```
+> A pre-built vector database is saved in `assets/rag/code_db`
+
 
 ## Usage
 
@@ -73,7 +75,7 @@ python run.py \
 ```
 chat-transform/
 ├── run.py                # Main execution script
-├── chat_to_inst_inference.py # Chat-to-inst inference
+├── w2s_prompt_inference.py # Weak2strong prompt inference
 ├── etc/                  # Configuration files
 │   ├── mega-transform.yaml # pipeline config
 │   ├── code-llm.yaml       # baseline Code LLM
@@ -104,13 +106,13 @@ chat-transform/
 
 
 ## Baselines
-Foundation model baseline, [link](https://github.com/HazyResearch/fm_data_tasks/blob/main/notebooks/data_transformation_experiments.ipynb)
+Foundation model baseline, source code refer to  the orginal implementation [here](https://github.com/HazyResearch/fm_data_tasks/blob/main/notebooks/data_transformation_experiments.ipynb)
 ```bash
 # Dataset: benchmark-stackoverflow
-python scripts/foundation_model.py --dataset stackoverflow
+python scripts/foundation_model.py --dataset stackoverflow --model gpt-4o-mini
 
 # Dataset: benchmark-BinqQuery (semantic)
-python scripts/foundation_model.py --dataset bingquery-logs
+python scripts/foundation_model.py --dataset bingquery-logs --model gpt-4o-mini
 ```
 > you can specify the `model` parameter in line:44 to try other models
 

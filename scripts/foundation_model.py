@@ -13,8 +13,6 @@ sys.path.append(project_root)
 
 from util import load_dataset_by_name, compare_values
 
-load_dotenv()
-
 def run(dataset: list, client: OpenAI, logger: logging.Logger) -> None:
     """Run the foundation model baseline"""
 
@@ -41,7 +39,7 @@ def run(dataset: list, client: OpenAI, logger: logging.Logger) -> None:
             # generate response
             time.sleep(0.5)
             response = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model=args.model,
             messages=[
                     {"role": "system", "content": "You are a helpful assistant."},
                     {"role": "user", "content": user_input}
@@ -78,13 +76,19 @@ def run(dataset: list, client: OpenAI, logger: logging.Logger) -> None:
 
 
 if __name__ == "__main__":
+    load_dotenv()
+
     parser = argparse.ArgumentParser(description="Run the foundation model pipeline")
     parser.add_argument('--dataset', type=str, help='Dataset to use')
+    parser.add_argument('--model', type=str, help='Model to use, refer to OpenAI Models')
     args = parser.parse_args()
 
     # stackoverflow and bingquery-logs (semantic)
     dataset = load_dataset_by_name(args.dataset)
-    client = OpenAI()
+    client = OpenAI(
+        api_key=os.getenv("OPENAI_API_KEY"),
+        base_url=os.getenv("OPENAI_BASE_URL")
+    )
 
     # setup logging
     logging.basicConfig(

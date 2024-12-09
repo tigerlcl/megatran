@@ -13,8 +13,6 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import WebBaseLoader, GitLoader
 
-load_dotenv()
-
 def get_loader_for_package(pkg_info: Dict):
     """
     Get appropriate document loader based on package info
@@ -125,6 +123,8 @@ def main(config: Dict):
         logger.warning("No documents processed, vector database not created")
 
 if __name__ == "__main__":
+    load_dotenv()
+    
     parser = argparse.ArgumentParser(description='Build vector database from package documentation')
     parser.add_argument('--config', default='./etc/vec-db.yaml', type=str, help='Path to config file')
     parser.add_argument('--query', '-q', type=str, help='query to test vector db') # if specified, will not build db

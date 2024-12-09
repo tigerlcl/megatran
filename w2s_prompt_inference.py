@@ -1,4 +1,3 @@
-import os
 import argparse
 from openai import OpenAI
 
@@ -20,8 +19,8 @@ def main(query: str):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Chat-to-inst inference")
-    parser.add_argument("--query", '-q', type=str, required=True, help="Query for chat-to-inst")
+    parser = argparse.ArgumentParser(description="Weak2strong prompt inference")
+    parser.add_argument("--query", '-q', type=str, required=True, help="Query for weak2strong prompt inference")
     args = parser.parse_args()
 
     main(args.query)
