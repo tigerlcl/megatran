@@ -1,0 +1,3 @@
+src_title:target_title
+source
+{[LIT:'9LAxH 2Kx4D' ], [Split: '6', 0 -> [Split: 'a', 0 ],  ], [Substr:(12-26) -> [Upper() ],  ], [Split: 'S', 0 -> [Split: '*', 0 ],  ], }

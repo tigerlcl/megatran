@@ -1,0 +1,3 @@
+src_title:target_title
+source
+{[Split: 'H', 0 ], [LIT:'?ASq' ], [Split: 'O', 1 -> [Substr:(4-14) ],  ], }

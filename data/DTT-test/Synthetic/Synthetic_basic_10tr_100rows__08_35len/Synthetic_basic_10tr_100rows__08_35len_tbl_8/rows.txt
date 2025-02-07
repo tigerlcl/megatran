@@ -1,0 +1,3 @@
+src_title:target_title
+source
+{[Split: 'T', 2 ], [LIT:'Q9pMJIb' ], [Split: 'S', 0 ], [Substr:(6-8) -> [Upper() ],  ], }
