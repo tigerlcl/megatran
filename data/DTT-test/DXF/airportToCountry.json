@@ -1,0 +1,30 @@
+
+{
+    "chat": "map airport code to country",
+    "tuples": [
+      {
+        "input": "ath",
+        "output": "Greece"
+      },
+      {
+        "input": "kef",
+        "output": "Iceland"
+      },
+      {
+        "input": "cho",
+        "output": "United States"
+      },
+      {
+        "input": "gva",
+        "output": "Switzerland"
+      },
+      {
+        "input": "xev",
+        "output": "Sweden"
+      },
+      {
+        "input": "osa",
+        "output": "Japan"
+      }
+    ]
+  }

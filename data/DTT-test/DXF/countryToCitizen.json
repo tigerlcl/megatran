@@ -1,0 +1,30 @@
+
+{
+    "chat": "map country to citizen",
+    "tuples": [
+      {
+        "input": "Greece",
+        "output": "Greek"
+      },
+      {
+        "input": "France",
+        "output": "French"
+      },
+      {
+        "input": "Romania",
+        "output": "Romanian"
+      },
+      {
+        "input": "Switzerland",
+        "output": "Swiss"
+      },
+      {
+        "input": "Germany",
+        "output": "German"
+      },
+      {
+        "input": "China",
+        "output": "Chinese"
+      }
+    ]
+  }
