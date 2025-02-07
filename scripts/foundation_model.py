@@ -125,7 +125,7 @@ if __name__ == "__main__":
     logging.basicConfig(
         level=logging.INFO,
         handlers=[
-            logging.FileHandler(f"fm_{args.dataset}_{args.model}.log", mode='w'),
+            logging.FileHandler(f"../results/FM/fm_{args.dataset}_{args.model}.log", mode='w'),
             logging.StreamHandler()  # This will output to console
         ]
     )
