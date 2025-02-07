@@ -1,0 +1,205 @@
+{
+  "chat": "Extract the last substring from each input string, capturing only the characters following the last special character, limited to specific length constraints of 8 to 35 characters.",
+  "tuples": [
+    {
+      "input": "vEwBnChy&wAarkajBiJh4KPJvfTy0y",
+      "output": "BiJh4KPJvfTy0"
+    },
+    {
+      "input": "vDsnt*7Qnu?K6MrEfKV7uw0BDRpV&rXkwx",
+      "output": "fKV7uw0BDRpV&"
+    },
+    {
+      "input": "6?-uk4RHsdkJKnsesRzovasnpu0Mib",
+      "output": "sRzovasnpu0Mi"
+    },
+    {
+      "input": "gj.hGZzo&YITXbqek7LEsceGfhrQ?x*6",
+      "output": "k7LEsceGfhrQ?"
+    },
+    {
+      "input": "x3kdu4(6FMnTWaWXezK4i5PP?u5aBefVxu",
+      "output": "ezK4i5PP?u5aB"
+    },
+    {
+      "input": "pr8HG9qCrEe)9tung3ysE0HNs)mbuvjb",
+      "output": "g3ysE0HNs)mbu"
+    },
+    {
+      "input": "qJWglubqTPs54OJJCypEcTbl*xOWEag7D15",
+      "output": "CypEcTbl*xOWE"
+    },
+    {
+      "input": "6h5X-rMcc3?K6pC-ahZYPP6YG-)nG8",
+      "output": "ahZYPP6YG-)nG"
+    },
+    {
+      "input": "kvhwP7NsupuB02IK5Io(BQ?Plpime7",
+      "output": "5Io(BQ?Plpime"
+    },
+    {
+      "input": "ah8J-vL105ILf&3OiV1bkmyCK77pDLe2",
+      "output": "iV1bkmyCK77pD"
+    },
+    {
+      "input": "u?qm72rabzQvMQ*EQk?3ATpBqz(TF)Ev",
+      "output": "Qk?3ATpBqz(TF"
+    },
+    {
+      "input": "lKIeJBO0?J?3c*Mri*WQlKOkfoOHaW*qu",
+      "output": "i*WQlKOkfoOHa"
+    },
+    {
+      "input": "tX0QuJwsvj4GFQGILEo9bf*ZHuIkl",
+      "output": "LEo9bf*ZHuIkl"
+    },
+    {
+      "input": "rUrkWd-mCK?MBx1zvRmQ29d4s28?F*Vnr",
+      "output": "vRmQ29d4s28?F"
+    },
+    {
+      "input": "aZgmA7NeEIE&nZP?dtyrINOyMUrZ.ARzQ-z",
+      "output": "dtyrINOyMUrZ."
+    },
+    {
+      "input": "eG&s6XvlZA9o(34bi3-vAT&r.dtbUgtp?qi",
+      "output": "i3-vAT&r.dtbU"
+    },
+    {
+      "input": "o4)*wuCNC&UY)6e8yyypNKFSV?HiDfX8ro",
+      "output": "yyypNKFSV?HiD"
+    },
+    {
+      "input": "n)ddmDzXQYBrKyzt8FY(z-y22yyr*.05Lro",
+      "output": "8FY(z-y22yyr*"
+    },
+    {
+      "input": "5)uFULYinFGCDMsp(LzAoUL1*ivfw",
+      "output": "(LzAoUL1*ivfw"
+    },
+    {
+      "input": "g0gY6W9AWC3a3g-C1a3wVEvn0k3B)hN(G5",
+      "output": "1a3wVEvn0k3B)"
+    },
+    {
+      "input": "g.*srjoC04tN.YcnxeBpTP&oxK*OO.4",
+      "output": "xeBpTP&oxK*OO"
+    },
+    {
+      "input": "kiJU4BckgtUKv)Q&dAJy7vLQRskvcyk79",
+      "output": "dAJy7vLQRskvc"
+    },
+    {
+      "input": "s)n7EikF17uaTUU6rZCfVm9fWclnoCbq",
+      "output": "rZCfVm9fWclno"
+    },
+    {
+      "input": "lMVx8(fb7A06Lin*s7aWhClVT.OK3NU6",
+      "output": "s7aWhClVT.OK3"
+    },
+    {
+      "input": "bnc4Cpug?Oxc3A&ShpiiKZ8PzsOFq63",
+      "output": "hpiiKZ8PzsOFq"
+    },
+    {
+      "input": "a4ay3kQi9mPcaJ2HxWiZH3D-*1(nc",
+      "output": "xWiZH3D-*1(nc"
+    },
+    {
+      "input": "mkUb2j8Uzgjw9pm?sl0OAyueNvPDxQXZl",
+      "output": "sl0OAyueNvPDx"
+    },
+    {
+      "input": "tT3egkgzC()ex(F&JmcAoEXg.-ldn",
+      "output": "JmcAoEXg.-ldn"
+    },
+    {
+      "input": "tF9cSDFZU90(NqxKSqudPcMUnE2Kn8",
+      "output": "SqudPcMUnE2Kn"
+    },
+    {
+      "input": "v-7p*PoxOoi?TsrRuovIwxqggCO9P8oAs",
+      "output": "uovIwxqggCO9P"
+    },
+    {
+      "input": "5z5(xZ.PTJbe&sB-)pr9W2-C&ri5LU0&VKr",
+      "output": ")pr9W2-C&ri5L"
+    },
+    {
+      "input": "gIiLi1ABBSoz.2?ECA0hm4eU-?52Ik3jnqy",
+      "output": "CA0hm4eU-?52I"
+    },
+    {
+      "input": "p.P4teULRW8HVOfODQRMNgXSYKrFGJxOr",
+      "output": "DQRMNgXSYKrFG"
+    },
+    {
+      "input": "n9J-i*lgYHgDQz8Z8ttn7tX.SzGHHzvma",
+      "output": "8ttn7tX.SzGHH"
+    },
+    {
+      "input": "9d6.6RQD2)NksM-xk3VGIZsbwhMK5aOb1",
+      "output": "k3VGIZsbwhMK5"
+    },
+    {
+      "input": "ryQW&&QDZ0Vw1gY1fZbpctcKe&Hxc7UeYo",
+      "output": "fZbpctcKe&Hxc"
+    },
+    {
+      "input": "6.mfhCVMcAM&kYI(fROkMAQP?6PA4",
+      "output": "fROkMAQP?6PA4"
+    },
+    {
+      "input": "mOSvGRKmDlSGr02xKm8v&?e4Vwr0QL&hLe",
+      "output": "Km8v&?e4Vwr0Q"
+    },
+    {
+      "input": "kKtxT3xpcWBI3az?sWEWWt-Gk4srj?QjW6i",
+      "output": "sWEWWt-Gk4srj"
+    },
+    {
+      "input": "86G8Xv5H?6m60DRyPUeBCdxCJEFCvE5",
+      "output": "PUeBCdxCJEFCv"
+    },
+    {
+      "input": "ygfo5NDMxZ6?zZfPYgl4M69-T9i)LM62dJq",
+      "output": "Ygl4M69-T9i)L"
+    },
+    {
+      "input": "u(6CPe?ewGPBTRmI.8OovHEL0e0)W4nl",
+      "output": ".8OovHEL0e0)W"
+    },
+    {
+      "input": "kDVcWPloBvHhbmROGke9pK2?cw1xg12wk",
+      "output": "Gke9pK2?cw1xg"
+    },
+    {
+      "input": "1pFq.BqonbgS?92Bg)ZZkJ8(t-*bBx((g",
+      "output": "g)ZZkJ8(t-*bB"
+    },
+    {
+      "input": "jHjqibohW86?XKH758yg55yHZNX-Pk",
+      "output": "58yg55yHZNX-P"
+    },
+    {
+      "input": "ozUl&v8VnRE5ev3oZiaLQZsqSrW)Rl",
+      "output": "ZiaLQZsqSrW)R"
+    },
+    {
+      "input": "rEy)jA(K7?)MTrYS8OE-Ru(7wsdZ1",
+      "output": "8OE-Ru(7wsdZ1"
+    },
+    {
+      "input": "7f9EFTSBt5stSZQEqk6ma51oKCZ*WTwh0",
+      "output": "qk6ma51oKCZ*W"
+    },
+    {
+      "input": "vdN1ADEWA6L&a)E-jt4mdnxr14)sTh8gMhl",
+      "output": "jt4mdnxr14)sT"
+    },
+    {
+      "input": "xW-Ux7PU?DzOAx1So78cRq&aGLJRhJrMj",
+      "output": "o78cRq&aGLJRh"
+    }
+  ]
+}

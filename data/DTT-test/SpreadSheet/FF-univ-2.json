@@ -1,0 +1,29 @@
+{
+  "chat": "Transform input university names into a standardized format by ensuring consistency in naming and including the country suffix \"USA\" when applicable.",
+  "tuples": [
+    {
+      "input": "University of Pennsylvania Phialdelphia- PA- USA",
+      "output": "University of Pennsylvania- Phialdelphia- PA- USA"
+    },
+    {
+      "input": "Penn Philadelphia- PA- USA",
+      "output": "Penn- Philadelphia- PA- USA"
+    },
+    {
+      "input": "University of Maryland College Park College Park- MD",
+      "output": "University of Maryland College Park- College Park- MD- USA"
+    },
+    {
+      "input": "Cornell University Ithaca- New York- USA",
+      "output": "Cornell University- Ithaca- New York- USA"
+    },
+    {
+      "input": "UCLA Los Angeles- CA",
+      "output": "UCLA- Los Angeles- CA- USA"
+    },
+    {
+      "input": "University of Michigan Ann Arbor- MI- USA",
+      "output": "University of Michigan- Ann Arbor- MI- USA"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "chat": "Reverse the string while maintaining the position of non-alphanumeric characters.",
+  "tuples": [
+    {
+      "input": "f-9ADPe5PDyFS5?8nwTOPX4",
+      "output": "4XPOTwn8?5SFyDP5ePDA9-f"
+    },
+    {
+      "input": "3PEJT2b?XYfEpJ9XNrfKWqu",
+      "output": "uqWKfrNX9JpEfYX?b2TJEP3"
+    },
+    {
+      "input": "2?z7R XLO5FC)-* ncvwu a)e",
+      "output": "e)a uwvcn *-)CF5OLX R7z?2"
+    },
+    {
+      "input": "8K -nUDc9NNvH9R)JnKE4TC)8n",
+      "output": "n8)CT4EKnJ)R9HvNN9cDUn- K8"
+    },
+    {
+      "input": "yfuyy.-t6qAsP N(p",
+      "output": "p(N PsAq6t-.yyufy"
+    },
+    {
+      "input": "2lP?-M7Q*GGvmT0",
+      "output": "0TmvGG*Q7M-?Pl2"
+    },
+    {
+      "input": "bRl )qlmOroF(- 4J8fC53oSQ8  G(ZHx",
+      "output": "xHZ(G  8QSo35Cf8J4 -(ForOmlq) lRb"
+    },
+    {
+      "input": "vr?r1mzae&sH7l",
+      "output": "l7Hs&eazm1r?rv"
+    },
+    {
+      "input": "7WOAcPXzvGu OVWOgH i5Swz4Mta 57d",
+      "output": "d75 atM4zwS5i HgOWVO uGvzXPcAOW7"
+    },
+    {
+      "input": "vvbH)Y?7XPP lDLy)-SFBkfLIeEi",
+      "output": "iEeILfkBFS-)yLDl PPX7?Y)Hbvv"
+    },
+    {
+      "input": "9X3f6 LuPIsNRs",
+      "output": "sRNsIPuL 6f3X9"
+    },
+    {
+      "input": "u9LUJ?G NOqaE Kx3)Ri sOYz.Iof",
+      "output": "foI.zYOs iR)3xK EaqON G?JUL9u"
+    },
+    {
+      "input": "ajrNLp41c8z4",
+      "output": "4z8c14pLNrja"
+    },
+    {
+      "input": "otOJ(y&Pj",
+      "output": "jP&y(JOto"
+    },
+    {
+      "input": "uf76UblV-eOGmec6RDK8BOUCQX-g4",
+      "output": "4g-XQCUOB8KDR6cemGOe-VlbU67fu"
+    },
+    {
+      "input": "mA5) MUn8q9tYo x9",
+      "output": "9x oYt9q8nUM )5Am"
+    },
+    {
+      "input": "5B &teG K.SAQ q162cNhBAI15zHp",
+      "output": "pHz51IABhNc261q QAS.K Get& B5"
+    },
+    {
+      "input": "tiAfnSM4",
+      "output": "4MSnfAit"
+    },
+    {
+      "input": "qNeovlBiNoXOiHuW1gl2",
+      "output": "2lg1WuHiOXoNiBlvoeNq"
+    },
+    {
+      "input": "6Nzp.3yYU FSx -qJwAg.npOd37",
+      "output": "73dOpn.gAwJq- xSF UYy3.pzN6"
+    },
+    {
+      "input": "sZemg-vXavz5LTEzmk",
+      "output": "kmzETL5zvaXv-gmeZs"
+    },
+    {
+      "input": "zpWNWcPvF*FNCv2JaHI1v8jQg A1go",
+      "output": "og1A gQj8v1IHaJ2vCNF*FvPcWNWpz"
+    },
+    {
+      "input": "1.f8NBc 2VMVmBaGN*xDzws.1P2",
+      "output": "2P1.swzDx*NGaBmVMV2 cBN8f.1"
+    },
+    {
+      "input": "vMP YqRNcLpbh",
+      "output": "hbpLcNRqY PMv"
+    },
+    {
+      "input": "9Zb6u8Ph V715ZqgsF*z",
+      "output": "z*FsgqZ517V hP8u6bZ9"
+    },
+    {
+      "input": "2oUIfYwS t7u",
+      "output": "u7t SwYfIUo2"
+    },
+    {
+      "input": "iqAL9Fb eHnHD0My",
+      "output": "yM0DHnHe bF9LAqi"
+    },
+    {
+      "input": "kwjzEhKtk",
+      "output": "ktKhEzjwk"
+    },
+    {
+      "input": "jS&4)wzh",
+      "output": "hzw)4&Sj"
+    },
+    {
+      "input": "qw EK.XfblDnrViCWx.eV)LsmJPwa",
+      "output": "awPJmsL)Ve.xWCiVrnDlbfX.KE wq"
+    },
+    {
+      "input": "dIvd(xT6",
+      "output": "6Tx(dvId"
+    },
+    {
+      "input": "vDg ThWRLFUMsms(2&*1",
+      "output": "1*&2(smsMUFLRWhT gDv"
+    },
+    {
+      "input": "i(uIcLa4lmK6LJ6a2P9p-n9Yy6(HL8",
+      "output": "8LH(6yY9n-p9P2a6JL6Kml4aLcIu(i"
+    },
+    {
+      "input": "bE )p(-zakF48gl-Idv",
+      "output": "vdI-lg84Fkaz-(p) Eb"
+    },
+    {
+      "input": "rwd-3S4k",
+      "output": "k4S3-dwr"
+    },
+    {
+      "input": "2N7I879e7?utl 0lvBp",
+      "output": "pBvl0 ltu?7e978I7N2"
+    },
+    {
+      "input": "e&VHiWIwJHsCge q",
+      "output": "q egCsHJwIWiHV&e"
+    },
+    {
+      "input": "dzQi.gN?HqSO8k3eTM1Bp)0ubT)2e6",
+      "output": "6e2)Tbu0)pB1MTe3k8OSqH?Ng.iQzd"
+    },
+    {
+      "input": "e-9uMzHcH5nD1rryqYIt",
+      "output": "tIYqyrr1Dn5HcHzMu9-e"
+    },
+    {
+      "input": "9fH))s.Nk9nV*Zp h",
+      "output": "h pZ*Vn9kN.s))Hf9"
+    },
+    {
+      "input": "d)c0q1okXhZ?CTho",
+      "output": "ohTC?ZhXko1q0c)d"
+    },
+    {
+      "input": "c.AMYAs-6D.bwTW&utYnQnomx((RVMk",
+      "output": "kMVR((xmonQnYtu&WTwb.D6-sAYMA.c"
+    },
+    {
+      "input": "5Tg9THMfVDz",
+      "output": "zDVfMHT9gT5"
+    },
+    {
+      "input": "sQH02jXEcz  IHf&7xRsBlFI2EZw z",
+      "output": "z wZE2IFlBsRx7&fHI  zcEXj20HQs"
+    },
+    {
+      "input": "hJXir(1X)1caF?EFr",
+      "output": "rFE?Fac1)X1(riXJh"
+    },
+    {
+      "input": "cYqFewcI&uB.0Y*xnAvo?)(bHt)tO5DsM5",
+      "output": "5MsD5Ot)tHb()?ovAnx*Y0.Bu&IcweFqYc"
+    },
+    {
+      "input": "4t 1ecQQ-fKWB3EhaY)0",
+      "output": "0)YahE3BWKf-QQce1 t4"
+    },
+    {
+      "input": "lKyYXQq* JCFuv*aJJ?jQxk",
+      "output": "kxQj?JJa*vuFCJ *qQXYyKl"
+    },
+    {
+      "input": "h(A4XxTcl -JZc7gYwRGyQz 3As",
+      "output": "sA3 zQyGRwYg7cZJ- lcTxX4A(h"
+    },
+    {
+      "input": "dNls2eKpinwK5o5XSSzl6Xw GvzR9",
+      "output": "9RzvG wX6lzSSX5o5KwnipKe2slNd"
+    }
+  ]
+}

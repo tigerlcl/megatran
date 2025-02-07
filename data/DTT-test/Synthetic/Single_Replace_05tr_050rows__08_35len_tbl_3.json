@@ -1,0 +1,205 @@
+{
+  "chat": "The transformation replaces specific patterns in the input while preserving the original content, ensuring no changes are made to the provided strings.",
+  "tuples": [
+    {
+      "input": "0jvgsaowWtoOjuFq08*uy",
+      "output": "0jvgsaowWtoOjuFq08*uy"
+    },
+    {
+      "input": "ibR 07mEnWRb1dSpEv.8n",
+      "output": "ibR 07mEnWRb1dSpEv.8n"
+    },
+    {
+      "input": "eOKYUmzeEa8iIejFtHrb",
+      "output": "eOKYUmzeEa8iIejFtHrb"
+    },
+    {
+      "input": "6eBFc(lsFDQgx.Vm",
+      "output": "6eBFc(lsFDQgx.Vm"
+    },
+    {
+      "input": "gP8FvrTvc",
+      "output": "gP8FvrTvc"
+    },
+    {
+      "input": "o.)3vUoy",
+      "output": "o.)3vUoy"
+    },
+    {
+      "input": "qXoOggPNgp",
+      "output": "qXoOggPNgp"
+    },
+    {
+      "input": "s9-jiJiL0Ux.&Xg",
+      "output": "s9-jiJiL0Ux.&Xg"
+    },
+    {
+      "input": "cD*Vij4y",
+      "output": "cD*Vij4y"
+    },
+    {
+      "input": "n nH4C0Zg 3f7ewi9RiaxnDTqusoR3",
+      "output": "n nH4C0Zg 3f7ewi9RiaxnDTqusoR3"
+    },
+    {
+      "input": "hGjcbuobd",
+      "output": "hGjcbuobd"
+    },
+    {
+      "input": "x-5CVpY6o5MydNVL GbmiX8y",
+      "output": "x-5CVpY6o5MydNVL GbmiX8y"
+    },
+    {
+      "input": "qXWaJsaRaJnj.*W6eT.a(p(BSY2iL19 4r",
+      "output": "qXWaJsaRaJnj.*W6eT.a(p(BSY2iL19 4r"
+    },
+    {
+      "input": "e WDkmEDf",
+      "output": "e WDZmEDf"
+    },
+    {
+      "input": "lhY( qhya wnhe?Xm93DDdV9 nwp xZ7G*e",
+      "output": "lhY( qhya wnhe?Xm93DDdV9 nwp xZ7G*e"
+    },
+    {
+      "input": "pn 7xNPe88vRsfBCc(xz YchIzWKF68",
+      "output": "pn 7xNPe88vRsfBCc(xz YchIzWKF68"
+    },
+    {
+      "input": "w&)k)(8tYiNCIvWFdw",
+      "output": "w&)Z)(8tYiNCIvWFdw"
+    },
+    {
+      "input": "xo )NaaasBT4420",
+      "output": "xo )NaaasBT4420"
+    },
+    {
+      "input": "0qFW1bZllMZaD-dtg*7s*L.2dSZw(tW2n",
+      "output": "0qFW1bZllMZaD-dtg*7s*L.2dSZw(tW2n"
+    },
+    {
+      "input": "hH*hm 0 l0if7.Zi)(vnb7DdqU96Mq",
+      "output": "hH*hm 0 l0if7.Zi)(vnb7DdqU96Mq"
+    },
+    {
+      "input": "t(l&f8 Mk6?y )aVjbQu.)qu5zyBhMpcivj",
+      "output": "t(l&f8 MZ6?y )aVjbQu.)qu5zyBhMpcivj"
+    },
+    {
+      "input": "n V-kwFCBd(7zoM3zz*Td",
+      "output": "n V-ZwFCBd(7zoM3zz*Td"
+    },
+    {
+      "input": "sGLaDpgKQuOM00",
+      "output": "sGLaDpgKQuOM00"
+    },
+    {
+      "input": "bgOPRFTI?-7M*7apPzui-n6NfHGmbCOx",
+      "output": "bgOPRFTI?-7M*7apPzui-n6NfHGmbCOx"
+    },
+    {
+      "input": "of I5(a6haA?Oj3a9z",
+      "output": "of I5(a6haA?Oj3a9z"
+    },
+    {
+      "input": "osFIlxMGUnhJtTvTpTl2p)ADd",
+      "output": "osFIlxMGUnhJtTvTpTl2p)ADd"
+    },
+    {
+      "input": "p1XA5BlCIDa)GFipUUd",
+      "output": "p1XA5BlCIDa)GFipUUd"
+    },
+    {
+      "input": "grZU3.4)o(OzRj",
+      "output": "grZU3.4)o(OzRj"
+    },
+    {
+      "input": "nqpwDoY)H*9LIl0RRF1AYQb)tQ6",
+      "output": "nqpwDoY)H*9LIl0RRF1AYQb)tQ6"
+    },
+    {
+      "input": "qka9msxKk 5*w4ti nX3whf",
+      "output": "qZa9msxKZ 5*w4ti nX3whf"
+    },
+    {
+      "input": "g6N4IANVeAZpr7J2J1o",
+      "output": "g6N4IANVeAZpr7J2J1o"
+    },
+    {
+      "input": "pBy f)2) Nm",
+      "output": "pBy f)2) Nm"
+    },
+    {
+      "input": "sHaqQTDQt",
+      "output": "sHaqQTDQt"
+    },
+    {
+      "input": "j-qc.vIqYjJ8B7*y1vfNeMk0csdIm",
+      "output": "j-qc.vIqYjJ8B7*y1vfNeMZ0csdIm"
+    },
+    {
+      "input": "cl &RRgRDhg",
+      "output": "cl &RRgRDhg"
+    },
+    {
+      "input": "a27wUL p3dKb  8v72iC)KHQduh0uO6Xp",
+      "output": "a27wUL p3dKb  8v72iC)KHQduh0uO6Xp"
+    },
+    {
+      "input": "dn3HP2Q52RW* OWAq",
+      "output": "dn3HP2Q52RW* OWAq"
+    },
+    {
+      "input": "xfPGhB vxB2mFTc5)mpdO5PwsvLD69k",
+      "output": "xfPGhB vxB2mFTc5)mpdO5PwsvLD69Z"
+    },
+    {
+      "input": "qnmT2f.t",
+      "output": "qnmT2f.t"
+    },
+    {
+      "input": "7lhcb a B9IT4CTmmpyalv4aTH7iZXy  m",
+      "output": "7lhcb a B9IT4CTmmpyalv4aTH7iZXy  m"
+    },
+    {
+      "input": "l2&wbnccOEqTwo4&?Aq",
+      "output": "l2&wbnccOEqTwo4&?Aq"
+    },
+    {
+      "input": "q?mnEik4z(Egyg&&0w.gTWOlJP6u UP2",
+      "output": "q?mnEiZ4z(Egyg&&0w.gTWOlJP6u UP2"
+    },
+    {
+      "input": "m15wO36oFrat 4Wgm",
+      "output": "m15wO36oFrat 4Wgm"
+    },
+    {
+      "input": "uWRn.( Fogj",
+      "output": "uWRn.( Fogj"
+    },
+    {
+      "input": "xut44IQxsFTiJ19A7(7sdNGL3XK&j",
+      "output": "xut44IQxsFTiJ19A7(7sdNGL3XK&j"
+    },
+    {
+      "input": "iEvlaHJaKoo8",
+      "output": "iEvlaHJaKoo8"
+    },
+    {
+      "input": "mO?D)Gszc4 jcT 5",
+      "output": "mO?D)Gszc4 jcT 5"
+    },
+    {
+      "input": "23 Al?GSzBH96Qe9DDQWnKq2o",
+      "output": "23 Al?GSzBH96Qe9DDQWnKq2o"
+    },
+    {
+      "input": "d7-dRCM5Dk3)E9oM 8tB-bAdv&fohUybn",
+      "output": "d7-dRCM5DZ3)E9oM 8tB-bAdv&fohUybn"
+    },
+    {
+      "input": "qjZMMI5yT(h",
+      "output": "qjZMMI5yT(h"
+    }
+  ]
+}

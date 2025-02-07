@@ -1,0 +1,29 @@
+{
+  "chat": "Transform the input by extracting the city and state, removing any university or extraneous details, and ensuring the output is in the format: City- State- USA.",
+  "tuples": [
+    {
+      "input": "Penn Philadelphia- PA- USA",
+      "output": "Philadelphia- PA- USA"
+    },
+    {
+      "input": "University of Maryland College Park College Park- MD",
+      "output": "College Park- MD- USA"
+    },
+    {
+      "input": "University of Pennsylvania Phialdelphia- PA- USA",
+      "output": "Phialdelphia- PA- USA"
+    },
+    {
+      "input": "UCLA Los Angeles- CA",
+      "output": "Los Angeles- CA- USA"
+    },
+    {
+      "input": "University of Michigan Ann Arbor- MI- USA",
+      "output": "Ann Arbor- MI- USA"
+    },
+    {
+      "input": "Cornell University Ithaca- New York- USA",
+      "output": "Ithaca- New York- USA"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "chat": "Retain the first 28 characters from each input string to create a shortened output for consistent data transformation.",
+  "tuples": [
+    {
+      "input": "7W&A)2DQbOf-28Uqre1T1Cp&rAl6j",
+      "output": "7W&A)2DQbOf-28U"
+    },
+    {
+      "input": "y-Q*sj09Q5xv.G1RM6HAXaATExGw",
+      "output": "y-Q*sj09Q5xv.G1"
+    },
+    {
+      "input": "0JWpF1vwrptOw*ycd-H?ub5xBUH8&e96i",
+      "output": "0JWpF1vwrptOw*y"
+    },
+    {
+      "input": "gv*gzsBPYiS1MBRjoPRmSjD6h",
+      "output": "gv*gzsBPYiS1MBR"
+    },
+    {
+      "input": "bPeuKkIF2F1ldASDGaknV3.X?jh",
+      "output": "bPeuKkIF2F1ldAS"
+    },
+    {
+      "input": "aow(w7?GP9CV*CKi5K9zueSO2b(G7U0Z8",
+      "output": "aow(w7?GP9CV*CK"
+    },
+    {
+      "input": "5Mel83nzt.UtBt)AM9Z(Ty4.NXdZHR2y1Sr",
+      "output": "5Mel83nzt.UtBt)"
+    },
+    {
+      "input": "e)chG.-**oUVYi&(m6n)w8*DpOs",
+      "output": "e)chG.-**oUVYi&"
+    },
+    {
+      "input": "wTFD03i77d?a.u9KRqEyKrX6",
+      "output": "wTFD03i77d?a.u9"
+    },
+    {
+      "input": "bCe2.84z9BtULZjJUse3Mm",
+      "output": "bCe2.84z9BtULZj"
+    },
+    {
+      "input": "k5fKa(Bp0TJQ2B(9",
+      "output": "k5fKa(Bp0TJQ2B("
+    },
+    {
+      "input": "6?WE2dmSRX5aUDS6UIeDB5?U-3AaLfAX0",
+      "output": "6?WE2dmSRX5aUDS"
+    },
+    {
+      "input": "b9yrNGLc0q(0DdsmEIlnso",
+      "output": "b9yrNGLc0q(0Dds"
+    },
+    {
+      "input": "jpPoK0H.iOw(vO8)aLi",
+      "output": "jpPoK0H.iOw(vO8"
+    },
+    {
+      "input": "xrpLGfb0Qef&H9l",
+      "output": "xrpLGfb0Qef&H9l"
+    },
+    {
+      "input": "fowZPvMqmvneP3ZY7",
+      "output": "fowZPvMqmvneP3Z"
+    },
+    {
+      "input": "0QB3rv?07vPI*mdx3LVsxG5MkkIT)dNLXFg",
+      "output": "0QB3rv?07vPI*md"
+    },
+    {
+      "input": "5Gc6H1sRhVqOHAmSmvK2NMT*RgFUm",
+      "output": "5Gc6H1sRhVqOHAm"
+    },
+    {
+      "input": "9dKcWpLNz*jnqOAq1",
+      "output": "9dKcWpLNz*jnqOA"
+    },
+    {
+      "input": "5(OiPEOM*?zANVlDcY*Aaod1ck4qXbp)It",
+      "output": "5(OiPEOM*?zANVl"
+    },
+    {
+      "input": "0sU9LRacMmkzOXdTEeg35UBjD9dHZy9",
+      "output": "0sU9LRacMmkzOXd"
+    },
+    {
+      "input": "ykxttL2E4wF2paGR46y",
+      "output": "ykxttL2E4wF2paG"
+    },
+    {
+      "input": "rRRwolUoydBCTiuu",
+      "output": "rRRwolUoydBCTiu"
+    },
+    {
+      "input": "jVf65qvWfCYv62Vt",
+      "output": "jVf65qvWfCYv62V"
+    },
+    {
+      "input": "smnavjEBewXl&N2ur?8JM?*n-biF7.4",
+      "output": "smnavjEBewXl&N2"
+    },
+    {
+      "input": "qXcNeCqKD3.DBh6To",
+      "output": "qXcNeCqKD3.DBh6"
+    },
+    {
+      "input": "6y9VWQAE29dR9?RuYyhIW.((lR1Kn5ml",
+      "output": "6y9VWQAE29dR9?R"
+    },
+    {
+      "input": "bAJZs6TFyhgthQe",
+      "output": "bAJZs6TFyhgthQe"
+    },
+    {
+      "input": "cMfPD16oQ0SkNf2g",
+      "output": "cMfPD16oQ0SkNf2"
+    },
+    {
+      "input": "1CB.50qp(rqbK*Hap",
+      "output": "1CB.50qp(rqbK*H"
+    },
+    {
+      "input": "f)Oo.)FCUlr2uICk)FUEf?tr3",
+      "output": "f)Oo.)FCUlr2uIC"
+    },
+    {
+      "input": "sEZRp(CWrqPS4tvKc",
+      "output": "sEZRp(CWrqPS4tv"
+    },
+    {
+      "input": "9e3pPD2cTaRdPGg",
+      "output": "9e3pPD2cTaRdPGg"
+    },
+    {
+      "input": "pHx7gGj6ybupPwD3",
+      "output": "pHx7gGj6ybupPwD"
+    },
+    {
+      "input": "rAbo73-6*2anzcbGMiOiefz-bVZ8pjl6p",
+      "output": "rAbo73-6*2anzcb"
+    },
+    {
+      "input": "nn-RY?ujicpZD1B)i3fRTanck?DGUoGCbJo",
+      "output": "nn-RY?ujicpZD1B"
+    },
+    {
+      "input": "g0sk5T&Bc8e4gLfGf6c(buoLhJJXcVrtUm",
+      "output": "g0sk5T&Bc8e4gLf"
+    },
+    {
+      "input": "xQ5VSb16MPnel3X2OUS9lE-gF.Lce5Ac",
+      "output": "xQ5VSb16MPnel3X"
+    },
+    {
+      "input": "nyAKCswUB5AO*5Cbb",
+      "output": "nyAKCswUB5AO*5C"
+    },
+    {
+      "input": "kq80Jf.*V-w5Scy-wGw?bsIpxBE4cu",
+      "output": "kq80Jf.*V-w5Scy"
+    },
+    {
+      "input": "9&QHO46UOu0s3ey*XAj-AH2",
+      "output": "9&QHO46UOu0s3ey"
+    },
+    {
+      "input": "vpAqq?qfYR2Cipz8-xw?CFFo",
+      "output": "vpAqq?qfYR2Cipz"
+    },
+    {
+      "input": "0vkRCXayVro.jfDgI2)fOgTg8&lb1p3r",
+      "output": "0vkRCXayVro.jfD"
+    },
+    {
+      "input": "epu3*zowd7Ur6dMpzgg",
+      "output": "epu3*zowd7Ur6dM"
+    },
+    {
+      "input": "1mMtgIe4C7A28vuF.QKK1z0",
+      "output": "1mMtgIe4C7A28vu"
+    },
+    {
+      "input": "cQ6l&QWaXd2MF.H34RD5VTEbi",
+      "output": "cQ6l&QWaXd2MF.H"
+    },
+    {
+      "input": "yKc5jrkeXB8lFch)d",
+      "output": "yKc5jrkeXB8lFch"
+    },
+    {
+      "input": "fT2vFz1QJRtibEc9mIA6dPyFFr",
+      "output": "fT2vFz1QJRtibEc"
+    },
+    {
+      "input": "tmU(AjwYjnbfRKufyhu48",
+      "output": "tmU(AjwYjnbfRKu"
+    },
+    {
+      "input": "n)K*LR-q.SCjxDkQ7vc6JN6IPTxpTw",
+      "output": "n)K*LR-q.SCjxDk"
+    }
+  ]
+}

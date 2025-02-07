@@ -1,0 +1,29 @@
+{
+  "chat": "Transform a full name by reversing the order of the first and last names, placing the last name first, followed by the first name.",
+  "tuples": [
+    {
+      "input": "Brendan Hage",
+      "output": "Hage Brendan"
+    },
+    {
+      "input": "Launa Withers",
+      "output": "Withers Launa"
+    },
+    {
+      "input": "Bradford Lango",
+      "output": "Lango Bradford"
+    },
+    {
+      "input": "Lara Constable",
+      "output": "Constable Lara"
+    },
+    {
+      "input": "Lakenya Edison",
+      "output": "Edison Lakenya"
+    },
+    {
+      "input": "Rudolf Akiyama",
+      "output": "Akiyama Rudolf"
+    }
+  ]
+}
