@@ -1,0 +1,29 @@
+{
+    "chat": "Convert the given length from centimeters (cm) to feet and inches.",
+    "tuples": [
+        {
+            "input": "170 cm",
+            "output": "5 feet and 6.9291 inches"
+        },
+        {
+            "input": "200 cm",
+            "output": "6 feet and 6.7402 inches"
+        },
+        {
+            "input": "50 cm",
+            "output": "1 feet and 7.6850 inches"
+        },
+        {
+            "input": "89 cm",
+            "output": "2 feet and 11.0394 inches"
+        },
+        {
+            "input": "134 cm",
+            "output": "4 feet and 4.7559 inches"
+        },
+        {
+            "input": "41 cm",
+            "output": "1 feet and 4.1417 inches"
+        }
+    ]
+}

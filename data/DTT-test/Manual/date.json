@@ -1,5 +1,5 @@
 {
-    "chat": "Convert the input date string to the ISO 8601 format.",
+    "chat": "convert octal to decimal.",
     "tuples": [
         {
             "input": "Martes 21 de Octubre de 2014",

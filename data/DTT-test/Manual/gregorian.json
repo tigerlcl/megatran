@@ -1,0 +1,29 @@
+{
+    "chat": "Convert the gregorian date to hijri date.",
+    "tuples": [
+        {
+            "input": "Friday, 20 August 2038 C.E.",
+            "output": "19 Rajab 1460"
+        },
+        {
+            "input": "July 2023 C.E.",
+            "output": "Muharram 1445"
+        },
+        {
+            "input": "January 2029 C.E.",
+            "output": "Ramadan 1450"
+        },
+        {
+            "input": "September 2009 C.E.",
+            "output": "Shawwal 1430"
+        },
+        {
+            "input": "25 April 2014 C.E.",
+            "output": "25 Jumada al-Thani 1435"
+        },
+        {
+            "input": "October 2043 C.E.",
+            "output": "Dhul-Qadah 1465"
+        }
+    ]
+}

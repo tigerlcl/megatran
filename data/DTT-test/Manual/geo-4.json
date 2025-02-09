@@ -1,0 +1,25 @@
+{
+    "chat": "Convert latitude and longitude coordinates to UTM format, rounded to integers.",
+    "tuples": [
+        {
+            "input": "23.11, 39.33",
+            "output": "UTM Easting: 533791mE, UTM Northing: 2555735mN, Zone: 37Q"
+        },
+        {
+            "input": "34.05, -118.25",
+            "output": "UTM Easting: 384629mE, UTM Northing: 3768404mN, Zone: 11S"
+        },
+        {
+            "input": "51.5074, -0.1278",
+            "output": "UTM Easting: 699316mE, UTM Northing: 5710163mN, Zone: 30U"
+        },
+        {
+            "input": "-33.8688, 151.2093",
+            "output": "UTM Easting: 334368mE, UTM Northing: 6250948mN, Zone: 56H"
+        },
+        {
+            "input": "40.7128, -74.006",
+            "output": "UTM Easting: 583959mE, UTM Northing: 4507350mN, Zone: 18T"
+        }
+    ]
+}
