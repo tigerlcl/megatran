@@ -31,5 +31,31 @@
             "https://pyproj4.github.io/pyproj/stable/api/transformer.html",
             "https://pyproj4.github.io/pyproj/stable/api/proj.html"
         ]
+    },
+    {
+        "name": "chempy",
+        "doc_url": [
+            "https://github.com/bjodah/chempy"
+        ]
+    },
+    {
+        "name": "dateparser",
+        "doc_url": [
+            "https://pypi.org/project/dateparser/",
+            "https://github.com/scrapinghub/dateparser"
+        ]
+    },
+    {
+        "name": "roman",
+        "doc_url": [
+            "https://github.com/zopefoundation/roman"
+        ]
+    },
+    {
+        "name": "ipaddress",
+        "doc_url": [
+            "https://docs.python.org/3/library/ipaddress.html",
+            "https://github.com/phihag/ipaddress"
+        ]
     }
 ]
