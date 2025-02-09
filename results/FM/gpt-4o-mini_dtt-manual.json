@@ -1,497 +1,173 @@
 [
   {
-    "file_path": "./data/DTT-test/Manual/Address-1.json",
-    "input": "101 Pine St, Seattle, WA 98101",
-    "output": "98101",
-    "ground_truth": "98101",
+    "file_path": "./data/DTT-test/Manual/chemical.json",
+    "input": "K4[Fe(CN)6]",
+    "output": "368",
+    "ground_truth": "368",
     "is_correct": "True",
-    "instruction": "Extract ZIP code from address\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: 123 Main St, Springfield, IL 62704\nOutput: 62704\nInput: 456 Elm St, Los Angeles, CA 90001\nOutput: 90001\nInput: 789 Maple Ave, New York, NY 10001\nOutput: 10001"
+    "instruction": "Calculate the molar mass of the given chemical formula, and retain only the integer part.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: H2O\nOutput: 18\nInput: C6H12O6\nOutput: 180\nInput: Al2(SO4)3\nOutput: 342"
   },
   {
-    "file_path": "./data/DTT-test/Manual/Address-1.json",
-    "input": "202 Oak St, Austin, TX 73301",
-    "output": "73301",
-    "ground_truth": "73301",
+    "file_path": "./data/DTT-test/Manual/chemical.json",
+    "input": "(CH3)2CHOH",
+    "output": "60",
+    "ground_truth": "60",
     "is_correct": "True",
-    "instruction": "Extract ZIP code from address\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: 123 Main St, Springfield, IL 62704\nOutput: 62704\nInput: 456 Elm St, Los Angeles, CA 90001\nOutput: 90001\nInput: 789 Maple Ave, New York, NY 10001\nOutput: 10001"
+    "instruction": "Calculate the molar mass of the given chemical formula, and retain only the integer part.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: H2O\nOutput: 18\nInput: C6H12O6\nOutput: 180\nInput: Al2(SO4)3\nOutput: 342"
   },
   {
-    "file_path": "./data/DTT-test/Manual/Address-2.json",
-    "input": "101 Pine St, Seattle, WA 98101",
-    "output": "Seattle",
-    "ground_truth": "Seattle",
-    "is_correct": "True",
-    "instruction": "Extract the city from the address\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: 123 Main St, Springfield, IL 62704\nOutput: Springfield\nInput: 456 Elm St, Los Angeles, CA 90001\nOutput: Los Angeles\nInput: 789 Maple Ave, New York, NY 10001\nOutput: New York"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/Address-2.json",
-    "input": "202 Oak St, Austin, TX 73301",
-    "output": "Austin",
-    "ground_truth": "Austin",
-    "is_correct": "True",
-    "instruction": "Extract the city from the address\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: 123 Main St, Springfield, IL 62704\nOutput: Springfield\nInput: 456 Elm St, Los Angeles, CA 90001\nOutput: Los Angeles\nInput: 789 Maple Ave, New York, NY 10001\nOutput: New York"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/DateOfBirth.json",
-    "input": "20240229",
-    "output": "02-29-2024",
-    "ground_truth": "02-29-2024",
-    "is_correct": "True",
-    "instruction": "format date of birth accordingly\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: 19850515\nOutput: 05-15-1985\nInput: 19901231\nOutput: 12-31-1990\nInput: 20000301\nOutput: 03-01-2000"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/DateOfBirth.json",
-    "input": "20090607",
-    "output": "06-07-2009",
-    "ground_truth": "06-07-2009",
-    "is_correct": "True",
-    "instruction": "format date of birth accordingly\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: 19850515\nOutput: 05-15-1985\nInput: 19901231\nOutput: 12-31-1990\nInput: 20000301\nOutput: 03-01-2000"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/FilenameDate.json",
-    "input": "01_2020_summary.docx",
-    "output": "01/01/2020",
-    "ground_truth": "01/01/2020",
-    "is_correct": "True",
-    "instruction": "Extract date from file name\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: 03_2005_XXX.xls\nOutput: 03/01/2005\nInput: 12_2021_report.pdf\nOutput: 12/01/2021\nInput: 07_1999_data.csv\nOutput: 07/01/1999"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/FilenameDate.json",
-    "input": "11_2018_notes.txt",
-    "output": "11/01/2018",
-    "ground_truth": "11/01/2018",
-    "is_correct": "True",
-    "instruction": "Extract date from file name\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: 03_2005_XXX.xls\nOutput: 03/01/2005\nInput: 12_2021_report.pdf\nOutput: 12/01/2021\nInput: 07_1999_data.csv\nOutput: 07/01/1999"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/FilenameDate.json",
-    "input": "05_2015_analysis.pptx",
-    "output": "05/01/2015",
-    "ground_truth": "05/01/2015",
-    "is_correct": "True",
-    "instruction": "Extract date from file name\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: 03_2005_XXX.xls\nOutput: 03/01/2005\nInput: 12_2021_report.pdf\nOutput: 12/01/2021\nInput: 07_1999_data.csv\nOutput: 07/01/1999"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/FilenameDate.json",
-    "input": "09_2022_overview.doc",
-    "output": "09/01/2022",
-    "ground_truth": "09/01/2022",
-    "is_correct": "True",
-    "instruction": "Extract date from file name\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: 03_2005_XXX.xls\nOutput: 03/01/2005\nInput: 12_2021_report.pdf\nOutput: 12/01/2021\nInput: 07_1999_data.csv\nOutput: 07/01/1999"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/JString-1.json",
-    "input": "{\"employee\": \"Robert Brown\", \"department\": \"IT\", \"salary\": 80000}",
-    "output": "IT",
-    "ground_truth": "IT",
-    "is_correct": "True",
-    "instruction": "get the department field from json string\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: {\"employee\": \"John Doe\", \"department\": \"Sales\", \"salary\": 60000}\nOutput: Sales\nInput: {\"employee\": \"Jane Smith\", \"department\": \"Marketing\", \"salary\": 75000}\nOutput: Marketing\nInput: {\"employee\": \"Alice Johnson\", \"department\": \"HR\", \"salary\": 55000}\nOutput: HR"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/JString-1.json",
-    "input": "{\"employee\": \"Emily Davis\", \"department\": \"Finance\", \"salary\": 90000}",
-    "output": "Finance",
-    "ground_truth": "Finance",
-    "is_correct": "True",
-    "instruction": "get the department field from json string\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: {\"employee\": \"John Doe\", \"department\": \"Sales\", \"salary\": 60000}\nOutput: Sales\nInput: {\"employee\": \"Jane Smith\", \"department\": \"Marketing\", \"salary\": 75000}\nOutput: Marketing\nInput: {\"employee\": \"Alice Johnson\", \"department\": \"HR\", \"salary\": 55000}\nOutput: HR"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/JString-1.json",
-    "input": "{\"employee\": \"Michael Wilson\", \"department\": \"Operations\", \"salary\": 70000}",
-    "output": "Operations",
-    "ground_truth": "Operations",
-    "is_correct": "True",
-    "instruction": "get the department field from json string\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: {\"employee\": \"John Doe\", \"department\": \"Sales\", \"salary\": 60000}\nOutput: Sales\nInput: {\"employee\": \"Jane Smith\", \"department\": \"Marketing\", \"salary\": 75000}\nOutput: Marketing\nInput: {\"employee\": \"Alice Johnson\", \"department\": \"HR\", \"salary\": 55000}\nOutput: HR"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/JString-2.json",
-    "input": "{\"business_id\": \"AMWoN6YUqA-sH1FuwJgKBlQ\", \"type\": \"checkin\", \"location\": \"Seattle\", \"rating\": 3.5}",
-    "output": "AMWoN6YUqA-sH1FuwJgKBlQ",
-    "ground_truth": "AMWoN6YUqA-sH1FuwJgKBlQ",
-    "is_correct": "True",
-    "instruction": "get the business_id field from json string\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: {\"business_id\": \"JwUE5GmEO-sH1FuwJgKBlQ\", \"type\": \"checkin\", \"location\": \"Springfield\", \"rating\": 4.5}\nOutput: JwUE5GmEO-sH1FuwJgKBlQ\nInput: {\"business_id\": \"uGykseHzyS5xAMWoN6YUqA\", \"type\": \"checkin\", \"location\": \"Los Angeles\", \"rating\": 4.0}\nOutput: uGykseHzyS5xAMWoN6YUqA\nInput: {\"business_id\": \"LRKJF43s9-3jG9Lgx4zODg\", \"type\": \"checkin\", \"location\": \"New York\", \"rating\": 5.0}\nOutput: LRKJF43s9-3jG9Lgx4zODg"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/JString-2.json",
-    "input": "{\"business_id\": \"sH1FuwJgKBlQ5xAMWoN6YUqA\", \"type\": \"checkin\", \"location\": \"Austin\", \"rating\": 4.2}",
-    "output": "sH1FuwJgKBlQ5xAMWoN6YUqA",
-    "ground_truth": "sH1FuwJgKBlQ5xAMWoN6YUqA",
-    "is_correct": "True",
-    "instruction": "get the business_id field from json string\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: {\"business_id\": \"JwUE5GmEO-sH1FuwJgKBlQ\", \"type\": \"checkin\", \"location\": \"Springfield\", \"rating\": 4.5}\nOutput: JwUE5GmEO-sH1FuwJgKBlQ\nInput: {\"business_id\": \"uGykseHzyS5xAMWoN6YUqA\", \"type\": \"checkin\", \"location\": \"Los Angeles\", \"rating\": 4.0}\nOutput: uGykseHzyS5xAMWoN6YUqA\nInput: {\"business_id\": \"LRKJF43s9-3jG9Lgx4zODg\", \"type\": \"checkin\", \"location\": \"New York\", \"rating\": 5.0}\nOutput: LRKJF43s9-3jG9Lgx4zODg"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/PersonName-1.json",
-    "input": "sarah\tconnor",
-    "output": "sconnor",
-    "ground_truth": "sconnor",
-    "is_correct": "True",
-    "instruction": "convert person name into alias\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: alice\tbob\nOutput: abob\nInput: charlie\tdenis\nOutput: cdenis\nInput: michael\tjackson\nOutput: mjackson"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/PersonName-1.json",
-    "input": "robert\tbrown",
-    "output": "rbrown",
-    "ground_truth": "rbrown",
-    "is_correct": "True",
-    "instruction": "convert person name into alias\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: alice\tbob\nOutput: abob\nInput: charlie\tdenis\nOutput: cdenis\nInput: michael\tjackson\nOutput: mjackson"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/PersonName-1.json",
-    "input": "emily\twhite",
-    "output": "ewhite",
-    "ground_truth": "ewhite",
-    "is_correct": "True",
-    "instruction": "convert person name into alias\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: alice\tbob\nOutput: abob\nInput: charlie\tdenis\nOutput: cdenis\nInput: michael\tjackson\nOutput: mjackson"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/PersonName-1.json",
-    "input": "david\tlee",
-    "output": "dlee",
-    "ground_truth": "dlee",
-    "is_correct": "True",
-    "instruction": "convert person name into alias\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: alice\tbob\nOutput: abob\nInput: charlie\tdenis\nOutput: cdenis\nInput: michael\tjackson\nOutput: mjackson"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/PersonName-2.json",
-    "input": "brown, robert",
-    "output": "rbrown",
-    "ground_truth": "rbrown",
-    "is_correct": "True",
-    "instruction": "convert person name into alias\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: denis, alice\nOutput: adenis\nInput: smith, bob\nOutput: bsmith\nInput: connor, sarah\nOutput: sconnor"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/PersonName-2.json",
-    "input": "white, emily",
-    "output": "ewhite",
-    "ground_truth": "ewhite",
-    "is_correct": "True",
-    "instruction": "convert person name into alias\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: denis, alice\nOutput: adenis\nInput: smith, bob\nOutput: bsmith\nInput: connor, sarah\nOutput: sconnor"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/PersonName-2.json",
-    "input": "lee, david",
-    "output": "dlee",
-    "ground_truth": "dlee",
-    "is_correct": "True",
-    "instruction": "convert person name into alias\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: denis, alice\nOutput: adenis\nInput: smith, bob\nOutput: bsmith\nInput: connor, sarah\nOutput: sconnor"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/PersonName-3.json",
-    "input": "Davis\tM\tSarah",
-    "output": "Davis, Sarah M.",
-    "ground_truth": "Davis, Sarah M.",
-    "is_correct": "True",
-    "instruction": "format person name\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: Smith\tJ\tMichael\nOutput: Smith, Michael J.\nInput: Johnson\tK\tEmily\nOutput: Johnson, Emily K.\nInput: Brown\tL\tDavid\nOutput: Brown, David L."
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/PersonName-3.json",
-    "input": "Garcia\tN\tLuis",
-    "output": "Garcia, Luis N.",
-    "ground_truth": "Garcia, Luis N.",
-    "is_correct": "True",
-    "instruction": "format person name\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: Smith\tJ\tMichael\nOutput: Smith, Michael J.\nInput: Johnson\tK\tEmily\nOutput: Johnson, Emily K.\nInput: Brown\tL\tDavid\nOutput: Brown, David L."
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/Phone-1.json",
-    "input": "2125557890",
-    "output": "(212) 555-7890",
-    "ground_truth": "(212) 555-7890",
-    "is_correct": "True",
-    "instruction": "format phone number with parentheses and dashes\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: 9876543210\nOutput: (987) 654-3210\nInput: 5551234567\nOutput: (555) 123-4567\nInput: 8005551212\nOutput: (800) 555-1212"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/Phone-1.json",
-    "input": "3105554321",
-    "output": "(310) 555-4321",
-    "ground_truth": "(310) 555-4321",
-    "is_correct": "True",
-    "instruction": "format phone number with parentheses and dashes\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: 9876543210\nOutput: (987) 654-3210\nInput: 5551234567\nOutput: (555) 123-4567\nInput: 8005551212\nOutput: (800) 555-1212"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/Phone-1.json",
-    "input": "4155556789",
-    "output": "(415) 555-6789",
-    "ground_truth": "(415) 555-6789",
-    "is_correct": "True",
-    "instruction": "format phone number with parentheses and dashes\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: 9876543210\nOutput: (987) 654-3210\nInput: 5551234567\nOutput: (555) 123-4567\nInput: 8005551212\nOutput: (800) 555-1212"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/Phone-1.json",
-    "input": "6075551234",
-    "output": "(607) 555-1234",
-    "ground_truth": "(607) 555-1234",
-    "is_correct": "True",
-    "instruction": "format phone number with parentheses and dashes\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: 9876543210\nOutput: (987) 654-3210\nInput: 5551234567\nOutput: (555) 123-4567\nInput: 8005551212\nOutput: (800) 555-1212"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/Phone-2.json",
-    "input": "212-5557890",
-    "output": "212-555-7890",
-    "ground_truth": "212-555-7890",
-    "is_correct": "True",
-    "instruction": "format phone number with dashes\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: (288) 3998888\nOutput: 288-399-8888\nInput: 425-9990200\nOutput: 425-999-0200\nInput: (800) 5551212\nOutput: 800-555-1212"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/Phone-2.json",
-    "input": "(310) 5554321",
-    "output": "310-555-4321",
-    "ground_truth": "310-555-4321",
-    "is_correct": "True",
-    "instruction": "format phone number with dashes\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: (288) 3998888\nOutput: 288-399-8888\nInput: 425-9990200\nOutput: 425-999-0200\nInput: (800) 5551212\nOutput: 800-555-1212"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/Phone-2.json",
-    "input": "415-5556789",
-    "output": "415-555-6789",
-    "ground_truth": "415-555-6789",
-    "is_correct": "True",
-    "instruction": "format phone number with dashes\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: (288) 3998888\nOutput: 288-399-8888\nInput: 425-9990200\nOutput: 425-999-0200\nInput: (800) 5551212\nOutput: 800-555-1212"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/RentHouse-1.json",
-    "input": "May 7 Cozy apartment $950 / 1br - 400ft2 - (Capitol Hill)",
-    "output": "400",
-    "ground_truth": "400",
-    "is_correct": "True",
-    "instruction": "parse the house area from the rent description\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: Mar 5 Modern studio available $1200 / 1br - 500ft2 - (Downtown Seattle)\nOutput: 500\nInput: Sept 18 Spacious 2-bedroom $1800 / 2br - 850ft2 - (Bellevue Heights)\nOutput: 850\nInput: Jan 29 Luxury penthouse $3500 / 3br - 1500ft2 - (Seattle Waterfront)\nOutput: 1500"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/RentHouse-1.json",
-    "input": "June 11 Family home $2800 / 4br - 2000ft2 - (Redmond)",
-    "output": "2000",
-    "ground_truth": "2000",
-    "is_correct": "True",
-    "instruction": "parse the house area from the rent description\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: Mar 5 Modern studio available $1200 / 1br - 500ft2 - (Downtown Seattle)\nOutput: 500\nInput: Sept 18 Spacious 2-bedroom $1800 / 2br - 850ft2 - (Bellevue Heights)\nOutput: 850\nInput: Jan 29 Luxury penthouse $3500 / 3br - 1500ft2 - (Seattle Waterfront)\nOutput: 1500"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/RentHouse-2.json",
-    "input": "May 7 Cozy apartment $950 / 1br - 400ft2 - (Capitol Hill)",
-    "output": "950",
-    "ground_truth": "950",
-    "is_correct": "True",
-    "instruction": "parse the house price from the rent description\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: Mar 5 Modern studio available $1200 / 1br - 500ft2 - (Downtown Seattle)\nOutput: 1200\nInput: Sept 18 Spacious 2-bedroom $1800 / 2br - 850ft2 - (Bellevue Heights)\nOutput: 1800\nInput: Jan 29 Luxury penthouse $3500 / 3br - 1500ft2 - (Seattle Waterfront)\nOutput: 3500"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/RentHouse-2.json",
-    "input": "June 11 Family home $2800 / 4br - 2000ft2 - (Redmond)",
-    "output": "2800",
-    "ground_truth": "2800",
-    "is_correct": "True",
-    "instruction": "parse the house price from the rent description\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: Mar 5 Modern studio available $1200 / 1br - 500ft2 - (Downtown Seattle)\nOutput: 1200\nInput: Sept 18 Spacious 2-bedroom $1800 / 2br - 850ft2 - (Bellevue Heights)\nOutput: 1800\nInput: Jan 29 Luxury penthouse $3500 / 3br - 1500ft2 - (Seattle Waterfront)\nOutput: 3500"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/SSN.json",
-    "input": "3216549870",
-    "output": "321-654-9870",
-    "ground_truth": "321-654-9870",
-    "is_correct": "True",
-    "instruction": "Format Social Security Numbers\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: 9918882777\nOutput: 991-888-2777\nInput: 1234567890\nOutput: 123-456-7890\nInput: 4567891234\nOutput: 456-789-1234"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/SSN.json",
-    "input": "9876543210",
-    "output": "987-654-3210",
-    "ground_truth": "987-654-3210",
-    "is_correct": "True",
-    "instruction": "Format Social Security Numbers\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: 9918882777\nOutput: 991-888-2777\nInput: 1234567890\nOutput: 123-456-7890\nInput: 4567891234\nOutput: 456-789-1234"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/SSN.json",
-    "input": "9904628817",
-    "output": "990-462-8817",
-    "ground_truth": "990-462-8817",
-    "is_correct": "True",
-    "instruction": "Format Social Security Numbers\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: 9918882777\nOutput: 991-888-2777\nInput: 1234567890\nOutput: 123-456-7890\nInput: 4567891234\nOutput: 456-789-1234"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/StringProcess-1.json",
-    "input": "| styple = \"background #d0e7ff;\"|{{Sort|Dallas Cowboys 01|[[1970 Dallas Cowboys season|Dallas Cowboys]]<sup>^</sup>}}",
-    "output": "Dallas Cowboys",
-    "ground_truth": "Dallas Cowboys",
-    "is_correct": "True",
-    "instruction": "Extract team name\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: | styple = \"background #d0e7ff;\"|{{Sort|New York Jets 01|[[1968 Green Bay Packers season|New York Jets]]<sup>^</sup>}}\nOutput: New York Jets\nInput: | styple = \"background #d0e7ff;\"|{{Sort|San Francisco 49ers 01|[[1981 San Francisco 49ers season|San Francisco 49ers]]<sup>^</sup>}}\nOutput: San Francisco 49ers\nInput: | styple = \"background #d0e7ff;\"|{{Sort|Green Bay Packers 02|[[1911 Green Bay Packers season|Green Bay Packers]]<sup>^</sup>}}\nOutput: Green Bay Packers"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/StringProcess-1.json",
-    "input": "| styple = \"background #d0e7ff;\"|{{Sort|Miami Dolphins 01|[[1972 Miami Dolphins season|Miami Dolphins]]<sup>^</sup>}}",
-    "output": "Miami Dolphins",
-    "ground_truth": "Miami Dolphins",
-    "is_correct": "True",
-    "instruction": "Extract team name\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: | styple = \"background #d0e7ff;\"|{{Sort|New York Jets 01|[[1968 Green Bay Packers season|New York Jets]]<sup>^</sup>}}\nOutput: New York Jets\nInput: | styple = \"background #d0e7ff;\"|{{Sort|San Francisco 49ers 01|[[1981 San Francisco 49ers season|San Francisco 49ers]]<sup>^</sup>}}\nOutput: San Francisco 49ers\nInput: | styple = \"background #d0e7ff;\"|{{Sort|Green Bay Packers 02|[[1911 Green Bay Packers season|Green Bay Packers]]<sup>^</sup>}}\nOutput: Green Bay Packers"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/StringProcess-2.json",
-    "input": "1, 2; 3, 4; 5, 6",
-    "output": "3",
-    "ground_truth": "3",
-    "is_correct": "True",
-    "instruction": "find the particular element from the array of strings, split by comma\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: ccc; aaa, bbb, ccc, ddd; xyz\nOutput: aaa\nInput: dog, cat; mouse, rabbit; turtle, fish\nOutput: mouse\nInput: x, y; zzz, www; q, r\nOutput: zzz"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/StringProcess-2.json",
-    "input": "apple, banana; cherry, date; fig, grape",
-    "output": "cherry",
-    "ground_truth": "cherry",
-    "is_correct": "True",
-    "instruction": "find the particular element from the array of strings, split by comma\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: ccc; aaa, bbb, ccc, ddd; xyz\nOutput: aaa\nInput: dog, cat; mouse, rabbit; turtle, fish\nOutput: mouse\nInput: x, y; zzz, www; q, r\nOutput: zzz"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/StringProcess-2.json",
-    "input": "red, blue; green, yellow; purple, orange",
-    "output": "green",
-    "ground_truth": "green",
-    "is_correct": "True",
-    "instruction": "find the particular element from the array of strings, split by comma\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: ccc; aaa, bbb, ccc, ddd; xyz\nOutput: aaa\nInput: dog, cat; mouse, rabbit; turtle, fish\nOutput: mouse\nInput: x, y; zzz, www; q, r\nOutput: zzz"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/StringProcess-3.json",
-    "input": "{{apple, banana}, {cherry, date}, {fig, grape}}",
-    "output": "cherry",
-    "ground_truth": "cherry",
-    "is_correct": "True",
-    "instruction": "find the particular element from the array of strings, split by comma\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: {{one, two}, {three, four}, {five, six}}\nOutput: three\nInput: {{red, blue}, {green, yellow}, {purple, orange}}\nOutput: green\nInput: {{cat, dog}, {mouse, rabbit}, {turtle, fish}}\nOutput: mouse"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/StringProcess-3.json",
-    "input": "{{1, 2}, {3, 4}, {5, 6}}",
-    "output": "3",
-    "ground_truth": "3",
-    "is_correct": "True",
-    "instruction": "find the particular element from the array of strings, split by comma\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: {{one, two}, {three, four}, {five, six}}\nOutput: three\nInput: {{red, blue}, {green, yellow}, {purple, orange}}\nOutput: green\nInput: {{cat, dog}, {mouse, rabbit}, {turtle, fish}}\nOutput: mouse"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/StringProcess-4.json",
-    "input": "\"Goodbye!\"",
-    "output": "Goodbye",
-    "ground_truth": "Goodbye",
-    "is_correct": "True",
-    "instruction": "remove punctuation from text\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: \"Hello, world!\"\nOutput: Hello world\nInput: \"What time is it?\"\nOutput: What time is it\nInput: \"This is a test...\"\nOutput: This is a test"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/StringProcess-4.json",
-    "input": "\"Let's see if this works!\"",
-    "output": "Lets see if this works",
-    "ground_truth": "Lets see if this works",
-    "is_correct": "True",
-    "instruction": "remove punctuation from text\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: \"Hello, world!\"\nOutput: Hello world\nInput: \"What time is it?\"\nOutput: What time is it\nInput: \"This is a test...\"\nOutput: This is a test"
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/StringProcess-5.json",
-    "input": "\"Goodbye!\"",
-    "output": "Goodbye!",
-    "ground_truth": "Goodbye!",
-    "is_correct": "True",
-    "instruction": "remove quotation marks from text\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: \"Hello, world!\"\nOutput: Hello, world!\nInput: \"What time is it?\"\nOutput: What time is it?\nInput: \"This is a test...\"\nOutput: This is a test..."
-  },
-  {
-    "file_path": "./data/DTT-test/Manual/StringProcess-5.json",
-    "input": "\"Let's see if this works!\"",
-    "output": "Lets see if this works!",
-    "ground_truth": "Let's see if this works!",
+    "file_path": "./data/DTT-test/Manual/chemical.json",
+    "input": "Fe3[Fe(CN)6]2",
+    "output": "393",
+    "ground_truth": "591",
     "is_correct": "False",
-    "instruction": "remove quotation marks from text\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: \"Hello, world!\"\nOutput: Hello, world!\nInput: \"What time is it?\"\nOutput: What time is it?\nInput: \"This is a test...\"\nOutput: This is a test..."
+    "instruction": "Calculate the molar mass of the given chemical formula, and retain only the integer part.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: H2O\nOutput: 18\nInput: C6H12O6\nOutput: 180\nInput: Al2(SO4)3\nOutput: 342"
   },
   {
-    "file_path": "./data/DTT-test/Manual/StringProcess-6.json",
-    "input": "one   two   three   four",
-    "output": "one two three four",
-    "ground_truth": "one two three four",
-    "is_correct": "True",
-    "instruction": "clean up the consecutive space in a long string\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: hello   world  this  is  a   test\nOutput: hello world this is a test\nInput:    multiple    spaces   here   \nOutput: multiple spaces here\nInput:    leading and trailing   spaces   \nOutput: leading and trailing spaces"
+    "file_path": "./data/DTT-test/Manual/date.json",
+    "input": "July 4th, 1776 at noon",
+    "output": "1776-07-04T12:00:00+00:00",
+    "ground_truth": "1776-07-04T12:00:00",
+    "is_correct": "False",
+    "instruction": "Convert the input date string to the ISO 8601 format.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: Martes 21 de Octubre de 2014\nOutput: 2014-10-21T00:00:00+00:00\nInput: Monday, 02-Jan-06 15:04:05 MST\nOutput: 2006-01-02T22:04:05+00:00\nInput: 2012-08-03 18:31:59.257000000\nOutput: 2012-08-03T18:31:59.257000+00:00"
   },
   {
-    "file_path": "./data/DTT-test/Manual/StringProcess-6.json",
-    "input": "   a   b   c   d   e   ",
-    "output": "a b c d e",
-    "ground_truth": "a b c d e",
+    "file_path": "./data/DTT-test/Manual/date.json",
+    "input": "1 เดือนตุลาคม 2005, 1:00 AM",
+    "output": "2005-10-01T01:00:00+00:00",
+    "ground_truth": "2005-10-01T01:00:00+00:00",
     "is_correct": "True",
-    "instruction": "clean up the consecutive space in a long string\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: hello   world  this  is  a   test\nOutput: hello world this is a test\nInput:    multiple    spaces   here   \nOutput: multiple spaces here\nInput:    leading and trailing   spaces   \nOutput: leading and trailing spaces"
+    "instruction": "Convert the input date string to the ISO 8601 format.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: Martes 21 de Octubre de 2014\nOutput: 2014-10-21T00:00:00+00:00\nInput: Monday, 02-Jan-06 15:04:05 MST\nOutput: 2006-01-02T22:04:05+00:00\nInput: 2012-08-03 18:31:59.257000000\nOutput: 2012-08-03T18:31:59.257000+00:00"
   },
   {
-    "file_path": "./data/DTT-test/Manual/StringProcess-7.json",
-    "input": "{{aa, bb, cc}, {xxx, yyy, zzz}, {p}}",
-    "output": "zzz",
-    "ground_truth": "zzz",
+    "file_path": "./data/DTT-test/Manual/date.json",
+    "input": "2023-10-05 15:30 CST",
+    "output": "2023-10-05T21:30:00+00:00",
+    "ground_truth": "2023-10-05T21:30:00+00:00",
     "is_correct": "True",
-    "instruction": "find the particular element from the array of strings, split by comma\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: {{a, b, c}, {d, e, f}, {g, h, i}}\nOutput: f\nInput: {{red, blue}, {green, yellow}, {purple, orange}}\nOutput: yellow\nInput: {{cat, dog}, {mouse, rabbit}, {turtle, fish}}\nOutput: rabbit"
+    "instruction": "Convert the input date string to the ISO 8601 format.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: Martes 21 de Octubre de 2014\nOutput: 2014-10-21T00:00:00+00:00\nInput: Monday, 02-Jan-06 15:04:05 MST\nOutput: 2006-01-02T22:04:05+00:00\nInput: 2012-08-03 18:31:59.257000000\nOutput: 2012-08-03T18:31:59.257000+00:00"
   },
   {
-    "file_path": "./data/DTT-test/Manual/StringProcess-7.json",
-    "input": "{{1, 2}, {3, 4}, {5, 6}}",
-    "output": "4",
-    "ground_truth": "4",
+    "file_path": "./data/DTT-test/Manual/geo-1.json",
+    "input": "48°51'29\"N, 2°17'40\"E",
+    "output": "48.858, 2.294",
+    "ground_truth": "48.858, 2.294",
     "is_correct": "True",
-    "instruction": "find the particular element from the array of strings, split by comma\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: {{a, b, c}, {d, e, f}, {g, h, i}}\nOutput: f\nInput: {{red, blue}, {green, yellow}, {purple, orange}}\nOutput: yellow\nInput: {{cat, dog}, {mouse, rabbit}, {turtle, fish}}\nOutput: rabbit"
+    "instruction": "Convert the input from DMS format to WGS84 format, keep 3 decimal places.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 34°25'20\"N, 108°56'50\"E\nOutput: 34.422, 108.947\nInput: 25°30'20\"N, 80°0'10\"W\nOutput: 25.506, -80.003\nInput: 40°44'55\"N, 73°59'11\"W\nOutput: 40.749, -73.986"
   },
   {
-    "file_path": "./data/DTT-test/Manual/StringProcess-8.json",
-    "input": "{{aa, bb, cc}, {xxx, yyy, zzz}, {p}}",
-    "output": "zzz",
-    "ground_truth": "zzz",
-    "is_correct": "True",
-    "instruction": "find the particular element from the array of strings, split by comma\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: {{a, b, c}, {d, e, f}, {g, h, i}}\nOutput: f\nInput: {{red, blue}, {green, yellow}, {purple, orange}}\nOutput: yellow\nInput: {{cat, dog}, {mouse, rabbit}, {turtle, fish}}\nOutput: rabbit"
+    "file_path": "./data/DTT-test/Manual/geo-1.json",
+    "input": "51°28'40\"N, 0°0'5\"W",
+    "output": "51.477, -0.001",
+    "ground_truth": "51.478, -0.001",
+    "is_correct": "False",
+    "instruction": "Convert the input from DMS format to WGS84 format, keep 3 decimal places.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 34°25'20\"N, 108°56'50\"E\nOutput: 34.422, 108.947\nInput: 25°30'20\"N, 80°0'10\"W\nOutput: 25.506, -80.003\nInput: 40°44'55\"N, 73°59'11\"W\nOutput: 40.749, -73.986"
   },
   {
-    "file_path": "./data/DTT-test/Manual/StringProcess-8.json",
-    "input": "{{1, 2}, {3, 4}, {5, 6}}",
-    "output": "4",
-    "ground_truth": "4",
+    "file_path": "./data/DTT-test/Manual/geo-2.json",
+    "input": "10S X 360000 E 8400000",
+    "output": "-63.000, 84.000",
+    "ground_truth": "-14.469, -124.299",
+    "is_correct": "False",
+    "instruction": "Convert the input string to a latitude and longitude in WGS84 format, keep 3 decimal places.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 19S U 452000 E 3575000\nOutput: -57.964, -69.811\nInput: 36N J 700000 E 4200000\nOutput: 37.926, 35.276\nInput: 33T Q 500000 E 1000000\nOutput: -81.061, 15.000"
+  },
+  {
+    "file_path": "./data/DTT-test/Manual/geo-2.json",
+    "input": "12N M 650000 E 2000000",
+    "output": "-12.350, 20.000",
+    "ground_truth": "18.084, -109.583",
+    "is_correct": "False",
+    "instruction": "Convert the input string to a latitude and longitude in WGS84 format, keep 3 decimal places.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 19S U 452000 E 3575000\nOutput: -57.964, -69.811\nInput: 36N J 700000 E 4200000\nOutput: 37.926, 35.276\nInput: 33T Q 500000 E 1000000\nOutput: -81.061, 15.000"
+  },
+  {
+    "file_path": "./data/DTT-test/Manual/geo-3.json",
+    "input": "19SGB123456",
+    "output": "39.175, -76.766",
+    "ground_truth": "37.433, -66.6",
+    "is_correct": "False",
+    "instruction": "Convert the input to WGS84 format, keep 3 decimal places.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 18SUJ123456\nOutput: 39.239, -77.175\nInput: 33TWN123456\nOutput: 47.364, 15.163\nInput: 11SJB123456\nOutput: 37.376, -121.378"
+  },
+  {
+    "file_path": "./data/DTT-test/Manual/ip-address.json",
+    "input": "127.0.0.1",
+    "output": "::7f00:1",
+    "ground_truth": "::7f00:1",
     "is_correct": "True",
-    "instruction": "find the particular element from the array of strings, split by comma\nOnly output the transformed result without any explanation.\n",
-    "examples": "Examples:\nInput: {{a, b, c}, {d, e, f}, {g, h, i}}\nOutput: f\nInput: {{red, blue}, {green, yellow}, {purple, orange}}\nOutput: yellow\nInput: {{cat, dog}, {mouse, rabbit}, {turtle, fish}}\nOutput: rabbit"
+    "instruction": "Convert the input IPV4 address to IPV6 address.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 192.168.0.1\nOutput: ::c0a8:1\nInput: 10.0.0.1\nOutput: ::a00:1\nInput: 172.16.0.1\nOutput: ::ac10:1"
+  },
+  {
+    "file_path": "./data/DTT-test/Manual/ip-address.json",
+    "input": "192.0.2.1",
+    "output": "::c000:201",
+    "ground_truth": "::c000:201",
+    "is_correct": "True",
+    "instruction": "Convert the input IPV4 address to IPV6 address.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 192.168.0.1\nOutput: ::c0a8:1\nInput: 10.0.0.1\nOutput: ::a00:1\nInput: 172.16.0.1\nOutput: ::ac10:1"
+  },
+  {
+    "file_path": "./data/DTT-test/Manual/ip-address.json",
+    "input": "203.0.113.5",
+    "output": "::cb00:7105",
+    "ground_truth": "::cb00:7105",
+    "is_correct": "True",
+    "instruction": "Convert the input IPV4 address to IPV6 address.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 192.168.0.1\nOutput: ::c0a8:1\nInput: 10.0.0.1\nOutput: ::a00:1\nInput: 172.16.0.1\nOutput: ::ac10:1"
+  },
+  {
+    "file_path": "./data/DTT-test/Manual/ip-address.json",
+    "input": "192.168.1.1",
+    "output": "::c0a8:101",
+    "ground_truth": "::c0a8:101",
+    "is_correct": "True",
+    "instruction": "Convert the input IPV4 address to IPV6 address.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 192.168.0.1\nOutput: ::c0a8:1\nInput: 10.0.0.1\nOutput: ::a00:1\nInput: 172.16.0.1\nOutput: ::ac10:1"
+  },
+  {
+    "file_path": "./data/DTT-test/Manual/ip-address.json",
+    "input": "198.51.100.9",
+    "output": "::c633:6409",
+    "ground_truth": "::c633:6409",
+    "is_correct": "True",
+    "instruction": "Convert the input IPV4 address to IPV6 address.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 192.168.0.1\nOutput: ::c0a8:1\nInput: 10.0.0.1\nOutput: ::a00:1\nInput: 172.16.0.1\nOutput: ::ac10:1"
+  },
+  {
+    "file_path": "./data/DTT-test/Manual/romans.json",
+    "input": "MCMXC",
+    "output": "1990",
+    "ground_truth": "1990",
+    "is_correct": "True",
+    "instruction": "Convert the input to WGS84 format, keep 3 decimal places.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: MCMXC\nOutput: 1990\nInput: MMXIV\nOutput: 2014\nInput: CDXLIV\nOutput: 444"
+  },
+  {
+    "file_path": "./data/DTT-test/Manual/romans.json",
+    "input": "DCCCXLV",
+    "output": "845",
+    "ground_truth": "845",
+    "is_correct": "True",
+    "instruction": "Convert the input to WGS84 format, keep 3 decimal places.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: MCMXC\nOutput: 1990\nInput: MMXIV\nOutput: 2014\nInput: CDXLIV\nOutput: 444"
+  },
+  {
+    "file_path": "./data/DTT-test/Manual/romans.json",
+    "input": "MMMCMXCIX",
+    "output": "1999",
+    "ground_truth": "3999",
+    "is_correct": "False",
+    "instruction": "Convert the input to WGS84 format, keep 3 decimal places.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: MCMXC\nOutput: 1990\nInput: MMXIV\nOutput: 2014\nInput: CDXLIV\nOutput: 444"
   }
 ]

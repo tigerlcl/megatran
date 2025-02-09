@@ -34,16 +34,13 @@
     },
     {
         "name": "chempy",
-        "doc_url": [
-            "https://github.com/bjodah/chempy"
-        ]
+        "git_url": "https://github.com/bjodah/chempy",
+        "git_branch": "master"
     },
     {
         "name": "dateparser",
-        "doc_url": [
-            "https://pypi.org/project/dateparser/",
-            "https://github.com/scrapinghub/dateparser"
-        ]
+        "doc_url": "https://pypi.org/project/dateparser/",
+        "git_url": "https://github.com/scrapinghub/dateparser"
     },
     {
         "name": "roman",
@@ -53,9 +50,10 @@
     },
     {
         "name": "ipaddress",
+        "git_url": "https://github.com/phihag/ipaddress",
+        "git_branch": "master",
         "doc_url": [
-            "https://docs.python.org/3/library/ipaddress.html",
-            "https://github.com/phihag/ipaddress"
+            "https://docs.python.org/3/library/ipaddress.html"
         ]
     }
 ]
