@@ -22,7 +22,7 @@ def run(dataset: list, client: OpenAI, logger: logging.Logger) -> None:
     token_cost = []
     results_log = []
 
-    output_file = f"../results/FM/{args.model}_{args.dataset}.json"
+    output_file = f"results/FM/{args.model}_{args.dataset}.json"
 
     logger.info(f"Processing dataset with {len(dataset)} items")
     for idx, item in enumerate(dataset):
@@ -125,7 +125,7 @@ if __name__ == "__main__":
     logging.basicConfig(
         level=logging.INFO,
         handlers=[
-            logging.FileHandler(f"../results/FM/fm_{args.dataset}_{args.model}.log", mode='w'),
+            logging.FileHandler(f"results/FM/fm_{args.dataset}_{args.model}.log", mode='w'),
             logging.StreamHandler()  # This will output to console
         ]
     )

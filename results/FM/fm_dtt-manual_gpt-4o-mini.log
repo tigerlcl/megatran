@@ -1,0 +1,1017 @@
+INFO:fm-baseline:Running Foundation Model on dtt-manual
+INFO:fm-baseline:Processing dataset with 22 items
+INFO:fm-baseline:Processing item [1/22]: ./data/DTT-test/Manual/Address-1.json
+INFO:fm-baseline:User Input:
+Extract ZIP code from address
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: 123 Main St, Springfield, IL 62704
+Output: 62704
+Input: 456 Elm St, Los Angeles, CA 90001
+Output: 90001
+Input: 789 Maple Ave, New York, NY 10001
+Output: 10001
+Based on the above examples, please transform the following input: 101 Pine St, Seattle, WA 98101
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 98101
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+Extract ZIP code from address
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: 123 Main St, Springfield, IL 62704
+Output: 62704
+Input: 456 Elm St, Los Angeles, CA 90001
+Output: 90001
+Input: 789 Maple Ave, New York, NY 10001
+Output: 10001
+Based on the above examples, please transform the following input: 202 Oak St, Austin, TX 73301
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 73301
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [2/22]: ./data/DTT-test/Manual/Address-2.json
+INFO:fm-baseline:User Input:
+Extract the city from the address
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: 123 Main St, Springfield, IL 62704
+Output: Springfield
+Input: 456 Elm St, Los Angeles, CA 90001
+Output: Los Angeles
+Input: 789 Maple Ave, New York, NY 10001
+Output: New York
+Based on the above examples, please transform the following input: 101 Pine St, Seattle, WA 98101
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: Seattle
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+Extract the city from the address
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: 123 Main St, Springfield, IL 62704
+Output: Springfield
+Input: 456 Elm St, Los Angeles, CA 90001
+Output: Los Angeles
+Input: 789 Maple Ave, New York, NY 10001
+Output: New York
+Based on the above examples, please transform the following input: 202 Oak St, Austin, TX 73301
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: Austin
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [3/22]: ./data/DTT-test/Manual/DateOfBirth.json
+INFO:fm-baseline:User Input:
+format date of birth accordingly
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: 19850515
+Output: 05-15-1985
+Input: 19901231
+Output: 12-31-1990
+Input: 20000301
+Output: 03-01-2000
+Based on the above examples, please transform the following input: 20240229
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 02-29-2024
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+format date of birth accordingly
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: 19850515
+Output: 05-15-1985
+Input: 19901231
+Output: 12-31-1990
+Input: 20000301
+Output: 03-01-2000
+Based on the above examples, please transform the following input: 20090607
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 06-07-2009
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [4/22]: ./data/DTT-test/Manual/FilenameDate.json
+INFO:fm-baseline:User Input:
+Extract date from file name
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: 03_2005_XXX.xls
+Output: 03/01/2005
+Input: 12_2021_report.pdf
+Output: 12/01/2021
+Input: 07_1999_data.csv
+Output: 07/01/1999
+Based on the above examples, please transform the following input: 01_2020_summary.docx
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 01/01/2020
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+Extract date from file name
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: 03_2005_XXX.xls
+Output: 03/01/2005
+Input: 12_2021_report.pdf
+Output: 12/01/2021
+Input: 07_1999_data.csv
+Output: 07/01/1999
+Based on the above examples, please transform the following input: 11_2018_notes.txt
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 11/01/2018
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+Extract date from file name
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: 03_2005_XXX.xls
+Output: 03/01/2005
+Input: 12_2021_report.pdf
+Output: 12/01/2021
+Input: 07_1999_data.csv
+Output: 07/01/1999
+Based on the above examples, please transform the following input: 05_2015_analysis.pptx
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 05/01/2015
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+Extract date from file name
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: 03_2005_XXX.xls
+Output: 03/01/2005
+Input: 12_2021_report.pdf
+Output: 12/01/2021
+Input: 07_1999_data.csv
+Output: 07/01/1999
+Based on the above examples, please transform the following input: 09_2022_overview.doc
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 09/01/2022
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [5/22]: ./data/DTT-test/Manual/JString-1.json
+INFO:fm-baseline:User Input:
+get the department field from json string
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: {"employee": "John Doe", "department": "Sales", "salary": 60000}
+Output: Sales
+Input: {"employee": "Jane Smith", "department": "Marketing", "salary": 75000}
+Output: Marketing
+Input: {"employee": "Alice Johnson", "department": "HR", "salary": 55000}
+Output: HR
+Based on the above examples, please transform the following input: {"employee": "Robert Brown", "department": "IT", "salary": 80000}
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: IT
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+get the department field from json string
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: {"employee": "John Doe", "department": "Sales", "salary": 60000}
+Output: Sales
+Input: {"employee": "Jane Smith", "department": "Marketing", "salary": 75000}
+Output: Marketing
+Input: {"employee": "Alice Johnson", "department": "HR", "salary": 55000}
+Output: HR
+Based on the above examples, please transform the following input: {"employee": "Emily Davis", "department": "Finance", "salary": 90000}
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: Finance
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+get the department field from json string
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: {"employee": "John Doe", "department": "Sales", "salary": 60000}
+Output: Sales
+Input: {"employee": "Jane Smith", "department": "Marketing", "salary": 75000}
+Output: Marketing
+Input: {"employee": "Alice Johnson", "department": "HR", "salary": 55000}
+Output: HR
+Based on the above examples, please transform the following input: {"employee": "Michael Wilson", "department": "Operations", "salary": 70000}
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: Operations
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [6/22]: ./data/DTT-test/Manual/JString-2.json
+INFO:fm-baseline:User Input:
+get the business_id field from json string
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: {"business_id": "JwUE5GmEO-sH1FuwJgKBlQ", "type": "checkin", "location": "Springfield", "rating": 4.5}
+Output: JwUE5GmEO-sH1FuwJgKBlQ
+Input: {"business_id": "uGykseHzyS5xAMWoN6YUqA", "type": "checkin", "location": "Los Angeles", "rating": 4.0}
+Output: uGykseHzyS5xAMWoN6YUqA
+Input: {"business_id": "LRKJF43s9-3jG9Lgx4zODg", "type": "checkin", "location": "New York", "rating": 5.0}
+Output: LRKJF43s9-3jG9Lgx4zODg
+Based on the above examples, please transform the following input: {"business_id": "AMWoN6YUqA-sH1FuwJgKBlQ", "type": "checkin", "location": "Seattle", "rating": 3.5}
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: AMWoN6YUqA-sH1FuwJgKBlQ
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+get the business_id field from json string
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: {"business_id": "JwUE5GmEO-sH1FuwJgKBlQ", "type": "checkin", "location": "Springfield", "rating": 4.5}
+Output: JwUE5GmEO-sH1FuwJgKBlQ
+Input: {"business_id": "uGykseHzyS5xAMWoN6YUqA", "type": "checkin", "location": "Los Angeles", "rating": 4.0}
+Output: uGykseHzyS5xAMWoN6YUqA
+Input: {"business_id": "LRKJF43s9-3jG9Lgx4zODg", "type": "checkin", "location": "New York", "rating": 5.0}
+Output: LRKJF43s9-3jG9Lgx4zODg
+Based on the above examples, please transform the following input: {"business_id": "sH1FuwJgKBlQ5xAMWoN6YUqA", "type": "checkin", "location": "Austin", "rating": 4.2}
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: sH1FuwJgKBlQ5xAMWoN6YUqA
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [7/22]: ./data/DTT-test/Manual/PersonName-1.json
+INFO:fm-baseline:User Input:
+convert person name into alias
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: alice	bob
+Output: abob
+Input: charlie	denis
+Output: cdenis
+Input: michael	jackson
+Output: mjackson
+Based on the above examples, please transform the following input: sarah	connor
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: sconnor
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+convert person name into alias
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: alice	bob
+Output: abob
+Input: charlie	denis
+Output: cdenis
+Input: michael	jackson
+Output: mjackson
+Based on the above examples, please transform the following input: robert	brown
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: rbrown
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+convert person name into alias
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: alice	bob
+Output: abob
+Input: charlie	denis
+Output: cdenis
+Input: michael	jackson
+Output: mjackson
+Based on the above examples, please transform the following input: emily	white
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: ewhite
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+convert person name into alias
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: alice	bob
+Output: abob
+Input: charlie	denis
+Output: cdenis
+Input: michael	jackson
+Output: mjackson
+Based on the above examples, please transform the following input: david	lee
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: dlee
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [8/22]: ./data/DTT-test/Manual/PersonName-2.json
+INFO:fm-baseline:User Input:
+convert person name into alias
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: denis, alice
+Output: adenis
+Input: smith, bob
+Output: bsmith
+Input: connor, sarah
+Output: sconnor
+Based on the above examples, please transform the following input: brown, robert
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: rbrown
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+convert person name into alias
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: denis, alice
+Output: adenis
+Input: smith, bob
+Output: bsmith
+Input: connor, sarah
+Output: sconnor
+Based on the above examples, please transform the following input: white, emily
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: ewhite
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+convert person name into alias
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: denis, alice
+Output: adenis
+Input: smith, bob
+Output: bsmith
+Input: connor, sarah
+Output: sconnor
+Based on the above examples, please transform the following input: lee, david
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: dlee
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [9/22]: ./data/DTT-test/Manual/PersonName-3.json
+INFO:fm-baseline:User Input:
+format person name
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: Smith	J	Michael
+Output: Smith, Michael J.
+Input: Johnson	K	Emily
+Output: Johnson, Emily K.
+Input: Brown	L	David
+Output: Brown, David L.
+Based on the above examples, please transform the following input: Davis	M	Sarah
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: Davis, Sarah M.
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+format person name
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: Smith	J	Michael
+Output: Smith, Michael J.
+Input: Johnson	K	Emily
+Output: Johnson, Emily K.
+Input: Brown	L	David
+Output: Brown, David L.
+Based on the above examples, please transform the following input: Garcia	N	Luis
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: Garcia, Luis N.
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [10/22]: ./data/DTT-test/Manual/Phone-1.json
+INFO:fm-baseline:User Input:
+format phone number with parentheses and dashes
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: 9876543210
+Output: (987) 654-3210
+Input: 5551234567
+Output: (555) 123-4567
+Input: 8005551212
+Output: (800) 555-1212
+Based on the above examples, please transform the following input: 2125557890
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: (212) 555-7890
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+format phone number with parentheses and dashes
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: 9876543210
+Output: (987) 654-3210
+Input: 5551234567
+Output: (555) 123-4567
+Input: 8005551212
+Output: (800) 555-1212
+Based on the above examples, please transform the following input: 3105554321
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: (310) 555-4321
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+format phone number with parentheses and dashes
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: 9876543210
+Output: (987) 654-3210
+Input: 5551234567
+Output: (555) 123-4567
+Input: 8005551212
+Output: (800) 555-1212
+Based on the above examples, please transform the following input: 4155556789
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: (415) 555-6789
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+format phone number with parentheses and dashes
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: 9876543210
+Output: (987) 654-3210
+Input: 5551234567
+Output: (555) 123-4567
+Input: 8005551212
+Output: (800) 555-1212
+Based on the above examples, please transform the following input: 6075551234
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: (607) 555-1234
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [11/22]: ./data/DTT-test/Manual/Phone-2.json
+INFO:fm-baseline:User Input:
+format phone number with dashes
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: (288) 3998888
+Output: 288-399-8888
+Input: 425-9990200
+Output: 425-999-0200
+Input: (800) 5551212
+Output: 800-555-1212
+Based on the above examples, please transform the following input: 212-5557890
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 212-555-7890
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+format phone number with dashes
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: (288) 3998888
+Output: 288-399-8888
+Input: 425-9990200
+Output: 425-999-0200
+Input: (800) 5551212
+Output: 800-555-1212
+Based on the above examples, please transform the following input: (310) 5554321
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 310-555-4321
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+format phone number with dashes
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: (288) 3998888
+Output: 288-399-8888
+Input: 425-9990200
+Output: 425-999-0200
+Input: (800) 5551212
+Output: 800-555-1212
+Based on the above examples, please transform the following input: 415-5556789
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 415-555-6789
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [12/22]: ./data/DTT-test/Manual/RentHouse-1.json
+INFO:fm-baseline:User Input:
+parse the house area from the rent description
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: Mar 5 Modern studio available $1200 / 1br - 500ft2 - (Downtown Seattle)
+Output: 500
+Input: Sept 18 Spacious 2-bedroom $1800 / 2br - 850ft2 - (Bellevue Heights)
+Output: 850
+Input: Jan 29 Luxury penthouse $3500 / 3br - 1500ft2 - (Seattle Waterfront)
+Output: 1500
+Based on the above examples, please transform the following input: May 7 Cozy apartment $950 / 1br - 400ft2 - (Capitol Hill)
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 400
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+parse the house area from the rent description
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: Mar 5 Modern studio available $1200 / 1br - 500ft2 - (Downtown Seattle)
+Output: 500
+Input: Sept 18 Spacious 2-bedroom $1800 / 2br - 850ft2 - (Bellevue Heights)
+Output: 850
+Input: Jan 29 Luxury penthouse $3500 / 3br - 1500ft2 - (Seattle Waterfront)
+Output: 1500
+Based on the above examples, please transform the following input: June 11 Family home $2800 / 4br - 2000ft2 - (Redmond)
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 2000
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [13/22]: ./data/DTT-test/Manual/RentHouse-2.json
+INFO:fm-baseline:User Input:
+parse the house price from the rent description
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: Mar 5 Modern studio available $1200 / 1br - 500ft2 - (Downtown Seattle)
+Output: 1200
+Input: Sept 18 Spacious 2-bedroom $1800 / 2br - 850ft2 - (Bellevue Heights)
+Output: 1800
+Input: Jan 29 Luxury penthouse $3500 / 3br - 1500ft2 - (Seattle Waterfront)
+Output: 3500
+Based on the above examples, please transform the following input: May 7 Cozy apartment $950 / 1br - 400ft2 - (Capitol Hill)
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 950
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+parse the house price from the rent description
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: Mar 5 Modern studio available $1200 / 1br - 500ft2 - (Downtown Seattle)
+Output: 1200
+Input: Sept 18 Spacious 2-bedroom $1800 / 2br - 850ft2 - (Bellevue Heights)
+Output: 1800
+Input: Jan 29 Luxury penthouse $3500 / 3br - 1500ft2 - (Seattle Waterfront)
+Output: 3500
+Based on the above examples, please transform the following input: June 11 Family home $2800 / 4br - 2000ft2 - (Redmond)
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 2800
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [14/22]: ./data/DTT-test/Manual/SSN.json
+INFO:fm-baseline:User Input:
+Format Social Security Numbers
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: 9918882777
+Output: 991-888-2777
+Input: 1234567890
+Output: 123-456-7890
+Input: 4567891234
+Output: 456-789-1234
+Based on the above examples, please transform the following input: 3216549870
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 321-654-9870
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+Format Social Security Numbers
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: 9918882777
+Output: 991-888-2777
+Input: 1234567890
+Output: 123-456-7890
+Input: 4567891234
+Output: 456-789-1234
+Based on the above examples, please transform the following input: 9876543210
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 987-654-3210
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+Format Social Security Numbers
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: 9918882777
+Output: 991-888-2777
+Input: 1234567890
+Output: 123-456-7890
+Input: 4567891234
+Output: 456-789-1234
+Based on the above examples, please transform the following input: 9904628817
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 990-462-8817
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [15/22]: ./data/DTT-test/Manual/StringProcess-1.json
+INFO:fm-baseline:User Input:
+Extract team name
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: | styple = "background #d0e7ff;"|{{Sort|New York Jets 01|[[1968 Green Bay Packers season|New York Jets]]<sup>^</sup>}}
+Output: New York Jets
+Input: | styple = "background #d0e7ff;"|{{Sort|San Francisco 49ers 01|[[1981 San Francisco 49ers season|San Francisco 49ers]]<sup>^</sup>}}
+Output: San Francisco 49ers
+Input: | styple = "background #d0e7ff;"|{{Sort|Green Bay Packers 02|[[1911 Green Bay Packers season|Green Bay Packers]]<sup>^</sup>}}
+Output: Green Bay Packers
+Based on the above examples, please transform the following input: | styple = "background #d0e7ff;"|{{Sort|Dallas Cowboys 01|[[1970 Dallas Cowboys season|Dallas Cowboys]]<sup>^</sup>}}
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: Dallas Cowboys
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+Extract team name
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: | styple = "background #d0e7ff;"|{{Sort|New York Jets 01|[[1968 Green Bay Packers season|New York Jets]]<sup>^</sup>}}
+Output: New York Jets
+Input: | styple = "background #d0e7ff;"|{{Sort|San Francisco 49ers 01|[[1981 San Francisco 49ers season|San Francisco 49ers]]<sup>^</sup>}}
+Output: San Francisco 49ers
+Input: | styple = "background #d0e7ff;"|{{Sort|Green Bay Packers 02|[[1911 Green Bay Packers season|Green Bay Packers]]<sup>^</sup>}}
+Output: Green Bay Packers
+Based on the above examples, please transform the following input: | styple = "background #d0e7ff;"|{{Sort|Miami Dolphins 01|[[1972 Miami Dolphins season|Miami Dolphins]]<sup>^</sup>}}
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: Miami Dolphins
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [16/22]: ./data/DTT-test/Manual/StringProcess-2.json
+INFO:fm-baseline:User Input:
+find the particular element from the array of strings, split by comma
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: ccc; aaa, bbb, ccc, ddd; xyz
+Output: aaa
+Input: dog, cat; mouse, rabbit; turtle, fish
+Output: mouse
+Input: x, y; zzz, www; q, r
+Output: zzz
+Based on the above examples, please transform the following input: 1, 2; 3, 4; 5, 6
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 3
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+find the particular element from the array of strings, split by comma
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: ccc; aaa, bbb, ccc, ddd; xyz
+Output: aaa
+Input: dog, cat; mouse, rabbit; turtle, fish
+Output: mouse
+Input: x, y; zzz, www; q, r
+Output: zzz
+Based on the above examples, please transform the following input: apple, banana; cherry, date; fig, grape
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: cherry
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+find the particular element from the array of strings, split by comma
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: ccc; aaa, bbb, ccc, ddd; xyz
+Output: aaa
+Input: dog, cat; mouse, rabbit; turtle, fish
+Output: mouse
+Input: x, y; zzz, www; q, r
+Output: zzz
+Based on the above examples, please transform the following input: red, blue; green, yellow; purple, orange
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: green
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [17/22]: ./data/DTT-test/Manual/StringProcess-3.json
+INFO:fm-baseline:User Input:
+find the particular element from the array of strings, split by comma
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: {{one, two}, {three, four}, {five, six}}
+Output: three
+Input: {{red, blue}, {green, yellow}, {purple, orange}}
+Output: green
+Input: {{cat, dog}, {mouse, rabbit}, {turtle, fish}}
+Output: mouse
+Based on the above examples, please transform the following input: {{apple, banana}, {cherry, date}, {fig, grape}}
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: cherry
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+find the particular element from the array of strings, split by comma
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: {{one, two}, {three, four}, {five, six}}
+Output: three
+Input: {{red, blue}, {green, yellow}, {purple, orange}}
+Output: green
+Input: {{cat, dog}, {mouse, rabbit}, {turtle, fish}}
+Output: mouse
+Based on the above examples, please transform the following input: {{1, 2}, {3, 4}, {5, 6}}
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 3
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [18/22]: ./data/DTT-test/Manual/StringProcess-4.json
+INFO:fm-baseline:User Input:
+remove punctuation from text
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: "Hello, world!"
+Output: Hello world
+Input: "What time is it?"
+Output: What time is it
+Input: "This is a test..."
+Output: This is a test
+Based on the above examples, please transform the following input: "Goodbye!"
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: Goodbye
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+remove punctuation from text
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: "Hello, world!"
+Output: Hello world
+Input: "What time is it?"
+Output: What time is it
+Input: "This is a test..."
+Output: This is a test
+Based on the above examples, please transform the following input: "Let's see if this works!"
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: Lets see if this works
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [19/22]: ./data/DTT-test/Manual/StringProcess-5.json
+INFO:fm-baseline:User Input:
+remove quotation marks from text
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: "Hello, world!"
+Output: Hello, world!
+Input: "What time is it?"
+Output: What time is it?
+Input: "This is a test..."
+Output: This is a test...
+Based on the above examples, please transform the following input: "Goodbye!"
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: Goodbye!
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+remove quotation marks from text
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: "Hello, world!"
+Output: Hello, world!
+Input: "What time is it?"
+Output: What time is it?
+Input: "This is a test..."
+Output: This is a test...
+Based on the above examples, please transform the following input: "Let's see if this works!"
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: Lets see if this works!
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [20/22]: ./data/DTT-test/Manual/StringProcess-6.json
+INFO:fm-baseline:User Input:
+clean up the consecutive space in a long string
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: hello   world  this  is  a   test
+Output: hello world this is a test
+Input:    multiple    spaces   here   
+Output: multiple spaces here
+Input:    leading and trailing   spaces   
+Output: leading and trailing spaces
+Based on the above examples, please transform the following input: one   two   three   four
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: one two three four
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+clean up the consecutive space in a long string
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: hello   world  this  is  a   test
+Output: hello world this is a test
+Input:    multiple    spaces   here   
+Output: multiple spaces here
+Input:    leading and trailing   spaces   
+Output: leading and trailing spaces
+Based on the above examples, please transform the following input:    a   b   c   d   e   
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: a b c d e
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [21/22]: ./data/DTT-test/Manual/StringProcess-7.json
+INFO:fm-baseline:User Input:
+find the particular element from the array of strings, split by comma
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: {{a, b, c}, {d, e, f}, {g, h, i}}
+Output: f
+Input: {{red, blue}, {green, yellow}, {purple, orange}}
+Output: yellow
+Input: {{cat, dog}, {mouse, rabbit}, {turtle, fish}}
+Output: rabbit
+Based on the above examples, please transform the following input: {{aa, bb, cc}, {xxx, yyy, zzz}, {p}}
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: zzz
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+find the particular element from the array of strings, split by comma
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: {{a, b, c}, {d, e, f}, {g, h, i}}
+Output: f
+Input: {{red, blue}, {green, yellow}, {purple, orange}}
+Output: yellow
+Input: {{cat, dog}, {mouse, rabbit}, {turtle, fish}}
+Output: rabbit
+Based on the above examples, please transform the following input: {{1, 2}, {3, 4}, {5, 6}}
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 4
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Processing item [22/22]: ./data/DTT-test/Manual/StringProcess-8.json
+INFO:fm-baseline:User Input:
+find the particular element from the array of strings, split by comma
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: {{a, b, c}, {d, e, f}, {g, h, i}}
+Output: f
+Input: {{red, blue}, {green, yellow}, {purple, orange}}
+Output: yellow
+Input: {{cat, dog}, {mouse, rabbit}, {turtle, fish}}
+Output: rabbit
+Based on the above examples, please transform the following input: {{aa, bb, cc}, {xxx, yyy, zzz}, {p}}
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: zzz
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:User Input:
+find the particular element from the array of strings, split by comma
+Only output the transformed result without any explanation.
+
+
+Examples:
+Input: {{a, b, c}, {d, e, f}, {g, h, i}}
+Output: f
+Input: {{red, blue}, {green, yellow}, {purple, orange}}
+Output: yellow
+Input: {{cat, dog}, {mouse, rabbit}, {turtle, fish}}
+Output: rabbit
+Based on the above examples, please transform the following input: {{1, 2}, {3, 4}, {5, 6}}
+output:
+INFO:httpx:HTTP Request: POST https://svip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Output: 4
+INFO:fm-baseline:Results updated in results/FM/gpt-4o-mini_dtt-manual.json
+
+INFO:fm-baseline:Final accuracy on dtt-manual: 0.9545454545454546
+INFO:fm-baseline:Average token costs - prompt: 133, completion: 4
+INFO:fm-baseline:All results saved to results/FM/gpt-4o-mini_dtt-manual.json

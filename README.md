@@ -24,10 +24,10 @@ OPENAI_API_KEY=your_api_key_here
 3. Start vLLM server for fine-tuned model
 ```bash
 vllm serve \
-    --model ./assets/models/llama3_lora_sft \ # after downloading ...
+    --model ./assets/models/llama3_lora_sft \ # wait for downloading ...
     --config ./etc/vllm-server.yaml
 ```
-> Note: You can use `CUDA_VISIBLE_DEVICES` to specify the GPU device
+> Note: You can use `CUDA_VISIBLE_DEVICES` to target the GPU device for vLLM server
 
 4. Test weak2strong prompt inference
 ```bash
@@ -114,7 +114,6 @@ python scripts/foundation_model.py --dataset stackoverflow --model gpt-4o-mini
 # Dataset: benchmark-BinqQuery (semantic)
 python scripts/foundation_model.py --dataset bingquery-logs --model gpt-4o-mini
 ```
-> you can specify the `model` parameter in line:44 to try other models
 
 
 Naive code generation baseline:
