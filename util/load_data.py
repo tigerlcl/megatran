@@ -19,14 +19,22 @@ DATASET_DICT = {
     "prep-software": {
         "path": "./data/TDE-v2/benchmark-FF-Trifacta-GoogleRefine"
     },
+    "dtt-manual": {
+        "path": "./data/DTT-test/Manual"
+    },
     "test-data": {
         "path": "./data/testset/"
     }
 }
 
 # Datasets using standard JSON format
-JSON_NORMAL_GROUP = ["stackoverflow", "headcase", "prep-software", 
-                     "test-data"]
+JSON_NORMAL_GROUP = [
+    "test-data",
+    "stackoverflow", 
+    "headcase", 
+    "prep-software", 
+    "dtt-manual",
+    ]
 
 def load_dataset_by_name(dataset_name: str) -> List[Dict]:
     """Load dataset based on name from configuration"""

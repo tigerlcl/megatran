@@ -10,6 +10,7 @@ __pycache__/
 # Project
 experiments/
 exp/
+revision/
 logs/
 assets/models/llama3_lora_sft
 assets/rag/repo/*

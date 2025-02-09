@@ -2,6 +2,7 @@
 n_shot: 3
 code_attempt: 3
 prompt_mode: "chat_example" # for chat_to_inst
+exp_folder: "revision" # exp
 # prompt_mode: "code_example" # for code generation OR chat_to_inst = false
 
 # MegaTransform control, turn on/off modules
