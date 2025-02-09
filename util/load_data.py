@@ -29,7 +29,7 @@ DATASET_DICT = {
 
 # Datasets using standard JSON format
 JSON_NORMAL_GROUP = [
-    "test-data"
+    "test-data",
     "stackoverflow", 
     "headcase", 
     "prep-software", 
