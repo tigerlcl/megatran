@@ -1,0 +1,25 @@
+2025-02-08 07:18:39,076 - INFO - Logger initialized.
+2025-02-08 07:18:39,076 - INFO - Code backend LLM: gpt-4o-mini
+2025-02-08 07:18:39,076 - INFO - Chat-to-inst: True, Reflection: True, Lazy RAG: True
+2025-02-08 07:18:39,076 - INFO - Loading dataset Synthetic...
+2025-02-08 07:18:39,343 - INFO - HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-08 07:18:39,345 - INFO - Chat-to-inst: vllm backend connected
+2025-02-08 07:18:39,384 - INFO - Reflection enabled
+2025-02-08 07:18:39,423 - INFO - Loading faiss with AVX512 support.
+2025-02-08 07:18:39,436 - INFO - Successfully loaded faiss with AVX512 support.
+2025-02-08 07:18:39,441 - INFO - Lazy RAG enabled
+2025-02-08 07:18:40,306 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-08 07:18:40,308 - INFO - Code Generator: OpenAI backend connected
+2025-02-08 07:18:40,308 - INFO - Starting Experiment...
+2025-02-08 07:18:40,308 - INFO - Task [0] Processing /home/yangchenyu/megatran/data/DTT-test/Synthetic/Single_Replace_05tr_050rows__08_35len_tbl_1.json...
+2025-02-08 07:18:40,308 - INFO - Chat-to-inst query:
+### Instruction ###
+Delete specific characters or patterns from the input string to perform the transformation.
+
+### Examples ###
+Input: 16JZ7doOeUJw4U j*jACQo7d
+Output: 16JZ7doOeUJw4U j*jACQo7d
+Input: gSKqGXrhqK l9s8 yq1HW4u
+Output: gSKqGXrhqK l9s8 yq1HW4u
+Input: gG1wj9)0ZYToy7 ox
+Output: gG1wj9)0Z Toy7 ox

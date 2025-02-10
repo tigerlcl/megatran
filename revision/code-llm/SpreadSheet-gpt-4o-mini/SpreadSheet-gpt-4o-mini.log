@@ -1,0 +1,443 @@
+2025-02-10 06:02:15,559 - INFO - Logger initialized.
+2025-02-10 06:02:15,559 - INFO - Code backend LLM: gpt-4o-mini
+2025-02-10 06:02:15,559 - INFO - Chat-to-inst: False, Reflection: False, Lazy RAG: False
+2025-02-10 06:02:15,559 - INFO - Loading dataset SpreadSheet...
+2025-02-10 06:02:16,730 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:02:16,733 - INFO - Code Generator: OpenAI backend connected
+2025-02-10 06:02:16,733 - INFO - Starting Experiment...
+2025-02-10 06:02:16,733 - INFO - Task [0] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-bikes.json...
+2025-02-10 06:02:16,733 - INFO - Generating code...
+2025-02-10 06:02:16,733 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: Honda125
+Output: Honda
+Input: Honda250
+Output: Honda
+Input: Honda550
+Output: Honda
+2025-02-10 06:02:17,852 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:02:17,853 - INFO - Code generation token usage: Prompt: 121, Completion: 39
+2025-02-10 06:02:17,854 - INFO - Code generated successfully, running tests...
+2025-02-10 06:02:17,855 - INFO - Task [0] final results: [{'input': 'Ducati125', 'output': 'Ducati', 'code_output': 'Ducati'}, {'input': 'Ducati250', 'output': 'Ducati', 'code_output': 'Ducati'}, {'input': 'Ducati100', 'output': 'Ducati', 'code_output': 'Ducati'}]
+2025-02-10 06:02:17,855 - INFO - All 3 test cases passed
+2025-02-10 06:02:17,855 - INFO - Task [1] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-dr-name.json...
+2025-02-10 06:02:17,855 - INFO - Generating code...
+2025-02-10 06:02:17,855 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: Jan Kotas
+Output: Dr. Jan
+Input: Andrew Cencici
+Output: Dr. Andrew
+Input: Nancy FreeHafer
+Output: Dr. Nancy
+2025-02-10 06:02:19,518 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:02:19,519 - INFO - Code generation token usage: Prompt: 132, Completion: 52
+2025-02-10 06:02:19,520 - INFO - Code generated successfully, running tests...
+2025-02-10 06:02:19,521 - INFO - Task [1] final results: [{'input': 'Mariya Sergienko', 'output': 'Dr. Mariya', 'code_output': 'Dr. Mariya'}]
+2025-02-10 06:02:19,521 - INFO - All 1 test cases passed
+2025-02-10 06:02:19,521 - INFO - Task [2] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-firstname.json...
+2025-02-10 06:02:19,521 - INFO - Generating code...
+2025-02-10 06:02:19,521 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: Nancy FreeHafer
+Output: Nancy
+Input: Andrew Cencici
+Output: Andrew
+Input: Mariya Sergienko
+Output: Mariya
+2025-02-10 06:02:21,370 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:02:21,371 - INFO - Code generation token usage: Prompt: 129, Completion: 34
+2025-02-10 06:02:21,371 - INFO - Code generated successfully, running tests...
+2025-02-10 06:02:21,372 - INFO - Task [2] final results: [{'input': 'Jan Kotas', 'output': 'Jan', 'code_output': 'Jan'}]
+2025-02-10 06:02:21,372 - INFO - All 1 test cases passed
+2025-02-10 06:02:21,372 - INFO - Task [3] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-initials.json...
+2025-02-10 06:02:21,372 - INFO - Generating code...
+2025-02-10 06:02:21,372 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: Jan Kotas
+Output: J.K.
+Input: Andrew Cencici
+Output: A.C.
+Input: Nancy FreeHafer
+Output: N.F.
+2025-02-10 06:02:22,498 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:02:22,499 - INFO - Code generation token usage: Prompt: 129, Completion: 61
+2025-02-10 06:02:22,499 - INFO - Code generated successfully, running tests...
+2025-02-10 06:02:22,500 - INFO - Task [3] final results: [{'input': 'Mariya Sergienko', 'output': 'M.S.', 'code_output': 'M.S.'}]
+2025-02-10 06:02:22,500 - INFO - All 1 test cases passed
+2025-02-10 06:02:22,500 - INFO - Task [4] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-lastname.json...
+2025-02-10 06:02:22,500 - INFO - Generating code...
+2025-02-10 06:02:22,500 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: Andrew Cencici
+Output: Cencici
+Input: Nancy FreeHafer
+Output: FreeHafer
+Input: Jan Kotas
+Output: Kotas
+2025-02-10 06:02:23,314 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:02:23,315 - INFO - Code generation token usage: Prompt: 126, Completion: 45
+2025-02-10 06:02:23,315 - INFO - Code generated successfully, running tests...
+2025-02-10 06:02:23,316 - INFO - Task [4] final results: [{'input': 'Mariya Sergienko', 'output': 'Sergienko', 'code_output': 'Sergienko'}]
+2025-02-10 06:02:23,316 - INFO - All 1 test cases passed
+2025-02-10 06:02:23,316 - INFO - Task [5] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-name-combine-2.json...
+2025-02-10 06:02:23,316 - INFO - Generating code...
+2025-02-10 06:02:23,316 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: Mariya Sergienko
+Output: Mariya S.
+Input: Nancy FreeHafer
+Output: Nancy F.
+Input: Andrew Cencici
+Output: Andrew C.
+2025-02-10 06:02:24,661 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:02:24,662 - INFO - Code generation token usage: Prompt: 132, Completion: 84
+2025-02-10 06:02:24,662 - INFO - Code generated successfully, running tests...
+2025-02-10 06:02:24,663 - INFO - Task [5] final results: [{'input': 'Jan Kotas', 'output': 'Jan K.', 'code_output': 'Jan K.'}]
+2025-02-10 06:02:24,663 - INFO - All 1 test cases passed
+2025-02-10 06:02:24,663 - INFO - Task [6] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-name-combine-3.json...
+2025-02-10 06:02:24,663 - INFO - Generating code...
+2025-02-10 06:02:24,663 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: Lara Constable
+Output: L. Constable
+Input: Bradford Lango
+Output: B. Lango
+Input: Lakenya Edison
+Output: L. Edison
+2025-02-10 06:02:25,825 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:02:25,827 - INFO - Code generation token usage: Prompt: 128, Completion: 57
+2025-02-10 06:02:25,828 - INFO - Code generated successfully, running tests...
+2025-02-10 06:02:25,829 - INFO - Task [6] final results: [{'input': 'Brendan Hage', 'output': 'B. Hage', 'code_output': 'B. Hage'}, {'input': 'Launa Withers', 'output': 'L. Withers', 'code_output': 'L. Withers'}, {'input': 'Rudolf Akiyama', 'output': 'R. Akiyama', 'code_output': 'R. Akiyama'}]
+2025-02-10 06:02:25,829 - INFO - All 3 test cases passed
+2025-02-10 06:02:25,829 - INFO - Task [7] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-name-combine-4.json...
+2025-02-10 06:02:25,830 - INFO - Generating code...
+2025-02-10 06:02:25,830 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: Brendan Hage
+Output: Hage- B.
+Input: Launa Withers
+Output: Withers- L.
+Input: Bradford Lango
+Output: Lango- B.
+2025-02-10 06:02:26,902 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:02:26,904 - INFO - Code generation token usage: Prompt: 129, Completion: 61
+2025-02-10 06:02:26,904 - INFO - Code generated successfully, running tests...
+2025-02-10 06:02:26,906 - INFO - Task [7] final results: [{'input': 'Lakenya Edison', 'output': 'Edison- L.', 'code_output': 'Edison- L.'}, {'input': 'Rudolf Akiyama', 'output': 'Akiyama- R.', 'code_output': 'Akiyama- R.'}]
+2025-02-10 06:02:26,906 - INFO - All 2 test cases passed
+2025-02-10 06:02:26,906 - INFO - Task [8] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-name-combine.json...
+2025-02-10 06:02:26,906 - INFO - Generating code...
+2025-02-10 06:02:26,906 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: Lakenya Edison
+Output: Lakenya Edison
+Input: Brendan Hage
+Output: Brendan Hage
+Input: Launa Withers
+Output: Launa Withers
+2025-02-10 06:02:27,907 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:02:27,908 - INFO - Code generation token usage: Prompt: 129, Completion: 24
+2025-02-10 06:02:27,909 - INFO - Code generated successfully, running tests...
+2025-02-10 06:02:27,913 - INFO - Task [8] final results: [{'input': 'Lara Constable', 'output': 'Lara Constable', 'code_output': 'Lara Constable'}, {'input': 'Bradford Lango', 'output': 'Bradford Lango', 'code_output': 'Bradford Lango'}, {'input': 'Rudolf Akiyama', 'output': 'Rudolf Akiyama', 'code_output': 'Rudolf Akiyama'}]
+2025-02-10 06:02:27,914 - INFO - All 3 test cases passed
+2025-02-10 06:02:27,914 - INFO - Task [9] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-phone-1.json...
+2025-02-10 06:02:27,914 - INFO - Generating code...
+2025-02-10 06:02:27,914 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 118-980-214
+Output: 980
+Input: 244-655-094
+Output: 655
+Input: 981-424-843
+Output: 424
+2025-02-10 06:02:30,541 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:02:30,542 - INFO - Code generation token usage: Prompt: 136, Completion: 52
+2025-02-10 06:02:30,543 - INFO - Code generated successfully, running tests...
+2025-02-10 06:02:30,545 - INFO - Task [9] final results: [{'input': '938-242-504', 'output': '242', 'code_output': '242'}, {'input': '623-599-749', 'output': '599', 'code_output': '599'}, {'input': '308-916-545', 'output': '916', 'code_output': '916'}]
+2025-02-10 06:02:30,545 - INFO - All 3 test cases passed
+2025-02-10 06:02:30,546 - INFO - Task [10] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-phone-10.json...
+2025-02-10 06:02:30,546 - INFO - Generating code...
+2025-02-10 06:02:30,546 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: +106 769-858-438
+Output: +106 (769) 858-438
+Input: +72 001-050-856
+Output: +72 (001) 050-856
+Input: +62 647-787-775
+Output: +62 (647) 787-775
+2025-02-10 06:03:02,501 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:03:02,503 - INFO - Code generation token usage: Prompt: 158, Completion: 103
+2025-02-10 06:03:02,504 - INFO - Code generated successfully, running tests...
+2025-02-10 06:03:02,505 - INFO - Task [10] final results: [{'input': '+172 027-507-632', 'output': '+172 (027) 507-632', 'code_output': '+172 (027) 507-632'}, {'input': '+6 775-969-238', 'output': '+6 (775) 969-238', 'code_output': '+6 (775) 969-238'}, {'input': '+95 310-537-401', 'output': '+95 (310) 537-401', 'code_output': '+95 (310) 537-401'}, {'input': '+83 973-757-831', 'output': '+83 (973) 757-831', 'code_output': '+83 (973) 757-831'}]
+2025-02-10 06:03:02,506 - INFO - All 4 test cases passed
+2025-02-10 06:03:02,506 - INFO - Task [11] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-phone-2.json...
+2025-02-10 06:03:02,506 - INFO - Generating code...
+2025-02-10 06:03:02,506 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 244-655-094
+Output: 094
+Input: 981-424-843
+Output: 843
+Input: 308-916-545
+Output: 545
+2025-02-10 06:03:03,913 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:03:03,915 - INFO - Code generation token usage: Prompt: 136, Completion: 50
+2025-02-10 06:03:03,915 - INFO - Code generated successfully, running tests...
+2025-02-10 06:03:03,917 - INFO - Task [11] final results: [{'input': '938-242-504', 'output': '504', 'code_output': '504'}, {'input': '623-599-749', 'output': '749', 'code_output': '749'}, {'input': '118-980-214', 'output': '214', 'code_output': '214'}]
+2025-02-10 06:03:03,918 - INFO - All 3 test cases passed
+2025-02-10 06:03:03,918 - INFO - Task [12] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-phone-3.json...
+2025-02-10 06:03:03,918 - INFO - Generating code...
+2025-02-10 06:03:03,918 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 244-655-094
+Output: (244) 655-094
+Input: 938-242-504
+Output: (938) 242-504
+Input: 118-980-214
+Output: (118) 980-214
+2025-02-10 06:03:35,099 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:03:35,100 - INFO - Code generation token usage: Prompt: 151, Completion: 59
+2025-02-10 06:03:35,100 - INFO - Code generated successfully, running tests...
+2025-02-10 06:03:35,101 - INFO - Task [12] final results: [{'input': '830-941-991', 'output': '(830) 941-991', 'code_output': '(830) 941-991'}, {'input': '981-424-843', 'output': '(981) 424-843', 'code_output': '(981) 424-843'}, {'input': '308-916-545', 'output': '(308) 916-545', 'code_output': '(308) 916-545'}, {'input': '623-599-749', 'output': '(623) 599-749', 'code_output': '(623) 599-749'}]
+2025-02-10 06:03:35,101 - INFO - All 4 test cases passed
+2025-02-10 06:03:35,101 - INFO - Task [13] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-phone-4.json...
+2025-02-10 06:03:35,101 - INFO - Generating code...
+2025-02-10 06:03:35,101 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 244-655-094
+Output: 244.655.094
+Input: 308-916-545
+Output: 308.916.545
+Input: 623-599-749
+Output: 623.599.749
+2025-02-10 06:03:36,531 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:03:36,532 - INFO - Code generation token usage: Prompt: 148, Completion: 28
+2025-02-10 06:03:36,532 - INFO - Code generated successfully, running tests...
+2025-02-10 06:03:36,533 - INFO - Task [13] final results: [{'input': '118-980-214', 'output': '118.980.214', 'code_output': '118.980.214'}, {'input': '981-424-843', 'output': '981.424.843', 'code_output': '981.424.843'}, {'input': '938-242-504', 'output': '938.242.504', 'code_output': '938.242.504'}]
+2025-02-10 06:03:36,533 - INFO - All 3 test cases passed
+2025-02-10 06:03:36,533 - INFO - Task [14] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-phone-5.json...
+2025-02-10 06:03:36,533 - INFO - Generating code...
+2025-02-10 06:03:36,533 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: +172 027-507-632
+Output: 172
+Input: +95 310-537-401
+Output: 95
+Input: +83 973-757-831
+Output: 83
+2025-02-10 06:03:37,623 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:03:37,624 - INFO - Code generation token usage: Prompt: 142, Completion: 48
+2025-02-10 06:03:37,624 - INFO - Code generated successfully, running tests...
+2025-02-10 06:03:37,625 - INFO - Task [14] final results: [{'input': '+106 769-858-438', 'output': '106', 'code_output': '106'}, {'input': '+6 775-969-238', 'output': '6', 'code_output': '6'}, {'input': '+62 647-787-775', 'output': '62', 'code_output': '62'}, {'input': '+72 001-050-856', 'output': '72', 'code_output': '72'}]
+2025-02-10 06:03:37,625 - INFO - All 4 test cases passed
+2025-02-10 06:03:37,625 - INFO - Task [15] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-phone-6.json...
+2025-02-10 06:03:37,626 - INFO - Generating code...
+2025-02-10 06:03:37,626 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: +62 647-787-775
+Output: 647
+Input: +6 775-969-238
+Output: 775
+Input: +172 027-507-632
+Output: 027
+2025-02-10 06:03:41,093 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:03:41,094 - INFO - Code generation token usage: Prompt: 142, Completion: 104
+2025-02-10 06:03:41,094 - INFO - Code generated successfully, running tests...
+2025-02-10 06:03:41,095 - INFO - Task [15] final results: [{'input': '+83 973-757-831', 'output': '973', 'code_output': '973'}, {'input': '+106 769-858-438', 'output': '769', 'code_output': '769'}, {'input': '+72 001-050-856', 'output': '001', 'code_output': '001'}, {'input': '+95 310-537-401', 'output': '310', 'code_output': '310'}]
+2025-02-10 06:03:41,096 - INFO - All 4 test cases passed
+2025-02-10 06:03:41,096 - INFO - Task [16] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-phone-7.json...
+2025-02-10 06:03:41,096 - INFO - Generating code...
+2025-02-10 06:03:41,096 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: +62 647-787-775
+Output: 787
+Input: +6 775-969-238
+Output: 969
+Input: +106 769-858-438
+Output: 858
+2025-02-10 06:03:42,811 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:03:42,812 - INFO - Code generation token usage: Prompt: 137, Completion: 79
+2025-02-10 06:03:42,813 - INFO - Code generated successfully, running tests...
+2025-02-10 06:03:42,814 - INFO - Task [16] final results: [{'input': '+72 001-050-856', 'output': '050', 'code_output': '050'}, {'input': '+172 027-507-632', 'output': '507', 'code_output': '507'}, {'input': '+95 310-537-401', 'output': '537', 'code_output': '537'}, {'input': '+83 973-757-831', 'output': '757', 'code_output': '757'}]
+2025-02-10 06:03:42,814 - INFO - All 4 test cases passed
+2025-02-10 06:03:42,814 - INFO - Task [17] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-phone-8.json...
+2025-02-10 06:03:42,814 - INFO - Generating code...
+2025-02-10 06:03:42,814 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: +106 769-858-438
+Output: 438
+Input: +95 310-537-401
+Output: 401
+Input: +172 027-507-632
+Output: 632
+2025-02-10 06:03:55,517 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:03:55,518 - INFO - Code generation token usage: Prompt: 137, Completion: 63
+2025-02-10 06:03:55,519 - INFO - Code generated successfully, running tests...
+2025-02-10 06:03:55,520 - INFO - Task [17] final results: [{'input': '+72 001-050-856', 'output': '856', 'code_output': '856'}, {'input': '+6 775-969-238', 'output': '238', 'code_output': '238'}, {'input': '+62 647-787-775', 'output': '775', 'code_output': '775'}, {'input': '+83 973-757-831', 'output': '831', 'code_output': '831'}]
+2025-02-10 06:03:55,520 - INFO - All 4 test cases passed
+2025-02-10 06:03:55,520 - INFO - Task [18] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-phone-9.json...
+2025-02-10 06:03:55,520 - INFO - Generating code...
+2025-02-10 06:03:55,520 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: +172 027-507-632
+Output: 172.027.507.632
+Input: +62 647-787-775
+Output: 62.647.787.775
+Input: +72 001-050-856
+Output: 72.001.050.856
+2025-02-10 06:03:56,940 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:03:56,941 - INFO - Code generation token usage: Prompt: 160, Completion: 58
+2025-02-10 06:03:56,942 - INFO - Code generated successfully, running tests...
+2025-02-10 06:03:56,942 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 172027.507.632 != expected output: 172.027.507.632
+2025-02-10 06:03:56,942 - WARNING - Code Generation attempt 1/3 failed
+2025-02-10 06:03:56,942 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: +172 027-507-632
+Output: 172.027.507.632
+Input: +62 647-787-775
+Output: 62.647.787.775
+Input: +72 001-050-856
+Output: 72.001.050.856
+
+### Last Coding Attempt ###
+def solution(input):
+    # Remove the leading '+' and any spaces
+    cleaned_input = input.replace('+', '').replace(' ', '')
+    
+    # Replace '-' with '.' to format the output correctly
+    output = cleaned_input.replace('-', '.')
+    
+    return output
+2025-02-10 06:03:58,603 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:03:58,604 - INFO - Code generation token usage: Prompt: 214, Completion: 58
+2025-02-10 06:03:58,604 - INFO - Code generated successfully, running tests...
+2025-02-10 06:03:58,605 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 172027.507.632 != expected output: 172.027.507.632
+2025-02-10 06:03:58,605 - WARNING - Code Generation attempt 2/3 failed
+2025-02-10 06:03:58,605 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: +172 027-507-632
+Output: 172.027.507.632
+Input: +62 647-787-775
+Output: 62.647.787.775
+Input: +72 001-050-856
+Output: 72.001.050.856
+
+### Last Coding Attempt ###
+def solution(input):
+    # Remove the leading '+' and any spaces
+    cleaned_input = input.replace('+', '').replace(' ', '')
+    
+    # Replace '-' with '.' to format the output correctly
+    output = cleaned_input.replace('-', '.')
+    
+    return output
+2025-02-10 06:03:59,976 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:03:59,977 - INFO - Code generation token usage: Prompt: 219, Completion: 58
+2025-02-10 06:03:59,978 - INFO - Code generated successfully, running tests...
+2025-02-10 06:03:59,979 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 172027.507.632 != expected output: 172.027.507.632
+2025-02-10 06:03:59,980 - WARNING - Code Generation attempt 3/3 failed
+2025-02-10 06:03:59,980 - INFO - Task [18] final results: [{'input': '+83 973-757-831', 'output': '83.973.757.831', 'code_output': '83973.757.831'}, {'input': '+95 310-537-401', 'output': '95.310.537.401', 'code_output': '95310.537.401'}, {'input': '+6 775-969-238', 'output': '6.775.969.238', 'code_output': '6775.969.238'}, {'input': '+106 769-858-438', 'output': '106.769.858.438', 'code_output': '106769.858.438'}]
+2025-02-10 06:03:59,980 - INFO - Passed 0/4 test cases
+2025-02-10 06:03:59,980 - INFO - Task [19] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-phone.json...
+2025-02-10 06:03:59,980 - INFO - Generating code...
+2025-02-10 06:03:59,980 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 938-242-504
+Output: 938
+Input: 981-424-843
+Output: 981
+Input: 244-655-094
+Output: 244
+2025-02-10 06:04:01,187 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:04:01,188 - INFO - Code generation token usage: Prompt: 136, Completion: 37
+2025-02-10 06:04:01,189 - INFO - Code generated successfully, running tests...
+2025-02-10 06:04:01,191 - INFO - Task [19] final results: [{'input': '118-980-214', 'output': '118', 'code_output': '118'}, {'input': '623-599-749', 'output': '623', 'code_output': '623'}, {'input': '308-916-545', 'output': '308', 'code_output': '308'}]
+2025-02-10 06:04:01,191 - INFO - All 3 test cases passed
+2025-02-10 06:04:01,191 - INFO - Task [20] Processing /home/yangchenyu/megatran/data/DTT-test/SpreadSheet/FF-reverse-name.json...
+2025-02-10 06:04:01,191 - INFO - Generating code...
+2025-02-10 06:04:01,191 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: Brendan Hage
+Output: Hage Brendan
+Input: Launa Withers
+Output: Withers Launa
+Input: Bradford Lango
+Output: Lango Bradford
+2025-02-10 06:04:02,604 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 06:04:02,605 - INFO - Code generation token usage: Prompt: 127, Completion: 55
+2025-02-10 06:04:02,606 - INFO - Code generated successfully, running tests...
+2025-02-10 06:04:02,607 - INFO - Task [20] final results: [{'input': 'Lara Constable', 'output': 'Constable Lara', 'code_output': 'Constable Lara'}, {'input': 'Lakenya Edison', 'output': 'Edison Lakenya', 'code_output': 'Edison Lakenya'}, {'input': 'Rudolf Akiyama', 'output': 'Akiyama Rudolf', 'code_output': 'Akiyama Rudolf'}]
+2025-02-10 06:04:02,608 - INFO - All 3 test cases passed
+2025-02-10 06:04:02,608 - INFO - Exporting results...
+2025-02-10 06:04:02,616 - INFO - Full result exported to revision/code-llm/SpreadSheet-gpt-4o-mini/result/full_result.csv
+2025-02-10 06:04:02,623 - INFO - Summary exported to revision/code-llm/SpreadSheet-gpt-4o-mini/result/summary.json, Test stats: {'total_pass': 55, 'total_test': 59, 'prate_per_test': 0.932, 'total_task': 21, 'total_pass_task': 20, 'prate_per_task': 0.952}, Token stats: {'chat_to_inst': {'total_api_calls': 0, 'avg_prompt': 0, 'avg_completion': 0, 'avg_total': 0}, 'code_generation': {'total_api_calls': 23, 'avg_prompt': 143.39, 'avg_completion': 56.91, 'avg_total': 200.3}, 'reflection': {'total_api_calls': 0, 'avg_prompt': 0, 'avg_completion': 0, 'avg_total': 0}, 'lazy_rag': {'total_api_calls': 0, 'avg_prompt': 0, 'avg_completion': 0, 'avg_total': 0}}
+2025-02-10 06:04:02,623 - INFO - Experiment completed successfully. Duration: 0:01:47.063194

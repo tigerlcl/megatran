@@ -1,0 +1,36 @@
+{
+    "test_summary": {
+        "total_pass": 33,
+        "total_test": 57,
+        "prate_per_test": 0.579,
+        "total_task": 21,
+        "total_pass_task": 11,
+        "prate_per_task": 0.524
+    },
+    "token_usage": {
+        "chat_to_inst": {
+            "total_api_calls": 21,
+            "avg_prompt": 89.1,
+            "avg_completion": 15.19,
+            "avg_total": 104.29
+        },
+        "code_generation": {
+            "total_api_calls": 33,
+            "avg_prompt": 308.73,
+            "avg_completion": 223.33,
+            "avg_total": 532.06
+        },
+        "reflection": {
+            "total_api_calls": 12,
+            "avg_prompt": 268.42,
+            "avg_completion": 231.0,
+            "avg_total": 499.42
+        },
+        "lazy_rag": {
+            "total_api_calls": 0,
+            "avg_prompt": 0,
+            "avg_completion": 0,
+            "avg_total": 0
+        }
+    }
+}

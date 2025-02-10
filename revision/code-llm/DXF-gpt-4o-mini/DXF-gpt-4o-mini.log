@@ -1,0 +1,257 @@
+2025-02-10 05:36:30,200 - INFO - Logger initialized.
+2025-02-10 05:36:30,200 - INFO - Code backend LLM: gpt-4o-mini
+2025-02-10 05:36:30,200 - INFO - Chat-to-inst: False, Reflection: False, Lazy RAG: False
+2025-02-10 05:36:30,200 - INFO - Loading dataset DXF...
+2025-02-10 05:36:31,760 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:36:31,765 - INFO - Code Generator: OpenAI backend connected
+2025-02-10 05:36:31,765 - INFO - Starting Experiment...
+2025-02-10 05:36:31,766 - INFO - Task [0] Processing /home/yangchenyu/megatran/data/DTT-test/DXF/AsciiToUnicode.json...
+2025-02-10 05:36:31,766 - INFO - Generating code...
+2025-02-10 05:36:31,766 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: #
+Output: 35
+Input: (
+Output: 40
+Input: 3
+Output: 51
+2025-02-10 05:36:33,070 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:36:33,072 - INFO - Code generation token usage: Prompt: 120, Completion: 77
+2025-02-10 05:36:33,073 - INFO - Code generated successfully, running tests...
+2025-02-10 05:36:33,075 - INFO - Task [0] final results: [{'input': 'C', 'output': '67', 'code_output': 'Input not recognized'}, {'input': 'L', 'output': '76', 'code_output': 'Input not recognized'}, {'input': '2', 'output': '50', 'code_output': 'Input not recognized'}, {'input': 'x', 'output': '120', 'code_output': 'Input not recognized'}, {'input': '{', 'output': '123', 'code_output': 'Input not recognized'}, {'input': '+', 'output': '43', 'code_output': 'Input not recognized'}]
+2025-02-10 05:36:33,075 - INFO - Passed 0/6 test cases
+2025-02-10 05:36:33,075 - INFO - Task [1] Processing /home/yangchenyu/megatran/data/DTT-test/DXF/CharToAscii.json...
+2025-02-10 05:36:33,075 - INFO - Generating code...
+2025-02-10 05:36:33,075 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: U+0041
+Output: 065
+Input: U+0042
+Output: 066
+Input: U+0043
+Output: 067
+2025-02-10 05:36:34,085 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:36:34,087 - INFO - Code generation token usage: Prompt: 125, Completion: 58
+2025-02-10 05:36:34,087 - INFO - Code generated successfully, running tests...
+2025-02-10 05:36:34,088 - INFO - Task [1] final results: [{'input': 'U+0044', 'output': '068', 'code_output': '068'}, {'input': 'U+0054', 'output': '084', 'code_output': '084'}, {'input': 'U+0055', 'output': '085', 'code_output': '085'}, {'input': 'U+0056', 'output': '086', 'code_output': '086'}, {'input': 'U+0057', 'output': '087', 'code_output': '087'}, {'input': 'U+0058', 'output': '088', 'code_output': '088'}, {'input': 'U+0059', 'output': '089', 'code_output': '089'}, {'input': 'U+005A', 'output': '090', 'code_output': '090'}]
+2025-02-10 05:36:34,089 - INFO - All 8 test cases passed
+2025-02-10 05:36:34,089 - INFO - Task [2] Processing /home/yangchenyu/megatran/data/DTT-test/DXF/HexCodeToRGB.json...
+2025-02-10 05:36:34,089 - INFO - Generating code...
+2025-02-10 05:36:34,089 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: #ffb6c1
+Output: (255182193)
+Input: #333333
+Output: (515151)
+Input: #d52b1e
+Output: (2134330)
+2025-02-10 05:36:35,966 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:36:35,967 - INFO - Code generation token usage: Prompt: 133, Completion: 119
+2025-02-10 05:36:35,968 - INFO - Code generated successfully, running tests...
+2025-02-10 05:36:35,970 - ERROR - Error RuntimeError: Debug case [1]: Solution output: (16758465) != expected output: (255182193)
+2025-02-10 05:36:35,970 - WARNING - Code Generation attempt 1/3 failed
+2025-02-10 05:36:35,970 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: #ffb6c1
+Output: (255182193)
+Input: #333333
+Output: (515151)
+Input: #d52b1e
+Output: (2134330)
+
+### Last Coding Attempt ###
+def solution(input):
+    # Remove the '#' character from the input
+    hex_color = input.lstrip('#')
+    
+    # Convert the hex color to RGB values
+    r = int(hex_color[0:2], 16)
+    g = int(hex_color[2:4], 16)
+    b = int(hex_color[4:6], 16)
+    
+    # Combine the RGB values into a single integer
+    output = (r << 16) + (g << 8) + b
+    
+    return f"({output})"
+2025-02-10 05:36:37,900 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:36:37,902 - INFO - Code generation token usage: Prompt: 258, Completion: 122
+2025-02-10 05:36:37,903 - INFO - Code generated successfully, running tests...
+2025-02-10 05:36:37,904 - ERROR - Error RuntimeError: Debug case [2]: Solution output: (51051051) != expected output: (515151)
+2025-02-10 05:36:37,904 - WARNING - Code Generation attempt 2/3 failed
+2025-02-10 05:36:37,905 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: #ffb6c1
+Output: (255182193)
+Input: #333333
+Output: (515151)
+Input: #d52b1e
+Output: (2134330)
+
+### Last Coding Attempt ###
+def solution(input):
+    # Remove the '#' character from the input
+    hex_color = input.lstrip('#')
+    
+    # Convert the hex color to RGB values
+    r = int(hex_color[0:2], 16)
+    g = int(hex_color[2:4], 16)
+    b = int(hex_color[4:6], 16)
+    
+    # Combine the RGB values into a single integer
+    output = (r * 1000000) + (g * 1000) + b
+    
+    return f"({output})"
+2025-02-10 05:36:40,462 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:36:40,464 - INFO - Code generation token usage: Prompt: 261, Completion: 122
+2025-02-10 05:36:40,464 - INFO - Code generated successfully, running tests...
+2025-02-10 05:36:40,466 - ERROR - Error RuntimeError: Debug case [2]: Solution output: (51051051) != expected output: (515151)
+2025-02-10 05:36:40,466 - WARNING - Code Generation attempt 3/3 failed
+2025-02-10 05:36:40,466 - INFO - Task [2] final results: [{'input': '#306860', 'output': '(4810496)', 'code_output': '(48104096)'}, {'input': '#045ca2', 'output': '(492162)', 'code_output': '(4092162)'}, {'input': '#fed100', 'output': '(2542090)', 'code_output': '(254209000)'}, {'input': '#000000', 'output': '(000)', 'code_output': '(0)'}, {'input': '#999999', 'output': '(153153153)', 'code_output': '(153153153)'}, {'input': '#123456', 'output': '(185286)', 'code_output': '(18052086)'}, {'input': '#000fff', 'output': '(015255)', 'code_output': '(15255)'}]
+2025-02-10 05:36:40,467 - INFO - Passed 1/7 test cases
+2025-02-10 05:36:40,467 - INFO - Task [3] Processing /home/yangchenyu/megatran/data/DTT-test/DXF/PoundsToKg.json...
+2025-02-10 05:36:40,467 - INFO - Generating code...
+2025-02-10 05:36:40,467 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 1
+Output: 0.45
+Input: 70
+Output: 31.75
+Input: 99
+Output: 44.9
+2025-02-10 05:36:41,780 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:36:41,781 - INFO - Code generation token usage: Prompt: 130, Completion: 62
+2025-02-10 05:36:41,782 - INFO - Code generated successfully, running tests...
+2025-02-10 05:36:41,784 - ERROR - Error RuntimeError: Debug case [2]: Solution output: 31.5 != expected output: 31.75
+2025-02-10 05:36:41,784 - WARNING - Code Generation attempt 1/3 failed
+2025-02-10 05:36:41,784 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 1
+Output: 0.45
+Input: 70
+Output: 31.75
+Input: 99
+Output: 44.9
+
+### Last Coding Attempt ###
+def solution(input):
+    # Convert the input string to an integer
+    num = int(input)
+    
+    # Apply the transformation logic
+    output = round(num * 0.45, 2)
+    
+    # Convert the output to string and return
+    return str(output)
+2025-02-10 05:36:42,604 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:36:42,606 - INFO - Code generation token usage: Prompt: 188, Completion: 62
+2025-02-10 05:36:42,606 - INFO - Code generated successfully, running tests...
+2025-02-10 05:36:42,608 - ERROR - Error RuntimeError: Debug case [2]: Solution output: 31.5 != expected output: 31.75
+2025-02-10 05:36:42,608 - WARNING - Code Generation attempt 2/3 failed
+2025-02-10 05:36:42,608 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 1
+Output: 0.45
+Input: 70
+Output: 31.75
+Input: 99
+Output: 44.9
+
+### Last Coding Attempt ###
+def solution(input):
+    # Convert the input string to an integer
+    num = int(input)
+    
+    # Apply the transformation logic
+    output = round(num * 0.45, 2)
+    
+    # Convert the output to string and return
+    return str(output)
+2025-02-10 05:36:43,734 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:36:43,736 - INFO - Code generation token usage: Prompt: 188, Completion: 62
+2025-02-10 05:36:43,737 - INFO - Code generated successfully, running tests...
+2025-02-10 05:36:43,739 - ERROR - Error RuntimeError: Debug case [2]: Solution output: 31.5 != expected output: 31.75
+2025-02-10 05:36:43,739 - WARNING - Code Generation attempt 3/3 failed
+2025-02-10 05:36:43,739 - INFO - Task [3] final results: [{'input': '8', 'output': '3.6', 'code_output': '3.6'}, {'input': '59', 'output': '26.76', 'code_output': '26.55'}, {'input': '68', 'output': '30.84', 'code_output': '30.6'}, {'input': '212', 'output': '96.16', 'code_output': '95.4'}, {'input': '192', 'output': '87.09', 'code_output': '86.4'}, {'input': '190', 'output': '86.18', 'code_output': '85.5'}]
+2025-02-10 05:36:43,740 - INFO - Passed 1/6 test cases
+2025-02-10 05:36:43,740 - INFO - Task [4] Processing /home/yangchenyu/megatran/data/DTT-test/DXF/RGBToColor.json...
+2025-02-10 05:36:43,740 - INFO - Generating code...
+2025-02-10 05:36:43,740 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 84;84;84
+Output: Grey
+Input: 211;211;211
+Output: LightGrey
+Input: 255;255;255
+Output: White
+2025-02-10 05:36:45,906 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:36:45,908 - INFO - Code generation token usage: Prompt: 134, Completion: 124
+2025-02-10 05:36:45,909 - INFO - Code generated successfully, running tests...
+2025-02-10 05:36:45,910 - INFO - Task [4] final results: [{'input': '138;43;226', 'output': 'BlueViolet', 'code_output': 'Not a shade of Grey'}, {'input': '173;216;230', 'output': 'LightBlue', 'code_output': 'Not a shade of Grey'}, {'input': '240;255;255', 'output': 'Azure', 'code_output': 'Not a shade of Grey'}, {'input': '0;255;255', 'output': 'Cyan', 'code_output': 'Not a shade of Grey'}, {'input': '165;42;42', 'output': 'Brown', 'code_output': 'Not a shade of Grey'}, {'input': '47;79;47', 'output': 'Dark Green', 'code_output': 'Not a shade of Grey'}, {'input': '255;165;0', 'output': 'Orange', 'code_output': 'Not a shade of Grey'}]
+2025-02-10 05:36:45,911 - INFO - Passed 0/7 test cases
+2025-02-10 05:36:45,911 - INFO - Task [5] Processing /home/yangchenyu/megatran/data/DTT-test/DXF/fahrenheitToCelcius.json...
+2025-02-10 05:36:45,911 - INFO - Generating code...
+2025-02-10 05:36:45,911 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 32
+Output: 0
+Input: 77
+Output: 25
+Input: 30
+Output: -1.11
+2025-02-10 05:36:47,180 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:36:47,181 - INFO - Code generation token usage: Prompt: 121, Completion: 106
+2025-02-10 05:36:47,184 - INFO - Code generated successfully, running tests...
+2025-02-10 05:36:47,186 - INFO - Task [5] final results: [{'input': '41', 'output': '5', 'code_output': 'None'}, {'input': '59', 'output': '15', 'code_output': 'None'}, {'input': '68', 'output': '20', 'code_output': 'None'}, {'input': '212', 'output': '100', 'code_output': 'None'}, {'input': '50', 'output': '10', 'code_output': 'None'}, {'input': '86', 'output': '30', 'code_output': 'None'}]
+2025-02-10 05:36:47,186 - INFO - Passed 0/6 test cases
+2025-02-10 05:36:47,187 - INFO - Task [6] Processing /home/yangchenyu/megatran/data/DTT-test/DXF/shoesizeUSEUR.json...
+2025-02-10 05:36:47,187 - INFO - Generating code...
+2025-02-10 05:36:47,187 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 6
+Output: 38
+Input: 6.5
+Output: 38.7
+Input: 7
+Output: 39.3
+2025-02-10 05:36:49,041 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:36:49,043 - INFO - Code generation token usage: Prompt: 125, Completion: 107
+2025-02-10 05:36:49,043 - INFO - Code generated successfully, running tests...
+2025-02-10 05:36:49,046 - INFO - Task [6] final results: [{'input': '7.5', 'output': '40', 'code_output': 'Input not recognized'}, {'input': '8', 'output': '40.5', 'code_output': 'Input not recognized'}, {'input': '8.5', 'output': '41', 'code_output': 'Input not recognized'}, {'input': '9', 'output': '42', 'code_output': 'Input not recognized'}, {'input': '9.5', 'output': '42.5', 'code_output': 'Input not recognized'}, {'input': '10', 'output': '43', 'code_output': 'Input not recognized'}, {'input': '10.5', 'output': '44', 'code_output': 'Input not recognized'}, {'input': '11', 'output': '44.5', 'code_output': 'Input not recognized'}, {'input': '11.5', 'output': '45', 'code_output': 'Input not recognized'}, {'input': '12', 'output': '46', 'code_output': 'Input not recognized'}, {'input': '12.5', 'output': '46.5', 'code_output': 'Input not recognized'}, {'input': '13', 'output': '47', 'code_output': 'Input not recognized'}]
+2025-02-10 05:36:49,046 - INFO - Passed 0/12 test cases
+2025-02-10 05:36:49,046 - INFO - Exporting results...
+2025-02-10 05:36:49,053 - INFO - Full result exported to revision/code-llm/DXF-gpt-4o-mini/result/full_result.csv
+2025-02-10 05:36:49,059 - INFO - Summary exported to revision/code-llm/DXF-gpt-4o-mini/result/summary.json, Test stats: {'total_pass': 10, 'total_test': 52, 'prate_per_test': 0.192, 'total_task': 7, 'total_pass_task': 1, 'prate_per_task': 0.143}, Token stats: {'chat_to_inst': {'total_api_calls': 0, 'avg_prompt': 0, 'avg_completion': 0, 'avg_total': 0}, 'code_generation': {'total_api_calls': 11, 'avg_prompt': 162.09, 'avg_completion': 92.82, 'avg_total': 254.91}, 'reflection': {'total_api_calls': 0, 'avg_prompt': 0, 'avg_completion': 0, 'avg_total': 0}, 'lazy_rag': {'total_api_calls': 0, 'avg_prompt': 0, 'avg_completion': 0, 'avg_total': 0}}
+2025-02-10 05:36:49,059 - INFO - Experiment completed successfully. Duration: 0:00:18.859024

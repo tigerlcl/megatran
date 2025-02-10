@@ -1,0 +1,1456 @@
+2025-02-10 05:48:57,242 - INFO - Logger initialized.
+2025-02-10 05:48:57,242 - INFO - Code backend LLM: gpt-4o
+2025-02-10 05:48:57,242 - INFO - Chat-to-inst: False, Reflection: False, Lazy RAG: False
+2025-02-10 05:48:57,242 - INFO - Loading dataset Manual-Hard...
+2025-02-10 05:48:58,828 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:48:58,835 - INFO - Code Generator: OpenAI backend connected
+2025-02-10 05:48:58,836 - INFO - Starting Experiment...
+2025-02-10 05:48:58,836 - INFO - Task [0] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/chemical.json...
+2025-02-10 05:48:58,836 - INFO - Generating code...
+2025-02-10 05:48:58,836 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: H2O
+Output: 18
+Input: C6H12O6
+Output: 180
+Input: Al2(SO4)3
+Output: 342
+2025-02-10 05:49:07,551 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:49:07,553 - INFO - Code generation token usage: Prompt: 129, Completion: 1032
+2025-02-10 05:49:07,555 - INFO - Code generated successfully, running tests...
+2025-02-10 05:49:07,560 - ERROR - Current task failed: 'NoneType' object has no attribute 'group'
+2025-02-10 05:49:07,560 - INFO - Task [0] final results: [{'input': 'K4[Fe(CN)6]', 'output': '368', 'code_output': None}, {'input': '(CH3)2CHOH', 'output': '60', 'code_output': None}, {'input': 'Fe3[Fe(CN)6]2', 'output': '591', 'code_output': None}]
+2025-02-10 05:49:07,560 - INFO - Passed 0/3 test cases
+2025-02-10 05:49:07,561 - INFO - Task [1] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/date.json...
+2025-02-10 05:49:07,561 - INFO - Generating code...
+2025-02-10 05:49:07,561 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: Martes 21 de Octubre de 2014
+Output: 2014-10-21T00:00:00+00:00
+Input: Monday, 02-Jan-06 15:04:05 MST
+Output: 2006-01-02T22:04:05+00:00
+Input: 2012-08-03 18:31:59.257000000
+Output: 2012-08-03T18:31:59.257000+00:00
+2025-02-10 05:49:11,620 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:49:11,622 - INFO - Code generation token usage: Prompt: 202, Completion: 303
+2025-02-10 05:49:11,623 - INFO - Code generated successfully, running tests...
+2025-02-10 05:49:11,630 - ERROR - Error RuntimeError: Debug case [1]: Solution output: None != expected output: 2014-10-21T00:00:00+00:00
+2025-02-10 05:49:11,630 - WARNING - Code Generation attempt 1/3 failed
+2025-02-10 05:49:11,630 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: Martes 21 de Octubre de 2014
+Output: 2014-10-21T00:00:00+00:00
+Input: Monday, 02-Jan-06 15:04:05 MST
+Output: 2006-01-02T22:04:05+00:00
+Input: 2012-08-03 18:31:59.257000000
+Output: 2012-08-03T18:31:59.257000+00:00
+
+### Last Coding Attempt ###
+from datetime import datetime
+import pytz
+
+def solution(input):
+    # Define possible input formats
+    formats = [
+        "%A %d de %B de %Y",  # Martes 21 de Octubre de 2014
+        "%A, %d-%b-%y %H:%M:%S %Z",  # Monday, 02-Jan-06 15:04:05 MST
+        "%Y-%m-%d %H:%M:%S.%f"  # 2012-08-03 18:31:59.257000000
+    ]
+    
+    # Try to parse the input with each format
+    for fmt in formats:
+        try:
+            dt = datetime.strptime(input, fmt)
+            if fmt == "%A, %d-%b-%y %H:%M:%S %Z":
+                dt = dt.replace(tzinfo=pytz.timezone('MST'))
+            else:
+                dt = dt.replace(tzinfo=pytz.UTC)
+            return dt.isoformat()
+        except ValueError:
+            continue
+    
+    # If no format matched, return None or raise an error
+    return None
+
+# Example usage:
+# print(solution("Martes 21 de Octubre de 2014"))
+# print(solution("Monday, 02-Jan-06 15:04:05 MST"))
+# print(solution("2012-08-03 18:31:59.257000000"))
+2025-02-10 05:49:16,390 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:49:16,392 - INFO - Code generation token usage: Prompt: 506, Completion: 271
+2025-02-10 05:49:16,393 - INFO - Code generated successfully, running tests...
+2025-02-10 05:49:16,395 - ERROR - Error Error: unsupported locale setting
+2025-02-10 05:49:16,395 - WARNING - Code Generation attempt 2/3 failed
+2025-02-10 05:49:16,395 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: Martes 21 de Octubre de 2014
+Output: 2014-10-21T00:00:00+00:00
+Input: Monday, 02-Jan-06 15:04:05 MST
+Output: 2006-01-02T22:04:05+00:00
+Input: 2012-08-03 18:31:59.257000000
+Output: 2012-08-03T18:31:59.257000+00:00
+
+### Last Coding Attempt ###
+from datetime import datetime
+import pytz
+
+def solution(input):
+    # Define possible input formats
+    formats = [
+        ("%A %d de %B de %Y", "es_ES"),  # Martes 21 de Octubre de 2014
+        ("%A, %d-%b-%y %H:%M:%S %Z", None),  # Monday, 02-Jan-06 15:04:05 MST
+        ("%Y-%m-%d %H:%M:%S.%f", None)  # 2012-08-03 18:31:59.257000000
+    ]
+    
+    # Try to parse the input with each format
+    for fmt, locale in formats:
+        try:
+            if locale:
+                import locale as lc
+                lc.setlocale(lc.LC_TIME, locale)
+            dt = datetime.strptime(input, fmt)
+            if fmt == "%A, %d-%b-%y %H:%M:%S %Z":
+                dt = dt.astimezone(pytz.UTC)
+            else:
+                dt = dt.replace(tzinfo=pytz.UTC)
+            return dt.isoformat()
+        except ValueError:
+            continue
+    
+    # If no format matched, return None or raise an error
+    return None
+2025-02-10 05:49:19,847 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:49:19,848 - INFO - Code generation token usage: Prompt: 474, Completion: 279
+2025-02-10 05:49:19,849 - INFO - Code generated successfully, running tests...
+2025-02-10 05:49:19,851 - ERROR - Error Error: unsupported locale setting
+2025-02-10 05:49:19,852 - WARNING - Code Generation attempt 3/3 failed
+2025-02-10 05:49:19,852 - ERROR - Current task failed: unsupported locale setting
+2025-02-10 05:49:19,852 - INFO - Task [1] final results: [{'input': 'July 4th, 1776 at noon', 'output': '1776-07-04T12:00:00', 'code_output': None}, {'input': '1 เดือนตุลาคม 2005, 1:00 AM', 'output': '2005-10-01T01:00:00+00:00', 'code_output': None}, {'input': '2023-10-05 15:30 CST', 'output': '2023-10-05T21:30:00+00:00', 'code_output': None}]
+2025-02-10 05:49:19,852 - INFO - Passed 0/3 test cases
+2025-02-10 05:49:19,852 - INFO - Task [2] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/days.json...
+2025-02-10 05:49:19,853 - INFO - Generating code...
+2025-02-10 05:49:19,853 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 2020/4/17
+Output: 43938
+Input: 1906/6/23
+Output: 2366
+Input: 1912/12/19
+Output: 4737
+2025-02-10 05:49:22,961 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:49:22,963 - INFO - Code generation token usage: Prompt: 137, Completion: 278
+2025-02-10 05:49:22,964 - INFO - Code generated successfully, running tests...
+2025-02-10 05:49:22,966 - ERROR - Error RuntimeError: Debug case [2]: Solution output: 2365 != expected output: 2366
+2025-02-10 05:49:22,966 - WARNING - Code Generation attempt 1/3 failed
+2025-02-10 05:49:22,966 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 2020/4/17
+Output: 43938
+Input: 1906/6/23
+Output: 2366
+Input: 1912/12/19
+Output: 4737
+
+### Last Coding Attempt ###
+def solution(input):
+    # Split the input date into year, month, and day
+    year, month, day = map(int, input.split('/'))
+    
+    # Calculate the number of days since 1900/1/1
+    days_since_1900 = (year - 1900) * 365 + (year - 1900) // 4 + sum([31, 28 + (1 if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0) else 0), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][:month-1]) + day
+    
+    # Adjust for leap years
+    if month <= 2 and (year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)):
+        days_since_1900 -= 1
+    
+    return str(days_since_1900)
+
+# Example usage:
+# print(solution("2020/4/17"))  # Output: 43938
+# print(solution("1906/6/23"))  # Output: 2366
+# print(solution("1912/12/19"))  # Output: 4737
+2025-02-10 05:49:26,119 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:49:26,121 - INFO - Code generation token usage: Prompt: 421, Completion: 147
+2025-02-10 05:49:26,122 - INFO - Code generated successfully, running tests...
+2025-02-10 05:49:26,124 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 43936 != expected output: 43938
+2025-02-10 05:49:26,125 - WARNING - Code Generation attempt 2/3 failed
+2025-02-10 05:49:26,125 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 2020/4/17
+Output: 43938
+Input: 1906/6/23
+Output: 2366
+Input: 1912/12/19
+Output: 4737
+
+### Last Coding Attempt ###
+from datetime import datetime
+
+def solution(input):
+    # Define the start date
+    start_date = datetime(1900, 1, 1)
+    
+    # Parse the input date
+    input_date = datetime.strptime(input, "%Y/%m/%d")
+    
+    # Calculate the difference in days
+    days_difference = (input_date - start_date).days
+    
+    return str(days_difference)
+
+# Example usage:
+# print(solution("2020/4/17"))  # Output: 43938
+# print(solution("1906/6/23"))  # Output: 2366
+# print(solution("1912/12/19"))  # Output: 4737
+2025-02-10 05:49:27,878 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:49:27,881 - INFO - Code generation token usage: Prompt: 285, Completion: 86
+2025-02-10 05:49:27,882 - INFO - Code generated successfully, running tests...
+2025-02-10 05:49:27,884 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 43936 != expected output: 43938
+2025-02-10 05:49:27,884 - WARNING - Code Generation attempt 3/3 failed
+2025-02-10 05:49:27,884 - INFO - Task [2] final results: [{'input': '1900/12/23', 'output': '358', 'code_output': '356'}, {'input': '1959/10/12', 'output': '21835', 'code_output': '21833'}]
+2025-02-10 05:49:27,885 - INFO - Passed 0/2 test cases
+2025-02-10 05:49:27,885 - INFO - Task [3] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/degree.json...
+2025-02-10 05:49:27,885 - INFO - Generating code...
+2025-02-10 05:49:27,885 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 13.5 Degrees
+Output: 24%
+Input: 5.71 Degrees
+Output: 10%
+Input: 26.57 Degrees
+Output: 50%
+2025-02-10 05:49:30,171 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:49:30,173 - INFO - Code generation token usage: Prompt: 128, Completion: 72
+2025-02-10 05:49:30,174 - INFO - Code generated successfully, running tests...
+2025-02-10 05:49:30,175 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 25% != expected output: 24%
+2025-02-10 05:49:30,175 - WARNING - Code Generation attempt 1/3 failed
+2025-02-10 05:49:30,176 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 13.5 Degrees
+Output: 24%
+Input: 5.71 Degrees
+Output: 10%
+Input: 26.57 Degrees
+Output: 50%
+
+### Last Coding Attempt ###
+def solution(input):
+    # Extract the numeric value from the input string
+    degrees = float(input.split()[0])
+    
+    # Convert degrees to percentage
+    percentage = int(degrees / 26.57 * 50)
+    
+    # Format the output string
+    output = f"{percentage}%"
+    
+    return output
+2025-02-10 05:49:32,466 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:49:32,468 - INFO - Code generation token usage: Prompt: 201, Completion: 72
+2025-02-10 05:49:32,471 - INFO - Code generated successfully, running tests...
+2025-02-10 05:49:32,472 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 25% != expected output: 24%
+2025-02-10 05:49:32,472 - WARNING - Code Generation attempt 2/3 failed
+2025-02-10 05:49:32,472 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 13.5 Degrees
+Output: 24%
+Input: 5.71 Degrees
+Output: 10%
+Input: 26.57 Degrees
+Output: 50%
+
+### Last Coding Attempt ###
+def solution(input):
+    # Extract the numeric value from the input string
+    degrees = float(input.split()[0])
+    
+    # Convert degrees to percentage
+    percentage = int(degrees / 26.57 * 50)
+    
+    # Format the output string
+    output = f"{percentage}%"
+    
+    return output
+2025-02-10 05:49:33,752 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:49:33,753 - INFO - Code generation token usage: Prompt: 201, Completion: 72
+2025-02-10 05:49:33,754 - INFO - Code generated successfully, running tests...
+2025-02-10 05:49:33,755 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 25% != expected output: 24%
+2025-02-10 05:49:33,756 - WARNING - Code Generation attempt 3/3 failed
+2025-02-10 05:49:33,756 - INFO - Task [3] final results: [{'input': '45 Degrees', 'output': '100%', 'code_output': '84%'}, {'input': '2.86 Degrees', 'output': '5%', 'code_output': '5%'}, {'input': '36.87 Degrees', 'output': '75%', 'code_output': '69%'}, {'input': '56.31 Degrees', 'output': '150%', 'code_output': '105%'}]
+2025-02-10 05:49:33,756 - INFO - Passed 1/4 test cases
+2025-02-10 05:49:33,756 - INFO - Task [4] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/excel_date.json...
+2025-02-10 05:49:33,756 - INFO - Generating code...
+2025-02-10 05:49:33,757 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 4938
+Output: 1913/7/8
+Input: 236
+Output: 1900/8/23
+Input: 47378
+Output: 2029/9/17
+2025-02-10 05:49:37,346 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:49:37,348 - INFO - Code generation token usage: Prompt: 136, Completion: 277
+2025-02-10 05:49:37,349 - INFO - Code generated successfully, running tests...
+2025-02-10 05:49:37,351 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 1913/7/13 != expected output: 1913/7/8
+2025-02-10 05:49:37,351 - WARNING - Code Generation attempt 1/3 failed
+2025-02-10 05:49:37,351 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 4938
+Output: 1913/7/8
+Input: 236
+Output: 1900/8/23
+Input: 47378
+Output: 2029/9/17
+
+### Last Coding Attempt ###
+def solution(input):
+    # Convert the input to an integer
+    number = int(input)
+    
+    # Determine the year
+    if number < 10000:
+        year = 1900 + (number // 365)
+    else:
+        year = 2000 + (number // 365)
+    
+    # Calculate the remaining days after determining the year
+    days_remaining = number % 365
+    
+    # Determine the month and day
+    # Days in each month from January to December
+    days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    
+    # Adjust for leap years
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        days_in_month[1] = 29
+    
+    month = 1
+    for days in days_in_month:
+        if days_remaining < days:
+            break
+        days_remaining -= days
+        month += 1
+    
+    # The remaining days are the day of the month
+    day = days_remaining + 1
+    
+    # Format the output as a string
+    output = f"{year}/{month}/{day}"
+    return output
+2025-02-10 05:49:40,720 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:49:40,721 - INFO - Code generation token usage: Prompt: 414, Completion: 277
+2025-02-10 05:49:40,722 - INFO - Code generated successfully, running tests...
+2025-02-10 05:49:40,724 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 1913/7/13 != expected output: 1913/7/8
+2025-02-10 05:49:40,724 - WARNING - Code Generation attempt 2/3 failed
+2025-02-10 05:49:40,724 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 4938
+Output: 1913/7/8
+Input: 236
+Output: 1900/8/23
+Input: 47378
+Output: 2029/9/17
+
+### Last Coding Attempt ###
+def solution(input):
+    # Convert the input to an integer
+    number = int(input)
+    
+    # Determine the year
+    if number < 10000:
+        year = 1900 + (number // 365)
+    else:
+        year = 2000 + (number // 365)
+    
+    # Calculate the remaining days after determining the year
+    days_remaining = number % 365
+    
+    # Determine the month and day
+    # Days in each month from January to December
+    days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    
+    # Adjust for leap years
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        days_in_month[1] = 29
+    
+    month = 1
+    for days in days_in_month:
+        if days_remaining < days:
+            break
+        days_remaining -= days
+        month += 1
+    
+    # The remaining days are the day of the month
+    day = days_remaining + 1
+    
+    # Format the output as a string
+    output = f"{year}/{month}/{day}"
+    return output
+2025-02-10 05:49:44,880 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:49:44,882 - INFO - Code generation token usage: Prompt: 414, Completion: 308
+2025-02-10 05:49:44,882 - INFO - Code generated successfully, running tests...
+2025-02-10 05:49:44,884 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 1913/7/13 != expected output: 1913/7/8
+2025-02-10 05:49:44,885 - WARNING - Code Generation attempt 3/3 failed
+2025-02-10 05:49:44,885 - INFO - Task [4] final results: [{'input': '2358', 'output': '1906/6/15', 'code_output': '1906/6/18'}, {'input': '21835', 'output': '1959/10/12', 'code_output': '1959/10/28'}]
+2025-02-10 05:49:44,885 - INFO - Passed 0/2 test cases
+2025-02-10 05:49:44,885 - INFO - Task [5] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/geo-1.json...
+2025-02-10 05:49:44,885 - INFO - Generating code...
+2025-02-10 05:49:44,885 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 34°25'20"N, 108°56'50"E
+Output: 34.422, 108.947
+Input: 25°30'20"N, 80°0'10"W
+Output: 25.506, -80.003
+Input: 40°44'55"N, 73°59'11"W
+Output: 40.749, -73.986
+2025-02-10 05:49:52,777 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:49:52,779 - INFO - Code generation token usage: Prompt: 179, Completion: 267
+2025-02-10 05:49:52,779 - INFO - Code generated successfully, running tests...
+2025-02-10 05:49:52,781 - ERROR - Error ValueError: not enough values to unpack (expected 3, got 2)
+2025-02-10 05:49:52,782 - WARNING - Code Generation attempt 1/3 failed
+2025-02-10 05:49:52,782 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 34°25'20"N, 108°56'50"E
+Output: 34.422, 108.947
+Input: 25°30'20"N, 80°0'10"W
+Output: 25.506, -80.003
+Input: 40°44'55"N, 73°59'11"W
+Output: 40.749, -73.986
+
+### Last Coding Attempt ###
+def solution(input):
+    def dms_to_decimal(degrees, minutes, seconds, direction):
+        decimal = degrees + minutes / 60 + seconds / 3600
+        if direction in ['S', 'W']:
+            decimal = -decimal
+        return round(decimal, 3)
+    
+    parts = input.split(', ')
+    lat_dms = parts[0]
+    lon_dms = parts[1]
+    
+    # Parse latitude
+    lat_deg, lat_min, lat_sec_dir = lat_dms.split('°')
+    lat_min, lat_sec_dir = lat_min.split("'")
+    lat_sec = lat_sec_dir[:-1]
+    lat_dir = lat_sec_dir[-1]
+    
+    # Parse longitude
+    lon_deg, lon_min, lon_sec_dir = lon_dms.split('°')
+    lon_min, lon_sec_dir = lon_min.split("'")
+    lon_sec = lon_sec_dir[:-1]
+    lon_dir = lon_sec_dir[-1]
+    
+    # Convert to decimal
+    latitude = dms_to_decimal(int(lat_deg), int(lat_min), int(lat_sec), lat_dir)
+    longitude = dms_to_decimal(int(lon_deg), int(lon_min), int(lon_sec), lon_dir)
+    
+    return f"{latitude}, {longitude}"
+2025-02-10 05:49:55,943 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:49:55,945 - INFO - Code generation token usage: Prompt: 447, Completion: 267
+2025-02-10 05:49:55,945 - INFO - Code generated successfully, running tests...
+2025-02-10 05:49:55,947 - ERROR - Error ValueError: not enough values to unpack (expected 3, got 2)
+2025-02-10 05:49:55,947 - WARNING - Code Generation attempt 2/3 failed
+2025-02-10 05:49:55,947 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 34°25'20"N, 108°56'50"E
+Output: 34.422, 108.947
+Input: 25°30'20"N, 80°0'10"W
+Output: 25.506, -80.003
+Input: 40°44'55"N, 73°59'11"W
+Output: 40.749, -73.986
+
+### Last Coding Attempt ###
+def solution(input):
+    def dms_to_decimal(degrees, minutes, seconds, direction):
+        decimal = degrees + minutes / 60 + seconds / 3600
+        if direction in ['S', 'W']:
+            decimal = -decimal
+        return round(decimal, 3)
+    
+    parts = input.split(', ')
+    lat_dms = parts[0]
+    lon_dms = parts[1]
+    
+    # Parse latitude
+    lat_deg, lat_min, lat_sec_dir = lat_dms.split('°')
+    lat_min, lat_sec_dir = lat_min.split("'")
+    lat_sec = lat_sec_dir[:-1]
+    lat_dir = lat_sec_dir[-1]
+    
+    # Parse longitude
+    lon_deg, lon_min, lon_sec_dir = lon_dms.split('°')
+    lon_min, lon_sec_dir = lon_min.split("'")
+    lon_sec = lon_sec_dir[:-1]
+    lon_dir = lon_sec_dir[-1]
+    
+    # Convert to decimal
+    latitude = dms_to_decimal(int(lat_deg), int(lat_min), int(lat_sec), lat_dir)
+    longitude = dms_to_decimal(int(lon_deg), int(lon_min), int(lon_sec), lon_dir)
+    
+    return f"{latitude}, {longitude}"
+2025-02-10 05:50:00,605 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:50:00,606 - INFO - Code generation token usage: Prompt: 447, Completion: 267
+2025-02-10 05:50:00,607 - INFO - Code generated successfully, running tests...
+2025-02-10 05:50:00,609 - ERROR - Error ValueError: not enough values to unpack (expected 3, got 2)
+2025-02-10 05:50:00,609 - WARNING - Code Generation attempt 3/3 failed
+2025-02-10 05:50:00,609 - ERROR - Current task failed: not enough values to unpack (expected 3, got 2)
+2025-02-10 05:50:00,610 - INFO - Task [5] final results: [{'input': '48°51\'29"N, 2°17\'40"E', 'output': '48.858, 2.294', 'code_output': None}, {'input': '51°28\'40"N, 0°0\'5"W', 'output': '51.478, -0.001', 'code_output': None}]
+2025-02-10 05:50:00,610 - INFO - Passed 0/2 test cases
+2025-02-10 05:50:00,610 - INFO - Task [6] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/geo-2.json...
+2025-02-10 05:50:00,610 - INFO - Generating code...
+2025-02-10 05:50:00,610 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 19S U 452000 E 3575000
+Output: -57.964, -69.811
+Input: 36N J 700000 E 4200000
+Output: 37.926, 35.276
+Input: 33T Q 500000 E 1000000
+Output: -81.061, 15.000
+2025-02-10 05:50:11,333 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:50:11,334 - INFO - Code generation token usage: Prompt: 170, Completion: 807
+2025-02-10 05:50:11,334 - INFO - Code generated successfully, running tests...
+2025-02-10 05:50:11,336 - ERROR - Error NameError: name 'sin' is not defined
+2025-02-10 05:50:11,336 - WARNING - Code Generation attempt 1/3 failed
+2025-02-10 05:50:11,336 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 19S U 452000 E 3575000
+Output: -57.964, -69.811
+Input: 36N J 700000 E 4200000
+Output: 37.926, 35.276
+Input: 33T Q 500000 E 1000000
+Output: -81.061, 15.000
+
+### Last Coding Attempt ###
+def solution(input):
+    # Split the input string into components
+    parts = input.split()
+    
+    # Extract the zone, hemisphere, easting, and northing
+    zone_number = int(parts[0][:-1])
+    hemisphere = parts[0][-1]
+    easting = int(parts[2])
+    northing = int(parts[4])
+    
+    # Constants for UTM to Lat/Lon conversion
+    k0 = 0.9996
+    e = 0.00669438
+    e1sq = e / (1 - e)
+    a = 6378137  # Radius of the Earth in meters
+    
+    # Calculate the longitude origin of the zone
+    lon_origin = (zone_number - 1) * 6 - 180 + 3
+    
+    # Adjust northing for southern hemisphere
+    if hemisphere == 'S':
+        northing -= 10000000
+    
+    # Calculate the footpoint latitude
+    m = northing / k0
+    mu = m / (a * (1 - e / 4 - 3 * e**2 / 64 - 5 * e**3 / 256))
+    
+    # Calculate latitude
+    e1 = (1 - (1 - e)**0.5) / (1 + (1 - e)**0.5)
+    j1 = 3 * e1 / 2 - 27 * e1**3 / 32
+    j2 = 21 * e1**2 / 16 - 55 * e1**4 / 32
+    j3 = 151 * e1**3 / 96
+    j4 = 1097 * e1**4 / 512
+    fp_lat = mu + j1 * sin(2 * mu) + j2 * sin(4 * mu) + j3 * sin(6 * mu) + j4 * sin(8 * mu)
+    
+    # Calculate latitude and longitude
+    c1 = e1sq * cos(fp_lat)**2
+    t1 = tan(fp_lat)**2
+    r1 = a * (1 - e) / (1 - e * sin(fp_lat)**2)**1.5
+    n1 = a / (1 - e * sin(fp_lat)**2)**0.5
+    d = (easting - 500000) / (n1 * k0)
+    
+    q1 = n1 * tan(fp_lat) / r1
+    q2 = (d**2 / 2)
+    q3 = (5 + 3 * t1 + 10 * c1 - 4 * c1**2 - 9 * e1sq) * d**4 / 24
+    q4 = (61 + 90 * t1 + 298 * c1 + 45 * t1**2 - 252 * e1sq - 3 * c1**2) * d**6 / 720
+    lat = fp_lat - q1 * (q2 - q3 + q4)
+    
+    q5 = d
+    q6 = (1 + 2 * t1 + c1) * d**3 / 6
+    q7 = (5 - 2 * c1 + 28 * t1 - 3 * c1**2 + 8 * e1sq + 24 * t1**2) * d**5 / 120
+    lon = lon_origin + (q5 - q6 + q7) / cos(fp_lat)
+    
+    # Convert latitude and longitude from radians to degrees
+    lat = lat * 180 / pi
+    lon = lon * 180 / pi
+    
+    # Format the output
+    output = f"{lat:.3f}, {lon:.3f}"
+    return output
+2025-02-10 05:50:19,918 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:50:19,920 - INFO - Code generation token usage: Prompt: 978, Completion: 825
+2025-02-10 05:50:19,921 - INFO - Code generated successfully, running tests...
+2025-02-10 05:50:19,922 - ERROR - Error RuntimeError: Debug case [1]: Solution output: -57.964, -3954.220 != expected output: -57.964, -69.811
+2025-02-10 05:50:19,922 - WARNING - Code Generation attempt 2/3 failed
+2025-02-10 05:50:19,922 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 19S U 452000 E 3575000
+Output: -57.964, -69.811
+Input: 36N J 700000 E 4200000
+Output: 37.926, 35.276
+Input: 33T Q 500000 E 1000000
+Output: -81.061, 15.000
+
+### Last Coding Attempt ###
+def solution(input):
+    import math
+    
+    # Split the input string into components
+    parts = input.split()
+    
+    # Extract the zone, hemisphere, easting, and northing
+    zone_number = int(parts[0][:-1])
+    hemisphere = parts[0][-1]
+    easting = int(parts[2])
+    northing = int(parts[4])
+    
+    # Constants for UTM to Lat/Lon conversion
+    k0 = 0.9996
+    e = 0.00669438
+    e1sq = e / (1 - e)
+    a = 6378137  # Radius of the Earth in meters
+    
+    # Calculate the longitude origin of the zone
+    lon_origin = (zone_number - 1) * 6 - 180 + 3
+    
+    # Adjust northing for southern hemisphere
+    if hemisphere == 'S':
+        northing -= 10000000
+    
+    # Calculate the footpoint latitude
+    m = northing / k0
+    mu = m / (a * (1 - e / 4 - 3 * e**2 / 64 - 5 * e**3 / 256))
+    
+    # Calculate latitude
+    e1 = (1 - (1 - e)**0.5) / (1 + (1 - e)**0.5)
+    j1 = 3 * e1 / 2 - 27 * e1**3 / 32
+    j2 = 21 * e1**2 / 16 - 55 * e1**4 / 32
+    j3 = 151 * e1**3 / 96
+    j4 = 1097 * e1**4 / 512
+    fp_lat = mu + j1 * math.sin(2 * mu) + j2 * math.sin(4 * mu) + j3 * math.sin(6 * mu) + j4 * math.sin(8 * mu)
+    
+    # Calculate latitude and longitude
+    c1 = e1sq * math.cos(fp_lat)**2
+    t1 = math.tan(fp_lat)**2
+    r1 = a * (1 - e) / (1 - e * math.sin(fp_lat)**2)**1.5
+    n1 = a / (1 - e * math.sin(fp_lat)**2)**0.5
+    d = (easting - 500000) / (n1 * k0)
+    
+    q1 = n1 * math.tan(fp_lat) / r1
+    q2 = (d**2 / 2)
+    q3 = (5 + 3 * t1 + 10 * c1 - 4 * c1**2 - 9 * e1sq) * d**4 / 24
+    q4 = (61 + 90 * t1 + 298 * c1 + 45 * t1**2 - 252 * e1sq - 3 * c1**2) * d**6 / 720
+    lat = fp_lat - q1 * (q2 - q3 + q4)
+    
+    q5 = d
+    q6 = (1 + 2 * t1 + c1) * d**3 / 6
+    q7 = (5 - 2 * c1 + 28 * t1 - 3 * c1**2 + 8 * e1sq + 24 * t1**2) * d**5 / 120
+    lon = lon_origin + (q5 - q6 + q7) / math.cos(fp_lat)
+    
+    # Convert latitude and longitude from radians to degrees
+    lat = lat * 180 / math.pi
+    lon = lon * 180 / math.pi
+    
+    # Format the output
+    output = f"{lat:.3f}, {lon:.3f}"
+    return output
+2025-02-10 05:50:34,796 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:50:34,797 - INFO - Code generation token usage: Prompt: 996, Completion: 927
+2025-02-10 05:50:34,797 - INFO - Code generated successfully, running tests...
+2025-02-10 05:50:34,799 - ERROR - Error RuntimeError: Debug case [1]: Solution output: -57.964, -3954.220 != expected output: -57.964, -69.811
+2025-02-10 05:50:34,799 - WARNING - Code Generation attempt 3/3 failed
+2025-02-10 05:50:34,799 - INFO - Task [6] final results: [{'input': '10S X 360000 E 8400000', 'output': '-14.469, -124.299', 'code_output': '-14.469, -7048.680'}, {'input': '12N M 650000 E 2000000', 'output': '18.084, -109.583', 'code_output': '18.084, -6358.414'}]
+2025-02-10 05:50:34,799 - INFO - Passed 0/2 test cases
+2025-02-10 05:50:34,799 - INFO - Task [7] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/geo-3.json...
+2025-02-10 05:50:34,799 - INFO - Generating code...
+2025-02-10 05:50:34,799 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 18SUJ123456
+Output: 39.239, -77.175
+Input: 33TWN123456
+Output: 47.364, 15.163
+Input: 11SJB123456
+Output: 37.376, -121.378
+2025-02-10 05:50:42,073 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:50:42,074 - INFO - Code generation token usage: Prompt: 152, Completion: 578
+2025-02-10 05:50:42,074 - INFO - Code generated successfully, running tests...
+2025-02-10 05:50:42,075 - INFO - Task [7] final results: [{'input': '19SGB123456', 'output': '37.433, -66.6', 'code_output': 'Unknown location'}]
+2025-02-10 05:50:42,075 - INFO - Passed 0/1 test cases
+2025-02-10 05:50:42,075 - INFO - Task [8] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/geo-4.json...
+2025-02-10 05:50:42,075 - INFO - Generating code...
+2025-02-10 05:50:42,075 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 23.11, 39.33
+Output: UTM Easting: 533791mE, UTM Northing: 2555735mN, Zone: 37Q
+Input: 34.05, -118.25
+Output: UTM Easting: 384629mE, UTM Northing: 3768404mN, Zone: 11S
+Input: 51.5074, -0.1278
+Output: UTM Easting: 699316mE, UTM Northing: 5710163mN, Zone: 30U
+2025-02-10 05:50:46,104 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:50:46,105 - INFO - Code generation token usage: Prompt: 220, Completion: 337
+2025-02-10 05:50:46,106 - INFO - Code generated successfully, running tests...
+2025-02-10 05:50:46,107 - ERROR - Error ModuleNotFoundError: No module named 'utm'
+2025-02-10 05:50:46,107 - WARNING - ModuleNotFoundError: No module named 'utm'. Please handle it manually.
+2025-02-10 05:50:46,107 - ERROR - Current task failed: cannot access local variable 'solution_func' where it is not associated with a value
+2025-02-10 05:50:46,107 - INFO - Task [8] final results: [{'input': '-33.8688, 151.2093', 'output': 'UTM Easting: 334368mE, UTM Northing: 6250948mN, Zone: 56H', 'code_output': None}, {'input': '40.7128, -74.006', 'output': 'UTM Easting: 583959mE, UTM Northing: 4507350mN, Zone: 18T', 'code_output': None}]
+2025-02-10 05:50:46,107 - INFO - Passed 0/2 test cases
+2025-02-10 05:50:46,107 - INFO - Task [9] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/geo-5.json...
+2025-02-10 05:50:46,107 - INFO - Generating code...
+2025-02-10 05:50:46,107 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 655957mE, 5887044mN, 40U
+Output: 53.11, 59.33
+Input: 634236mE, 7105483mN, 27W
+Output: 64.05, -18.25
+Input: 729981mE, 2379495mN, 29Q
+Output: 21.5034, -6.78
+2025-02-10 05:50:48,902 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:50:48,903 - INFO - Code generation token usage: Prompt: 183, Completion: 197
+2025-02-10 05:50:48,904 - INFO - Code generated successfully, running tests...
+2025-02-10 05:50:48,905 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 58.8704, -16.56 != expected output: 53.11, 59.33
+2025-02-10 05:50:48,905 - WARNING - Code Generation attempt 1/3 failed
+2025-02-10 05:50:48,905 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 655957mE, 5887044mN, 40U
+Output: 53.11, 59.33
+Input: 634236mE, 7105483mN, 27W
+Output: 64.05, -18.25
+Input: 729981mE, 2379495mN, 29Q
+Output: 21.5034, -6.78
+
+### Last Coding Attempt ###
+def solution(input):
+    # Extract the components from the input string
+    easting, northing, zone = input.split(', ')
+    
+    # Remove the 'mE' and 'mN' suffixes and convert to integers
+    easting = int(easting[:-2])
+    northing = int(northing[:-2])
+    
+    # Extract the zone number and letter
+    zone_number = int(zone[:-1])
+    zone_letter = zone[-1]
+    
+    # Calculate the latitude and longitude
+    latitude = northing / 100000.0
+    longitude = (easting / 100000.0) - (30 - zone_number)
+    
+    # Adjust longitude for the western hemisphere
+    if zone_letter in 'NPQRSTUVWX':
+        longitude = -longitude
+    
+    # Format the output as required
+    output = f"{latitude:.4f}, {longitude:.2f}"
+    
+    return output
+2025-02-10 05:50:52,648 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:50:52,649 - INFO - Code generation token usage: Prompt: 386, Completion: 294
+2025-02-10 05:50:52,649 - INFO - Code generated successfully, running tests...
+2025-02-10 05:50:52,650 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 58.87, -16.56 != expected output: 53.11, 59.33
+2025-02-10 05:50:52,650 - WARNING - Code Generation attempt 2/3 failed
+2025-02-10 05:50:52,651 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 655957mE, 5887044mN, 40U
+Output: 53.11, 59.33
+Input: 634236mE, 7105483mN, 27W
+Output: 64.05, -18.25
+Input: 729981mE, 2379495mN, 29Q
+Output: 21.5034, -6.78
+
+### Last Coding Attempt ###
+def solution(input):
+    # Extract the components from the input string
+    easting, northing, zone = input.split(', ')
+    
+    # Remove the 'mE' and 'mN' suffixes and convert to integers
+    easting = int(easting[:-2])
+    northing = int(northing[:-2])
+    
+    # Extract the zone number and letter
+    zone_number = int(zone[:-1])
+    zone_letter = zone[-1]
+    
+    # Calculate the latitude and longitude
+    latitude = northing / 100000.0
+    longitude = (easting / 100000.0) - (30 - zone_number)
+    
+    # Adjust longitude for the western hemisphere
+    if zone_letter in 'NPQRSTUVWX':
+        longitude = -longitude
+    
+    # Format the output as required
+    output = f"{latitude:.2f}, {longitude:.2f}"
+    
+    return output
+2025-02-10 05:50:55,145 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:50:55,146 - INFO - Code generation token usage: Prompt: 381, Completion: 198
+2025-02-10 05:50:55,147 - INFO - Code generated successfully, running tests...
+2025-02-10 05:50:55,148 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 58.87, 16.56 != expected output: 53.11, 59.33
+2025-02-10 05:50:55,148 - WARNING - Code Generation attempt 3/3 failed
+2025-02-10 05:50:55,148 - INFO - Task [9] final results: [{'input': '772181mE, 3753637mN, 32S', 'output': '33.888, 11.943', 'code_output': '37.54, 9.72'}, {'input': '397424mE, 7631951mN, 40W', 'output': '68.78, 54.46', 'code_output': '76.32, 13.97'}]
+2025-02-10 05:50:55,148 - INFO - Passed 0/2 test cases
+2025-02-10 05:50:55,148 - INFO - Task [10] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/gregorian.json...
+2025-02-10 05:50:55,148 - INFO - Generating code...
+2025-02-10 05:50:55,148 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: Friday, 20 August 2038 C.E.
+Output: 19 Rajab 1460
+Input: July 2023 C.E.
+Output: Muharram 1445
+Input: January 2029 C.E.
+Output: Ramadan 1450
+2025-02-10 05:51:00,608 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:00,609 - INFO - Code generation token usage: Prompt: 146, Completion: 489
+2025-02-10 05:51:00,609 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:00,611 - ERROR - Error ModuleNotFoundError: No module named 'hijri_converter'
+2025-02-10 05:51:00,611 - WARNING - ModuleNotFoundError: No module named 'hijri_converter'. Please handle it manually.
+2025-02-10 05:51:00,611 - ERROR - Current task failed: cannot access local variable 'solution_func' where it is not associated with a value
+2025-02-10 05:51:00,611 - INFO - Task [10] final results: [{'input': 'September 2009 C.E.', 'output': 'Shawwal 1430', 'code_output': None}, {'input': '25 April 2014 C.E.', 'output': '25 Jumada al-Thani 1435', 'code_output': None}, {'input': 'October 2043 C.E.', 'output': 'Dhul-Qadah 1465', 'code_output': None}]
+2025-02-10 05:51:00,611 - INFO - Passed 0/3 test cases
+2025-02-10 05:51:00,611 - INFO - Task [11] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/hex.json...
+2025-02-10 05:51:00,611 - INFO - Generating code...
+2025-02-10 05:51:00,611 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 1E162
+Output: 123234
+Input: A1F
+Output: 2591
+Input: 3D7A
+Output: 15738
+2025-02-10 05:51:01,720 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:01,720 - INFO - Code generation token usage: Prompt: 128, Completion: 45
+2025-02-10 05:51:01,721 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:01,722 - INFO - Task [11] final results: [{'input': 'FF', 'output': '255', 'code_output': '255'}, {'input': '2B4C', 'output': '11084', 'code_output': '11084'}, {'input': 'C0DE', 'output': '49374', 'code_output': '49374'}]
+2025-02-10 05:51:01,722 - INFO - All 3 test cases passed
+2025-02-10 05:51:01,722 - INFO - Task [12] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/hijri.json...
+2025-02-10 05:51:01,722 - INFO - Generating code...
+2025-02-10 05:51:01,722 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 19 Rajab 1460
+Output: Friday, 20 August 2038 C.E.
+Input: Muharram 1445
+Output: July 2023 C.E.
+Input: Ramadan 1450
+Output: January 2029 C.E.
+2025-02-10 05:51:06,031 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:06,032 - INFO - Code generation token usage: Prompt: 151, Completion: 271
+2025-02-10 05:51:06,033 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:06,034 - ERROR - Error ModuleNotFoundError: No module named 'hijri_converter'
+2025-02-10 05:51:06,034 - WARNING - ModuleNotFoundError: No module named 'hijri_converter'. Please handle it manually.
+2025-02-10 05:51:06,034 - ERROR - Current task failed: cannot access local variable 'solution_func' where it is not associated with a value
+2025-02-10 05:51:06,034 - INFO - Task [12] final results: [{'input': 'Shawwal 1430', 'output': 'September 2009 C.E.', 'code_output': None}, {'input': '25 Jumada al-Thani 1435', 'output': '25 April 2014 C.E.', 'code_output': None}, {'input': 'Dhul-Qadah 1465', 'output': 'October 2043 C.E.', 'code_output': None}]
+2025-02-10 05:51:06,034 - INFO - Passed 0/3 test cases
+2025-02-10 05:51:06,034 - INFO - Task [13] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/inches.json...
+2025-02-10 05:51:06,034 - INFO - Generating code...
+2025-02-10 05:51:06,034 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 170 cm
+Output: 5 feet and 6.9291 inches
+Input: 200 cm
+Output: 6 feet and 6.7402 inches
+Input: 50 cm
+Output: 1 feet and 7.6850 inches
+2025-02-10 05:51:07,912 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:07,912 - INFO - Code generation token usage: Prompt: 146, Completion: 115
+2025-02-10 05:51:07,913 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:07,914 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 5 feet and 6.9292 inches != expected output: 5 feet and 6.9291 inches
+2025-02-10 05:51:07,914 - WARNING - Code Generation attempt 1/3 failed
+2025-02-10 05:51:07,914 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 170 cm
+Output: 5 feet and 6.9291 inches
+Input: 200 cm
+Output: 6 feet and 6.7402 inches
+Input: 50 cm
+Output: 1 feet and 7.6850 inches
+
+### Last Coding Attempt ###
+def solution(input):
+    # Extract the numeric value from the input string
+    cm = float(input.split()[0])
+    
+    # Convert cm to inches (1 cm = 0.393701 inches)
+    total_inches = cm * 0.393701
+    
+    # Calculate feet and remaining inches
+    feet = int(total_inches // 12)
+    inches = total_inches % 12
+    
+    # Format the output string
+    output = f"{feet} feet and {inches:.4f} inches"
+    
+    return output
+2025-02-10 05:51:10,494 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:10,495 - INFO - Code generation token usage: Prompt: 262, Completion: 115
+2025-02-10 05:51:10,495 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:10,496 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 5 feet and 6.9292 inches != expected output: 5 feet and 6.9291 inches
+2025-02-10 05:51:10,496 - WARNING - Code Generation attempt 2/3 failed
+2025-02-10 05:51:10,496 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 170 cm
+Output: 5 feet and 6.9291 inches
+Input: 200 cm
+Output: 6 feet and 6.7402 inches
+Input: 50 cm
+Output: 1 feet and 7.6850 inches
+
+### Last Coding Attempt ###
+def solution(input):
+    # Extract the numeric value from the input string
+    cm = float(input.split()[0])
+    
+    # Convert cm to inches (1 cm = 0.393701 inches)
+    total_inches = cm * 0.393701
+    
+    # Calculate feet and remaining inches
+    feet = int(total_inches // 12)
+    inches = total_inches % 12
+    
+    # Format the output string
+    output = f"{feet} feet and {inches:.4f} inches"
+    
+    return output
+2025-02-10 05:51:12,733 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:12,734 - INFO - Code generation token usage: Prompt: 267, Completion: 115
+2025-02-10 05:51:12,734 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:12,735 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 5 feet and 6.9292 inches != expected output: 5 feet and 6.9291 inches
+2025-02-10 05:51:12,735 - WARNING - Code Generation attempt 3/3 failed
+2025-02-10 05:51:12,735 - INFO - Task [13] final results: [{'input': '89 cm', 'output': '2 feet and 11.0394 inches', 'code_output': '2 feet and 11.0394 inches'}, {'input': '134 cm', 'output': '4 feet and 4.7559 inches', 'code_output': '4 feet and 4.7559 inches'}, {'input': '41 cm', 'output': '1 feet and 4.1417 inches', 'code_output': '1 feet and 4.1417 inches'}]
+2025-02-10 05:51:12,735 - INFO - All 3 test cases passed
+2025-02-10 05:51:12,735 - INFO - Task [14] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/ip-address.json...
+2025-02-10 05:51:12,735 - INFO - Generating code...
+2025-02-10 05:51:12,735 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 192.168.0.1
+Output: ::c0a8:1
+Input: 10.0.0.1
+Output: ::a00:1
+Input: 172.16.0.1
+Output: ::ac10:1
+2025-02-10 05:51:15,517 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:15,519 - INFO - Code generation token usage: Prompt: 148, Completion: 122
+2025-02-10 05:51:15,519 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:15,521 - ERROR - Error RuntimeError: Debug case [1]: Solution output: ::c0a8:0001 != expected output: ::c0a8:1
+2025-02-10 05:51:15,521 - WARNING - Code Generation attempt 1/3 failed
+2025-02-10 05:51:15,521 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 192.168.0.1
+Output: ::c0a8:1
+Input: 10.0.0.1
+Output: ::a00:1
+Input: 172.16.0.1
+Output: ::ac10:1
+
+### Last Coding Attempt ###
+def solution(input):
+    # Split the input string by dots to get the individual octets
+    octets = input.split('.')
+    
+    # Convert each octet to its hexadecimal representation
+    hex_octets = [format(int(octet), '02x') for octet in octets]
+    
+    # Combine the hexadecimal octets into a single string
+    hex_string = ''.join(hex_octets)
+    
+    # Format the final IPv6 address
+    output = f"::{hex_string[:4]}:{hex_string[4:]}"
+    
+    return output
+2025-02-10 05:51:17,462 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:17,464 - INFO - Code generation token usage: Prompt: 271, Completion: 122
+2025-02-10 05:51:17,464 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:17,466 - ERROR - Error RuntimeError: Debug case [1]: Solution output: ::c0a8:0001 != expected output: ::c0a8:1
+2025-02-10 05:51:17,466 - WARNING - Code Generation attempt 2/3 failed
+2025-02-10 05:51:17,466 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 192.168.0.1
+Output: ::c0a8:1
+Input: 10.0.0.1
+Output: ::a00:1
+Input: 172.16.0.1
+Output: ::ac10:1
+
+### Last Coding Attempt ###
+def solution(input):
+    # Split the input string by dots to get the individual octets
+    octets = input.split('.')
+    
+    # Convert each octet to its hexadecimal representation
+    hex_octets = [format(int(octet), '02x') for octet in octets]
+    
+    # Combine the hexadecimal octets into a single string
+    hex_string = ''.join(hex_octets)
+    
+    # Format the final IPv6 address
+    output = f"::{hex_string[:4]}:{hex_string[4:]}"
+    
+    return output
+2025-02-10 05:51:19,937 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:19,938 - INFO - Code generation token usage: Prompt: 271, Completion: 122
+2025-02-10 05:51:19,939 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:19,941 - ERROR - Error RuntimeError: Debug case [1]: Solution output: ::c0a8:0001 != expected output: ::c0a8:1
+2025-02-10 05:51:19,941 - WARNING - Code Generation attempt 3/3 failed
+2025-02-10 05:51:19,941 - INFO - Task [14] final results: [{'input': '127.0.0.1', 'output': '::7f00:1', 'code_output': '::7f00:0001'}, {'input': '192.0.2.1', 'output': '::c000:201', 'code_output': '::c000:0201'}, {'input': '203.0.113.5', 'output': '::cb00:7105', 'code_output': '::cb00:7105'}, {'input': '192.168.1.1', 'output': '::c0a8:101', 'code_output': '::c0a8:0101'}, {'input': '198.51.100.9', 'output': '::c633:6409', 'code_output': '::c633:6409'}]
+2025-02-10 05:51:19,941 - INFO - Passed 2/5 test cases
+2025-02-10 05:51:19,942 - INFO - Task [15] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/mph.json...
+2025-02-10 05:51:19,942 - INFO - Generating code...
+2025-02-10 05:51:19,942 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 26.84324
+Output: 12.00 m/s
+Input: 10
+Output: 4.47 m/s
+Input: 60
+Output: 26.82 m/s
+2025-02-10 05:51:21,563 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:21,565 - INFO - Code generation token usage: Prompt: 134, Completion: 86
+2025-02-10 05:51:21,566 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:21,567 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 7.46 m/s != expected output: 12.00 m/s
+2025-02-10 05:51:21,567 - WARNING - Code Generation attempt 1/3 failed
+2025-02-10 05:51:21,567 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 26.84324
+Output: 12.00 m/s
+Input: 10
+Output: 4.47 m/s
+Input: 60
+Output: 26.82 m/s
+
+### Last Coding Attempt ###
+def solution(input):
+    # Convert the input string to a float
+    kmh = float(input)
+    
+    # Convert km/h to m/s by dividing by 3.6
+    ms = kmh / 3.6
+    
+    # Format the result to two decimal places and append ' m/s'
+    output = f"{ms:.2f} m/s"
+    
+    return output
+2025-02-10 05:51:23,420 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:23,421 - INFO - Code generation token usage: Prompt: 226, Completion: 86
+2025-02-10 05:51:23,422 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:23,423 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 7.46 m/s != expected output: 12.00 m/s
+2025-02-10 05:51:23,423 - WARNING - Code Generation attempt 2/3 failed
+2025-02-10 05:51:23,423 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 26.84324
+Output: 12.00 m/s
+Input: 10
+Output: 4.47 m/s
+Input: 60
+Output: 26.82 m/s
+
+### Last Coding Attempt ###
+def solution(input):
+    # Convert the input string to a float
+    kmh = float(input)
+    
+    # Convert km/h to m/s by dividing by 3.6
+    ms = kmh / 3.6
+    
+    # Format the result to two decimal places and append ' m/s'
+    output = f"{ms:.2f} m/s"
+    
+    return output
+2025-02-10 05:51:25,113 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:25,115 - INFO - Code generation token usage: Prompt: 226, Completion: 86
+2025-02-10 05:51:25,115 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:25,117 - ERROR - Error RuntimeError: Debug case [1]: Solution output: 7.46 m/s != expected output: 12.00 m/s
+2025-02-10 05:51:25,117 - WARNING - Code Generation attempt 3/3 failed
+2025-02-10 05:51:25,117 - INFO - Task [15] final results: [{'input': '23.2', 'output': '10.37 m/s', 'code_output': '6.44 m/s'}, {'input': '64.4', 'output': '28.79 m/s', 'code_output': '17.89 m/s'}, {'input': '4.49', 'output': '2.01 m/s', 'code_output': '1.25 m/s'}]
+2025-02-10 05:51:25,117 - INFO - Passed 0/3 test cases
+2025-02-10 05:51:25,118 - INFO - Task [16] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/octal.json...
+2025-02-10 05:51:25,118 - INFO - Generating code...
+2025-02-10 05:51:25,118 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 1234
+Output: 668
+Input: 643
+Output: 419
+Input: 1643
+Output: 931
+2025-02-10 05:51:26,525 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:26,526 - INFO - Code generation token usage: Prompt: 121, Completion: 67
+2025-02-10 05:51:26,527 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:26,529 - ERROR - Error RuntimeError: Debug case [2]: Solution output: 77 != expected output: 419
+2025-02-10 05:51:26,529 - WARNING - Code Generation attempt 1/3 failed
+2025-02-10 05:51:26,529 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 1234
+Output: 668
+Input: 643
+Output: 419
+Input: 1643
+Output: 931
+
+### Last Coding Attempt ###
+def solution(input):
+    # Convert the input string to an integer
+    num = int(input)
+    
+    # Subtract 566 from the number
+    transformed_num = num - 566
+    
+    # Convert the result back to a string
+    output = str(transformed_num)
+    
+    return output
+2025-02-10 05:51:27,944 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:27,945 - INFO - Code generation token usage: Prompt: 194, Completion: 67
+2025-02-10 05:51:27,946 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:27,948 - ERROR - Error RuntimeError: Debug case [2]: Solution output: 77 != expected output: 419
+2025-02-10 05:51:27,948 - WARNING - Code Generation attempt 2/3 failed
+2025-02-10 05:51:27,948 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 1234
+Output: 668
+Input: 643
+Output: 419
+Input: 1643
+Output: 931
+
+### Last Coding Attempt ###
+def solution(input):
+    # Convert the input string to an integer
+    num = int(input)
+    
+    # Subtract 566 from the number
+    transformed_num = num - 566
+    
+    # Convert the result back to a string
+    output = str(transformed_num)
+    
+    return output
+2025-02-10 05:51:29,080 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:29,082 - INFO - Code generation token usage: Prompt: 194, Completion: 67
+2025-02-10 05:51:29,083 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:29,084 - ERROR - Error RuntimeError: Debug case [2]: Solution output: 77 != expected output: 419
+2025-02-10 05:51:29,085 - WARNING - Code Generation attempt 3/3 failed
+2025-02-10 05:51:29,085 - INFO - Task [16] final results: [{'input': '6421', 'output': '3345', 'code_output': '5855'}, {'input': '323', 'output': '211', 'code_output': '-243'}, {'input': '555', 'output': '365', 'code_output': '-11'}]
+2025-02-10 05:51:29,085 - INFO - Passed 0/3 test cases
+2025-02-10 05:51:29,086 - INFO - Task [17] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/pounds.json...
+2025-02-10 05:51:29,086 - INFO - Generating code...
+2025-02-10 05:51:29,086 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 0lb 1.128767oz
+Output: 32g
+Input: 1lb 0oz
+Output: 454g
+Input: 2lb 3.527396oz
+Output: 1007g
+2025-02-10 05:51:32,203 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:32,205 - INFO - Code generation token usage: Prompt: 146, Completion: 175
+2025-02-10 05:51:32,205 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:32,207 - INFO - Task [17] final results: [{'input': '0lb 8oz', 'output': '227g', 'code_output': '227g'}, {'input': '5lb 10oz', 'output': '2551g', 'code_output': '2551g'}, {'input': '3lb 5.643835oz', 'output': '1521g', 'code_output': '1521g'}]
+2025-02-10 05:51:32,207 - INFO - All 3 test cases passed
+2025-02-10 05:51:32,208 - INFO - Task [18] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/rectangular.json...
+2025-02-10 05:51:32,208 - INFO - Generating code...
+2025-02-10 05:51:32,208 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: (4.33, 2.50)
+Output: (5, 30)
+Input: (2.12, 2.12)
+Output: (3, 45)
+Input: (0.00, 6.00)
+Output: (6, 90)
+2025-02-10 05:51:34,286 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:34,288 - INFO - Code generation token usage: Prompt: 149, Completion: 139
+2025-02-10 05:51:34,293 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:34,297 - ERROR - Error RuntimeError: Debug case [1]: Solution output: (7, 27) != expected output: (5, 30)
+2025-02-10 05:51:34,297 - WARNING - Code Generation attempt 1/3 failed
+2025-02-10 05:51:34,298 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: (4.33, 2.50)
+Output: (5, 30)
+Input: (2.12, 2.12)
+Output: (3, 45)
+Input: (0.00, 6.00)
+Output: (6, 90)
+
+### Last Coding Attempt ###
+def solution(input):
+    # Parse the input string to extract the two float values
+    num1, num2 = map(float, input.strip("()").split(", "))
+    
+    # Calculate the sum of the two numbers and round it up to the nearest integer
+    sum_rounded = int(num1 + num2 + 0.5)
+    
+    # Calculate the angle in degrees based on the difference between the two numbers
+    angle = abs(num1 - num2) * 15
+    
+    # Format the output as a tuple in string format
+    output = f"({sum_rounded}, {int(angle)})"
+    
+    return output
+2025-02-10 05:51:36,258 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:36,261 - INFO - Code generation token usage: Prompt: 289, Completion: 139
+2025-02-10 05:51:36,262 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:36,264 - ERROR - Error RuntimeError: Debug case [1]: Solution output: (7, 27) != expected output: (5, 30)
+2025-02-10 05:51:36,264 - WARNING - Code Generation attempt 2/3 failed
+2025-02-10 05:51:36,264 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: (4.33, 2.50)
+Output: (5, 30)
+Input: (2.12, 2.12)
+Output: (3, 45)
+Input: (0.00, 6.00)
+Output: (6, 90)
+
+### Last Coding Attempt ###
+def solution(input):
+    # Parse the input string to extract the two float values
+    num1, num2 = map(float, input.strip("()").split(", "))
+    
+    # Calculate the sum of the two numbers and round it up to the nearest integer
+    sum_rounded = int(num1 + num2 + 0.5)
+    
+    # Calculate the angle in degrees based on the difference between the two numbers
+    angle = abs(num1 - num2) * 15
+    
+    # Format the output as a tuple in string format
+    output = f"({sum_rounded}, {int(angle)})"
+    
+    return output
+2025-02-10 05:51:38,660 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:38,662 - INFO - Code generation token usage: Prompt: 294, Completion: 130
+2025-02-10 05:51:38,663 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:38,664 - ERROR - Error RuntimeError: Debug case [1]: Solution output: (7, 27) != expected output: (5, 30)
+2025-02-10 05:51:38,664 - WARNING - Code Generation attempt 3/3 failed
+2025-02-10 05:51:38,665 - INFO - Task [18] final results: [{'input': '(-1.00, 1.73)', 'output': '(2, 120)', 'code_output': (1, 40)}, {'input': '(5.00, 8.66)', 'output': '(10, 60)', 'code_output': (14, 54)}]
+2025-02-10 05:51:38,665 - INFO - Passed 0/2 test cases
+2025-02-10 05:51:38,665 - INFO - Task [19] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/romans.json...
+2025-02-10 05:51:38,665 - INFO - Generating code...
+2025-02-10 05:51:38,666 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: MCMXC
+Output: 1990
+Input: MMXIV
+Output: 2014
+Input: CDXLIV
+Output: 444
+2025-02-10 05:51:40,732 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:40,734 - INFO - Code generation token usage: Prompt: 124, Completion: 199
+2025-02-10 05:51:40,735 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:40,738 - INFO - Task [19] final results: [{'input': 'DCCCXLV', 'output': '845', 'code_output': '845'}, {'input': 'MMMCMXCIX', 'output': '3999', 'code_output': '3999'}]
+2025-02-10 05:51:40,738 - INFO - All 2 test cases passed
+2025-02-10 05:51:40,738 - INFO - Task [20] Processing /home/yangchenyu/megatran/data/DTT-test/Manual-Hard/time.json...
+2025-02-10 05:51:40,738 - INFO - Generating code...
+2025-02-10 05:51:40,739 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 08:00:45
+Output: 8.0125 hours
+Input: 00:30:00
+Output: 0.5 hours
+Input: 12:34:56
+Output: 12.5822 hours
+2025-02-10 05:51:42,286 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:42,288 - INFO - Code generation token usage: Prompt: 142, Completion: 92
+2025-02-10 05:51:42,289 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:42,290 - ERROR - Error RuntimeError: Debug case [2]: Solution output: 0.5000 hours != expected output: 0.5 hours
+2025-02-10 05:51:42,290 - WARNING - Code Generation attempt 1/3 failed
+2025-02-10 05:51:42,290 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 08:00:45
+Output: 8.0125 hours
+Input: 00:30:00
+Output: 0.5 hours
+Input: 12:34:56
+Output: 12.5822 hours
+
+### Last Coding Attempt ###
+def solution(input):
+    # Split the input time into hours, minutes, and seconds
+    hours, minutes, seconds = map(int, input.split(':'))
+    
+    # Convert the time into total hours
+    total_hours = hours + minutes / 60 + seconds / 3600
+    
+    # Format the output to 4 decimal places
+    output = f"{total_hours:.4f} hours"
+    
+    return output
+2025-02-10 05:51:43,525 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:43,526 - INFO - Code generation token usage: Prompt: 235, Completion: 92
+2025-02-10 05:51:43,527 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:43,529 - ERROR - Error RuntimeError: Debug case [2]: Solution output: 0.5000 hours != expected output: 0.5 hours
+2025-02-10 05:51:43,529 - WARNING - Code Generation attempt 2/3 failed
+2025-02-10 05:51:43,529 - INFO - Code generation query:
+### Instruction ###
+Write function to transform the input data into the desired output
+
+### Examples ###
+Input: 08:00:45
+Output: 8.0125 hours
+Input: 00:30:00
+Output: 0.5 hours
+Input: 12:34:56
+Output: 12.5822 hours
+
+### Last Coding Attempt ###
+def solution(input):
+    # Split the input time into hours, minutes, and seconds
+    hours, minutes, seconds = map(int, input.split(':'))
+    
+    # Convert the time into total hours
+    total_hours = hours + minutes / 60 + seconds / 3600
+    
+    # Format the output to 4 decimal places
+    output = f"{total_hours:.4f} hours"
+    
+    return output
+2025-02-10 05:51:45,107 - INFO - HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-10 05:51:45,108 - INFO - Code generation token usage: Prompt: 235, Completion: 92
+2025-02-10 05:51:45,109 - INFO - Code generated successfully, running tests...
+2025-02-10 05:51:45,110 - ERROR - Error RuntimeError: Debug case [2]: Solution output: 0.5000 hours != expected output: 0.5 hours
+2025-02-10 05:51:45,110 - WARNING - Code Generation attempt 3/3 failed
+2025-02-10 05:51:45,111 - INFO - Task [20] final results: [{'input': '15:45:30', 'output': '15.7583 hours', 'code_output': '15.7583 hours'}, {'input': '14:10:20', 'output': '14.1722 hours', 'code_output': '14.1722 hours'}, {'input': '19:16:32', 'output': '19.2756 hours', 'code_output': '19.2756 hours'}, {'input': '09:14:23', 'output': '9.2397 hours', 'code_output': '9.2397 hours'}]
+2025-02-10 05:51:45,111 - INFO - All 4 test cases passed
+2025-02-10 05:51:45,111 - INFO - Exporting results...
+2025-02-10 05:51:45,132 - INFO - Full result exported to revision/code-llm/Manual-Hard-gpt-4o/result/full_result.csv
+2025-02-10 05:51:45,143 - INFO - Summary exported to revision/code-llm/Manual-Hard-gpt-4o/result/summary.json, Test stats: {'total_pass': 18, 'total_test': 57, 'prate_per_test': 0.316, 'total_task': 21, 'total_pass_task': 5, 'prate_per_task': 0.238}, Token stats: {'chat_to_inst': {'total_api_calls': 0, 'avg_prompt': 0, 'avg_completion': 0, 'avg_total': 0}, 'code_generation': {'total_api_calls': 47, 'avg_prompt': 269.91, 'avg_completion': 244.06, 'avg_total': 513.98}, 'reflection': {'total_api_calls': 0, 'avg_prompt': 0, 'avg_completion': 0, 'avg_total': 0}, 'lazy_rag': {'total_api_calls': 0, 'avg_prompt': 0, 'avg_completion': 0, 'avg_total': 0}}
+2025-02-10 05:51:45,144 - INFO - Experiment completed successfully. Duration: 0:02:47.900477
