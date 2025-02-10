@@ -10,10 +10,6 @@
         "git_branch": "main"
     },
     {
-        "name": "hijri_converter",
-        "doc_url": "https://hijri-converter.readthedocs.io/en/stable/"
-    },
-    {
         "name": "geopy",
         "doc_url": "https://geopy.readthedocs.io/en/stable/"
     },
@@ -40,13 +36,13 @@
     {
         "name": "dateparser",
         "doc_url": "https://pypi.org/project/dateparser/",
-        "git_url": "https://github.com/scrapinghub/dateparser"
+        "git_url": "https://github.com/scrapinghub/dateparser",
+        "git_branch": "master"
     },
     {
         "name": "roman",
-        "doc_url": [
-            "https://github.com/zopefoundation/roman"
-        ]
+        "git_url": "https://github.com/zopefoundation/roman",
+        "git_branch": "master"
     },
     {
         "name": "ipaddress",
@@ -57,7 +53,7 @@
         ]
     }, 
     {
-        "name": "hijri_converter",
+        "name": "hijridate",
         "git_url": "https://github.com/dralshehri/hijridate",
         "git_branch": "main",
         "doc_url": [
