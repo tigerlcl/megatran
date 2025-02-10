@@ -1,0 +1,29 @@
+{
+  "chat": "Transform the input motorcycle model by retaining only the brand name, removing the numeric displacement designation. For example, \"Honda125\" becomes \"Honda.\"",
+  "tuples": [
+    {
+      "input": "Honda125",
+      "output": "Honda"
+    },
+    {
+      "input": "Honda250",
+      "output": "Honda"
+    },
+    {
+      "input": "Honda550",
+      "output": "Honda"
+    },
+    {
+      "input": "Ducati125",
+      "output": "Ducati"
+    },
+    {
+      "input": "Ducati250",
+      "output": "Ducati"
+    },
+    {
+      "input": "Ducati100",
+      "output": "Ducati"
+    }
+  ]
+}

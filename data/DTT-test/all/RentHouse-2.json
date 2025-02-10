@@ -1,0 +1,25 @@
+{
+    "chat": "parse the house price from the rent description",
+    "tuples": [
+        {
+            "input": "Mar 5 Modern studio available $1200 / 1br - 500ft2 - (Downtown Seattle)",
+            "output": "1200"
+        },
+        {
+            "input": "Sept 18 Spacious 2-bedroom $1800 / 2br - 850ft2 - (Bellevue Heights)",
+            "output": "1800"
+        },
+        {
+            "input": "Jan 29 Luxury penthouse $3500 / 3br - 1500ft2 - (Seattle Waterfront)",
+            "output": "3500"
+        },
+        {
+            "input": "May 7 Cozy apartment $950 / 1br - 400ft2 - (Capitol Hill)",
+            "output": "950"
+        },
+        {
+            "input": "June 11 Family home $2800 / 4br - 2000ft2 - (Redmond)",
+            "output": "2800"
+        }
+    ]
+}

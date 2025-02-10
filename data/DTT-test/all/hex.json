@@ -1,0 +1,29 @@
+{
+    "chat": "Convert the given hex number to decimal number.",
+    "tuples": [
+        {
+            "input": "1E162",
+            "output": "123234"
+        },
+        {
+            "input": "A1F",
+            "output": "2591"
+        },
+        {
+            "input": "3D7A",
+            "output": "15738"
+        },
+        {
+            "input": "FF",
+            "output": "255"
+        },
+        {
+            "input": "2B4C",
+            "output": "11084"
+        },
+        {
+            "input": "C0DE",
+            "output": "49374"
+        }
+    ]
+}

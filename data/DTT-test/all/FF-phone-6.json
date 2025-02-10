@@ -1,0 +1,33 @@
+{
+  "chat": "Extract the three digits following the country code and before the hyphen from each phone number.",
+  "tuples": [
+    {
+      "input": "+62 647-787-775",
+      "output": "647"
+    },
+    {
+      "input": "+6 775-969-238",
+      "output": "775"
+    },
+    {
+      "input": "+172 027-507-632",
+      "output": "027"
+    },
+    {
+      "input": "+83 973-757-831",
+      "output": "973"
+    },
+    {
+      "input": "+106 769-858-438",
+      "output": "769"
+    },
+    {
+      "input": "+72 001-050-856",
+      "output": "001"
+    },
+    {
+      "input": "+95 310-537-401",
+      "output": "310"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+    "chat": "convert mph to mps, round to 2 decimal places.",
+    "tuples": [
+        {
+            "input": "26.84324",
+            "output": "12.00 m/s"
+        },
+        {
+            "input": "10",
+            "output": "4.47 m/s"
+        },
+        {
+            "input": "60",
+            "output": "26.82 m/s"
+        },
+        {
+            "input": "23.2",
+            "output": "10.37 m/s"
+        },
+        {
+            "input": "64.4",
+            "output": "28.79 m/s"
+        },
+        {
+            "input": "4.49",
+            "output": "2.01 m/s"
+        }
+    ]
+}

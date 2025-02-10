@@ -58,7 +58,7 @@
     }, 
     {
         "name": "hijri_converter",
-        "git_url": "https://github.com/salsabel/hijri-converter",
+        "git_url": "https://github.com/dralshehri/hijridate",
         "git_branch": "main",
         "doc_url": [
             "https://pypi.org/project/hijri-converter/"

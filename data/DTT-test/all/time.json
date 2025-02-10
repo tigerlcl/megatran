@@ -1,0 +1,33 @@
+{
+    "chat": "Transform the input to hours.",
+    "tuples": [
+        {
+            "input": "08:00:45",
+            "output": "8.0125 hours"
+        },
+        {
+            "input": "00:30:00",
+            "output": "0.5 hours"
+        },
+        {
+            "input": "12:34:56",
+            "output": "12.5822 hours"
+        },
+        {
+            "input": "15:45:30",
+            "output": "15.7583 hours"
+        },
+        {
+            "input": "14:10:20",
+            "output": "14.1722 hours"
+        },
+        {
+            "input": "19:16:32",
+            "output": "19.2756 hours"
+        },
+        {
+            "input": "09:14:23",
+            "output": "9.2397 hours"
+        }
+    ]
+}

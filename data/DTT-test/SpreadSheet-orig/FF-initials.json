@@ -1,0 +1,21 @@
+{
+  "chat": "Transform names into initials by taking the first letter of the first name and the first letter of the last name, separated by a period.",
+  "tuples": [
+    {
+      "input": "Jan Kotas",
+      "output": "J.K."
+    },
+    {
+      "input": "Andrew Cencici",
+      "output": "A.C."
+    },
+    {
+      "input": "Nancy FreeHafer",
+      "output": "N.F."
+    },
+    {
+      "input": "Mariya Sergienko",
+      "output": "M.S."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "chat": "Transform names by prefixing \"Dr.\" to the first name, using only the first name from the input for the output.",
+  "tuples": [
+    {
+      "input": "Jan Kotas",
+      "output": "Dr. Jan"
+    },
+    {
+      "input": "Andrew Cencici",
+      "output": "Dr. Andrew"
+    },
+    {
+      "input": "Nancy FreeHafer",
+      "output": "Dr. Nancy"
+    },
+    {
+      "input": "Mariya Sergienko",
+      "output": "Dr. Mariya"
+    }
+  ]
+}

@@ -2,39 +2,52 @@ import os
 import json
 from typing import List, Dict
 
-# Dataset configuration mapping
+# 添加获取项目根目录的函数
+def get_project_root():
+    """获取项目根目录的绝对路径"""
+    current_file = os.path.abspath(__file__)  # 获取当前文件的绝对路径
+    return os.path.dirname(os.path.dirname(current_file))  # 返回项目根目录
+
+# 更新数据集配置，使用项目根目录
 DATASET_DICT = {
     "stackoverflow": {
-        "path": "./data/TDE-v2/benchmark-stackoverflow"
+        "path": os.path.join(get_project_root(), "data/TDE-v2/benchmark-stackoverflow")
     },
     "bingquery-logs": {
-        "path": "./data/TDE-v2/benchmark-bing-query-logs"
+        "path": os.path.join(get_project_root(), "data/TDE-v2/benchmark-bing-query-logs")
     },
     "unit_convert": {
-        "path": "./data/TDE-v2/benchmark-bing-query-logs"
+        "path": os.path.join(get_project_root(), "data/TDE-v2/benchmark-bing-query-logs")
     },
     "headcase": {
-        "path": "./data/TDE-v2/benchmark-headcase"
+        "path": os.path.join(get_project_root(), "data/TDE-v2/benchmark-headcase")
     },
     "prep-software": {
-        "path": "./data/TDE-v2/benchmark-FF-Trifacta-GoogleRefine"
+        "path": os.path.join(get_project_root(), "data/TDE-v2/benchmark-FF-Trifacta-GoogleRefine")
     },
-    "dtt-manual": {
-        "path": "./data/DTT-test/Manual"
+    "DXF": {
+        "path": os.path.join(get_project_root(), "data/DTT-test/DXF")
+    },
+    "SpreadSheet": {
+        "path": os.path.join(get_project_root(), "data/DTT-test/SpreadSheet")
+    },
+    "Synthetic": {
+        "path": os.path.join(get_project_root(), "data/DTT-test/Synthetic")
+    },
+    "Manual-Easy": {
+        "path": os.path.join(get_project_root(), "data/DTT-test/Manual-Easy")
+    },
+    "Manual-Hard": {
+        "path": os.path.join(get_project_root(), "data/DTT-test/Manual-Hard")
     },
     "test-data": {
-        "path": "./data/testset/"
+        "path": os.path.join(get_project_root(), "data/testset/")
     }
 }
 
 # Datasets using standard JSON format
-JSON_NORMAL_GROUP = [
-    "test-data",
-    "stackoverflow", 
-    "headcase", 
-    "prep-software", 
-    "dtt-manual",
-    ]
+JSON_NORMAL_GROUP = ["stackoverflow", "headcase", "prep-software", "DXF", "SpreadSheet", "Synthetic", "Manual-Easy", "Manual-Hard",
+                     "test-data"]
 
 def load_dataset_by_name(dataset_name: str) -> List[Dict]:
     """Load dataset based on name from configuration"""

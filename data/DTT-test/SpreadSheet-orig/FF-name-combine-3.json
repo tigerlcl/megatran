@@ -1,0 +1,29 @@
+{
+  "chat": "Transform names by abbreviating the first name to its initial followed by the full last name.",
+  "tuples": [
+    {
+      "input": "Lara Constable",
+      "output": "L. Constable"
+    },
+    {
+      "input": "Bradford Lango",
+      "output": "B. Lango"
+    },
+    {
+      "input": "Lakenya Edison",
+      "output": "L. Edison"
+    },
+    {
+      "input": "Brendan Hage",
+      "output": "B. Hage"
+    },
+    {
+      "input": "Launa Withers",
+      "output": "L. Withers"
+    },
+    {
+      "input": "Rudolf Akiyama",
+      "output": "R. Akiyama"
+    }
+  ]
+}

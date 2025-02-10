@@ -1,0 +1,25 @@
+{
+    "chat": "Extract the city from the address",
+    "tuples": [
+        {
+            "input": "123 Main St, Springfield, IL 62704",
+            "output": "Springfield"
+        },
+        {
+            "input": "456 Elm St, Los Angeles, CA 90001",
+            "output": "Los Angeles"
+        },
+        {
+            "input": "789 Maple Ave, New York, NY 10001",
+            "output": "New York"
+        },
+        {
+            "input": "101 Pine St, Seattle, WA 98101",
+            "output": "Seattle"
+        },
+        {
+            "input": "202 Oak St, Austin, TX 73301",
+            "output": "Austin"
+        }
+    ]
+}
