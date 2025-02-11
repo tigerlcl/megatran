@@ -1,0 +1,33 @@
+{
+  "chat": "Identify credit card issuer based on card number prefix patterns (Visa: 4, Mastercard: 51-55, Amex: 34/37, Discover: 6011/644-649/65, JCB: 3528-3589, Diners: 300-305/36/38-39, UnionPay: 62).",
+  "tuples": [
+    {
+      "input": "4532015112830366",
+      "output": "Visa"
+    },
+    {
+      "input": "5424180123456789",
+      "output": "Mastercard"
+    },
+    {
+      "input": "347298412345678",
+      "output": "American Express"
+    },
+    {
+      "input": "6011601160116611",
+      "output": "Discover"
+    },
+    {
+      "input": "3530111333300000",
+      "output": "JCB"
+    },
+    {
+      "input": "3852000023237",
+      "output": "Diners Club"
+    },
+    {
+      "input": "6250941006528599",
+      "output": "UnionPay"
+    }
+  ]
+} 

@@ -1,0 +1,25 @@
+{
+  "chat": "Extract stock symbols from text.",
+  "tuples": [
+    {
+      "input": "Despite market volatility, Costco Wholesale (COST) and Lockheed Martin (LMT) maintained stable performance throughout Q3",
+      "output": "COST, LMT"
+    },
+    {
+      "input": "Healthcare stocks UnitedHealth Group (UNH) and Intuitive Surgical (ISRG) showed promising growth in emerging markets",
+      "output": "UNH, ISRG"
+    },
+    {
+      "input": "Analysts are closely watching VMW and ADSK after recent software industry consolidation news",
+      "output": "VMW, ADSK"
+    },
+    {
+      "input": "Semiconductor equipment maker AMAT reported earnings while KLAC and LRCX remain under pressure from export restrictions",
+      "output": "AMAT, KLAC, LRCX"
+    },
+    {
+      "input": "In the biotech sector, Regeneron Pharmaceuticals (REGN) and Vertex Pharmaceuticals (VRTX) announced breakthrough research results",
+      "output": "REGN, VRTX"
+    }
+  ]
+} 
