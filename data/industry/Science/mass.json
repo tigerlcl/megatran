@@ -1,0 +1,26 @@
+{
+    "chat": "Convert mass from kilograms to pounds.",
+    "tuples": [
+      {
+        "input": "1 kg",
+        "output": "2.205 lbs"
+      },
+      {
+        "input": "50 kg",
+        "output": "110.25 lbs"
+      },
+      {
+        "input": "100 kg",
+        "output": "220.5 lbs"
+      },
+      {
+        "input": "0 kg",
+        "output": "0 lbs"
+      },
+      {
+        "input": "75 kg",
+        "output": "165.375 lbs"
+      }
+    ]
+  }
+  

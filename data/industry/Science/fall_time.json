@@ -1,0 +1,25 @@
+{
+  "chat": "Calculate the time (in seconds) it takes for an object to fall from a given height (in meters) on Earth.",
+  "tuples": [
+    {
+      "input": "195.05m height",
+      "output": "6.306s"
+    },
+    {
+      "input": "13.36m height",
+      "output": "1.65s"
+    },
+    {
+      "input": "48.04m height",
+      "output": "3.13s"
+    },
+    {
+      "input": "79.63m height",
+      "output": "4.029s"
+    },
+    {
+      "input": "70.34m height",
+      "output": "3.787s"
+    }
+  ]
+}

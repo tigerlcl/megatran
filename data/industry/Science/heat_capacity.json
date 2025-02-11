@@ -1,0 +1,25 @@
+{
+  "chat": "Calculate the heat energy (kJ) required to change the temperature of a substance given its mass (kg), specific heat capacity (J/kg\u00b7K) and temperature change (\u00b0C).",
+  "tuples": [
+    {
+      "input": "mass: 2.11kg, specific heat: 1996.0J/kg\u00b7K, \u0394T: 25.1\u00b0C",
+      "output": "energy required: 105.71kJ"
+    },
+    {
+      "input": "mass: 8.57kg, specific heat: 2459.0J/kg\u00b7K, \u0394T: 21.1\u00b0C",
+      "output": "energy required: 444.654kJ"
+    },
+    {
+      "input": "mass: 8.27kg, specific heat: 576.0J/kg\u00b7K, \u0394T: 33.2\u00b0C",
+      "output": "energy required: 158.149kJ"
+    },
+    {
+      "input": "mass: 6.16kg, specific heat: 4123.0J/kg\u00b7K, \u0394T: 82.3\u00b0C",
+      "output": "energy required: 2090.229kJ"
+    },
+    {
+      "input": "mass: 4.68kg, specific heat: 3759.0J/kg\u00b7K, \u0394T: 98.3\u00b0C",
+      "output": "energy required: 1729.305kJ"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "chat": "Calculate the photon energy (eV) given the frequency of light (Hz).",
+  "tuples": [
+    {
+      "input": "frequency: 7.34e+14Hz",
+      "output": "energy: 3.035eV"
+    },
+    {
+      "input": "frequency: 5.29e+14Hz",
+      "output": "energy: 2.186eV"
+    },
+    {
+      "input": "frequency: 4.79e+14Hz",
+      "output": "energy: 1.982eV"
+    },
+    {
+      "input": "frequency: 4.91e+14Hz",
+      "output": "energy: 2.03eV"
+    },
+    {
+      "input": "frequency: 6.70e+14Hz",
+      "output": "energy: 2.771eV"
+    }
+  ]
+}

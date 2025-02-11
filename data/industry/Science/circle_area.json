@@ -1,0 +1,25 @@
+{
+  "chat": "Calculate the area of a circle given its radius in meters.",
+  "tuples": [
+    {
+      "input": "radius 7.33m",
+      "output": "168.794 square meters"
+    },
+    {
+      "input": "radius 5.67m",
+      "output": "100.999 square meters"
+    },
+    {
+      "input": "radius 7.85m",
+      "output": "193.593 square meters"
+    },
+    {
+      "input": "radius 11.65m",
+      "output": "426.385 square meters"
+    },
+    {
+      "input": "radius 1.81m",
+      "output": "10.292 square meters"
+    }
+  ]
+}

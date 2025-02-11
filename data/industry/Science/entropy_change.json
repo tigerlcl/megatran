@@ -1,0 +1,25 @@
+{
+  "chat": "Calculate the entropy change (J/K) for a system given the heat transfer (J) and temperature (K).",
+  "tuples": [
+    {
+      "input": "heat transfer: 1271.5J at temperature: 654.0K",
+      "output": "entropy change: 1.944J/K"
+    },
+    {
+      "input": "heat transfer: 3150.5J at temperature: 783.4K",
+      "output": "entropy change: 4.022J/K"
+    },
+    {
+      "input": "heat transfer: 3947.2J at temperature: 278.0K",
+      "output": "entropy change: 14.199J/K"
+    },
+    {
+      "input": "heat transfer: 8614.5J at temperature: 640.7K",
+      "output": "entropy change: 13.445J/K"
+    },
+    {
+      "input": "heat transfer: 5399.2J at temperature: 347.8K",
+      "output": "entropy change: 15.524J/K"
+    }
+  ]
+}

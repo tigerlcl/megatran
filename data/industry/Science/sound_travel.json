@@ -1,0 +1,25 @@
+{
+  "chat": "Calculate how long it takes for sound to travel a given distance in air at room temperature.",
+  "tuples": [
+    {
+      "input": "659.66m distance",
+      "output": "1.923 seconds"
+    },
+    {
+      "input": "216.38m distance",
+      "output": "0.631 seconds"
+    },
+    {
+      "input": "2229.42m distance",
+      "output": "6.5 seconds"
+    },
+    {
+      "input": "46.44m distance",
+      "output": "0.135 seconds"
+    },
+    {
+      "input": "2311.55m distance",
+      "output": "6.739 seconds"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "chat": "Calculate the relativistic mass (kg) given the rest mass (kg) and velocity (m/s).",
+  "tuples": [
+    {
+      "input": "rest mass: 4.538kg, velocity: 9.14e+07m/s",
+      "output": "relativistic mass: 4.764313kg"
+    },
+    {
+      "input": "rest mass: 5.923kg, velocity: 8.48e+07m/s",
+      "output": "relativistic mass: 6.174946kg"
+    },
+    {
+      "input": "rest mass: 0.714kg, velocity: 1.55e+08m/s",
+      "output": "relativistic mass: 0.833933kg"
+    },
+    {
+      "input": "rest mass: 7.616kg, velocity: 2.05e+07m/s",
+      "output": "relativistic mass: 7.633815kg"
+    },
+    {
+      "input": "rest mass: 4.39kg, velocity: 2.71e+08m/s",
+      "output": "relativistic mass: 10.152959kg"
+    }
+  ]
+}

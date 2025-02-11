@@ -1,0 +1,25 @@
+{
+  "chat": "Calculate the molar concentration (mol/L) given the number of moles and volume in liters.",
+  "tuples": [
+    {
+      "input": "4.741mol in 0.819L solution",
+      "output": "5.7888M"
+    },
+    {
+      "input": "4.328mol in 1.248L solution",
+      "output": "3.4679M"
+    },
+    {
+      "input": "3.955mol in 1.691L solution",
+      "output": "2.3389M"
+    },
+    {
+      "input": "4.485mol in 0.867L solution",
+      "output": "5.173M"
+    },
+    {
+      "input": "3.035mol in 1.709L solution",
+      "output": "1.7759M"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "chat": "Convert between wavelength (nm) and frequency (Hz) for electromagnetic waves.",
+  "tuples": [
+    {
+      "input": "wavelength: 432.26nm",
+      "output": "frequency: 694.027THz"
+    },
+    {
+      "input": "wavelength: 395.76nm",
+      "output": "frequency: 758.035THz"
+    },
+    {
+      "input": "wavelength: 695.51nm",
+      "output": "frequency: 431.338THz"
+    },
+    {
+      "input": "wavelength: 442.19nm",
+      "output": "frequency: 678.441THz"
+    },
+    {
+      "input": "wavelength: 603.94nm",
+      "output": "frequency: 496.738THz"
+    }
+  ]
+}

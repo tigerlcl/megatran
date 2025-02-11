@@ -1,0 +1,26 @@
+{
+    "chat": "Convert distance from light-years to kilometers.",
+    "tuples": [
+      {
+        "input": "1 ly",
+        "output": "9.461 × 10^12 km"
+      },
+      {
+        "input": "0.5 ly",
+        "output": "4.731 × 10^12 km"
+      },
+      {
+        "input": "2 ly",
+        "output": "1.892 × 10^13 km"
+      },
+      {
+        "input": "10 ly",
+        "output": "9.461 × 10^13 km"
+      },
+      {
+        "input": "100 ly",
+        "output": "9.461 × 10^14 km"
+      }
+    ]
+  }
+  
