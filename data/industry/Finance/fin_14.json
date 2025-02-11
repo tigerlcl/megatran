@@ -1,0 +1,25 @@
+{
+  "chat": "Mask account numbers keeping only last 4 digits.",
+  "tuples": [
+    {
+      "input": "123456789",
+      "output": "***6789"
+    },
+    {
+      "input": "987654321",
+      "output": "***4321"
+    },
+    {
+      "input": "456789123",
+      "output": "***9123"
+    },
+    {
+      "input": "147258369",
+      "output": "***8369"
+    },
+    {
+      "input": "963852741",
+      "output": "***2741"
+    }
+  ]
+} 

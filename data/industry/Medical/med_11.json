@@ -1,0 +1,25 @@
+{
+  "chat": "Convert laboratory parameter names to standard abbreviations.",
+  "tuples": [
+    {
+      "input": "Hemoglobin A1c",
+      "output": "HbA1c"
+    },
+    {
+      "input": "C-Reactive Protein",
+      "output": "CRP"
+    },
+    {
+      "input": "Thyroid Stimulating Hormone",
+      "output": "TSH"
+    },
+    {
+      "input": "Brain Natriuretic Peptide",
+      "output": "BNP"
+    },
+    {
+      "input": "Prostate Specific Antigen",
+      "output": "PSA"
+    }
+  ]
+} 

@@ -1,0 +1,25 @@
+{
+  "chat": "Format phone numbers to international standard format.",
+  "tuples": [
+    {
+      "input": "15551234567",
+      "output": "+1 (555) 123-4567"
+    },
+    {
+      "input": "14159876543",
+      "output": "+1 (415) 987-6543"
+    },
+    {
+      "input": "12125550199",
+      "output": "+1 (212) 555-0199"
+    },
+    {
+      "input": "13105557890",
+      "output": "+1 (310) 555-7890"
+    },
+    {
+      "input": "16175554321",
+      "output": "+1 (617) 555-4321"
+    }
+  ]
+} 

@@ -1,0 +1,25 @@
+{
+  "chat": "Round exchange rates to 4 decimal places.",
+  "tuples": [
+    {
+      "input": "1.234567",
+      "output": "1.2346"
+    },
+    {
+      "input": "0.876543",
+      "output": "0.8765"
+    },
+    {
+      "input": "1.567890",
+      "output": "1.5679"
+    },
+    {
+      "input": "1.999999",
+      "output": "2.0000"
+    },
+    {
+      "input": "0.123456",
+      "output": "0.1235"
+    }
+  ]
+} 

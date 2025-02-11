@@ -1,0 +1,25 @@
+{
+  "chat": "Convert USD amount to formatted currency notation with dollar sign.",
+  "tuples": [
+    {
+      "input": "USD 1000",
+      "output": "$1,000"
+    },
+    {
+      "input": "USD 50",
+      "output": "$50"
+    },
+    {
+      "input": "USD 1000000",
+      "output": "$1,000,000"
+    },
+    {
+      "input": "USD 123.45",
+      "output": "$123.45"
+    },
+    {
+      "input": "USD 0.99",
+      "output": "$0.99"
+    }
+  ]
+} 

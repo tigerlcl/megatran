@@ -1,0 +1,25 @@
+{
+  "chat": "Format gene names with standard nomenclature.",
+  "tuples": [
+    {
+      "input": "BRCA1 (Breast Cancer Gene 1)",
+      "output": "BRCA1"
+    },
+    {
+      "input": "TP53 (Tumor Protein 53)",
+      "output": "TP53"
+    },
+    {
+      "input": "EGFR (Epidermal Growth Factor Receptor)",
+      "output": "EGFR"
+    },
+    {
+      "input": "HER2 (Human Epidermal Growth Factor Receptor 2)",
+      "output": "ERBB2"
+    },
+    {
+      "input": "CFTR (Cystic Fibrosis Transmembrane Conductor)",
+      "output": "CFTR"
+    }
+  ]
+} 

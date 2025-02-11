@@ -1,0 +1,25 @@
+{
+  "chat": "Convert measurement units to standard metric format.",
+  "tuples": [
+    {
+      "input": "5km",
+      "output": "5,000 m"
+    },
+    {
+      "input": "2.5km",
+      "output": "2,500 m"
+    },
+    {
+      "input": "0.1km",
+      "output": "100 m"
+    },
+    {
+      "input": "7.5km",
+      "output": "7,500 m"
+    },
+    {
+      "input": "10km",
+      "output": "10,000 m"
+    }
+  ]
+} 

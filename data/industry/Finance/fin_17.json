@@ -1,0 +1,25 @@
+{
+  "chat": "Convert interest rate expressions to basis point notation.",
+  "tuples": [
+    {
+      "input": "0.025 + LIBOR",
+      "output": "LIBOR+25bps"
+    },
+    {
+      "input": "0.0075 + SOFR",
+      "output": "SOFR+7.5bps"
+    },
+    {
+      "input": "0.05 + EURIBOR",
+      "output": "EURIBOR+50bps"
+    },
+    {
+      "input": "0.0125 + SONIA",
+      "output": "SONIA+12.5bps"
+    },
+    {
+      "input": "0.0375 + TIBOR",
+      "output": "TIBOR+37.5bps"
+    }
+  ]
+} 

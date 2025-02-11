@@ -1,0 +1,25 @@
+{
+  "chat": "Standardize ICD-10 diagnostic codes by removing prefix and dot.",
+  "tuples": [
+    {
+      "input": "ICD-10: E11.9",
+      "output": "E119"
+    },
+    {
+      "input": "ICD-10: I10.0",
+      "output": "I100"
+    },
+    {
+      "input": "ICD-10: F32.1",
+      "output": "F321"
+    },
+    {
+      "input": "ICD-10: J45.9",
+      "output": "J459"
+    },
+    {
+      "input": "ICD-10: K21.9",
+      "output": "K219"
+    }
+  ]
+} 

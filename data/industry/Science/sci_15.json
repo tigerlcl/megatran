@@ -1,0 +1,25 @@
+{
+  "chat": "Convert geological time expressions to standard notation.",
+  "tuples": [
+    {
+      "input": "65 million years ago",
+      "output": "65Ma"
+    },
+    {
+      "input": "2.5 billion years ago",
+      "output": "2.5Ga"
+    },
+    {
+      "input": "542 million years ago",
+      "output": "542Ma"
+    },
+    {
+      "input": "3.8 billion years ago",
+      "output": "3.8Ga"
+    },
+    {
+      "input": "251 million years ago",
+      "output": "251Ma"
+    }
+  ]
+} 

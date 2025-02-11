@@ -1,0 +1,25 @@
+{
+  "chat": "Standardize temperature symbols in sample storage conditions.",
+  "tuples": [
+    {
+      "input": "-80°C",
+      "output": "-80℃"
+    },
+    {
+      "input": "-20°C",
+      "output": "-20℃"
+    },
+    {
+      "input": "4°C",
+      "output": "4℃"
+    },
+    {
+      "input": "37°C",
+      "output": "37℃"
+    },
+    {
+      "input": "-196°C",
+      "output": "-196℃"
+    }
+  ]
+} 

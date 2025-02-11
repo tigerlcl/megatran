@@ -1,0 +1,25 @@
+{
+  "chat": "Mask IBAN numbers while keeping first 4 and last 4 digits visible.",
+  "tuples": [
+    {
+      "input": "DE89370400440532013000",
+      "output": "DE89**********3000"
+    },
+    {
+      "input": "GB29NWBK60161331926819",
+      "output": "GB29**********6819"
+    },
+    {
+      "input": "FR1420041010050500013M02606",
+      "output": "FR14**********2606"
+    },
+    {
+      "input": "CH9300762011623852957",
+      "output": "CH93**********2957"
+    },
+    {
+      "input": "ES9121000418450200051332",
+      "output": "ES91**********1332"
+    }
+  ]
+} 

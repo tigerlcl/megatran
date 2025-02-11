@@ -1,0 +1,25 @@
+{
+  "chat": "Convert decimal numbers to scientific notation with superscript.",
+  "tuples": [
+    {
+      "input": "0.000045",
+      "output": "4.5×10⁻⁵"
+    },
+    {
+      "input": "0.00789",
+      "output": "7.89×10⁻³"
+    },
+    {
+      "input": "0.000000123",
+      "output": "1.23×10⁻⁷"
+    },
+    {
+      "input": "0.0000678",
+      "output": "6.78×10⁻⁵"
+    },
+    {
+      "input": "0.000000456",
+      "output": "4.56×10⁻⁷"
+    }
+  ]
+} 

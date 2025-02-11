@@ -1,0 +1,25 @@
+{
+  "chat": "Convert Celsius temperatures to Fahrenheit.",
+  "tuples": [
+    {
+      "input": "25°C",
+      "output": "77°F"
+    },
+    {
+      "input": "0°C",
+      "output": "32°F"
+    },
+    {
+      "input": "100°C",
+      "output": "212°F"
+    },
+    {
+      "input": "-40°C",
+      "output": "-40°F"
+    },
+    {
+      "input": "37°C",
+      "output": "98.6°F"
+    }
+  ]
+} 

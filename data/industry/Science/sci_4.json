@@ -1,0 +1,25 @@
+{
+  "chat": "Round numbers to 4 decimal places.",
+  "tuples": [
+    {
+      "input": "3.1415926535",
+      "output": "3.1416"
+    },
+    {
+      "input": "2.7182818284",
+      "output": "2.7183"
+    },
+    {
+      "input": "1.4142135623",
+      "output": "1.4142"
+    },
+    {
+      "input": "1.7320508075",
+      "output": "1.7321"
+    },
+    {
+      "input": "2.2360679774",
+      "output": "2.2361"
+    }
+  ]
+} 

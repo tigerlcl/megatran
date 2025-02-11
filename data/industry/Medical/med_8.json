@@ -1,0 +1,25 @@
+{
+  "chat": "Format sample IDs with lab prefix and year suffix.",
+  "tuples": [
+    {
+      "input": "S123",
+      "output": "LAB-S123-2023"
+    },
+    {
+      "input": "S456",
+      "output": "LAB-S456-2023"
+    },
+    {
+      "input": "S789",
+      "output": "LAB-S789-2023"
+    },
+    {
+      "input": "S234",
+      "output": "LAB-S234-2023"
+    },
+    {
+      "input": "S567",
+      "output": "LAB-S567-2023"
+    }
+  ]
+} 

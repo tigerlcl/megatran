@@ -1,0 +1,25 @@
+{
+  "chat": "Convert decimal numbers to percentage format.",
+  "tuples": [
+    {
+      "input": "0.15",
+      "output": "15%"
+    },
+    {
+      "input": "0.056",
+      "output": "5.6%"
+    },
+    {
+      "input": "1.25",
+      "output": "125%"
+    },
+    {
+      "input": "0.0875",
+      "output": "8.75%"
+    },
+    {
+      "input": "0.03",
+      "output": "3%"
+    }
+  ]
+} 

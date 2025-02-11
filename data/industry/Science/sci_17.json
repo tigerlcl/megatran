@@ -1,0 +1,25 @@
+{
+  "chat": "Standardize particle notation using Greek letters.",
+  "tuples": [
+    {
+      "input": "α-particle",
+      "output": "α"
+    },
+    {
+      "input": "β-particle",
+      "output": "β"
+    },
+    {
+      "input": "γ-ray",
+      "output": "γ"
+    },
+    {
+      "input": "δ-particle",
+      "output": "δ"
+    },
+    {
+      "input": "μ-particle",
+      "output": "μ"
+    }
+  ]
+} 

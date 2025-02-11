@@ -1,0 +1,25 @@
+{
+  "chat": "Convert dates to standardized medical format with month abbreviation.",
+  "tuples": [
+    {
+      "input": "23/09/2023",
+      "output": "2023-Sep-23"
+    },
+    {
+      "input": "15/01/2024",
+      "output": "2024-Jan-15"
+    },
+    {
+      "input": "30/12/2023",
+      "output": "2023-Dec-30"
+    },
+    {
+      "input": "01/03/2024",
+      "output": "2024-Mar-01"
+    },
+    {
+      "input": "22/07/2023",
+      "output": "2023-Jul-22"
+    }
+  ]
+} 

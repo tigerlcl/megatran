@@ -1,0 +1,25 @@
+{
+  "chat": "Convert drug brand names to international generic names.",
+  "tuples": [
+    {
+      "input": "Tylenol",
+      "output": "Paracetamol"
+    },
+    {
+      "input": "Advil",
+      "output": "Ibuprofen"
+    },
+    {
+      "input": "Ventolin",
+      "output": "Salbutamol"
+    },
+    {
+      "input": "Lasix",
+      "output": "Furosemide"
+    },
+    {
+      "input": "Zantac",
+      "output": "Ranitidine"
+    }
+  ]
+} 

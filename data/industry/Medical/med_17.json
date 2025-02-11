@@ -1,0 +1,25 @@
+{
+  "chat": "Standardize clinical trial phase notation.",
+  "tuples": [
+    {
+      "input": "Phase III Clinical Trial",
+      "output": "Phase 3"
+    },
+    {
+      "input": "Phase II Clinical Trial",
+      "output": "Phase 2"
+    },
+    {
+      "input": "Phase I Clinical Trial",
+      "output": "Phase 1"
+    },
+    {
+      "input": "Phase IV Clinical Trial",
+      "output": "Phase 4"
+    },
+    {
+      "input": "Phase I/II Clinical Trial",
+      "output": "Phase 1/2"
+    }
+  ]
+} 

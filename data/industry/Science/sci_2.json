@@ -1,0 +1,25 @@
+{
+  "chat": "Convert chemical formulas to proper subscript notation.",
+  "tuples": [
+    {
+      "input": "H2O",
+      "output": "H₂O"
+    },
+    {
+      "input": "CO2",
+      "output": "CO₂"
+    },
+    {
+      "input": "H2SO4",
+      "output": "H₂SO₄"
+    },
+    {
+      "input": "NH3",
+      "output": "NH₃"
+    },
+    {
+      "input": "CaCO3",
+      "output": "CaCO₃"
+    }
+  ]
+} 
