@@ -7,7 +7,6 @@ def get_project_root():
     current_file = os.path.abspath(__file__)
     return os.path.dirname(os.path.dirname(current_file))
 
-# 更新数据集配置，使用项目根目录
 DATASET_DICT = {
     "stackoverflow": {
         "path": os.path.join(get_project_root(), "data/TDE-v2/benchmark-stackoverflow")
@@ -45,8 +44,12 @@ DATASET_DICT = {
 }
 
 # Datasets using standard JSON format
-JSON_NORMAL_GROUP = ["stackoverflow", "headcase", "prep-software", "DXF", "SpreadSheet", "Synthetic", "Manual-Easy", "Manual-Hard",
-                     "test-data"]
+JSON_NORMAL_GROUP = [
+    "stackoverflow", "headcase", "prep-software", 
+    "DXF", "SpreadSheet", "Synthetic", 
+    "Manual-Easy", "Manual-Hard",
+    "test-data"
+    ]
 
 def load_dataset_by_name(dataset_name: str) -> List[Dict]:
     """Load dataset based on name from configuration"""

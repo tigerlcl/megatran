@@ -4,7 +4,7 @@ import yaml
 import argparse
 import logging
 import time
-from typing import Dict, List
+from typing import Dict
 from dotenv import load_dotenv
 from tqdm import tqdm
 
@@ -35,27 +35,6 @@ def get_loader_for_package(pkg_info: Dict):
         )
         
     raise ValueError(f"No valid documentation source for {pkg_info['name']}")
-
-def batch_process_embeddings(documents: List, embeddings, batch_size: int = 100):
-    """Process documents in batches with rate limiting"""
-
-    batches = [documents[i:i + batch_size] for i in range(0, len(documents), batch_size)]
-    all_embeddings = []
-    
-    with tqdm(total=len(documents), desc="Creating embeddings") as pbar:
-        for batch in batches:
-            try:
-                time.sleep(0.5)  # Rate limiting for API calls
-                embedded_batch = embeddings.embed_documents([doc.page_content for doc in batch])
-                all_embeddings.extend(embedded_batch)
-                pbar.update(len(batch))
-            except Exception as e:
-                logging.error(f"Error processing batch: {e}")
-                time.sleep(2)  # Backoff on error
-                continue
-    
-
-    return zip([doc.page_content for doc in documents], all_embeddings)
 
 def main(config: Dict):
     """Build vector database from package documentation"""
