@@ -29,11 +29,13 @@ class Context:
                 - dataset_name: Dataset to use
                 - testing: Boolean for test mode
                 - config: Path to config YAML
+                - model: LLM backend model name
         """
         self.load_environment()
         self.exp_name = args.exp_name
         self.dataset_name = args.dataset_name
         self.testing = args.testing
+        self.openai_model = args.model
         self.config = self._load_config(args.config)
 
 
