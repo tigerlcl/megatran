@@ -1,0 +1,515 @@
+[
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/astronomical_dis.json",
+    "input": "8.616e9 km",
+    "output": "57.620 AU",
+    "ground_truth": "57.595 AU",
+    "is_correct": "False",
+    "instruction": "Convert astronomical distances to AU (Astronomical Units).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 1.187e10 km\nOutput: 79.357 AU\nInput: 2.992e8 km\nOutput: 2 AU\nInput: 7.48e8 km\nOutput: 5 AU"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/astronomical_dis.json",
+    "input": "2.244e8 km",
+    "output": "1.5 AU",
+    "ground_truth": "1.5 AU",
+    "is_correct": "True",
+    "instruction": "Convert astronomical distances to AU (Astronomical Units).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 1.187e10 km\nOutput: 79.357 AU\nInput: 2.992e8 km\nOutput: 2 AU\nInput: 7.48e8 km\nOutput: 5 AU"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/astronomical_dis.json",
+    "input": "8.402e9 km",
+    "output": "56.182 AU",
+    "ground_truth": "56.164 AU",
+    "is_correct": "False",
+    "instruction": "Convert astronomical distances to AU (Astronomical Units).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 1.187e10 km\nOutput: 79.357 AU\nInput: 2.992e8 km\nOutput: 2 AU\nInput: 7.48e8 km\nOutput: 5 AU"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/astronomical_dis.json",
+    "input": "7.175e9 km",
+    "output": "48 AU",
+    "ground_truth": "47.963 AU",
+    "is_correct": "False",
+    "instruction": "Convert astronomical distances to AU (Astronomical Units).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 1.187e10 km\nOutput: 79.357 AU\nInput: 2.992e8 km\nOutput: 2 AU\nInput: 7.48e8 km\nOutput: 5 AU"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/astronomical_dis.json",
+    "input": "2.471e9 km",
+    "output": "16.518 AU",
+    "ground_truth": "16.519 AU",
+    "is_correct": "False",
+    "instruction": "Convert astronomical distances to AU (Astronomical Units).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 1.187e10 km\nOutput: 79.357 AU\nInput: 2.992e8 km\nOutput: 2 AU\nInput: 7.48e8 km\nOutput: 5 AU"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/celsius.json",
+    "input": "-40°C",
+    "output": "-40°F",
+    "ground_truth": "-40°F",
+    "is_correct": "True",
+    "instruction": "Convert Celsius temperatures to Fahrenheit.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 25°C\nOutput: 77°F\nInput: 0°C\nOutput: 32°F\nInput: 100°C\nOutput: 212°F"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/celsius.json",
+    "input": "37°C",
+    "output": "98.6°F",
+    "ground_truth": "98.6°F",
+    "is_correct": "True",
+    "instruction": "Convert Celsius temperatures to Fahrenheit.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 25°C\nOutput: 77°F\nInput: 0°C\nOutput: 32°F\nInput: 100°C\nOutput: 212°F"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/chemical.json",
+    "input": "ag",
+    "output": "Ag",
+    "ground_truth": "Ag",
+    "is_correct": "True",
+    "instruction": "Standardize chemical element symbols with correct capitalization.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: fe\nOutput: Fe\nInput: na\nOutput: Na\nInput: AU\nOutput: Au"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/chemical.json",
+    "input": "HG",
+    "output": "Hg",
+    "ground_truth": "Hg",
+    "is_correct": "True",
+    "instruction": "Standardize chemical element symbols with correct capitalization.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: fe\nOutput: Fe\nInput: na\nOutput: Na\nInput: AU\nOutput: Au"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/chemical_equilibrium.json",
+    "input": "[A]=1.2M, [B]=1.355M, [C]=1.661M, [D]=1.758M",
+    "output": "Kc=1.8088",
+    "ground_truth": "Kc=1.7958",
+    "is_correct": "False",
+    "instruction": "Calculate the equilibrium constant (Kc) given the equilibrium concentrations of reactants and products.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: [A]=1.582M, [B]=1.739M, [C]=0.406M, [D]=0.88M\nOutput: Kc=0.1299\nInput: [A]=0.411M, [B]=1.142M, [C]=1.374M, [D]=0.987M\nOutput: Kc=2.8893\nInput: [A]=0.884M, [B]=1.178M, [C]=0.973M, [D]=1.585M\nOutput: Kc=1.481"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/chemical_equilibrium.json",
+    "input": "[A]=1.666M, [B]=1.176M, [C]=1.33M, [D]=0.851M",
+    "output": "Kc=0.5174",
+    "ground_truth": "Kc=0.5777",
+    "is_correct": "False",
+    "instruction": "Calculate the equilibrium constant (Kc) given the equilibrium concentrations of reactants and products.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: [A]=1.582M, [B]=1.739M, [C]=0.406M, [D]=0.88M\nOutput: Kc=0.1299\nInput: [A]=0.411M, [B]=1.142M, [C]=1.374M, [D]=0.987M\nOutput: Kc=2.8893\nInput: [A]=0.884M, [B]=1.178M, [C]=0.973M, [D]=1.585M\nOutput: Kc=1.481"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/chemical_formulas.json",
+    "input": "NH3",
+    "output": "NH₃",
+    "ground_truth": "NH₃",
+    "is_correct": "True",
+    "instruction": "Convert chemical formulas to proper subscript notation.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: H2O\nOutput: H₂O\nInput: CO2\nOutput: CO₂\nInput: H2SO4\nOutput: H₂SO₄"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/chemical_formulas.json",
+    "input": "CaCO3",
+    "output": "CaCO₃",
+    "ground_truth": "CaCO₃",
+    "is_correct": "True",
+    "instruction": "Convert chemical formulas to proper subscript notation.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: H2O\nOutput: H₂O\nInput: CO2\nOutput: CO₂\nInput: H2SO4\nOutput: H₂SO₄"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/chemical_formulas.json",
+    "input": "C6H12O6",
+    "output": "C₆H₁₂O₆",
+    "ground_truth": "C₆H₁₂O₆",
+    "is_correct": "True",
+    "instruction": "Convert chemical formulas to proper subscript notation.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: H2O\nOutput: H₂O\nInput: CO2\nOutput: CO₂\nInput: H2SO4\nOutput: H₂SO₄"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/chemical_formulas.json",
+    "input": "CH3COOH",
+    "output": "CH₃COOH",
+    "ground_truth": "CH₃COOH",
+    "is_correct": "True",
+    "instruction": "Convert chemical formulas to proper subscript notation.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: H2O\nOutput: H₂O\nInput: CO2\nOutput: CO₂\nInput: H2SO4\nOutput: H₂SO₄"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/chemical_formulas.json",
+    "input": "Fe2(SO4)3",
+    "output": "Fe₂(SO₄)₃",
+    "ground_truth": "Fe₂(SO₄)₃",
+    "is_correct": "True",
+    "instruction": "Convert chemical formulas to proper subscript notation.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: H2O\nOutput: H₂O\nInput: CO2\nOutput: CO₂\nInput: H2SO4\nOutput: H₂SO₄"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/chemical_formulas.json",
+    "input": "K4[Fe(CN)6]",
+    "output": "K₄[Fe(CN)₆]",
+    "ground_truth": "K₄[Fe(CN)₆]",
+    "is_correct": "True",
+    "instruction": "Convert chemical formulas to proper subscript notation.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: H2O\nOutput: H₂O\nInput: CO2\nOutput: CO₂\nInput: H2SO4\nOutput: H₂SO₄"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/circle_area.json",
+    "input": "radius 11.65m",
+    "output": "426.732 square meters",
+    "ground_truth": "426.385 square meters",
+    "is_correct": "False",
+    "instruction": "Calculate the area of a circle given its radius in meters.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: radius 7.33m\nOutput: 168.794 square meters\nInput: radius 5.67m\nOutput: 100.999 square meters\nInput: radius 7.85m\nOutput: 193.593 square meters"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/circle_area.json",
+    "input": "radius 1.81m",
+    "output": "10.297 square meters",
+    "ground_truth": "10.292 square meters",
+    "is_correct": "False",
+    "instruction": "Calculate the area of a circle given its radius in meters.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: radius 7.33m\nOutput: 168.794 square meters\nInput: radius 5.67m\nOutput: 100.999 square meters\nInput: radius 7.85m\nOutput: 193.593 square meters"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/coordinates.json",
+    "input": "35.6762°N,139.6503°E",
+    "output": "35°40'34\"N 139°39'01\"E",
+    "ground_truth": "35°40'34\"N 139°39'01\"E",
+    "is_correct": "True",
+    "instruction": "Convert decimal coordinates to degrees, minutes, and seconds format.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 40.7128°N,74.0060°W\nOutput: 40°42'46\"N 74°00'22\"W\nInput: 51.5074°N,0.1278°W\nOutput: 51°30'27\"N 00°07'40\"W\nInput: 48.8566°N,2.3522°E\nOutput: 48°51'24\"N 02°21'08\"E"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/coordinates.json",
+    "input": "33.8688°S,151.2093°E",
+    "output": "33°52'08\"S 151°12'34\"E",
+    "ground_truth": "33°52'08\"S 151°12'33\"E",
+    "is_correct": "False",
+    "instruction": "Convert decimal coordinates to degrees, minutes, and seconds format.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 40.7128°N,74.0060°W\nOutput: 40°42'46\"N 74°00'22\"W\nInput: 51.5074°N,0.1278°W\nOutput: 51°30'27\"N 00°07'40\"W\nInput: 48.8566°N,2.3522°E\nOutput: 48°51'24\"N 02°21'08\"E"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/dis.json",
+    "input": "10 ly",
+    "output": "9.461 × 10^13 km",
+    "ground_truth": "9.461 × 10^13 km",
+    "is_correct": "True",
+    "instruction": "Convert distance from light-years to kilometers.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 1 ly\nOutput: 9.461 × 10^12 km\nInput: 0.5 ly\nOutput: 4.731 × 10^12 km\nInput: 2 ly\nOutput: 1.892 × 10^13 km"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/dis.json",
+    "input": "100 ly",
+    "output": "9.461 × 10^14 km",
+    "ground_truth": "9.461 × 10^14 km",
+    "is_correct": "True",
+    "instruction": "Convert distance from light-years to kilometers.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 1 ly\nOutput: 9.461 × 10^12 km\nInput: 0.5 ly\nOutput: 4.731 × 10^12 km\nInput: 2 ly\nOutput: 1.892 × 10^13 km"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/entropy_change.json",
+    "input": "heat transfer: 8614.5J at temperature: 640.7K",
+    "output": "entropy change: 13.445J/K",
+    "ground_truth": "entropy change: 13.445J/K",
+    "is_correct": "True",
+    "instruction": "Calculate the entropy change (J/K) for a system given the heat transfer (J) and temperature (K).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: heat transfer: 1271.5J at temperature: 654.0K\nOutput: entropy change: 1.944J/K\nInput: heat transfer: 3150.5J at temperature: 783.4K\nOutput: entropy change: 4.022J/K\nInput: heat transfer: 3947.2J at temperature: 278.0K\nOutput: entropy change: 14.199J/K"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/entropy_change.json",
+    "input": "heat transfer: 5399.2J at temperature: 347.8K",
+    "output": "entropy change: 15.528J/K",
+    "ground_truth": "entropy change: 15.524J/K",
+    "is_correct": "False",
+    "instruction": "Calculate the entropy change (J/K) for a system given the heat transfer (J) and temperature (K).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: heat transfer: 1271.5J at temperature: 654.0K\nOutput: entropy change: 1.944J/K\nInput: heat transfer: 3150.5J at temperature: 783.4K\nOutput: entropy change: 4.022J/K\nInput: heat transfer: 3947.2J at temperature: 278.0K\nOutput: entropy change: 14.199J/K"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/fall_time.json",
+    "input": "79.63m height",
+    "output": "4.02s",
+    "ground_truth": "4.029s",
+    "is_correct": "False",
+    "instruction": "Calculate the time (in seconds) it takes for an object to fall from a given height (in meters) on Earth.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 195.05m height\nOutput: 6.306s\nInput: 13.36m height\nOutput: 1.65s\nInput: 48.04m height\nOutput: 3.13s"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/fall_time.json",
+    "input": "70.34m height",
+    "output": "3.78s",
+    "ground_truth": "3.787s",
+    "is_correct": "False",
+    "instruction": "Calculate the time (in seconds) it takes for an object to fall from a given height (in meters) on Earth.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 195.05m height\nOutput: 6.306s\nInput: 13.36m height\nOutput: 1.65s\nInput: 48.04m height\nOutput: 3.13s"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/heat_capacity.json",
+    "input": "mass: 6.16kg, specific heat: 4123.0J/kg·K, ΔT: 82.3°C",
+    "output": "energy required: 2099.104kJ",
+    "ground_truth": "energy required: 2090.229kJ",
+    "is_correct": "False",
+    "instruction": "Calculate the heat energy (kJ) required to change the temperature of a substance given its mass (kg), specific heat capacity (J/kg·K) and temperature change (°C).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: mass: 2.11kg, specific heat: 1996.0J/kg·K, ΔT: 25.1°C\nOutput: energy required: 105.71kJ\nInput: mass: 8.57kg, specific heat: 2459.0J/kg·K, ΔT: 21.1°C\nOutput: energy required: 444.654kJ\nInput: mass: 8.27kg, specific heat: 576.0J/kg·K, ΔT: 33.2°C\nOutput: energy required: 158.149kJ"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/heat_capacity.json",
+    "input": "mass: 4.68kg, specific heat: 3759.0J/kg·K, ΔT: 98.3°C",
+    "output": "energy required: 1728.77kJ",
+    "ground_truth": "energy required: 1729.305kJ",
+    "is_correct": "False",
+    "instruction": "Calculate the heat energy (kJ) required to change the temperature of a substance given its mass (kg), specific heat capacity (J/kg·K) and temperature change (°C).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: mass: 2.11kg, specific heat: 1996.0J/kg·K, ΔT: 25.1°C\nOutput: energy required: 105.71kJ\nInput: mass: 8.57kg, specific heat: 2459.0J/kg·K, ΔT: 21.1°C\nOutput: energy required: 444.654kJ\nInput: mass: 8.27kg, specific heat: 576.0J/kg·K, ΔT: 33.2°C\nOutput: energy required: 158.149kJ"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/ideal_gas.json",
+    "input": "V=1.7L, n=0.76mol, T=313.4K",
+    "output": "P=11.480atm",
+    "ground_truth": "P=11.497atm",
+    "is_correct": "False",
+    "instruction": "Calculate the pressure (atm) using the ideal gas law given volume (L), moles (mol), and temperature (K).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: V=8.69L, n=1.82mol, T=337.0K\nOutput: P=5.792atm\nInput: V=2.95L, n=1.03mol, T=273.9K\nOutput: P=7.848atm\nInput: V=4.66L, n=0.95mol, T=348.2K\nOutput: P=5.825atm"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/ideal_gas.json",
+    "input": "V=5.47L, n=1.76mol, T=283.6K",
+    "output": "P=7.636atm",
+    "ground_truth": "P=7.488atm",
+    "is_correct": "False",
+    "instruction": "Calculate the pressure (atm) using the ideal gas law given volume (L), moles (mol), and temperature (K).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: V=8.69L, n=1.82mol, T=337.0K\nOutput: P=5.792atm\nInput: V=2.95L, n=1.03mol, T=273.9K\nOutput: P=7.848atm\nInput: V=4.66L, n=0.95mol, T=348.2K\nOutput: P=5.825atm"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/kinetic_energy.json",
+    "input": "mass: 93.6kg, velocity: 3.54m/s",
+    "output": "586.651J",
+    "ground_truth": "586.479J",
+    "is_correct": "False",
+    "instruction": "Calculate the kinetic energy (in Joules) of an object given its mass (kg) and velocity (m/s).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: mass: 42.22kg, velocity: 3.15m/s\nOutput: 209.464J\nInput: mass: 13.69kg, velocity: 7.13m/s\nOutput: 347.979J\nInput: mass: 83.83kg, velocity: 15.26m/s\nOutput: 9760.645J"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/kinetic_energy.json",
+    "input": "mass: 7.89kg, velocity: 47.64m/s",
+    "output": "8965.700J",
+    "ground_truth": "8953.452J",
+    "is_correct": "False",
+    "instruction": "Calculate the kinetic energy (in Joules) of an object given its mass (kg) and velocity (m/s).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: mass: 42.22kg, velocity: 3.15m/s\nOutput: 209.464J\nInput: mass: 13.69kg, velocity: 7.13m/s\nOutput: 347.979J\nInput: mass: 83.83kg, velocity: 15.26m/s\nOutput: 9760.645J"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/light_year.json",
+    "input": "9.78×10⁵ light-years",
+    "output": "300 kpc",
+    "ground_truth": "300 kpc",
+    "is_correct": "True",
+    "instruction": "Convert light-years to kiloparsecs (kpc).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 1.58×10⁵ light-years\nOutput: 48.5 kpc\nInput: 3.26×10⁵ light-years\nOutput: 100 kpc\nInput: 6.52×10⁵ light-years\nOutput: 200 kpc"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/light_year.json",
+    "input": "1.63×10⁶ light-years",
+    "output": "500 kpc",
+    "ground_truth": "500 kpc",
+    "is_correct": "True",
+    "instruction": "Convert light-years to kiloparsecs (kpc).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 1.58×10⁵ light-years\nOutput: 48.5 kpc\nInput: 3.26×10⁵ light-years\nOutput: 100 kpc\nInput: 6.52×10⁵ light-years\nOutput: 200 kpc"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/mass.json",
+    "input": "0 kg",
+    "output": "0 lbs",
+    "ground_truth": "0 lbs",
+    "is_correct": "True",
+    "instruction": "Convert mass from kilograms to pounds.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 1 kg\nOutput: 2.205 lbs\nInput: 50 kg\nOutput: 110.25 lbs\nInput: 100 kg\nOutput: 220.5 lbs"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/mass.json",
+    "input": "75 kg",
+    "output": "165.375 lbs",
+    "ground_truth": "165.375 lbs",
+    "is_correct": "True",
+    "instruction": "Convert mass from kilograms to pounds.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 1 kg\nOutput: 2.205 lbs\nInput: 50 kg\nOutput: 110.25 lbs\nInput: 100 kg\nOutput: 220.5 lbs"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/molar_concentration.json",
+    "input": "4.485mol in 0.867L solution",
+    "output": "5.1731M",
+    "ground_truth": "5.173M",
+    "is_correct": "False",
+    "instruction": "Calculate the molar concentration (mol/L) given the number of moles and volume in liters.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 4.741mol in 0.819L solution\nOutput: 5.7888M\nInput: 4.328mol in 1.248L solution\nOutput: 3.4679M\nInput: 3.955mol in 1.691L solution\nOutput: 2.3389M"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/molar_concentration.json",
+    "input": "3.035mol in 1.709L solution",
+    "output": "1.7766M",
+    "ground_truth": "1.7759M",
+    "is_correct": "False",
+    "instruction": "Calculate the molar concentration (mol/L) given the number of moles and volume in liters.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 4.741mol in 0.819L solution\nOutput: 5.7888M\nInput: 4.328mol in 1.248L solution\nOutput: 3.4679M\nInput: 3.955mol in 1.691L solution\nOutput: 2.3389M"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/ph_calculation.json",
+    "input": "[H+] = 2.02e-09mol/L",
+    "output": "pH = 8.694",
+    "ground_truth": "pH = 8.695",
+    "is_correct": "False",
+    "instruction": "Calculate the pH value given the hydrogen ion concentration [H+] in mol/L.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: [H+] = 2.02e-08mol/L\nOutput: pH = 7.694\nInput: [H+] = 1.33e-09mol/L\nOutput: pH = 8.876\nInput: [H+] = 8.71e-09mol/L\nOutput: pH = 8.06"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/ph_calculation.json",
+    "input": "[H+] = 2.57e-07mol/L",
+    "output": "pH = 6.589",
+    "ground_truth": "pH = 6.589",
+    "is_correct": "True",
+    "instruction": "Calculate the pH value given the hydrogen ion concentration [H+] in mol/L.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: [H+] = 2.02e-08mol/L\nOutput: pH = 7.694\nInput: [H+] = 1.33e-09mol/L\nOutput: pH = 8.876\nInput: [H+] = 8.71e-09mol/L\nOutput: pH = 8.06"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/pressure.json",
+    "input": "5000 Pa",
+    "output": "0.05 atm",
+    "ground_truth": "0.05 atm",
+    "is_correct": "True",
+    "instruction": "Convert pressure from Pascals to atmospheres.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 150000 Pa\nOutput: 1.48 atm\nInput: 250000 Pa\nOutput: 2.47 atm\nInput: 75000 Pa\nOutput: 0.74 atm"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/pressure.json",
+    "input": "333000 Pa",
+    "output": "3.29 atm",
+    "ground_truth": "3.29 atm",
+    "is_correct": "True",
+    "instruction": "Convert pressure from Pascals to atmospheres.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 150000 Pa\nOutput: 1.48 atm\nInput: 250000 Pa\nOutput: 2.47 atm\nInput: 75000 Pa\nOutput: 0.74 atm"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/quantum_energy.json",
+    "input": "frequency: 4.91e+14Hz",
+    "output": "energy: 2.032eV",
+    "ground_truth": "energy: 2.03eV",
+    "is_correct": "False",
+    "instruction": "Calculate the photon energy (eV) given the frequency of light (Hz).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: frequency: 7.34e+14Hz\nOutput: energy: 3.035eV\nInput: frequency: 5.29e+14Hz\nOutput: energy: 2.186eV\nInput: frequency: 4.79e+14Hz\nOutput: energy: 1.982eV"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/quantum_energy.json",
+    "input": "frequency: 6.70e+14Hz",
+    "output": "energy: 2.769eV",
+    "ground_truth": "energy: 2.771eV",
+    "is_correct": "False",
+    "instruction": "Calculate the photon energy (eV) given the frequency of light (Hz).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: frequency: 7.34e+14Hz\nOutput: energy: 3.035eV\nInput: frequency: 5.29e+14Hz\nOutput: energy: 2.186eV\nInput: frequency: 4.79e+14Hz\nOutput: energy: 1.982eV"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/relativistic_mass.json",
+    "input": "rest mass: 7.616kg, velocity: 2.05e+07m/s",
+    "output": "relativistic mass: 7.630050kg",
+    "ground_truth": "relativistic mass: 7.633815kg",
+    "is_correct": "False",
+    "instruction": "Calculate the relativistic mass (kg) given the rest mass (kg) and velocity (m/s).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: rest mass: 4.538kg, velocity: 9.14e+07m/s\nOutput: relativistic mass: 4.764313kg\nInput: rest mass: 5.923kg, velocity: 8.48e+07m/s\nOutput: relativistic mass: 6.174946kg\nInput: rest mass: 0.714kg, velocity: 1.55e+08m/s\nOutput: relativistic mass: 0.833933kg"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/relativistic_mass.json",
+    "input": "rest mass: 4.39kg, velocity: 2.71e+08m/s",
+    "output": "relativistic mass: 9.286469kg",
+    "ground_truth": "relativistic mass: 10.152959kg",
+    "is_correct": "False",
+    "instruction": "Calculate the relativistic mass (kg) given the rest mass (kg) and velocity (m/s).\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: rest mass: 4.538kg, velocity: 9.14e+07m/s\nOutput: relativistic mass: 4.764313kg\nInput: rest mass: 5.923kg, velocity: 8.48e+07m/s\nOutput: relativistic mass: 6.174946kg\nInput: rest mass: 0.714kg, velocity: 1.55e+08m/s\nOutput: relativistic mass: 0.833933kg"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/sound_travel.json",
+    "input": "46.44m distance",
+    "output": "0.136 seconds",
+    "ground_truth": "0.135 seconds",
+    "is_correct": "False",
+    "instruction": "Calculate how long it takes for sound to travel a given distance in air at room temperature.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 659.66m distance\nOutput: 1.923 seconds\nInput: 216.38m distance\nOutput: 0.631 seconds\nInput: 2229.42m distance\nOutput: 6.5 seconds"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/sound_travel.json",
+    "input": "2311.55m distance",
+    "output": "6.741 seconds",
+    "ground_truth": "6.739 seconds",
+    "is_correct": "False",
+    "instruction": "Calculate how long it takes for sound to travel a given distance in air at room temperature.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 659.66m distance\nOutput: 1.923 seconds\nInput: 216.38m distance\nOutput: 0.631 seconds\nInput: 2229.42m distance\nOutput: 6.5 seconds"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/taxonomic.json",
+    "input": "Escherichia coli",
+    "output": "E. coli",
+    "ground_truth": "E. coli",
+    "is_correct": "True",
+    "instruction": "Abbreviate taxonomic names according to scientific convention.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: Canis lupus\nOutput: C. lupus\nInput: Panthera tigris\nOutput: P. tigris\nInput: Homo sapiens\nOutput: H. sapiens"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/taxonomic.json",
+    "input": "Drosophila melanogaster",
+    "output": "D. melanogaster",
+    "ground_truth": "D. melanogaster",
+    "is_correct": "True",
+    "instruction": "Abbreviate taxonomic names according to scientific convention.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: Canis lupus\nOutput: C. lupus\nInput: Panthera tigris\nOutput: P. tigris\nInput: Homo sapiens\nOutput: H. sapiens"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/taxonomic.json",
+    "input": "Bos taurus indicus",
+    "output": "B. t. indicus",
+    "ground_truth": "B. t. indicus",
+    "is_correct": "True",
+    "instruction": "Abbreviate taxonomic names according to scientific convention.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: Canis lupus\nOutput: C. lupus\nInput: Panthera tigris\nOutput: P. tigris\nInput: Homo sapiens\nOutput: H. sapiens"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/taxonomic.json",
+    "input": "Bos taurus indicus",
+    "output": "B. taurus indicus",
+    "ground_truth": "B. t. indicus",
+    "is_correct": "False",
+    "instruction": "Abbreviate taxonomic names according to scientific convention.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: Canis lupus\nOutput: C. lupus\nInput: Panthera tigris\nOutput: P. tigris\nInput: Homo sapiens\nOutput: H. sapiens"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/taxonomic.json",
+    "input": "Pseudomonas aeruginosa",
+    "output": "P. aeruginosa",
+    "ground_truth": "P. aeruginosa",
+    "is_correct": "True",
+    "instruction": "Abbreviate taxonomic names according to scientific convention.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: Canis lupus\nOutput: C. lupus\nInput: Panthera tigris\nOutput: P. tigris\nInput: Homo sapiens\nOutput: H. sapiens"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/taxonomic.json",
+    "input": "Rattus norvegicus albinus",
+    "output": "R. norvegicus albinus",
+    "ground_truth": "R. n. albinus",
+    "is_correct": "False",
+    "instruction": "Abbreviate taxonomic names according to scientific convention.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: Canis lupus\nOutput: C. lupus\nInput: Panthera tigris\nOutput: P. tigris\nInput: Homo sapiens\nOutput: H. sapiens"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/wave_frequency.json",
+    "input": "wavelength: 442.19nm",
+    "output": "frequency: 678.362THz",
+    "ground_truth": "frequency: 678.441THz",
+    "is_correct": "False",
+    "instruction": "Convert between wavelength (nm) and frequency (Hz) for electromagnetic waves.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: wavelength: 432.26nm\nOutput: frequency: 694.027THz\nInput: wavelength: 395.76nm\nOutput: frequency: 758.035THz\nInput: wavelength: 695.51nm\nOutput: frequency: 431.338THz"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Science/wave_frequency.json",
+    "input": "wavelength: 603.94nm",
+    "output": "frequency: 496.512THz",
+    "ground_truth": "frequency: 496.738THz",
+    "is_correct": "False",
+    "instruction": "Convert between wavelength (nm) and frequency (Hz) for electromagnetic waves.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: wavelength: 432.26nm\nOutput: frequency: 694.027THz\nInput: wavelength: 395.76nm\nOutput: frequency: 758.035THz\nInput: wavelength: 695.51nm\nOutput: frequency: 431.338THz"
+  }
+]

@@ -1,0 +1,26 @@
+INFO:fm-baseline:Running Foundation Model on Medical
+INFO:fm-baseline:Processing dataset with 10 items
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://vip.yi-zhan.top/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:fm-baseline:Final accuracy on Medical: 1.0
+INFO:fm-baseline:Average token costs - prompt: 103, completion: 3
+INFO:fm-baseline:Total execution time: 20.84 seconds
+INFO:fm-baseline:All results saved to results_gpt-4o_Medical.json

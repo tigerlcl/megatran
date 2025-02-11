@@ -38,6 +38,15 @@ DATASET_DICT = {
     "Manual-Hard": {
         "path": os.path.join(get_project_root(), "data/DTT-test/Manual-Hard")
     },
+    "Finance": {
+        "path": os.path.join(get_project_root(), "data/industry/Finance")
+    },
+    "Medical": {
+        "path": os.path.join(get_project_root(), "data/industry/Medical")
+    },
+    "Science": {
+        "path": os.path.join(get_project_root(), "data/industry/Science")
+    },
     "test-data": {
         "path": os.path.join(get_project_root(), "data/testset/")
     }
@@ -48,6 +57,7 @@ JSON_NORMAL_GROUP = [
     "stackoverflow", "headcase", "prep-software", 
     "DXF", "SpreadSheet", "Synthetic", 
     "Manual-Easy", "Manual-Hard",
+    "Finance", "Medical", "Science",
     "test-data"
     ]
 

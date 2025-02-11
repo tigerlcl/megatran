@@ -17,16 +17,18 @@ from util import load_dataset_by_name, compare_values
 def run(dataset: list, client: OpenAI, logger: logging.Logger) -> None:
     """Run the foundation model baseline"""
 
+    start_time = time.time()  # 添加开始时间测量
     n_shot=3
     accuracy = []
     token_cost = []
     results_log = []
 
-    output_file = f"results/FM/{args.model}_{args.dataset}.json"
+
+    output_file = f"results_{args.model}_{args.dataset}.json"
 
     logger.info(f"Processing dataset with {len(dataset)} items")
     for idx, item in enumerate(dataset):
-        logger.info(f"Processing item [{idx+1}/{len(dataset)}]: {item['file_path']}")
+        # logger.info(f"Processing item [{idx+1}/{len(dataset)}]: {item['file_path']}")
 
         # process tuples for each item
         instruction = item['chat'] + "\nOnly output the transformed result without any explanation.\n"
@@ -38,10 +40,9 @@ def run(dataset: list, client: OpenAI, logger: logging.Logger) -> None:
         for t in item['tuples'][n_shot:]:
 
             user_input = f"{instruction}\n\n{icl}\nBased on the above examples, please transform the following input: {t['input']}\noutput:"
-            logger.info(f"User Input:\n{user_input}")
-
+            # logger.info(f"User Input:\n{user_input}")
+            # time.sleep(0.5)
             # generate response
-            time.sleep(0.5)
             response = client.chat.completions.create(
             model=args.model,
             messages=[
@@ -72,12 +73,11 @@ def run(dataset: list, client: OpenAI, logger: logging.Logger) -> None:
             }
             results_log.append(current_result)
 
-            # 新增：立即保存当前结果
             with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(results_log, f, ensure_ascii=False, indent=2)
 
-            logger.info(f"Output: {result}")
-            logger.info(f"Results updated in {output_file}\n")
+            # logger.info(f"Output: {result}")
+            # logger.info(f"Results updated in {output_file}\n")
 
             # store token cost: (prompt, completion)
             token_cost.append((response.usage.prompt_tokens, response.usage.completion_tokens))
@@ -99,6 +99,10 @@ def run(dataset: list, client: OpenAI, logger: logging.Logger) -> None:
     avg_prompt_cost = sum([t[0] for t in token_cost]) / len(token_cost)
     avg_completion_cost = sum([t[1] for t in token_cost]) / len(token_cost)
     logger.info(f"Average token costs - prompt: {int(avg_prompt_cost)}, completion: {int(avg_completion_cost)}")
+
+    # 添加总时间计算和显示
+    total_time = time.time() - start_time
+    logger.info(f"Total execution time: {total_time:.2f} seconds")
 
     # 最终日志信息
     logger.info(f"All results saved to {output_file}")
@@ -125,7 +129,7 @@ if __name__ == "__main__":
     logging.basicConfig(
         level=logging.INFO,
         handlers=[
-            logging.FileHandler(f"results/FM/fm_{args.dataset}_{args.model}.log", mode='w'),
+            logging.FileHandler(f"fm_{args.dataset}_{args.model}.log", mode='w'),
             logging.StreamHandler()  # This will output to console
         ]
     )

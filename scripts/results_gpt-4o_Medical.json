@@ -1,0 +1,182 @@
+[
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/clinical_trial.json",
+    "input": "Phase IV Clinical Trial",
+    "output": "Phase 4",
+    "ground_truth": "Phase 4",
+    "is_correct": "True",
+    "instruction": "Standardize clinical trial phase notation.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: Phase III Clinical Trial\nOutput: Phase 3\nInput: Phase II Clinical Trial\nOutput: Phase 2\nInput: Phase I Clinical Trial\nOutput: Phase 1"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/clinical_trial.json",
+    "input": "Phase I/II Clinical Trial",
+    "output": "Phase 1/2",
+    "ground_truth": "Phase 1/2",
+    "is_correct": "True",
+    "instruction": "Standardize clinical trial phase notation.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: Phase III Clinical Trial\nOutput: Phase 3\nInput: Phase II Clinical Trial\nOutput: Phase 2\nInput: Phase I Clinical Trial\nOutput: Phase 1"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/dates.json",
+    "input": "01/03/2024",
+    "output": "2024-Mar-01",
+    "ground_truth": "2024-Mar-01",
+    "is_correct": "True",
+    "instruction": "Convert dates to standardized medical format with month abbreviation.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 23/09/2023\nOutput: 2023-Sep-23\nInput: 15/01/2024\nOutput: 2024-Jan-15\nInput: 30/12/2023\nOutput: 2023-Dec-30"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/dates.json",
+    "input": "22/07/2023",
+    "output": "2023-Jul-22",
+    "ground_truth": "2023-Jul-22",
+    "is_correct": "True",
+    "instruction": "Convert dates to standardized medical format with month abbreviation.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 23/09/2023\nOutput: 2023-Sep-23\nInput: 15/01/2024\nOutput: 2024-Jan-15\nInput: 30/12/2023\nOutput: 2023-Dec-30"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/diagnostic_code.json",
+    "input": "ICD-10: J45.9",
+    "output": "J459",
+    "ground_truth": "J459",
+    "is_correct": "True",
+    "instruction": "Standardize ICD-10 diagnostic codes by removing prefix and dot.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: ICD-10: E11.9\nOutput: E119\nInput: ICD-10: I10.0\nOutput: I100\nInput: ICD-10: F32.1\nOutput: F321"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/diagnostic_code.json",
+    "input": "ICD-10: K21.9",
+    "output": "K219",
+    "ground_truth": "K219",
+    "is_correct": "True",
+    "instruction": "Standardize ICD-10 diagnostic codes by removing prefix and dot.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: ICD-10: E11.9\nOutput: E119\nInput: ICD-10: I10.0\nOutput: I100\nInput: ICD-10: F32.1\nOutput: F321"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/height.json",
+    "input": "6ft 0in",
+    "output": "183 cm",
+    "ground_truth": "183 cm",
+    "is_correct": "True",
+    "instruction": "Convert height measurements to centimeters.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 6ft 2in\nOutput: 188 cm\nInput: 5ft 10in\nOutput: 178 cm\nInput: 5ft 7in\nOutput: 170 cm"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/height.json",
+    "input": "5ft 5in",
+    "output": "165 cm",
+    "ground_truth": "165 cm",
+    "is_correct": "True",
+    "instruction": "Convert height measurements to centimeters.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 6ft 2in\nOutput: 188 cm\nInput: 5ft 10in\nOutput: 178 cm\nInput: 5ft 7in\nOutput: 170 cm"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/medical_device.json",
+    "input": "X-Ray-System-A4.0",
+    "output": "XR-A4",
+    "ground_truth": "XR-A4",
+    "is_correct": "True",
+    "instruction": "Simplify medical device model numbers.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: MRI-Scanner-X1.2\nOutput: MRI-X1\nInput: CT-Scanner-Y2.0\nOutput: CT-Y2\nInput: Ultrasound-Z3.1\nOutput: US-Z3"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/medical_device.json",
+    "input": "PET-Scanner-B2.3",
+    "output": "PET-B2",
+    "ground_truth": "PET-B2",
+    "is_correct": "True",
+    "instruction": "Simplify medical device model numbers.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: MRI-Scanner-X1.2\nOutput: MRI-X1\nInput: CT-Scanner-Y2.0\nOutput: CT-Y2\nInput: Ultrasound-Z3.1\nOutput: US-Z3"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/patient.json",
+    "input": "AnnaLee-12",
+    "output": "AL-12",
+    "ground_truth": "AL-12",
+    "is_correct": "True",
+    "instruction": "Mask patient IDs while preserving initials and number.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: JohnDoe-45\nOutput: JD-45\nInput: MarySue-23\nOutput: MS-23\nInput: RobertSmith-89\nOutput: RS-89"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/patient.json",
+    "input": "WilliamBrown-67",
+    "output": "WB-67",
+    "ground_truth": "WB-67",
+    "is_correct": "True",
+    "instruction": "Mask patient IDs while preserving initials and number.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: JohnDoe-45\nOutput: JD-45\nInput: MarySue-23\nOutput: MS-23\nInput: RobertSmith-89\nOutput: RS-89"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/patient_record.json",
+    "input": "PT-2023-999",
+    "output": "2023PT999",
+    "ground_truth": "2023PT999",
+    "is_correct": "True",
+    "instruction": "Transform patient record numbers to standardized format.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: PT-2023-001\nOutput: 2023PT001\nInput: PT-2023-012\nOutput: 2023PT012\nInput: PT-2023-123\nOutput: 2023PT123"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/patient_record.json",
+    "input": "PT-2023-045",
+    "output": "2023PT045",
+    "ground_truth": "2023PT045",
+    "is_correct": "True",
+    "instruction": "Transform patient record numbers to standardized format.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: PT-2023-001\nOutput: 2023PT001\nInput: PT-2023-012\nOutput: 2023PT012\nInput: PT-2023-123\nOutput: 2023PT123"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/prefix_suffix.json",
+    "input": "S234",
+    "output": "LAB-S234-2023",
+    "ground_truth": "LAB-S234-2023",
+    "is_correct": "True",
+    "instruction": "Format sample IDs with lab prefix and year suffix.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: S123\nOutput: LAB-S123-2023\nInput: S456\nOutput: LAB-S456-2023\nInput: S789\nOutput: LAB-S789-2023"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/prefix_suffix.json",
+    "input": "S567",
+    "output": "LAB-S567-2023",
+    "ground_truth": "LAB-S567-2023",
+    "is_correct": "True",
+    "instruction": "Format sample IDs with lab prefix and year suffix.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: S123\nOutput: LAB-S123-2023\nInput: S456\nOutput: LAB-S456-2023\nInput: S789\nOutput: LAB-S789-2023"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/quarter.json",
+    "input": "Q4-2023",
+    "output": "2023-Oct-Dec",
+    "ground_truth": "2023-Oct-Dec",
+    "is_correct": "True",
+    "instruction": "Convert quarter dates to full date range format.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: Q3-2023\nOutput: 2023-Jul-Sep\nInput: Q1-2024\nOutput: 2024-Jan-Mar\nInput: Q2-2023\nOutput: 2023-Apr-Jun"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/quarter.json",
+    "input": "Q1-2023",
+    "output": "2023-Jan-Mar",
+    "ground_truth": "2023-Jan-Mar",
+    "is_correct": "True",
+    "instruction": "Convert quarter dates to full date range format.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: Q3-2023\nOutput: 2023-Jul-Sep\nInput: Q1-2024\nOutput: 2024-Jan-Mar\nInput: Q2-2023\nOutput: 2023-Apr-Jun"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/units.json",
+    "input": "8.5g/dL",
+    "output": "85 g/L",
+    "ground_truth": "85 g/L",
+    "is_correct": "True",
+    "instruction": "Convert laboratory values to standardized units.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 10g/dL\nOutput: 100 g/L\nInput: 5g/dL\nOutput: 50 g/L\nInput: 12g/dL\nOutput: 120 g/L"
+  },
+  {
+    "file_path": "/home/yangchenyu/tiger/megatran/data/industry/Medical/units.json",
+    "input": "15g/dL",
+    "output": "150 g/L",
+    "ground_truth": "150 g/L",
+    "is_correct": "True",
+    "instruction": "Convert laboratory values to standardized units.\nOnly output the transformed result without any explanation.\n",
+    "examples": "Examples:\nInput: 10g/dL\nOutput: 100 g/L\nInput: 5g/dL\nOutput: 50 g/L\nInput: 12g/dL\nOutput: 120 g/L"
+  }
+]
