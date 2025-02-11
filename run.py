@@ -86,6 +86,7 @@ if __name__ == '__main__':
     parser.add_argument('--exp_name', default='demo', type=str, help='Unique experiment name')
     parser.add_argument('--dataset_name', type=str, help='Dataset name from load_data.py/DATASET_DICT')
     parser.add_argument('--config', required=True, type=str, help='Path to config file')
+    parser.add_argument('--model', default="gpt-4o-mini", required=True, type=str, help='LLM backend model name')
     parser.add_argument('--testing', action='store_true', help='Run on small subset of data for testing')
     
     args = parser.parse_args()

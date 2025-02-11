@@ -11,7 +11,7 @@ allow_reflection: true
 allow_rag: true
 
 # OPENAI chat model (shared in code generator and reflection)
-openai_model: "gpt-4o-mini" # gpt-4o, gpt-4o-mini
+# model: "gpt-4o-mini" # gpt-4o, gpt-4o-mini
 openai_temperature: 0.2
 
 # OPENAI embedding model
