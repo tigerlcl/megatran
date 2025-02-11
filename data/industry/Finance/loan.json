@@ -1,0 +1,25 @@
+{
+  "chat": "Convert loan terms to standardized abbreviated format.",
+  "tuples": [
+    {
+      "input": "Loan-to-Value Ratio 75% with 5-year amortization",
+      "output": "LTV 75% | 5Y AMORT"
+    },
+    {
+      "input": "Loan-to-Value Ratio 80% with 10-year amortization",
+      "output": "LTV 80% | 10Y AMORT"
+    },
+    {
+      "input": "Loan-to-Value Ratio 65% with 3-year amortization",
+      "output": "LTV 65% | 3Y AMORT"
+    },
+    {
+      "input": "Loan-to-Value Ratio 70% with 7-year amortization",
+      "output": "LTV 70% | 7Y AMORT"
+    },
+    {
+      "input": "Loan-to-Value Ratio 85% with 15-year amortization",
+      "output": "LTV 85% | 15Y AMORT"
+    }
+  ]
+} 

@@ -1,0 +1,25 @@
+{
+  "chat": "Format installment breakdown with abbreviated amounts.",
+  "tuples": [
+    {
+      "input": "Monthly payment $10,000 (principal: $7,500, interest: $2,500)",
+      "output": "PMT: $10k (P:7.5k, I:2.5k)"
+    },
+    {
+      "input": "Monthly payment $25,000 (principal: $18,000, interest: $7,000)",
+      "output": "PMT: $25k (P:18k, I:7k)"
+    },
+    {
+      "input": "Monthly payment $15,000 (principal: $11,250, interest: $3,750)",
+      "output": "PMT: $15k (P:11.25k, I:3.75k)"
+    },
+    {
+      "input": "Monthly payment $50,000 (principal: $37,500, interest: $12,500)",
+      "output": "PMT: $50k (P:37.5k, I:12.5k)"
+    },
+    {
+      "input": "Monthly payment $8,000 (principal: $6,000, interest: $2,000)",
+      "output": "PMT: $8k (P:6k, I:2k)"
+    }
+  ]
+} 

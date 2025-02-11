@@ -1,0 +1,25 @@
+{
+  "chat": "Convert interest rate expressions to internal code format.",
+  "tuples": [
+    {
+      "input": "Prime Rate + 200 basis points",
+      "output": "PR+200bps"
+    },
+    {
+      "input": "Prime Rate + 150 basis points",
+      "output": "PR+150bps"
+    },
+    {
+      "input": "Prime Rate + 75 basis points",
+      "output": "PR+75bps"
+    },
+    {
+      "input": "Prime Rate + 300 basis points",
+      "output": "PR+300bps"
+    },
+    {
+      "input": "Prime Rate + 125 basis points",
+      "output": "PR+125bps"
+    }
+  ]
+} 

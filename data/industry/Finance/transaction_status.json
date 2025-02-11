@@ -1,0 +1,29 @@
+{
+  "chat": "Extract transaction status from email subject lines",
+  "tuples": [
+    {
+      "input": "[Completed] Your order #12345 has been successfully processed",
+      "output": "Completed"
+    },
+    {
+      "input": "[Refunded] Refund processed for your recent order #45678",
+      "output": "Refunded"
+    },
+    {
+      "input": "[Pending] Awaiting payment confirmation for order #98765",
+      "output": "Pending"
+    },
+    {
+      "input": "[Cancelled] Order cancellation confirmation #34567",
+      "output": "Cancelled"
+    },
+    {
+      "input": "[Failed] Payment unsuccessful for order #23456",
+      "output": "Failed"
+    },
+    {
+      "input": "[Disputed] Chargeback notice for transaction #78901",
+      "output": "Disputed"
+    }
+  ]
+} 

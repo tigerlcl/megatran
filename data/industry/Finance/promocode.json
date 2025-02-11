@@ -1,0 +1,33 @@
+{
+  "chat": "Extract promotional code from advertisement text (codes are typically in CAPS, may contain numbers, and are often at the end of sentences).",
+  "tuples": [
+    {
+      "input": "Shop our summer collection and get 25% off with code SUMMER2024 at checkout!",
+      "output": "SUMMER2024"
+    },
+    {
+      "input": "🎉 Flash sale alert! Use FLASH48 for an extra 30% off clearance items",
+      "output": "FLASH48"
+    },
+    {
+      "input": "Members: Enjoy free shipping on all orders - simply enter SHIPFREE at checkout",
+      "output": "SHIPFREE"
+    },
+    {
+      "input": "Limited time offer! Get your 20% student discount with STUDENT20. Terms apply.",
+      "output": "STUDENT20"
+    },
+    {
+      "input": "Early bird special: Use promo code EARLY15 before 9AM for an additional 15% off",
+      "output": "EARLY15"
+    },
+    {
+      "input": "Subscribe to our newsletter and use welcome code WELCOME10 for 10% off your first order!",
+      "output": "WELCOME10"
+    },
+    {
+      "input": "Black Friday deals start early! Don't forget to apply BFCM2023 for maximum savings",
+      "output": "BFCM2023"
+    }
+  ]
+} 
