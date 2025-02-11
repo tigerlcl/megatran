@@ -85,40 +85,62 @@ def main(config: Dict):
         is_separator_regex=False
     )
     
-    # Process each package
-    documents = []
+    # Initialize lists to accumulate all documents
+    all_texts = []
+    all_metadatas = []
+    
     total_packages = len(pkg_info)
     logger.info(f"Starting to process {total_packages} packages")
     
     for idx, pkg in enumerate(pkg_info, 1):
         try:
             logger.info(f"[{idx}/{total_packages}] Processing {pkg['name']}...")
+            
+            # Load and split documents
             loader = get_loader_for_package(pkg)
             docs = loader.load()
             split_docs = text_splitter.split_documents(docs)
-            documents.extend(split_docs)
+            
+            # Process each document chunk
+            for doc in split_docs:
+                # Enhance metadata with package info
+                metadata = doc.metadata.copy()  # Preserve existing metadata from loader
+                metadata.update({
+                    'package_name': pkg['name'],
+                    'source_type': 'documentation' if 'doc_url' in pkg else 'github',
+                    'url': pkg.get('doc_url', pkg.get('git_url', 'unknown')),
+                    'timestamp': time.strftime('%Y-%m-%d'),  # When the doc was processed
+                    'chunk_id': f"{pkg['name']}_{len(all_texts)}"  # Unique identifier for each chunk
+                })
+                
+                all_texts.append(doc.page_content)
+                all_metadatas.append(metadata)
+            
             logger.info(f"Successfully processed {pkg['name']}: {len(split_docs)} chunks created")
+            
         except Exception as e:
             logger.error(f"Error processing {pkg['name']}: {e}")
             continue
 
-    if documents:
-        logger.info(f"Total documents to process: {len(documents)}")
-        try:
-            # Create embedding pairs in batches
-            embedding_pairs = batch_process_embeddings(documents, embeddings, batch_size=100)
-            
-            # Create FAISS index
-            logger.info("Creating FAISS index...")
-            vector_db = FAISS.from_embeddings(embedding_pairs, embeddings)
-            
-            logger.info(f"Saving vector database to {config['vec_db_dir']}")
-            vector_db.save_local(config['vec_db_dir'])
-            logger.info("Vector database built successfully")
-            
-        except Exception as e:
-            logger.error(f"Error creating vector database: {e}")
-            raise
+    if all_texts:
+        logger.info(f"Total documents to process: {len(all_texts)}")
+        
+        # Create embeddings for all texts
+        text_embeddings = list(zip(
+            all_texts,
+            embeddings.embed_documents(all_texts)
+        ))
+        
+        # Create single vector store with all documents
+        vector_db = FAISS.from_embeddings(
+            text_embeddings,
+            embeddings,
+            metadatas=all_metadatas
+        )
+        
+        logger.info(f"Saving vector database to {config['vec_db_dir']}")
+        vector_db.save_local(config['vec_db_dir'])
+        logger.info("Vector database built successfully")
     else:
         logger.warning("No documents processed, vector database not created")
 
@@ -149,8 +171,7 @@ if __name__ == "__main__":
         vector_db = FAISS.load_local(config['vec_db_dir'], embeddings, allow_dangerous_deserialization=True)
         docs = vector_db.similarity_search_with_relevance_scores(args.query, k=3)
         for doc, score in docs:
-            print(f"Page Content:\n{doc.page_content}\nRelevance Score: {score}")
-
+            print(f"Page Content:\n{doc.page_content}\nMetadata: {doc.metadata}\nRelevance Score: {score}")
     else:
         # Build database
         main(config) 

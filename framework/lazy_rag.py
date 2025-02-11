@@ -17,7 +17,10 @@ class LazyRAG:
     def __init__(self, ctx):
         self.oai_embedding = OpenAI(api_key=ctx.openai_api_key, base_url=ctx.openai_base_url)
         self.embedding_model = ctx.embedding_model
-        self.lc_embedding = OpenAIEmbeddings(client=self.oai_embedding, model=ctx.embedding_model)
+        self.lc_embedding = OpenAIEmbeddings(
+            api_key=os.getenv("OPENAI_API_KEY"),
+            base_url=os.getenv("OPENAI_BASE_URL"), 
+            model=ctx.embedding_model)
         self.analyzer = ctx.result_analyzer
         self.logger = ctx.logger
         

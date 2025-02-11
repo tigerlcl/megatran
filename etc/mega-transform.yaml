@@ -26,4 +26,4 @@ vllm_cfg:
 
 # Lazy RAG (online)
 pkg_info_path: "./assets/rag/pkg_info.json"
-vec_db_dir: "./assets/rag/code_db_v2"
+vec_db_dir: "./assets/rag/code_db_v3"

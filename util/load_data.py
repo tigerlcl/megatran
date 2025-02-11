@@ -2,11 +2,10 @@ import os
 import json
 from typing import List, Dict
 
-# 添加获取项目根目录的函数
+
 def get_project_root():
-    """获取项目根目录的绝对路径"""
-    current_file = os.path.abspath(__file__)  # 获取当前文件的绝对路径
-    return os.path.dirname(os.path.dirname(current_file))  # 返回项目根目录
+    current_file = os.path.abspath(__file__)
+    return os.path.dirname(os.path.dirname(current_file))
 
 # 更新数据集配置，使用项目根目录
 DATASET_DICT = {
