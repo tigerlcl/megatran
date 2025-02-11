@@ -20,6 +20,22 @@
     {
       "input": "CaCO3",
       "output": "CaCO₃"
+    },
+    {
+      "input": "C6H12O6",
+      "output": "C₆H₁₂O₆"
+    },
+    {
+      "input": "CH3COOH",
+      "output": "CH₃COOH"
+    },
+    {
+      "input": "Fe2(SO4)3",
+      "output": "Fe₂(SO₄)₃"
+    },
+    {
+      "input": "K4[Fe(CN)6]",
+      "output": "K₄[Fe(CN)₆]"
     }
   ]
 } 

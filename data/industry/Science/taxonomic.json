@@ -20,6 +20,22 @@
     {
       "input": "Drosophila melanogaster",
       "output": "D. melanogaster"
+    },
+    {
+      "input": "Bos taurus indicus",
+      "output": "B. t. indicus"
+    },
+    {
+      "input": "Bos taurus indicus",
+      "output": "B. t. indicus"
+    },
+    {
+      "input": "Pseudomonas aeruginosa",
+      "output": "P. aeruginosa"
+    },
+    {
+      "input": "Rattus norvegicus albinus",
+      "output": "R. n. albinus"
     }
   ]
 } 
