@@ -1,0 +1,85 @@
+{
+  "chat": "Reverse the input string.",
+  "tuples": [
+    {
+      "input": "f-9ADPe5PDyFS5?8nwTOPX4",
+      "output": "4XPOTwn8?5SFyDP5ePDA9-f"
+    },
+    {
+      "input": "3PEJT2b?XYfEpJ9XNrfKWqu",
+      "output": "uqWKfrNX9JpEfYX?b2TJEP3"
+    },
+    {
+      "input": "2?z7R XLO5FC)-* ncvwu a)e",
+      "output": "e)a uwvcn *-)CF5OLX R7z?2"
+    },
+    {
+      "input": "8K -nUDc9NNvH9R)JnKE4TC)8n",
+      "output": "n8)CT4EKnJ)R9HvNN9cDUn- K8"
+    },
+    {
+      "input": "yfuyy.-t6qAsP N(p",
+      "output": "p(N PsAq6t-.yyufy"
+    },
+    {
+      "input": "2lP?-M7Q*GGvmT0",
+      "output": "0TmvGG*Q7M-?Pl2"
+    },
+    {
+      "input": "bRl )qlmOroF(- 4J8fC53oSQ8  G(ZHx",
+      "output": "xHZ(G  8QSo35Cf8J4 -(ForOmlq) lRb"
+    },
+    {
+      "input": "vr?r1mzae&sH7l",
+      "output": "l7Hs&eazm1r?rv"
+    },
+    {
+      "input": "7WOAcPXzvGu OVWOgH i5Swz4Mta 57d",
+      "output": "d75 atM4zwS5i HgOWVO uGvzXPcAOW7"
+    },
+    {
+      "input": "vvbH)Y?7XPP lDLy)-SFBkfLIeEi",
+      "output": "iEeILfkBFS-)yLDl PPX7?Y)Hbvv"
+    },
+    {
+      "input": "9X3f6 LuPIsNRs",
+      "output": "sRNsIPuL 6f3X9"
+    },
+    {
+      "input": "u9LUJ?G NOqaE Kx3)Ri sOYz.Iof",
+      "output": "foI.zYOs iR)3xK EaqON G?JUL9u"
+    },
+    {
+      "input": "ajrNLp41c8z4",
+      "output": "4z8c14pLNrja"
+    },
+    {
+      "input": "otOJ(y&Pj",
+      "output": "jP&y(JOto"
+    },
+    {
+      "input": "uf76UblV-eOGmec6RDK8BOUCQX-g4",
+      "output": "4g-XQCUOB8KDR6cemGOe-VlbU67fu"
+    },
+    {
+      "input": "mA5) MUn8q9tYo x9",
+      "output": "9x oYt9q8nUM )5Am"
+    },
+    {
+      "input": "5B &teG K.SAQ q162cNhBAI15zHp",
+      "output": "pHz51IABhNc261q QAS.K Get& B5"
+    },
+    {
+      "input": "tiAfnSM4",
+      "output": "4MSnfAit"
+    },
+    {
+      "input": "qNeovlBiNoXOiHuW1gl2",
+      "output": "2lg1WuHiOXoNiBlvoeNq"
+    },
+    {
+      "input": "6Nzp.3yYU FSx -qJwAg.npOd37",
+      "output": "73dOpn.gAwJq- xSF UYy3.pzN6"
+    }
+  ]
+}

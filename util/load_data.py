@@ -23,29 +23,14 @@ DATASET_DICT = {
     "prep-software": {
         "path": os.path.join(get_project_root(), "data/TDE-v2/benchmark-FF-Trifacta-GoogleRefine")
     },
-    "DXF": {
-        "path": os.path.join(get_project_root(), "data/DTT-test/DXF")
+    "DTT-variant": {
+        "path": os.path.join(get_project_root(), "data/DTT-variant/")
     },
-    "SpreadSheet": {
-        "path": os.path.join(get_project_root(), "data/DTT-test/SpreadSheet")
-    },
-    "Synthetic": {
-        "path": os.path.join(get_project_root(), "data/DTT-test/Synthetic")
-    },
-    "Manual-Easy": {
-        "path": os.path.join(get_project_root(), "data/DTT-test/Manual-Easy")
-    },
-    "Manual-Hard": {
-        "path": os.path.join(get_project_root(), "data/DTT-test/Manual-Hard")
-    },
-    "Finance": {
-        "path": os.path.join(get_project_root(), "data/industry/Finance")
-    },
-    "Medical": {
-        "path": os.path.join(get_project_root(), "data/industry/Medical")
+    "Manual": {
+        "path": os.path.join(get_project_root(), "data/Manual")
     },
     "Science": {
-        "path": os.path.join(get_project_root(), "data/industry/Science")
+        "path": os.path.join(get_project_root(), "data/Science")
     },
     "test-data": {
         "path": os.path.join(get_project_root(), "data/testset/")
@@ -55,9 +40,7 @@ DATASET_DICT = {
 # Datasets using standard JSON format
 JSON_NORMAL_GROUP = [
     "stackoverflow", "headcase", "prep-software", 
-    "DXF", "SpreadSheet", "Synthetic", 
-    "Manual-Easy", "Manual-Hard",
-    "Finance", "Medical", "Science",
+    "DTT-variant", "Manual", "Science",
     "test-data"
     ]
 

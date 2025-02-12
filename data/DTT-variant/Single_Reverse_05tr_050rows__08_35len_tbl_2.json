@@ -1,0 +1,77 @@
+{
+  "chat": "Transform the input string by reversing its order.",
+  "tuples": [
+    {
+      "input": "rGzWK Pk",
+      "output": "kP KWzGr"
+    },
+    {
+      "input": "hW*yeXPARKeBdZA0(85Wu2epio",
+      "output": "oipe2uW58(0AZdBeKRAPXey*Wh"
+    },
+    {
+      "input": "y(a4G8vobO-baEvT)BW6(lw3cJr)ap7",
+      "output": "7pa)rJc3wl(6WB)TvEab-Obov8G4a(y"
+    },
+    {
+      "input": "dL15hrsRJ.4u pD 4D78* bRcebFe2-Fx",
+      "output": "xF-2eFbecRb *87D4 Dp u4.JRsrh51Ld"
+    },
+    {
+      "input": "kQLir8A.GG hIhQWw",
+      "output": "wWQhIh GG.A8riLQk"
+    },
+    {
+      "input": "gw*PxP O1vsqNQbvx4qFm.DFy",
+      "output": "yFD.mFq4xvbQNqsv1O PxP*wg"
+    },
+    {
+      "input": "x0A&4I29C&wd",
+      "output": "dw&C92I4&A0x"
+    },
+    {
+      "input": "c&fvSChZiiAa5",
+      "output": "5aAiiZhCSvf&c"
+    },
+    {
+      "input": "xs8MwIXqJ1j KM)b2H3f",
+      "output": "f3H2b)MK j1JqXIwM8sx"
+    },
+    {
+      "input": "y2ybNQSoX-j2M(JDR2ER7S0c d",
+      "output": "d c0S7RE2RDJ(M2j-XoSQNby2y"
+    },
+    {
+      "input": "fcBNCZcej*K&iIfv*?M3UXaCx0",
+      "output": "0xCaXU3M?*vfIi&K*jecZCNBcf"
+    },
+    {
+      "input": "7fzSnlDza-wrKKaHUPt5Nl(K1-6",
+      "output": "6-1K(lN5tPUHaKKrw-azDlnSzf7"
+    },
+    {
+      "input": "cGkd bXqteJ?U)DNinAmSUoik)uHnU8",
+      "output": "8UnHu)kioUSmAniND)U?JetqXb dkGc"
+    },
+    {
+      "input": "eN1Y*a)(fDSHtgkwS2IWcxA9R8IDY7XPdfs",
+      "output": "sfdPX7YDI8R9AxcWI2SwkgtHSDf()a*Y1Ne"
+    },
+    {
+      "input": "xKo-7ZLe2*jHCiNG89fum",
+      "output": "muf98GNiCHj*2eLZ7-oKx"
+    },
+    {
+      "input": "z?sFcfJN*ZnflnM-QD1-k",
+      "output": "k-1DQ-MnlfnZ*NJfcFs?z"
+    },
+    {
+      "input": "mQFESdV5ZFyyc hu7QwGL4 M Cnf)y",
+      "output": "y)fnC M 4LGwQ7uh cyyFZ5VdSEFQm"
+    },
+    {
+      "input": "clh5 KZnNzkE86 Q49zJrmawsg",
+      "output": "gswamrJz94Q 68EkzNnZK 5hlc"
+    }
+  ]
+}

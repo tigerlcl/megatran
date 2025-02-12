@@ -1,0 +1,45 @@
+{
+  "chat": "Convert a hex color code into its equivalent RGB integer representation by combining the decimal values of the red, green, and blue components.",
+  "tuples": [
+    {
+      "input": "#ffb6c1",
+      "output": "(255182193)"
+    },
+    {
+      "input": "#333333",
+      "output": "(515151)"
+    },
+    {
+      "input": "#d52b1e",
+      "output": "(2134330)"
+    },
+    {
+      "input": "#306860",
+      "output": "(4810496)"
+    },
+    {
+      "input": "#045ca2",
+      "output": "(492162)"
+    },
+    {
+      "input": "#fed100",
+      "output": "(2542090)"
+    },
+    {
+      "input": "#000000",
+      "output": "(000)"
+    },
+    {
+      "input": "#999999",
+      "output": "(153153153)"
+    },
+    {
+      "input": "#123456",
+      "output": "(185286)"
+    },
+    {
+      "input": "#000fff",
+      "output": "(015255)"
+    }
+  ]
+}

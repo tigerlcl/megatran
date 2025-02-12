@@ -1,0 +1,33 @@
+{
+    "chat": "Extract date from file name",
+    "tuples": [
+        {
+            "input": "03_2005_XXX.xls",
+            "output": "03/01/2005"
+        },
+        {
+            "input": "12_2021_report.pdf",
+            "output": "12/01/2021"
+        },
+        {
+            "input": "07_1999_data.csv",
+            "output": "07/01/1999"
+        },
+        {
+            "input": "01_2020_summary.docx",
+            "output": "01/01/2020"
+        },
+        {
+            "input": "11_2018_notes.txt",
+            "output": "11/01/2018"
+        },
+        {
+            "input": "05_2015_analysis.pptx",
+            "output": "05/01/2015"
+        },
+        {
+            "input": "09_2022_overview.doc",
+            "output": "09/01/2022"
+        }
+    ]
+}

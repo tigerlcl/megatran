@@ -1,0 +1,29 @@
+{
+  "chat": "Extract the last three digits from the phone number format \"XXX-XXX-XXX\" as the output.",
+  "tuples": [
+    {
+      "input": "244-655-094",
+      "output": "094"
+    },
+    {
+      "input": "981-424-843",
+      "output": "843"
+    },
+    {
+      "input": "308-916-545",
+      "output": "545"
+    },
+    {
+      "input": "938-242-504",
+      "output": "504"
+    },
+    {
+      "input": "623-599-749",
+      "output": "749"
+    },
+    {
+      "input": "118-980-214",
+      "output": "214"
+    }
+  ]
+}

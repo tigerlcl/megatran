@@ -1,0 +1,21 @@
+{
+  "chat": "Instruction: Extract the first name from a given full name, retaining only the first part before any spaces.",
+  "tuples": [
+    {
+      "input": "Nancy FreeHafer",
+      "output": "Nancy"
+    },
+    {
+      "input": "Andrew Cencici",
+      "output": "Andrew"
+    },
+    {
+      "input": "Mariya Sergienko",
+      "output": "Mariya"
+    },
+    {
+      "input": "Jan Kotas",
+      "output": "Jan"
+    }
+  ]
+}

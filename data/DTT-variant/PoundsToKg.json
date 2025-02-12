@@ -1,0 +1,41 @@
+{
+  "chat": "Convert weight from pounds to kilograms.",
+  "tuples": [
+    {
+      "input": "1",
+      "output": "0.45"
+    },
+    {
+      "input": "70",
+      "output": "31.75"
+    },
+    {
+      "input": "99",
+      "output": "44.9"
+    },
+    {
+      "input": "8",
+      "output": "3.6"
+    },
+    {
+      "input": "59",
+      "output": "26.76"
+    },
+    {
+      "input": "68",
+      "output": "30.84"
+    },
+    {
+      "input": "212",
+      "output": "96.16"
+    },
+    {
+      "input": "192",
+      "output": "87.09"
+    },
+    {
+      "input": "190",
+      "output": "86.18"
+    }
+  ]
+}

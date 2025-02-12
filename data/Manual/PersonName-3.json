@@ -1,0 +1,25 @@
+{
+    "chat": "format person name",
+    "tuples": [
+        {
+            "input": "Smith\tJ\tMichael",
+            "output": "Smith, Michael J."
+        },
+        {
+            "input": "Johnson\tK\tEmily",
+            "output": "Johnson, Emily K."
+        },
+        {
+            "input": "Brown\tL\tDavid",
+            "output": "Brown, David L."
+        },
+        {
+            "input": "Davis\tM\tSarah",
+            "output": "Davis, Sarah M."
+        },
+        {
+            "input": "Garcia\tN\tLuis",
+            "output": "Garcia, Luis N."
+        }
+    ]
+}

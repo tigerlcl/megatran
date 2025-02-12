@@ -1,0 +1,25 @@
+{
+    "chat": "Extract ZIP code from address",
+    "tuples": [
+        {
+            "input": "123 Main St, Springfield, IL 62704",
+            "output": "62704"
+        },
+        {
+            "input": "456 Elm St, Los Angeles, CA 90001",
+            "output": "90001"
+        },
+        {
+            "input": "789 Maple Ave, New York, NY 10001",
+            "output": "10001"
+        },
+        {
+            "input": "101 Pine St, Seattle, WA 98101",
+            "output": "98101"
+        },
+        {
+            "input": "202 Oak St, Austin, TX 73301",
+            "output": "73301"
+        }
+    ]
+}

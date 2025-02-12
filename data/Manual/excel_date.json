@@ -1,0 +1,25 @@
+{
+    "chat": "Convert excel date to datetime.",
+    "tuples": [
+        {
+            "input": "4938",
+            "output": "1913/7/8"
+        },
+        {
+            "input": "236",
+            "output": "1900/8/23"
+        },
+        {
+            "input": "47378",
+            "output": "2029/9/17"
+        },
+        {
+            "input": "2358",
+            "output": "1906/6/15"
+        },
+        {
+            "input": "21835",
+            "output": "1959/10/12"
+        } 
+    ]
+}

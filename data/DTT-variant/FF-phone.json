@@ -1,0 +1,29 @@
+{
+  "chat": "Extract the first three digits from the given phone number in the format XXX-XXX-XXX.",
+  "tuples": [
+    {
+      "input": "938-242-504",
+      "output": "938"
+    },
+    {
+      "input": "981-424-843",
+      "output": "981"
+    },
+    {
+      "input": "244-655-094",
+      "output": "244"
+    },
+    {
+      "input": "118-980-214",
+      "output": "118"
+    },
+    {
+      "input": "623-599-749",
+      "output": "623"
+    },
+    {
+      "input": "308-916-545",
+      "output": "308"
+    }
+  ]
+}
