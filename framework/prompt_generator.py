@@ -40,7 +40,6 @@ class PromptMaker:
         # Code LLM
         if self.CODE in self.mode:
             query += f"### Instruction ###\nWrite function to transform the input data into the desired output"
-            # query += f"### Instruction ###\nPlease write code to perform data transformation"
 
         # add instruction
         if self.CHAT in self.mode:

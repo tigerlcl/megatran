@@ -68,8 +68,6 @@ def _load_json_files(dataset_info: dict):
             json_fp = os.path.join(dataset_info["path"], file)
             with open(json_fp, 'r') as f:
                 obj = json.load(f)
-                # print("Modifying chat instruction...")
-                obj['chat'] = "Please write code to perform data transformation."
                 obj['file_path'] = json_fp # store file path for logging
                 data.append(obj)
 
