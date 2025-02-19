@@ -55,12 +55,14 @@ python scripts/build_vector_db.py \
 python run.py \
     --config etc/mega-transform.yaml \
     --exp_name demo \
+    --model gpt-4o-mini \
     --testing
 
 # Full dataset run
 python run.py \
     --config etc/mega-transform.yaml \
     --exp_name exp-1 \
+    --model gpt-4o-mini \
     --dataset_name stackoverflow
 ```
 
@@ -121,6 +123,7 @@ Naive code generation baseline:
 python run.py \
     --config etc/code-llm.yaml \ # use code-llm config here
     --exp_name exp-1 \
+    --model gpt-4o-mini \
     --dataset_name stackoverflow
 ```
 
