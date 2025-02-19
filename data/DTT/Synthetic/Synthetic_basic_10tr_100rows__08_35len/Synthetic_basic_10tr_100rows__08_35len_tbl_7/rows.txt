@@ -1,3 +1,0 @@
-src_title:target_title
-source
-{[LIT:'*Z8 Qhc-' ], [Split: 'Q', 2 -> [Split: 'H', 0 ],  ], [Split: ' ', 3 ], [LIT:'Dsd ' ], }

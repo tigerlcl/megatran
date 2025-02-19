@@ -1,3 +1,0 @@
-src_title:target_title
-source
-{[Split: 'h', 1 ], [Split: 'T', 0 -> [Substr:(0-7) ],  ], [LIT:'--3 mM8' ], [Split: 'd', 2 ], }

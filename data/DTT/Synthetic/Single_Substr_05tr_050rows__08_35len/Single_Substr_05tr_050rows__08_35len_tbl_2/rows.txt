@@ -1,3 +1,0 @@
-src_title:target_title
-source
-{[Substr:(0-15) ], }
