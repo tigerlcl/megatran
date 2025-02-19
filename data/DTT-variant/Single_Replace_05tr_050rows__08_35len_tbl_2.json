@@ -1,0 +1,85 @@
+{
+  "chat": "Replace a specific character in the input string with another one.",
+  "tuples": [
+    {
+      "input": "nqTa K)(aIw3MY-SZev-lz",
+      "output": "nqTa K)(aIw3MY-SZev-lz"
+    },
+    {
+      "input": "d3a2g7b3 YDG5&pYPAhIY0Fgs",
+      "output": "d3a2g7b3 YDG5&pYPAhIY0Fgs"
+    },
+    {
+      "input": "e3rY D8RSp C3x",
+      "output": "e3rY D8RSp C3r"
+    },
+    {
+      "input": "dMGa eMMI&--or&4HDf",
+      "output": "dMGa eMMI&--or&4HDf"
+    },
+    {
+      "input": "oSG jyt)Snl49uOm?mHwDFmSjAQGxN2",
+      "output": "oSG jyt)Snl49uOm?mHwDFmSjAQGrN2"
+    },
+    {
+      "input": "kj4d Z?Ru2XAURa",
+      "output": "kj4d Z?Ru2XAURa"
+    },
+    {
+      "input": "t3SXhzx*Fxp0bRjReKdc*sASiwGXrBrXIg",
+      "output": "t3SXhzr*Frp0bRjReKdc*sASiwGXrBrXIg"
+    },
+    {
+      "input": "kdZVGTQcd)NinZ-Q9A&tjrKLsBr",
+      "output": "kdZVGTQcd)NinZ-Q9A&tjrKLsBr"
+    },
+    {
+      "input": "9t9KOFC7&s",
+      "output": "9t9KOFC7&s"
+    },
+    {
+      "input": "bzddJRx.4",
+      "output": "bzddJRr.4"
+    },
+    {
+      "input": "pIOd(24LH2qfb5(GT.h?Mrdl",
+      "output": "pIOd(24LH2qfb5(GT.h?Mrdl"
+    },
+    {
+      "input": "iG 4c5XPtrsQ0equ",
+      "output": "iG 4c5XPtrsQ0equ"
+    },
+    {
+      "input": "lPpTxRTuIfJwovT)fn7F2(cQBLr1e",
+      "output": "lPpTrRTuIfJwovT)fn7F2(cQBLr1e"
+    },
+    {
+      "input": "kfX50Jru.b McUJVIOTw3 ARX5p8Be",
+      "output": "kfX50Jru.b McUJVIOTw3 ARX5p8Be"
+    },
+    {
+      "input": "nM2j PVmY0XZtwxZJqIegb?xOVS5urSCB?b",
+      "output": "nM2j PVmY0XZtwrZJqIegb?rOVS5urSCB?b"
+    },
+    {
+      "input": "z508SxiYSzirZl4",
+      "output": "z508SriYSzirZl4"
+    },
+    {
+      "input": "ny63lDS2 o MqZPk92.7OUlKrlXcKkb",
+      "output": "ny63lDS2 o MqZPk92.7OUlKrlXcKkb"
+    },
+    {
+      "input": "e2MUq-AVD(bPqwworPEAI9.0FnUg.R.d",
+      "output": "e2MUq-AVD(bPqwworPEAI9.0FnUg.R.d"
+    },
+    {
+      "input": "pmJN )6I)meBJ5)hpuLmkM?.H86o(fFm",
+      "output": "pmJN )6I)meBJ5)hpuLmkM?.H86o(fFm"
+    },
+    {
+      "input": "yBPh0XOwW5qyzkV(eaGf(OieQX Diqh",
+      "output": "yBPh0XOwW5qyzkV(eaGf(OieQX Diqh"
+    }
+  ]
+}

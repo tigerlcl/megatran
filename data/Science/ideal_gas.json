@@ -1,0 +1,25 @@
+{
+  "chat": "Calculate the pressure (atm) using the ideal gas law given volume (L), moles (mol), and temperature (K).",
+  "tuples": [
+    {
+      "input": "V=8.69L, n=1.82mol, T=337.0K",
+      "output": "P=5.792atm"
+    },
+    {
+      "input": "V=2.95L, n=1.03mol, T=273.9K",
+      "output": "P=7.848atm"
+    },
+    {
+      "input": "V=4.66L, n=0.95mol, T=348.2K",
+      "output": "P=5.825atm"
+    },
+    {
+      "input": "V=1.7L, n=0.76mol, T=313.4K",
+      "output": "P=11.497atm"
+    },
+    {
+      "input": "V=5.47L, n=1.76mol, T=283.6K",
+      "output": "P=7.488atm"
+    }
+  ]
+}

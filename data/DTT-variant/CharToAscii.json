@@ -1,0 +1,49 @@
+{
+  "chat": "Convert each Unicode character to its corresponding ASCII code.",
+  "tuples": [
+    {
+      "input": "U+0041",
+      "output": "065"
+    },
+    {
+      "input": "U+0042",
+      "output": "066"
+    },
+    {
+      "input": "U+0043",
+      "output": "067"
+    },
+    {
+      "input": "U+0044",
+      "output": "068"
+    },
+    {
+      "input": "U+0054",
+      "output": "084"
+    },
+    {
+      "input": "U+0055",
+      "output": "085"
+    },
+    {
+      "input": "U+0056",
+      "output": "086"
+    },
+    {
+      "input": "U+0057",
+      "output": "087"
+    },
+    {
+      "input": "U+0058",
+      "output": "088"
+    },
+    {
+      "input": "U+0059",
+      "output": "089"
+    },
+    {
+      "input": "U+005A",
+      "output": "090"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "chat": "Calculate the equilibrium constant (Kc) given the equilibrium concentrations of reactants and products.",
+  "tuples": [
+    {
+      "input": "[A]=1.582M, [B]=1.739M, [C]=0.406M, [D]=0.88M",
+      "output": "Kc=0.1299"
+    },
+    {
+      "input": "[A]=0.411M, [B]=1.142M, [C]=1.374M, [D]=0.987M",
+      "output": "Kc=2.8893"
+    },
+    {
+      "input": "[A]=0.884M, [B]=1.178M, [C]=0.973M, [D]=1.585M",
+      "output": "Kc=1.481"
+    },
+    {
+      "input": "[A]=1.2M, [B]=1.355M, [C]=1.661M, [D]=1.758M",
+      "output": "Kc=1.7958"
+    },
+    {
+      "input": "[A]=1.666M, [B]=1.176M, [C]=1.33M, [D]=0.851M",
+      "output": "Kc=0.5777"
+    }
+  ]
+}

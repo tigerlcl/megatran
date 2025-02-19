@@ -1,0 +1,25 @@
+{
+  "chat": "Standardize chemical element symbols with correct capitalization.",
+  "tuples": [
+    {
+      "input": "fe",
+      "output": "Fe"
+    },
+    {
+      "input": "na",
+      "output": "Na"
+    },
+    {
+      "input": "AU",
+      "output": "Au"
+    },
+    {
+      "input": "ag",
+      "output": "Ag"
+    },
+    {
+      "input": "HG",
+      "output": "Hg"
+    }
+  ]
+} 

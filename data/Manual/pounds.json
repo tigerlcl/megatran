@@ -1,0 +1,29 @@
+{
+    "chat": "convert octal to decimal.",
+    "tuples": [
+        {
+            "input": "0lb 1.128767oz",
+            "output": "32g"
+        },
+        {
+            "input": "1lb 0oz",
+            "output": "454g"
+        },
+        {
+            "input": "2lb 3.527396oz",
+            "output": "1007g"
+        },
+        {
+            "input": "0lb 8oz",
+            "output": "227g"
+        },
+        {
+            "input": "5lb 10oz",
+            "output": "2551g"
+        },
+        {
+            "input": "3lb 5.643835oz",
+            "output": "1521g"
+        }
+    ]
+}

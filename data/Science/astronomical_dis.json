@@ -1,0 +1,37 @@
+{
+  "chat": "Convert astronomical distances to AU (Astronomical Units).",
+  "tuples": [
+    {
+      "input": "1.187e10 km",
+      "output": "79.357 AU"
+    },
+    {
+      "input": "2.992e8 km",
+      "output": "2 AU"
+    },
+    {
+      "input": "7.48e8 km",
+      "output": "5 AU"
+    },
+    {
+      "input": "8.616e9 km",
+      "output": "57.595 AU"
+    },
+    {
+      "input": "2.244e8 km",
+      "output": "1.5 AU"
+    },
+    {
+      "input": "8.402e9 km",
+      "output": "56.164 AU"
+    },
+    {
+      "input": "7.175e9 km",
+      "output": "47.963 AU"
+    },
+    {
+      "input": "2.471e9 km",
+      "output": "16.519 AU"
+    }
+  ]
+} 

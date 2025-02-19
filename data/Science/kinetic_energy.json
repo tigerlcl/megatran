@@ -1,0 +1,25 @@
+{
+  "chat": "Calculate the kinetic energy (in Joules) of an object given its mass (kg) and velocity (m/s).",
+  "tuples": [
+    {
+      "input": "mass: 42.22kg, velocity: 3.15m/s",
+      "output": "209.464J"
+    },
+    {
+      "input": "mass: 13.69kg, velocity: 7.13m/s",
+      "output": "347.979J"
+    },
+    {
+      "input": "mass: 83.83kg, velocity: 15.26m/s",
+      "output": "9760.645J"
+    },
+    {
+      "input": "mass: 93.6kg, velocity: 3.54m/s",
+      "output": "586.479J"
+    },
+    {
+      "input": "mass: 7.89kg, velocity: 47.64m/s",
+      "output": "8953.452J"
+    }
+  ]
+}

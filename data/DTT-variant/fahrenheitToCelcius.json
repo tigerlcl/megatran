@@ -1,0 +1,41 @@
+{
+  "chat": "Convert temperature from Fahrenheit to Celsius.",
+  "tuples": [
+    {
+      "input": "32",
+      "output": "0"
+    },
+    {
+      "input": "77",
+      "output": "25"
+    },
+    {
+      "input": "30",
+      "output": "-1.11"
+    },
+    {
+      "input": "41",
+      "output": "5"
+    },
+    {
+      "input": "59",
+      "output": "15"
+    },
+    {
+      "input": "68",
+      "output": "20"
+    },
+    {
+      "input": "212",
+      "output": "100"
+    },
+    {
+      "input": "50",
+      "output": "10"
+    },
+    {
+      "input": "86",
+      "output": "30"
+    }
+  ]
+}

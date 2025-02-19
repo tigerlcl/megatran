@@ -1,0 +1,25 @@
+{
+    "chat": "format date of birth accordingly",
+    "tuples": [
+        {
+            "input": "19850515",
+            "output": "05-15-1985"
+        },
+        {
+            "input": "19901231",
+            "output": "12-31-1990"
+        },
+        {
+            "input": "20000301",
+            "output": "03-01-2000"
+        },
+        {
+            "input": "20240229",
+            "output": "02-29-2024"
+        },
+        {
+            "input": "20090607",
+            "output": "06-07-2009"
+        }
+    ]
+}

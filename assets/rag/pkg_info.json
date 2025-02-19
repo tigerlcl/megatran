@@ -10,10 +10,6 @@
         "git_branch": "main"
     },
     {
-        "name": "hijri_converter",
-        "doc_url": "https://hijri-converter.readthedocs.io/en/stable/"
-    },
-    {
         "name": "geopy",
         "doc_url": "https://geopy.readthedocs.io/en/stable/"
     },
@@ -30,6 +26,38 @@
             "https://pyproj4.github.io/pyproj/stable/examples.html",
             "https://pyproj4.github.io/pyproj/stable/api/transformer.html",
             "https://pyproj4.github.io/pyproj/stable/api/proj.html"
+        ]
+    },
+    {
+        "name": "chempy",
+        "git_url": "https://github.com/bjodah/chempy",
+        "git_branch": "master"
+    },
+    {
+        "name": "dateparser",
+        "doc_url": "https://pypi.org/project/dateparser/",
+        "git_url": "https://github.com/scrapinghub/dateparser",
+        "git_branch": "master"
+    },
+    {
+        "name": "roman",
+        "git_url": "https://github.com/zopefoundation/roman",
+        "git_branch": "master"
+    },
+    {
+        "name": "ipaddress",
+        "git_url": "https://github.com/phihag/ipaddress",
+        "git_branch": "master",
+        "doc_url": [
+            "https://docs.python.org/3/library/ipaddress.html"
+        ]
+    }, 
+    {
+        "name": "hijridate",
+        "git_url": "https://github.com/dralshehri/hijridate",
+        "git_branch": "main",
+        "doc_url": [
+            "https://pypi.org/project/hijri-converter/"
         ]
     }
 ]

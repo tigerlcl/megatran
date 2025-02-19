@@ -1,0 +1,25 @@
+{
+  "chat": "Convert decimal coordinates to degrees, minutes, and seconds format.",
+  "tuples": [
+    {
+      "input": "40.7128°N,74.0060°W",
+      "output": "40°42'46\"N 74°00'22\"W"
+    },
+    {
+      "input": "51.5074°N,0.1278°W",
+      "output": "51°30'27\"N 00°07'40\"W"
+    },
+    {
+      "input": "48.8566°N,2.3522°E",
+      "output": "48°51'24\"N 02°21'08\"E"
+    },
+    {
+      "input": "35.6762°N,139.6503°E",
+      "output": "35°40'34\"N 139°39'01\"E"
+    },
+    {
+      "input": "33.8688°S,151.2093°E",
+      "output": "33°52'08\"S 151°12'33\"E"
+    }
+  ]
+} 

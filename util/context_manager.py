@@ -29,11 +29,13 @@ class Context:
                 - dataset_name: Dataset to use
                 - testing: Boolean for test mode
                 - config: Path to config YAML
+                - model: LLM backend model name
         """
         self.load_environment()
         self.exp_name = args.exp_name
         self.dataset_name = args.dataset_name
         self.testing = args.testing
+        self.openai_model = args.model
         self.config = self._load_config(args.config)
 
 
@@ -68,16 +70,18 @@ class Context:
         └── temp/          # Temporary files
         """
         # Check if experiment directory already exists
-        if os.path.exists(os.path.join('exp', self.exp_name)) and not self.testing:
-            raise ValueError(f"Experiment directory 'exp/{self.exp_name}' already exists. Please use a different experiment name to avoid overwriting existing results.")
+        exp_folder = os.path.join(self.exp_folder, self.exp_name)
+        if os.path.exists(exp_folder) and not self.testing:
+            raise ValueError(f"Experiment directory '{exp_folder}' already exists. Please use a different experiment name to avoid overwriting existing results.")
         
         # Create new directories
-        self.code_dir = os.path.join('exp', self.exp_name, 'code')
+        self.code_dir = os.path.join(exp_folder, 'code')
         os.makedirs(self.code_dir, exist_ok=True)
         
-        self.result_dir = os.path.join('exp', self.exp_name, 'result')
+        self.result_dir = os.path.join(exp_folder, 'result')
         os.makedirs(self.result_dir, exist_ok=True)
         
+        # temp dir for staging generated code
         self.temp_dir = 'temp'
         os.makedirs(self.temp_dir, exist_ok=True)
 
@@ -91,7 +95,7 @@ class Context:
 
     def _setup_logger(self):
         """Configure experiment logger with both file and console output"""
-        log_fp = os.path.join('exp', self.exp_name, f'{self.exp_name}.log')
+        log_fp = os.path.join(self.exp_folder, self.exp_name, f'{self.exp_name}.log')
 
         logger = logging.getLogger()
         logger.setLevel(logging.INFO)

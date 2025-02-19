@@ -1,0 +1,25 @@
+{
+  "chat": "Convert light-years to kiloparsecs (kpc).",
+  "tuples": [
+    {
+      "input": "1.58×10⁵ light-years",
+      "output": "48.5 kpc"
+    },
+    {
+      "input": "3.26×10⁵ light-years",
+      "output": "100 kpc"
+    },
+    {
+      "input": "6.52×10⁵ light-years",
+      "output": "200 kpc"
+    },
+    {
+      "input": "9.78×10⁵ light-years",
+      "output": "300 kpc"
+    },
+    {
+      "input": "1.63×10⁶ light-years",
+      "output": "500 kpc"
+    }
+  ]
+} 

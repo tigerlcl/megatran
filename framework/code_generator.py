@@ -44,7 +44,6 @@ class CodeGenerator:
             self.lazy_rag = LazyRAG(ctx)
             self.logger.info("Lazy RAG enabled")
 
-
         # regexes
         self.py_block = r'```python\n(.*?)\n```'
         self.func_def = r'def\s+solution\s*\('
@@ -114,9 +113,10 @@ class CodeGenerator:
         """Save generated code to file"""
         # prepare the code file path
         dir_name, base_name = os.path.split(file_path)
-        dir_name = os.path.join(code_dir, dir_name.replace('./data/', ''))
+
+        dir_name = dir_name.replace('data', code_dir)
         os.makedirs(dir_name, exist_ok=True)
-        
+
         base_name = f"{os.path.splitext(base_name)[0]}.py"
         code_fp = os.path.join(dir_name, base_name)
 

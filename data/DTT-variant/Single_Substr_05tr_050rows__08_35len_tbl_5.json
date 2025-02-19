@@ -1,0 +1,69 @@
+{
+  "chat": "Extract the substring from each input string, starting from the fifth character.",
+  "tuples": [
+    {
+      "input": "vQxo2iRO-Y6?BnudarU8sZCCbm9xeZTtCA5",
+      "output": "darU8sZCCbm9xeZTtCA5"
+    },
+    {
+      "input": "rLlJ(Tcqfy&aQL57Bd1tOpsImuspXnxIwGe",
+      "output": "7Bd1tOpsImuspXnxIwGe"
+    },
+    {
+      "input": "g4x0CGmqq*RIpX2JXF9*tRVu4sEyVZml6zw",
+      "output": "JXF9*tRVu4sEyVZml6zw"
+    },
+    {
+      "input": "a-Z6MYB-FkvQ)y62vc-DBJMO8aO4oblCcO4",
+      "output": "2vc-DBJMO8aO4oblCcO4"
+    },
+    {
+      "input": "uSmvwYv*tD21.hq6G8)VYaD9i8Nj.W)3qPs",
+      "output": "6G8)VYaD9i8Nj.W)3qPs"
+    },
+    {
+      "input": "tq.McTq1SP&TS3CQxD01HJIXppd0yenyqFw",
+      "output": "QxD01HJIXppd0yenyqFw"
+    },
+    {
+      "input": "y9L0x-)XqZ3ATo0aD(4)xBQxl0Z)OVboHkm",
+      "output": "aD(4)xBQxl0Z)OVboHkm"
+    },
+    {
+      "input": "0Z.PVRT-DeZQ)9ogc.JaILyoB1olPCKaNR2",
+      "output": "gc.JaILyoB1olPCKaNR2"
+    },
+    {
+      "input": "tOpu-1p&fja5k2FpL7IgiMyDSCc&8Lil1Hu",
+      "output": "pL7IgiMyDSCc&8Lil1Hu"
+    },
+    {
+      "input": "7K2r0GA)kWyl.JNKnZA0e.-inj2tH5qgb3o",
+      "output": "KnZA0e.-inj2tH5qgb3o"
+    },
+    {
+      "input": "7EUO8(s2Kzg3ceKi8Gq8kgGjp0Vp(dy*6Z1",
+      "output": "i8Gq8kgGjp0Vp(dy*6Z1"
+    },
+    {
+      "input": "qpuqpgMwFgv.5k3&kSHhZCSm9qtZQ73Soi3",
+      "output": "&kSHhZCSm9qtZQ73Soi3"
+    },
+    {
+      "input": "6HmL2jCwVmx1clg8&CoB*PTBK0-z&0U?hH5",
+      "output": "8&CoB*PTBK0-z&0U?hH5"
+    },
+    {
+      "input": "wSJo8GjsZz987U7ATmgWh5)6ryX6p&wJf3l",
+      "output": "ATmgWh5)6ryX6p&wJf3l"
+    },
+    {
+      "input": "j4MN6(sYYxPxo1?ZEdycOOsg(2o)Tg.-0&k",
+      "output": "ZEdycOOsg(2o)Tg.-0&k"
+    },
+    {
+      "input": "sE)4uEf6q96eusAW3AZ3y9H-sz.SDmAbmKt",
+      "output": "W3AZ3y9H-sz.SDmAbmKt"
+    }
+  ]
+}

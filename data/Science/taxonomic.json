@@ -1,0 +1,41 @@
+{
+  "chat": "Abbreviate taxonomic names according to scientific convention.",
+  "tuples": [
+    {
+      "input": "Canis lupus",
+      "output": "C. lupus"
+    },
+    {
+      "input": "Panthera tigris",
+      "output": "P. tigris"
+    },
+    {
+      "input": "Homo sapiens",
+      "output": "H. sapiens"
+    },
+    {
+      "input": "Escherichia coli",
+      "output": "E. coli"
+    },
+    {
+      "input": "Drosophila melanogaster",
+      "output": "D. melanogaster"
+    },
+    {
+      "input": "Bos taurus indicus",
+      "output": "B. t. indicus"
+    },
+    {
+      "input": "Bos taurus indicus",
+      "output": "B. t. indicus"
+    },
+    {
+      "input": "Pseudomonas aeruginosa",
+      "output": "P. aeruginosa"
+    },
+    {
+      "input": "Rattus norvegicus albinus",
+      "output": "R. n. albinus"
+    }
+  ]
+} 

@@ -1,0 +1,25 @@
+{
+    "chat": "Convert pressure from Pascals to atmospheres.",
+    "tuples": [
+        {
+            "input": "150000 Pa",
+            "output": "1.48 atm"
+        },
+        {
+            "input": "250000 Pa",
+            "output": "2.47 atm"
+        },
+        {
+            "input": "75000 Pa",
+            "output": "0.74 atm"
+        },
+        {
+            "input": "5000 Pa",
+            "output": "0.05 atm"
+        },
+        {
+            "input": "333000 Pa",
+            "output": "3.29 atm"
+        }
+    ]
+}

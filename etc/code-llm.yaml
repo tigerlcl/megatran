@@ -2,7 +2,8 @@
 n_shot: 3
 code_attempt: 3
 prompt_mode: "code_example" 
+exp_folder: "revision"
 
 # OPENAI chat model
-openai_model: "gpt-4o" # gpt-4o, gpt-4o-mini
+# model: "gpt-4o-mini" # gpt-4o, gpt-4o-mini
 openai_temperature: 0.2

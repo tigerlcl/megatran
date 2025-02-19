@@ -1,0 +1,25 @@
+{
+  "chat": "Calculate the pH value given the hydrogen ion concentration [H+] in mol/L.",
+  "tuples": [
+    {
+      "input": "[H+] = 2.02e-08mol/L",
+      "output": "pH = 7.694"
+    },
+    {
+      "input": "[H+] = 1.33e-09mol/L",
+      "output": "pH = 8.876"
+    },
+    {
+      "input": "[H+] = 8.71e-09mol/L",
+      "output": "pH = 8.06"
+    },
+    {
+      "input": "[H+] = 2.02e-09mol/L",
+      "output": "pH = 8.695"
+    },
+    {
+      "input": "[H+] = 2.57e-07mol/L",
+      "output": "pH = 6.589"
+    }
+  ]
+}
